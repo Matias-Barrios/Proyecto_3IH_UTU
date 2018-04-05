@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class Ventana_Principal
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -24,14 +24,14 @@ Partial Class Form2
     Private Sub InitializeComponent()
         Me.SuspendLayout()
         '
-        'Form2
+        'Ventana_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CausesValidation = False
-        Me.ClientSize = New System.Drawing.Size(1101, 450)
-        Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.ClientSize = New System.Drawing.Size(1085, 576)
+        Me.Name = "Ventana_Principal"
+        Me.Text = "Ventana Principal"
         Me.ResumeLayout(False)
 
     End Sub

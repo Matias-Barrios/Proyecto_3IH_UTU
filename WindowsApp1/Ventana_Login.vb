@@ -1,4 +1,4 @@
-﻿Public Class Form1
+﻿Public Class Ventana_Login
 
 
 
@@ -17,6 +17,8 @@
         usersList.Add(New User("Matias", "Barrios"))
         usersList.Add(New User("Gimena", "Barrios"))
         Button1.Enabled = False
+        centrarVentana(Me)
+
 
     End Sub
 
@@ -47,10 +49,12 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Validar(usersList, Me.TextBox1.Text, Me.TextBox2.Text) Then
-            WindowsApp1.Form2.Show()
+            WindowsApp1.Ventana_Principal.Show()
             Me.Hide()
         Else
             MsgBox("Either your username or your password is incorrect", 0, "Authentication error")
         End If
     End Sub
+
+
 End Class

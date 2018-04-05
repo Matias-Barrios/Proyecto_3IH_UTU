@@ -1,4 +1,4 @@
-﻿Module Usuarios
+﻿Module Modulo_Usuarios
     Public Class User
 
         Public Property Name As String
