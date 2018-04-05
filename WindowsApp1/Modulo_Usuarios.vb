@@ -6,8 +6,6 @@
         Public Property Password As String
         Public Property Rol As String
 
-
-
         Public Sub New(ByVal name As String, ByVal password As String, ByVal rol As String)
             Me.Name = name
             Me.Password = password

@@ -13,10 +13,6 @@
         removerMarco(Ventana_Principal)
         Me.b_lblNombreUsuario.border_thickness = 4
         Me.b_lblPassword.border_thickness = 4
-        'lblNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-
-
-
     End Sub
 
     Private Sub txtNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtNombreUsuario.TextChanged
