@@ -47,5 +47,7 @@
         End If
     End Sub
 
+    Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs)
 
+    End Sub
 End Class

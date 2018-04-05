@@ -72,6 +72,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BorderLabel.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Modulo_Comportamiento_Ventanas.vb" />
     <Compile Include="Ventana_Login.vb">
       <SubType>Form</SubType>
