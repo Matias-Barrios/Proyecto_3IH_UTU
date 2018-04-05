@@ -1,21 +1,6 @@
 ﻿Public Class Form1
 
-    Private Class User
 
-        Public Property Name As String
-
-        Public Property Password As String
-
-
-
-        Public Sub New(ByVal name As String, ByVal password As String)
-            Me.Name = name
-            Me.Password = password
-        End Sub
-
-
-
-    End Class
 
     Private usersList As New List(Of User)
 
@@ -35,16 +20,7 @@
 
     End Sub
 
-    Public Function Validar(nombre As String, password As String) As Boolean
 
-        For Each user As Object In usersList
-            If nombre = user.Name() And password = user.Password() Then
-                Return True
-            End If
-        Next
-
-
-    End Function
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
 
@@ -70,7 +46,7 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        If Validar(Me.TextBox1.Text, Me.TextBox2.Text) Then
+        If Validar(usersList, Me.TextBox1.Text, Me.TextBox2.Text) Then
             WindowsApp1.Form2.Show()
             Me.Hide()
         Else
