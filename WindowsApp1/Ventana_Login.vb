@@ -6,11 +6,13 @@
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        usersList.Add(New User("Matias", "Barrios"))
-        usersList.Add(New User("Gimena", "Barrios"))
+        usersList.Add(New User("Matias", "Barrios", "admin"))
+        usersList.Add(New User("Gimena", "Barrios", "user"))
         btnLogin.Enabled = False
         centrarVentana(Me)
         removerMarco(Ventana_Principal)
+        Me.b_lblNombreUsuario.border_thickness = 4
+        Me.b_lblPassword.border_thickness = 4
         'lblNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
 
 
@@ -39,12 +41,12 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        If Validar(usersList, Me.txtNombreUsuario.Text, Me.txtPassword.Text) Then
+        Try
+            Ventana_Principal.usuario = Validar(usersList, Me.txtNombreUsuario.Text, Me.txtPassword.Text)
             Ventana_Principal.Show()
-            Me.Hide()
-        Else
+        Catch ex As Exception
             MsgBox("Either your username or your password is incorrect", 0, "Authentication error")
-        End If
+        End Try
     End Sub
 
     Private Sub BackgroundWorker1_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs)

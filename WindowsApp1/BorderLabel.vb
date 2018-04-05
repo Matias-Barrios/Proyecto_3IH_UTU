@@ -3,7 +3,7 @@
 Public Class BorderLabel
     Inherits Label
     Public outline_color As Color = Color.Black
-    Public border_thickness As Integer = 5
+    Public border_thickness As Integer = 1
     Public Sub New()
         MyBase.New
 

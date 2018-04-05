@@ -1,4 +1,5 @@
 ﻿Module Modulo_Comportamiento_Ventanas
+
     Public Sub centrarVentana(ventana As Form)
         Dim boundWidth As Integer = Screen.PrimaryScreen.Bounds.Width
         Dim boundHeight As Integer = Screen.PrimaryScreen.Bounds.Height
@@ -15,6 +16,12 @@
     Public Sub removerMarco(ventana As Form)
         ventana.FormBorderStyle = FormBorderStyle.None
     End Sub
+    Public Function porcentajeAncho(ventana As Object, porcentaje As Integer)
+        Return ((ventana.Width * porcentaje) / 100)
+    End Function
+    Public Function porcentajeAlto(ventana As Object, porcentaje As Integer)
+        Return ((ventana.Height * porcentaje) / 100)
+    End Function
     Public Sub LogOff()
         ' Aca iria una subrutina mas para borrar la sesion
         ' TODO ^^
