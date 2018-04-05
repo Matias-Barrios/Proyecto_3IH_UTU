@@ -12,4 +12,15 @@
     Public Sub minimizarVentana(ventana As Form)
         ventana.WindowState = FormWindowState.Minimized
     End Sub
+    Public Sub removerMarco(ventana As Form)
+        ventana.FormBorderStyle = FormBorderStyle.None
+    End Sub
+    Public Sub LogOff()
+        ' Aca iria una subrutina mas para borrar la sesion
+        ' TODO ^^
+        Console.Write("Clicky clicky")
+        WindowsApp1.Ventana_Principal.Hide()
+        WindowsApp1.Ventana_Login.Show()
+    End Sub
+
 End Module

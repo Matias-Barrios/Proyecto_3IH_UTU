@@ -10,6 +10,9 @@
         usersList.Add(New User("Gimena", "Barrios"))
         btnLogin.Enabled = False
         centrarVentana(Me)
+        removerMarco(Ventana_Principal)
+        'lblNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+
 
 
     End Sub
