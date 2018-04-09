@@ -34,6 +34,7 @@ Partial Class Ventana_Principal
         Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
         Me.pnlMaterias = New System.Windows.Forms.Panel()
         Me.lblMaterias = New WindowsApp1.BorderLabel()
+        Me.txtPrueba = New System.Windows.Forms.TextBox()
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.pnlAlumnos.SuspendLayout()
         Me.pnlMaterias.SuspendLayout()
@@ -177,6 +178,13 @@ Partial Class Ventana_Principal
         Me.lblMaterias.TabIndex = 5
         Me.lblMaterias.Text = "Materias"
         '
+        'txtPrueba
+        '
+        Me.txtPrueba.Location = New System.Drawing.Point(22, 219)
+        Me.txtPrueba.Name = "txtPrueba"
+        Me.txtPrueba.Size = New System.Drawing.Size(175, 20)
+        Me.txtPrueba.TabIndex = 11
+        '
         'Ventana_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -184,6 +192,7 @@ Partial Class Ventana_Principal
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.CausesValidation = False
         Me.ClientSize = New System.Drawing.Size(1085, 576)
+        Me.Controls.Add(Me.txtPrueba)
         Me.Controls.Add(Me.pnlMaterias)
         Me.Controls.Add(Me.pnlAlumnos)
         Me.Controls.Add(Me.btnMaterias)
@@ -196,6 +205,7 @@ Partial Class Ventana_Principal
         Me.pnlAlumnos.ResumeLayout(False)
         Me.pnlMaterias.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -211,4 +221,5 @@ Partial Class Ventana_Principal
     Friend WithEvents lblMaterias As BorderLabel
     Public WithEvents pnlAlumnos As Panel
     Public WithEvents pnlMaterias As Panel
+    Friend WithEvents txtPrueba As TextBox
 End Class

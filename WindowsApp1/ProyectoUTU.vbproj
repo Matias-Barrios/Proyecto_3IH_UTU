@@ -79,6 +79,7 @@
     <Compile Include="Rounded_Button.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Validar_Entradas.vb" />
     <Compile Include="Ventana_Login.vb">
       <SubType>Form</SubType>
     </Compile>

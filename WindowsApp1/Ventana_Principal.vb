@@ -10,6 +10,7 @@
         Me.b_lblNombreUsuario_Dinamico.Text = Me.usuario.Name
         Me.b_lblRol_Dinamico.Text = Me.usuario.Rol
         Me.b_lblRol_Dinamico.outline_color = Color.White
+        Adherir_Validacion(Me.txtPrueba, TipoValidacion.Solo_numeros)
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
