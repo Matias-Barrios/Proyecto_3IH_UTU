@@ -46,7 +46,7 @@ Module Validar_Entradas
     Public Sub NotNull_Leave(ByVal sender As Object, ByVal e As System.EventArgs)
         Dim No As Windows.Forms.TextBox = sender
         If No.Text.Trim = "" Then
-            MsgBox("This field Must be filled!")
+            MsgBox("Este campo no puede quedar vacio")
             No.Focus()
         End If
     End Sub
@@ -55,7 +55,7 @@ Module Validar_Entradas
         If Email.Text <> "" Then
             Dim rex As Match = Regex.Match(Trim(Email.Text), "^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,3})$", RegexOptions.IgnoreCase)
             If rex.Success = False Then
-                MessageBox.Show("Please Enter a valid Email Address", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Se necesita una direccion de mail valida", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Email.BackColor = Color.Red
                 Email.Focus()
                 Exit Sub

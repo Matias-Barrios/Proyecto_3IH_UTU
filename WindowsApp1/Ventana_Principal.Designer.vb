@@ -24,20 +24,25 @@ Partial Class Ventana_Principal
     Private Sub InitializeComponent()
         Me.btnLogoff = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado = New System.Windows.Forms.Panel()
+        Me.btnAlumnos = New System.Windows.Forms.Button()
+        Me.btnMaterias = New System.Windows.Forms.Button()
+        Me.tabPrincipal = New System.Windows.Forms.TabControl()
+        Me.tabPrincipalAlumnos = New System.Windows.Forms.TabPage()
+        Me.tabPrincipalMaterias = New System.Windows.Forms.TabPage()
+        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
+        Me.lblMaterias = New WindowsApp1.BorderLabel()
         Me.b_lblRol_Dinamico = New WindowsApp1.BorderLabel()
         Me.b_lblRol_fijo = New WindowsApp1.BorderLabel()
         Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
         Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
-        Me.btnAlumnos = New System.Windows.Forms.Button()
-        Me.btnMaterias = New System.Windows.Forms.Button()
-        Me.pnlAlumnos = New System.Windows.Forms.Panel()
-        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
-        Me.pnlMaterias = New System.Windows.Forms.Panel()
-        Me.lblMaterias = New WindowsApp1.BorderLabel()
-        Me.txtPrueba = New System.Windows.Forms.TextBox()
+        Me.tabPrincipalTareas = New System.Windows.Forms.TabPage()
+        Me.lblTareas = New WindowsApp1.BorderLabel()
+        Me.btnTareas = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado.SuspendLayout()
-        Me.pnlAlumnos.SuspendLayout()
-        Me.pnlMaterias.SuspendLayout()
+        Me.tabPrincipal.SuspendLayout()
+        Me.tabPrincipalAlumnos.SuspendLayout()
+        Me.tabPrincipalMaterias.SuspendLayout()
+        Me.tabPrincipalTareas.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogoff
@@ -65,6 +70,88 @@ Partial Class Ventana_Principal
         Me.pnlUsuario_logueado.Name = "pnlUsuario_logueado"
         Me.pnlUsuario_logueado.Size = New System.Drawing.Size(211, 71)
         Me.pnlUsuario_logueado.TabIndex = 6
+        '
+        'btnAlumnos
+        '
+        Me.btnAlumnos.BackColor = System.Drawing.Color.White
+        Me.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAlumnos.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAlumnos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAlumnos.Location = New System.Drawing.Point(12, 102)
+        Me.btnAlumnos.Name = "btnAlumnos"
+        Me.btnAlumnos.Size = New System.Drawing.Size(211, 39)
+        Me.btnAlumnos.TabIndex = 7
+        Me.btnAlumnos.Text = "Alumnos"
+        Me.btnAlumnos.UseVisualStyleBackColor = False
+        '
+        'btnMaterias
+        '
+        Me.btnMaterias.BackColor = System.Drawing.Color.White
+        Me.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMaterias.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMaterias.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMaterias.Location = New System.Drawing.Point(12, 156)
+        Me.btnMaterias.Name = "btnMaterias"
+        Me.btnMaterias.Size = New System.Drawing.Size(211, 39)
+        Me.btnMaterias.TabIndex = 8
+        Me.btnMaterias.Text = "Materias"
+        Me.btnMaterias.UseVisualStyleBackColor = False
+        '
+        'tabPrincipal
+        '
+        Me.tabPrincipal.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.tabPrincipal.Controls.Add(Me.tabPrincipalAlumnos)
+        Me.tabPrincipal.Controls.Add(Me.tabPrincipalMaterias)
+        Me.tabPrincipal.Controls.Add(Me.tabPrincipalTareas)
+        Me.tabPrincipal.Location = New System.Drawing.Point(229, 12)
+        Me.tabPrincipal.Name = "tabPrincipal"
+        Me.tabPrincipal.SelectedIndex = 0
+        Me.tabPrincipal.Size = New System.Drawing.Size(844, 552)
+        Me.tabPrincipal.TabIndex = 10
+        '
+        'tabPrincipalAlumnos
+        '
+        Me.tabPrincipalAlumnos.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tabPrincipalAlumnos.Controls.Add(Me.lblAlumnos_Titulo)
+        Me.tabPrincipalAlumnos.Location = New System.Drawing.Point(4, 22)
+        Me.tabPrincipalAlumnos.Name = "tabPrincipalAlumnos"
+        Me.tabPrincipalAlumnos.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabPrincipalAlumnos.Size = New System.Drawing.Size(836, 526)
+        Me.tabPrincipalAlumnos.TabIndex = 0
+        Me.tabPrincipalAlumnos.Text = "Alumnos"
+        '
+        'tabPrincipalMaterias
+        '
+        Me.tabPrincipalMaterias.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tabPrincipalMaterias.Controls.Add(Me.lblMaterias)
+        Me.tabPrincipalMaterias.Location = New System.Drawing.Point(4, 22)
+        Me.tabPrincipalMaterias.Name = "tabPrincipalMaterias"
+        Me.tabPrincipalMaterias.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabPrincipalMaterias.Size = New System.Drawing.Size(836, 526)
+        Me.tabPrincipalMaterias.TabIndex = 1
+        Me.tabPrincipalMaterias.Text = "Materias"
+        '
+        'lblAlumnos_Titulo
+        '
+        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(6, 4)
+        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
+        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
+        Me.lblAlumnos_Titulo.TabIndex = 5
+        Me.lblAlumnos_Titulo.Text = "Alumnos"
+        '
+        'lblMaterias
+        '
+        Me.lblMaterias.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblMaterias.Location = New System.Drawing.Point(3, 4)
+        Me.lblMaterias.Name = "lblMaterias"
+        Me.lblMaterias.Size = New System.Drawing.Size(136, 36)
+        Me.lblMaterias.TabIndex = 11
+        Me.lblMaterias.Text = "Materias"
         '
         'b_lblRol_Dinamico
         '
@@ -106,84 +193,39 @@ Partial Class Ventana_Principal
         Me.b_lblusuarioLogueado_nombre.TabIndex = 1
         Me.b_lblusuarioLogueado_nombre.Text = "Bienvenido,"
         '
-        'btnAlumnos
+        'tabPrincipalTareas
         '
-        Me.btnAlumnos.BackColor = System.Drawing.Color.White
-        Me.btnAlumnos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAlumnos.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlumnos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAlumnos.Location = New System.Drawing.Point(12, 102)
-        Me.btnAlumnos.Name = "btnAlumnos"
-        Me.btnAlumnos.Size = New System.Drawing.Size(211, 39)
-        Me.btnAlumnos.TabIndex = 7
-        Me.btnAlumnos.Text = "Alumnos"
-        Me.btnAlumnos.UseVisualStyleBackColor = False
+        Me.tabPrincipalTareas.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tabPrincipalTareas.Controls.Add(Me.lblTareas)
+        Me.tabPrincipalTareas.Location = New System.Drawing.Point(4, 22)
+        Me.tabPrincipalTareas.Name = "tabPrincipalTareas"
+        Me.tabPrincipalTareas.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabPrincipalTareas.Size = New System.Drawing.Size(836, 526)
+        Me.tabPrincipalTareas.TabIndex = 2
+        Me.tabPrincipalTareas.Text = "Tareas"
         '
-        'btnMaterias
+        'lblTareas
         '
-        Me.btnMaterias.BackColor = System.Drawing.Color.White
-        Me.btnMaterias.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnMaterias.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMaterias.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMaterias.Location = New System.Drawing.Point(12, 156)
-        Me.btnMaterias.Name = "btnMaterias"
-        Me.btnMaterias.Size = New System.Drawing.Size(211, 39)
-        Me.btnMaterias.TabIndex = 8
-        Me.btnMaterias.Text = "Materias"
-        Me.btnMaterias.UseVisualStyleBackColor = False
+        Me.lblTareas.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTareas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblTareas.Location = New System.Drawing.Point(6, 5)
+        Me.lblTareas.Name = "lblTareas"
+        Me.lblTareas.Size = New System.Drawing.Size(136, 36)
+        Me.lblTareas.TabIndex = 12
+        Me.lblTareas.Text = "Tareas"
         '
-        'pnlAlumnos
+        'btnTareas
         '
-        Me.pnlAlumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlAlumnos.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.pnlAlumnos.Controls.Add(Me.lblAlumnos_Titulo)
-        Me.pnlAlumnos.Location = New System.Drawing.Point(243, 12)
-        Me.pnlAlumnos.Name = "pnlAlumnos"
-        Me.pnlAlumnos.Size = New System.Drawing.Size(830, 552)
-        Me.pnlAlumnos.TabIndex = 9
-        Me.pnlAlumnos.Visible = False
-        '
-        'lblAlumnos_Titulo
-        '
-        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(15, 9)
-        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
-        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
-        Me.lblAlumnos_Titulo.TabIndex = 5
-        Me.lblAlumnos_Titulo.Text = "Alumnos"
-        '
-        'pnlMaterias
-        '
-        Me.pnlMaterias.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlMaterias.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.pnlMaterias.Controls.Add(Me.lblMaterias)
-        Me.pnlMaterias.Location = New System.Drawing.Point(243, 13)
-        Me.pnlMaterias.Name = "pnlMaterias"
-        Me.pnlMaterias.Size = New System.Drawing.Size(830, 552)
-        Me.pnlMaterias.TabIndex = 10
-        Me.pnlMaterias.Visible = False
-        '
-        'lblMaterias
-        '
-        Me.lblMaterias.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblMaterias.Location = New System.Drawing.Point(15, 9)
-        Me.lblMaterias.Name = "lblMaterias"
-        Me.lblMaterias.Size = New System.Drawing.Size(136, 36)
-        Me.lblMaterias.TabIndex = 5
-        Me.lblMaterias.Text = "Materias"
-        '
-        'txtPrueba
-        '
-        Me.txtPrueba.Location = New System.Drawing.Point(22, 219)
-        Me.txtPrueba.Name = "txtPrueba"
-        Me.txtPrueba.Size = New System.Drawing.Size(175, 20)
-        Me.txtPrueba.TabIndex = 11
+        Me.btnTareas.BackColor = System.Drawing.Color.White
+        Me.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTareas.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTareas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnTareas.Location = New System.Drawing.Point(12, 211)
+        Me.btnTareas.Name = "btnTareas"
+        Me.btnTareas.Size = New System.Drawing.Size(211, 39)
+        Me.btnTareas.TabIndex = 11
+        Me.btnTareas.Text = "Tareas"
+        Me.btnTareas.UseVisualStyleBackColor = False
         '
         'Ventana_Principal
         '
@@ -192,9 +234,8 @@ Partial Class Ventana_Principal
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(172, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.CausesValidation = False
         Me.ClientSize = New System.Drawing.Size(1085, 576)
-        Me.Controls.Add(Me.txtPrueba)
-        Me.Controls.Add(Me.pnlMaterias)
-        Me.Controls.Add(Me.pnlAlumnos)
+        Me.Controls.Add(Me.btnTareas)
+        Me.Controls.Add(Me.tabPrincipal)
         Me.Controls.Add(Me.btnMaterias)
         Me.Controls.Add(Me.btnAlumnos)
         Me.Controls.Add(Me.pnlUsuario_logueado)
@@ -202,10 +243,11 @@ Partial Class Ventana_Principal
         Me.Name = "Ventana_Principal"
         Me.Text = "Ventana Principal"
         Me.pnlUsuario_logueado.ResumeLayout(False)
-        Me.pnlAlumnos.ResumeLayout(False)
-        Me.pnlMaterias.ResumeLayout(False)
+        Me.tabPrincipal.ResumeLayout(False)
+        Me.tabPrincipalAlumnos.ResumeLayout(False)
+        Me.tabPrincipalMaterias.ResumeLayout(False)
+        Me.tabPrincipalTareas.ResumeLayout(False)
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -218,8 +260,11 @@ Partial Class Ventana_Principal
     Friend WithEvents btnAlumnos As Button
     Friend WithEvents btnMaterias As Button
     Friend WithEvents lblAlumnos_Titulo As BorderLabel
+    Friend WithEvents tabPrincipal As TabControl
+    Friend WithEvents tabPrincipalAlumnos As TabPage
+    Friend WithEvents tabPrincipalMaterias As TabPage
     Friend WithEvents lblMaterias As BorderLabel
-    Public WithEvents pnlAlumnos As Panel
-    Public WithEvents pnlMaterias As Panel
-    Friend WithEvents txtPrueba As TextBox
+    Friend WithEvents tabPrincipalTareas As TabPage
+    Friend WithEvents lblTareas As BorderLabel
+    Friend WithEvents btnTareas As Button
 End Class
