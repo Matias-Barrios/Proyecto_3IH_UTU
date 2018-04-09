@@ -47,7 +47,7 @@ Partial Class Ventana_Login
         Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtPassword.Size = New System.Drawing.Size(201, 20)
         Me.txtPassword.TabIndex = 3
-        Me.txtPassword.Text = "Barrios"
+        Me.txtPassword.Text = "1234"
         '
         'btnLogin
         '
