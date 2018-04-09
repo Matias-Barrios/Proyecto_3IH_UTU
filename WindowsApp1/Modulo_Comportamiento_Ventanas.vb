@@ -29,5 +29,9 @@
         WindowsApp1.Ventana_Principal.Hide()
         WindowsApp1.Ventana_Login.Show()
     End Sub
+    Public Sub Esconder_todos_los_paneles(ventana As Object)
+        ventana.pnlAlumnos.Hide()
+        ventana.pnlMaterias.Hide()
+    End Sub
 
 End Module
