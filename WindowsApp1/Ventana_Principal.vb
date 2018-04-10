@@ -53,4 +53,8 @@
     Private Sub pnlUsuariosBotonCrearNuevo_Click(sender As Object, e As EventArgs) Handles pnlUsuariosBotonCrearNuevo.Click
 
     End Sub
+
+    Private Sub btnVentanaPrincipalConfiguracion_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalConfiguracion.Click
+        VentanaConfiguracion.ShowDialog()
+    End Sub
 End Class

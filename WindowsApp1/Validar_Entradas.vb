@@ -11,6 +11,8 @@ Module Validar_Entradas
         Solo_cedulas = 7
         Solo_password = 8
         Solo_username = 9
+        Solo_IP = 10
+        Solo_digitos = 10
     End Enum
     Public Sub Adherir_Validacion(ByRef CTRL As Windows.Forms.TextBox, ByVal Validation_Type As TipoValidacion)
         Dim txt As Windows.Forms.TextBox = CTRL
@@ -33,6 +35,10 @@ Module Validar_Entradas
                 AddHandler txt.KeyPress, AddressOf Solo_password
             Case TipoValidacion.Solo_username
                 AddHandler txt.KeyPress, AddressOf Solo_username
+            Case TipoValidacion.Solo_IP
+                AddHandler txt.KeyPress, AddressOf Solo_IP
+            Case TipoValidacion.Solo_Digitos
+                AddHandler txt.KeyPress, AddressOf Solo_digitos
         End Select
     End Sub
     Public Sub solo_numeros(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
@@ -41,6 +47,20 @@ Module Validar_Entradas
             e.KeyChar = Chr(0)
             e.Handled = True
         End If
+    End Sub
+    Public Sub Solo_digitos(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If Not e.KeyChar.ToString() Like "[0-9]" And Asc(e.KeyChar) <> 8 Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+
+    End Sub
+    Public Sub Solo_IP(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If Not e.KeyChar.ToString() Like "[0-9.]" And Asc(e.KeyChar) <> 8 Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+
     End Sub
     Public Sub Solo_cedulas(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Not e.KeyChar.ToString() Like "[0-9]" And Asc(e.KeyChar) <> 8 Then

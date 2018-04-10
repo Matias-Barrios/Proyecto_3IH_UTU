@@ -75,6 +75,12 @@
     <Compile Include="BorderLabel.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="VentanaConfiguracion.Designer.vb">
+      <DependentUpon>VentanaConfiguracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaConfiguracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Modulo_Comportamiento_Ventanas.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -111,6 +117,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="VentanaConfiguracion.resx">
+      <DependentUpon>VentanaConfiguracion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventana_Login.resx">
       <DependentUpon>Ventana_Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +282,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-group-man-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuration_gears.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkmark-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
