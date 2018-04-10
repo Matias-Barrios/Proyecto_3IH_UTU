@@ -142,5 +142,137 @@
   <ItemGroup>
     <None Include="Resources\exit_icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\adduser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-group-man-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binoculars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear-filters-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference-background-selected-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference-call-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datadear-multiple-worksheets-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datadear-record-your-workings-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\datadear-security-login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\continuing-education-icon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-user-male-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit_icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find-user-male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\google-groups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-foreground-selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\multi-edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-borders.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user-male1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-down2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference-background-selected-filled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference-call-filled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database-import1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-as.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-as-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-tabs-list-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-tabs-list-filled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sentence-case.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sentence-case1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-filled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-group-man-man.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

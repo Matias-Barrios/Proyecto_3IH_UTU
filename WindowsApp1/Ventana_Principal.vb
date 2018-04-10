@@ -48,4 +48,8 @@
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalUsuarios
     End Sub
+
+    Private Sub pnlUsuariosBotonCrearNuevo_Click(sender As Object, e As EventArgs) Handles pnlUsuariosBotonCrearNuevo.Click
+
+    End Sub
 End Class
