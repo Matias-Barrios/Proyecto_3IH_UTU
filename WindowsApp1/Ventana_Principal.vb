@@ -17,6 +17,7 @@
         Me.tabPrincipal.SizeMode = TabSizeMode.Fixed
         Adherir_Validacion(txtAlumnosCedula, TipoValidacion.Solo_cedulas)
         Adherir_Validacion(txtAlumnosNombre, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(pnlUsuariosFiltroNombreUsuario, TipoValidacion.Solo_username)
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
