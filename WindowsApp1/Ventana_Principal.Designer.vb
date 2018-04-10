@@ -534,6 +534,9 @@ Partial Class Ventana_Principal
         '
         'DataGridView1
         '
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(6, 122)
         Me.DataGridView1.Name = "DataGridView1"
@@ -542,6 +545,7 @@ Partial Class Ventana_Principal
         '
         'pnlUsuariosBotonImprimir
         '
+        Me.pnlUsuariosBotonImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.pnlUsuariosBotonImprimir.BackColor = System.Drawing.Color.White
         Me.pnlUsuariosBotonImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
         Me.pnlUsuariosBotonImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
