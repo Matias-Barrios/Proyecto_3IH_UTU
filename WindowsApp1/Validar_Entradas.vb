@@ -9,6 +9,8 @@ Module Validar_Entradas
         Numero_telefono = 5
         Solo_nombres = 6
         Solo_cedulas = 7
+        Solo_password = 8
+        Solo_username = 9
     End Enum
     Public Sub Adherir_Validacion(ByRef CTRL As Windows.Forms.TextBox, ByVal Validation_Type As TipoValidacion)
         Dim txt As Windows.Forms.TextBox = CTRL
@@ -27,6 +29,10 @@ Module Validar_Entradas
                 AddHandler txt.KeyPress, AddressOf Numero_telefono
             Case TipoValidacion.Solo_cedulas
                 AddHandler txt.KeyPress, AddressOf Solo_cedulas
+            Case TipoValidacion.Solo_password
+                AddHandler txt.KeyPress, AddressOf Solo_password
+            Case TipoValidacion.Solo_username
+                AddHandler txt.KeyPress, AddressOf Solo_username
         End Select
     End Sub
     Public Sub solo_numeros(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
@@ -38,6 +44,20 @@ Module Validar_Entradas
     End Sub
     Public Sub Solo_cedulas(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If Not e.KeyChar.ToString() Like "[0-9]" And Asc(e.KeyChar) <> 8 Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+
+    End Sub
+    Public Sub Solo_username(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If Not e.KeyChar.ToString() Like "[a-zA-Z0-9]" And Asc(e.KeyChar) <> 8 Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+
+    End Sub
+    Public Sub Solo_password(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If Not e.KeyChar.ToString() Like "[a-zA-Z0-9@#_\.-]" And Asc(e.KeyChar) <> 8 Then
             e.KeyChar = Chr(0)
             e.Handled = True
         End If

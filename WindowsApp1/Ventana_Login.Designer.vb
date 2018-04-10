@@ -22,6 +22,7 @@ Partial Class Ventana_Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ventana_Login))
         Me.txtNombreUsuario = New System.Windows.Forms.TextBox()
         Me.txtPassword = New System.Windows.Forms.TextBox()
         Me.btnLogin = New System.Windows.Forms.Button()
@@ -100,13 +101,18 @@ Partial Class Ventana_Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(14, Byte), Integer), CType(CType(214, Byte), Integer), CType(CType(236, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(262, 313)
+        Me.ClientSize = New System.Drawing.Size(259, 341)
         Me.Controls.Add(Me.picUserLogin)
         Me.Controls.Add(Me.b_lblPassword)
         Me.Controls.Add(Me.b_lblNombreUsuario)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.txtNombreUsuario)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(275, 380)
+        Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(275, 380)
         Me.Name = "Ventana_Login"
         Me.Text = "Login"
         CType(Me.picUserLogin, System.ComponentModel.ISupportInitialize).EndInit()

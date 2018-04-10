@@ -22,12 +22,20 @@ Partial Class Ventana_Principal
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ventana_Principal))
         Me.btnLogoff = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado = New System.Windows.Forms.Panel()
         Me.btnAlumnos = New System.Windows.Forms.Button()
         Me.btnMaterias = New System.Windows.Forms.Button()
         Me.tabPrincipal = New System.Windows.Forms.TabControl()
         Me.tabPrincipalAlumnos = New System.Windows.Forms.TabPage()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnAlumnosFiltrar = New System.Windows.Forms.Button()
+        Me.txtAlumnosNombre = New System.Windows.Forms.TextBox()
+        Me.lblAlumnosNombre = New System.Windows.Forms.Label()
+        Me.txtAlumnosCedula = New System.Windows.Forms.TextBox()
+        Me.lblAlumnosCedula = New System.Windows.Forms.Label()
+        Me.lblFiltrar = New System.Windows.Forms.Label()
         Me.tabPrincipalMaterias = New System.Windows.Forms.TabPage()
         Me.tabPrincipalTareas = New System.Windows.Forms.TabPage()
         Me.tabPrincipalDocentes = New System.Windows.Forms.TabPage()
@@ -35,13 +43,6 @@ Partial Class Ventana_Principal
         Me.btnTareas = New System.Windows.Forms.Button()
         Me.btnDocentes = New System.Windows.Forms.Button()
         Me.btnUsuarios = New System.Windows.Forms.Button()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblFiltrar = New System.Windows.Forms.Label()
-        Me.lblAlumnosCedula = New System.Windows.Forms.Label()
-        Me.txtAlumnosCedula = New System.Windows.Forms.TextBox()
-        Me.lblAlumnosNombre = New System.Windows.Forms.Label()
-        Me.txtAlumnosNombre = New System.Windows.Forms.TextBox()
-        Me.btnAlumnosFiltrar = New System.Windows.Forms.Button()
         Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
         Me.lblMaterias = New WindowsApp1.BorderLabel()
         Me.lblTareas = New WindowsApp1.BorderLabel()
@@ -54,11 +55,11 @@ Partial Class Ventana_Principal
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         Me.tabPrincipalMaterias.SuspendLayout()
         Me.tabPrincipalTareas.SuspendLayout()
         Me.tabPrincipalDocentes.SuspendLayout()
         Me.tabPrincipalUsuarios.SuspendLayout()
-        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogoff
@@ -141,6 +142,83 @@ Partial Class Ventana_Principal
         Me.tabPrincipalAlumnos.Size = New System.Drawing.Size(836, 526)
         Me.tabPrincipalAlumnos.TabIndex = 0
         Me.tabPrincipalAlumnos.Text = "Alumnos"
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.btnAlumnosFiltrar)
+        Me.Panel1.Controls.Add(Me.txtAlumnosNombre)
+        Me.Panel1.Controls.Add(Me.lblAlumnosNombre)
+        Me.Panel1.Controls.Add(Me.txtAlumnosCedula)
+        Me.Panel1.Controls.Add(Me.lblAlumnosCedula)
+        Me.Panel1.Controls.Add(Me.lblFiltrar)
+        Me.Panel1.Location = New System.Drawing.Point(12, 43)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(818, 100)
+        Me.Panel1.TabIndex = 6
+        '
+        'btnAlumnosFiltrar
+        '
+        Me.btnAlumnosFiltrar.BackColor = System.Drawing.Color.Blue
+        Me.btnAlumnosFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAlumnosFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAlumnosFiltrar.ForeColor = System.Drawing.Color.White
+        Me.btnAlumnosFiltrar.Location = New System.Drawing.Point(661, 35)
+        Me.btnAlumnosFiltrar.Name = "btnAlumnosFiltrar"
+        Me.btnAlumnosFiltrar.Size = New System.Drawing.Size(133, 37)
+        Me.btnAlumnosFiltrar.TabIndex = 15
+        Me.btnAlumnosFiltrar.Text = "Filtrar"
+        Me.btnAlumnosFiltrar.UseVisualStyleBackColor = False
+        '
+        'txtAlumnosNombre
+        '
+        Me.txtAlumnosNombre.Location = New System.Drawing.Point(454, 47)
+        Me.txtAlumnosNombre.Name = "txtAlumnosNombre"
+        Me.txtAlumnosNombre.Size = New System.Drawing.Size(185, 20)
+        Me.txtAlumnosNombre.TabIndex = 11
+        '
+        'lblAlumnosNombre
+        '
+        Me.lblAlumnosNombre.AutoSize = True
+        Me.lblAlumnosNombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAlumnosNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblAlumnosNombre.Location = New System.Drawing.Point(334, 43)
+        Me.lblAlumnosNombre.Name = "lblAlumnosNombre"
+        Me.lblAlumnosNombre.Size = New System.Drawing.Size(83, 22)
+        Me.lblAlumnosNombre.TabIndex = 10
+        Me.lblAlumnosNombre.Text = "Nombre"
+        Me.lblAlumnosNombre.UseMnemonic = False
+        '
+        'txtAlumnosCedula
+        '
+        Me.txtAlumnosCedula.Location = New System.Drawing.Point(131, 43)
+        Me.txtAlumnosCedula.Name = "txtAlumnosCedula"
+        Me.txtAlumnosCedula.Size = New System.Drawing.Size(185, 20)
+        Me.txtAlumnosCedula.TabIndex = 9
+        '
+        'lblAlumnosCedula
+        '
+        Me.lblAlumnosCedula.AutoSize = True
+        Me.lblAlumnosCedula.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAlumnosCedula.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblAlumnosCedula.Location = New System.Drawing.Point(34, 42)
+        Me.lblAlumnosCedula.Name = "lblAlumnosCedula"
+        Me.lblAlumnosCedula.Size = New System.Drawing.Size(74, 22)
+        Me.lblAlumnosCedula.TabIndex = 8
+        Me.lblAlumnosCedula.Text = "Cedula"
+        '
+        'lblFiltrar
+        '
+        Me.lblFiltrar.AutoSize = True
+        Me.lblFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblFiltrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblFiltrar.Location = New System.Drawing.Point(12, 8)
+        Me.lblFiltrar.Name = "lblFiltrar"
+        Me.lblFiltrar.Size = New System.Drawing.Size(72, 24)
+        Me.lblFiltrar.TabIndex = 7
+        Me.lblFiltrar.Text = "Filtrar"
         '
         'tabPrincipalMaterias
         '
@@ -225,83 +303,6 @@ Partial Class Ventana_Principal
         Me.btnUsuarios.TabIndex = 13
         Me.btnUsuarios.Text = "Usuarios"
         Me.btnUsuarios.UseVisualStyleBackColor = False
-        '
-        'Panel1
-        '
-        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(152, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.btnAlumnosFiltrar)
-        Me.Panel1.Controls.Add(Me.txtAlumnosNombre)
-        Me.Panel1.Controls.Add(Me.lblAlumnosNombre)
-        Me.Panel1.Controls.Add(Me.txtAlumnosCedula)
-        Me.Panel1.Controls.Add(Me.lblAlumnosCedula)
-        Me.Panel1.Controls.Add(Me.lblFiltrar)
-        Me.Panel1.Location = New System.Drawing.Point(12, 43)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(818, 100)
-        Me.Panel1.TabIndex = 6
-        '
-        'lblFiltrar
-        '
-        Me.lblFiltrar.AutoSize = True
-        Me.lblFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblFiltrar.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblFiltrar.Location = New System.Drawing.Point(12, 8)
-        Me.lblFiltrar.Name = "lblFiltrar"
-        Me.lblFiltrar.Size = New System.Drawing.Size(72, 24)
-        Me.lblFiltrar.TabIndex = 7
-        Me.lblFiltrar.Text = "Filtrar"
-        '
-        'lblAlumnosCedula
-        '
-        Me.lblAlumnosCedula.AutoSize = True
-        Me.lblAlumnosCedula.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAlumnosCedula.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblAlumnosCedula.Location = New System.Drawing.Point(34, 42)
-        Me.lblAlumnosCedula.Name = "lblAlumnosCedula"
-        Me.lblAlumnosCedula.Size = New System.Drawing.Size(74, 22)
-        Me.lblAlumnosCedula.TabIndex = 8
-        Me.lblAlumnosCedula.Text = "Cedula"
-        '
-        'txtAlumnosCedula
-        '
-        Me.txtAlumnosCedula.Location = New System.Drawing.Point(131, 43)
-        Me.txtAlumnosCedula.Name = "txtAlumnosCedula"
-        Me.txtAlumnosCedula.Size = New System.Drawing.Size(185, 20)
-        Me.txtAlumnosCedula.TabIndex = 9
-        '
-        'lblAlumnosNombre
-        '
-        Me.lblAlumnosNombre.AutoSize = True
-        Me.lblAlumnosNombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAlumnosNombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblAlumnosNombre.Location = New System.Drawing.Point(334, 43)
-        Me.lblAlumnosNombre.Name = "lblAlumnosNombre"
-        Me.lblAlumnosNombre.Size = New System.Drawing.Size(83, 22)
-        Me.lblAlumnosNombre.TabIndex = 10
-        Me.lblAlumnosNombre.Text = "Nombre"
-        Me.lblAlumnosNombre.UseMnemonic = False
-        '
-        'txtAlumnosNombre
-        '
-        Me.txtAlumnosNombre.Location = New System.Drawing.Point(454, 47)
-        Me.txtAlumnosNombre.Name = "txtAlumnosNombre"
-        Me.txtAlumnosNombre.Size = New System.Drawing.Size(185, 20)
-        Me.txtAlumnosNombre.TabIndex = 11
-        '
-        'btnAlumnosFiltrar
-        '
-        Me.btnAlumnosFiltrar.BackColor = System.Drawing.Color.Blue
-        Me.btnAlumnosFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAlumnosFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlumnosFiltrar.ForeColor = System.Drawing.Color.White
-        Me.btnAlumnosFiltrar.Location = New System.Drawing.Point(661, 35)
-        Me.btnAlumnosFiltrar.Name = "btnAlumnosFiltrar"
-        Me.btnAlumnosFiltrar.Size = New System.Drawing.Size(133, 37)
-        Me.btnAlumnosFiltrar.TabIndex = 15
-        Me.btnAlumnosFiltrar.Text = "Filtrar"
-        Me.btnAlumnosFiltrar.UseVisualStyleBackColor = False
         '
         'lblAlumnos_Titulo
         '
@@ -408,17 +409,18 @@ Partial Class Ventana_Principal
         Me.Controls.Add(Me.btnAlumnos)
         Me.Controls.Add(Me.pnlUsuario_logueado)
         Me.Controls.Add(Me.btnLogoff)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Ventana_Principal"
         Me.Text = "Ventana Principal"
         Me.pnlUsuario_logueado.ResumeLayout(False)
         Me.tabPrincipal.ResumeLayout(False)
         Me.tabPrincipalAlumnos.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.tabPrincipalMaterias.ResumeLayout(False)
         Me.tabPrincipalTareas.ResumeLayout(False)
         Me.tabPrincipalDocentes.ResumeLayout(False)
         Me.tabPrincipalUsuarios.ResumeLayout(False)
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
