@@ -35,6 +35,7 @@ Partial Class Ventana_Login
         'txtNombreUsuario
         '
         Me.txtNombreUsuario.Location = New System.Drawing.Point(31, 163)
+        Me.txtNombreUsuario.MaxLength = 50
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtNombreUsuario.Size = New System.Drawing.Size(201, 20)
@@ -44,6 +45,7 @@ Partial Class Ventana_Login
         'txtPassword
         '
         Me.txtPassword.Location = New System.Drawing.Point(31, 232)
+        Me.txtPassword.MaxLength = 50
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtPassword.Size = New System.Drawing.Size(201, 20)

@@ -14,5 +14,7 @@
         Me.Hide()
     End Sub
 
-
+    Private Sub btnVentanaConfiguracionCambiarPassword_Click(sender As Object, e As EventArgs) Handles btnVentanaConfiguracionCambiarPassword.Click
+        VentanaCambiarPassword.ShowDialog()
+    End Sub
 End Class

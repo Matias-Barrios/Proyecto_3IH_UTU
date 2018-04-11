@@ -75,6 +75,13 @@
     <Compile Include="BorderLabel.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Encripcion_Passwords.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VentanaConfiguracion.Designer.vb">
       <DependentUpon>VentanaConfiguracion.vb</DependentUpon>
     </Compile>
@@ -117,6 +124,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaConfiguracion.resx">
       <DependentUpon>VentanaConfiguracion.vb</DependentUpon>
     </EmbeddedResource>

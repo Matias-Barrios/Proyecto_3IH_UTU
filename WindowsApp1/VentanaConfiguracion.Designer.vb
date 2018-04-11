@@ -27,8 +27,9 @@ Partial Class VentanaConfiguracion
         Me.txtVentanaConfiguracionIPServidor = New System.Windows.Forms.TextBox()
         Me.lblVentanaConfiguracionPuerto = New System.Windows.Forms.Label()
         Me.txtVentanaCondiguracionPuerto = New System.Windows.Forms.TextBox()
-        Me.btnVentanaConfiguracionOK = New System.Windows.Forms.Button()
+        Me.btnVentanaConfiguracionCambiarPassword = New System.Windows.Forms.Button()
         Me.btnVentanaConfiguracionCancel = New System.Windows.Forms.Button()
+        Me.btnVentanaConfiguracionOK = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblVentanaConfiguracionIPServidor
@@ -79,20 +80,20 @@ Partial Class VentanaConfiguracion
         Me.txtVentanaCondiguracionPuerto.Size = New System.Drawing.Size(87, 20)
         Me.txtVentanaCondiguracionPuerto.TabIndex = 12
         '
-        'btnVentanaConfiguracionOK
+        'btnVentanaConfiguracionCambiarPassword
         '
-        Me.btnVentanaConfiguracionOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnVentanaConfiguracionOK.BackColor = System.Drawing.Color.White
-        Me.btnVentanaConfiguracionOK.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.checkmark_filled
-        Me.btnVentanaConfiguracionOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnVentanaConfiguracionOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnVentanaConfiguracionOK.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentanaConfiguracionOK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaConfiguracionOK.Location = New System.Drawing.Point(65, 410)
-        Me.btnVentanaConfiguracionOK.Name = "btnVentanaConfiguracionOK"
-        Me.btnVentanaConfiguracionOK.Size = New System.Drawing.Size(86, 39)
-        Me.btnVentanaConfiguracionOK.TabIndex = 13
-        Me.btnVentanaConfiguracionOK.UseVisualStyleBackColor = False
+        Me.btnVentanaConfiguracionCambiarPassword.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnVentanaConfiguracionCambiarPassword.BackColor = System.Drawing.Color.White
+        Me.btnVentanaConfiguracionCambiarPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnVentanaConfiguracionCambiarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnVentanaConfiguracionCambiarPassword.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentanaConfiguracionCambiarPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnVentanaConfiguracionCambiarPassword.Location = New System.Drawing.Point(12, 76)
+        Me.btnVentanaConfiguracionCambiarPassword.Name = "btnVentanaConfiguracionCambiarPassword"
+        Me.btnVentanaConfiguracionCambiarPassword.Size = New System.Drawing.Size(172, 32)
+        Me.btnVentanaConfiguracionCambiarPassword.TabIndex = 15
+        Me.btnVentanaConfiguracionCambiarPassword.Text = "Cambiar password"
+        Me.btnVentanaConfiguracionCambiarPassword.UseVisualStyleBackColor = False
         '
         'btnVentanaConfiguracionCancel
         '
@@ -109,12 +110,28 @@ Partial Class VentanaConfiguracion
         Me.btnVentanaConfiguracionCancel.TabIndex = 14
         Me.btnVentanaConfiguracionCancel.UseVisualStyleBackColor = False
         '
+        'btnVentanaConfiguracionOK
+        '
+        Me.btnVentanaConfiguracionOK.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnVentanaConfiguracionOK.BackColor = System.Drawing.Color.White
+        Me.btnVentanaConfiguracionOK.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.checkmark_filled
+        Me.btnVentanaConfiguracionOK.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnVentanaConfiguracionOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnVentanaConfiguracionOK.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentanaConfiguracionOK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnVentanaConfiguracionOK.Location = New System.Drawing.Point(65, 410)
+        Me.btnVentanaConfiguracionOK.Name = "btnVentanaConfiguracionOK"
+        Me.btnVentanaConfiguracionOK.Size = New System.Drawing.Size(86, 39)
+        Me.btnVentanaConfiguracionOK.TabIndex = 13
+        Me.btnVentanaConfiguracionOK.UseVisualStyleBackColor = False
+        '
         'VentanaConfiguracion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(484, 461)
+        Me.Controls.Add(Me.btnVentanaConfiguracionCambiarPassword)
         Me.Controls.Add(Me.btnVentanaConfiguracionCancel)
         Me.Controls.Add(Me.btnVentanaConfiguracionOK)
         Me.Controls.Add(Me.txtVentanaCondiguracionPuerto)
@@ -139,4 +156,5 @@ Partial Class VentanaConfiguracion
     Friend WithEvents txtVentanaCondiguracionPuerto As TextBox
     Friend WithEvents btnVentanaConfiguracionOK As Button
     Friend WithEvents btnVentanaConfiguracionCancel As Button
+    Friend WithEvents btnVentanaConfiguracionCambiarPassword As Button
 End Class

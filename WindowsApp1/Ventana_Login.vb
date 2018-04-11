@@ -18,8 +18,6 @@
     End Sub
 
     Private Sub txtNombreUsuario_TextChanged(sender As Object, e As EventArgs) Handles txtNombreUsuario.TextChanged
-
-
         If txtNombreUsuario.Text = "" Or txtPassword.Text = "" Then
             btnLogin.Enabled = False
         Else
@@ -33,8 +31,6 @@
             btnLogin.Enabled = False
         Else
             btnLogin.Enabled = True
-
-
         End If
     End Sub
 
