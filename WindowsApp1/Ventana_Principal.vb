@@ -57,4 +57,8 @@
     Private Sub btnVentanaPrincipalConfiguracion_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalConfiguracion.Click
         VentanaConfiguracion.ShowDialog()
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        ventana_crear_alumno.ShowDialog()
+    End Sub
 End Class
