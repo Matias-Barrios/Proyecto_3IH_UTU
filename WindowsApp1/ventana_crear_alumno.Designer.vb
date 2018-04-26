@@ -74,6 +74,7 @@ Partial Class ventana_crear_alumno
         'rdioCrearAlumnoHaceProyecto
         '
         Me.rdioCrearAlumnoHaceProyecto.AutoSize = True
+        Me.rdioCrearAlumnoHaceProyecto.Checked = True
         Me.rdioCrearAlumnoHaceProyecto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!)
         Me.rdioCrearAlumnoHaceProyecto.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.rdioCrearAlumnoHaceProyecto.Location = New System.Drawing.Point(22, 332)

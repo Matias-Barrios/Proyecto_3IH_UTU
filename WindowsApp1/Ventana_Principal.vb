@@ -15,8 +15,8 @@
         Me.tabPrincipal.Appearance = TabAppearance.FlatButtons
         Me.tabPrincipal.ItemSize = New Size(0, 1)
         Me.tabPrincipal.SizeMode = TabSizeMode.Fixed
-        Adherir_Validacion(txtAlumnosCedula, TipoValidacion.Solo_cedulas)
-        Adherir_Validacion(txtAlumnosNombre, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(txtAlumnosFiltrarCedula, TipoValidacion.Solo_cedulas)
+        Adherir_Validacion(txtAlumnosFiltrarNombre, TipoValidacion.Solo_nombres)
         Adherir_Validacion(pnlUsuariosFiltroNombreUsuario, TipoValidacion.Solo_username)
     End Sub
 
@@ -58,7 +58,11 @@
         VentanaConfiguracion.ShowDialog()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnAlumnosCrearNuevo.Click
         ventana_crear_alumno.ShowDialog()
+    End Sub
+
+    Private Sub btnDocentesCrearNuevo_Click(sender As Object, e As EventArgs) Handles btnDocentesCrearNuevo.Click
+        ventana_crear_docente.ShowDialog()
     End Sub
 End Class

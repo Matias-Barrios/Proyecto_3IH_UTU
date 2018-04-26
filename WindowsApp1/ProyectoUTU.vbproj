@@ -75,7 +75,7 @@
     <Compile Include="BorderLabel.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Encripcion_Passwords.vb" />
+    <Compile Include="modulos\Encripcion_Passwords.vb" />
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
@@ -88,7 +88,7 @@
     <Compile Include="VentanaConfiguracion.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo_Comportamiento_Ventanas.vb" />
+    <Compile Include="modulos\Modulo_Comportamiento_Ventanas.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -97,11 +97,17 @@
     <Compile Include="Rounded_Button.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Validar_Entradas.vb" />
+    <Compile Include="modulos\Validar_Entradas.vb" />
     <Compile Include="ventana_crear_alumno.Designer.vb">
       <DependentUpon>ventana_crear_alumno.vb</DependentUpon>
     </Compile>
     <Compile Include="ventana_crear_alumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ventana_crear_docente.Designer.vb">
+      <DependentUpon>ventana_crear_docente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ventana_crear_docente.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventana_Login.vb">
@@ -117,7 +123,7 @@
     <Compile Include="Ventana_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo_Usuarios.vb" />
+    <Compile Include="modulos\Modulo_Usuarios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ventana_crear_alumno.resx">
       <DependentUpon>ventana_crear_alumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventana_crear_docente.resx">
+      <DependentUpon>ventana_crear_docente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventana_Login.resx">
       <DependentUpon>Ventana_Login.vb</DependentUpon>
