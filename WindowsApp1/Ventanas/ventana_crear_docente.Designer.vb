@@ -23,6 +23,8 @@ Partial Class ventana_crear_docente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlCrearDocente = New System.Windows.Forms.Panel()
+        Me.nudCrearDocenteGrado = New System.Windows.Forms.NumericUpDown()
+        Me.lblCrearDocenteGrado = New System.Windows.Forms.Label()
         Me.pnlCrearDocenteCI = New System.Windows.Forms.Panel()
         Me.txtCrearDocenteCI = New System.Windows.Forms.TextBox()
         Me.lblCrearDocenteCI = New System.Windows.Forms.Label()
@@ -41,11 +43,9 @@ Partial Class ventana_crear_docente
         Me.btnCrearDocenteCancelar = New System.Windows.Forms.Button()
         Me.btnCrearDocenteAceptar = New System.Windows.Forms.Button()
         Me.lblCrear_Docente_Titulo = New WindowsApp1.BorderLabel()
-        Me.lblCrearDocenteGrado = New System.Windows.Forms.Label()
-        Me.nudCrearDocenteGrado = New System.Windows.Forms.NumericUpDown()
         Me.pnlCrearDocente.SuspendLayout()
-        Me.pnlCrearDocenteCI.SuspendLayout()
         CType(Me.nudCrearDocenteGrado, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlCrearDocenteCI.SuspendLayout()
         Me.SuspendLayout()
         '
         'pnlCrearDocente
@@ -72,6 +72,31 @@ Partial Class ventana_crear_docente
         Me.pnlCrearDocente.Name = "pnlCrearDocente"
         Me.pnlCrearDocente.Size = New System.Drawing.Size(423, 518)
         Me.pnlCrearDocente.TabIndex = 25
+        '
+        'nudCrearDocenteGrado
+        '
+        Me.nudCrearDocenteGrado.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.nudCrearDocenteGrado.Location = New System.Drawing.Point(197, 345)
+        Me.nudCrearDocenteGrado.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
+        Me.nudCrearDocenteGrado.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudCrearDocenteGrado.Name = "nudCrearDocenteGrado"
+        Me.nudCrearDocenteGrado.Size = New System.Drawing.Size(129, 20)
+        Me.nudCrearDocenteGrado.TabIndex = 32
+        Me.nudCrearDocenteGrado.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'lblCrearDocenteGrado
+        '
+        Me.lblCrearDocenteGrado.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblCrearDocenteGrado.AutoSize = True
+        Me.lblCrearDocenteGrado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearDocenteGrado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblCrearDocenteGrado.Location = New System.Drawing.Point(18, 343)
+        Me.lblCrearDocenteGrado.Name = "lblCrearDocenteGrado"
+        Me.lblCrearDocenteGrado.Size = New System.Drawing.Size(67, 22)
+        Me.lblCrearDocenteGrado.TabIndex = 31
+        Me.lblCrearDocenteGrado.Text = "Grado"
         '
         'pnlCrearDocenteCI
         '
@@ -296,31 +321,6 @@ Partial Class ventana_crear_docente
         Me.lblCrear_Docente_Titulo.TabIndex = 22
         Me.lblCrear_Docente_Titulo.Text = "Cree un nuevo docente..."
         '
-        'lblCrearDocenteGrado
-        '
-        Me.lblCrearDocenteGrado.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblCrearDocenteGrado.AutoSize = True
-        Me.lblCrearDocenteGrado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrearDocenteGrado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearDocenteGrado.Location = New System.Drawing.Point(18, 343)
-        Me.lblCrearDocenteGrado.Name = "lblCrearDocenteGrado"
-        Me.lblCrearDocenteGrado.Size = New System.Drawing.Size(67, 22)
-        Me.lblCrearDocenteGrado.TabIndex = 31
-        Me.lblCrearDocenteGrado.Text = "Grado"
-        '
-        'nudCrearDocenteGrado
-        '
-        Me.nudCrearDocenteGrado.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.nudCrearDocenteGrado.Location = New System.Drawing.Point(197, 345)
-        Me.nudCrearDocenteGrado.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
-        Me.nudCrearDocenteGrado.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.nudCrearDocenteGrado.Name = "nudCrearDocenteGrado"
-        Me.nudCrearDocenteGrado.Size = New System.Drawing.Size(129, 20)
-        Me.nudCrearDocenteGrado.TabIndex = 32
-        Me.nudCrearDocenteGrado.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
         'ventana_crear_docente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -337,9 +337,9 @@ Partial Class ventana_crear_docente
         Me.Text = "Crear nuevo docente"
         Me.pnlCrearDocente.ResumeLayout(False)
         Me.pnlCrearDocente.PerformLayout()
+        CType(Me.nudCrearDocenteGrado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlCrearDocenteCI.ResumeLayout(False)
         Me.pnlCrearDocenteCI.PerformLayout()
-        CType(Me.nudCrearDocenteGrado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

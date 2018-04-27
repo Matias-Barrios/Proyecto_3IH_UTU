@@ -8,4 +8,8 @@
         Adherir_Validacion(txtCrearDocenteEmail, TipoValidacion.Solo_Email)
         datepickerCrearDocenteFechaNacimiento.MaxDate = Date.Now
     End Sub
+
+    Private Sub btnCrearDocenteCancelar_Click(sender As Object, e As EventArgs) Handles btnCrearDocenteCancelar.Click
+        Me.Close()
+    End Sub
 End Class

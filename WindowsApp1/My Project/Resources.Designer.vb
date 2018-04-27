@@ -63,6 +63,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _132224_200() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("132224-200", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property add_books_read_literature_512() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("add-books-read-literature-512", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property add_user_group_man_man() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("add-user-group-man-man", resourceCulture)
@@ -243,6 +263,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property delete_book_trash_education_remove_30d96a3dea2d0c0a_512x512() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("delete-book-trash-education-remove-30d96a3dea2d0c0a-512x512", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property delete_shield() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("delete-shield", resourceCulture)
@@ -346,6 +376,26 @@ Namespace My.Resources
         Friend ReadOnly Property news_filled() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("news-filled", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property noun_713090_cc_e1484300306678() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("noun_713090_cc-e1484300306678", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property noun_713090_cc_e14843003066781() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("noun_713090_cc-e14843003066781", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

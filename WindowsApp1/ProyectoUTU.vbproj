@@ -72,20 +72,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BorderLabel.vb">
+    <Compile Include="clases_personalizadas\BorderLabel.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="modulos\Encripcion_Passwords.vb" />
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Ventanas\ventana_cambiar_password.Designer.vb">
+      <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Ventanas\ventana_cambiar_password.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VentanaConfiguracion.Designer.vb">
+    <Compile Include="Ventanas\VentanaConfiguracion.Designer.vb">
       <DependentUpon>VentanaConfiguracion.vb</DependentUpon>
     </Compile>
-    <Compile Include="VentanaConfiguracion.vb">
+    <Compile Include="Ventanas\VentanaConfiguracion.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modulos\Modulo_Comportamiento_Ventanas.vb" />
@@ -94,33 +94,45 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Rounded_Button.vb">
+    <Compile Include="clases_personalizadas\Rounded_Button.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="modulos\Validar_Entradas.vb" />
-    <Compile Include="ventana_crear_alumno.Designer.vb">
+    <Compile Include="Ventanas\ventana_crear_alumno.Designer.vb">
       <DependentUpon>ventana_crear_alumno.vb</DependentUpon>
     </Compile>
-    <Compile Include="ventana_crear_alumno.vb">
+    <Compile Include="Ventanas\ventana_crear_alumno.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventana_crear_docente.Designer.vb">
+    <Compile Include="Ventanas\ventana_crear_docente.Designer.vb">
       <DependentUpon>ventana_crear_docente.vb</DependentUpon>
     </Compile>
-    <Compile Include="ventana_crear_docente.vb">
+    <Compile Include="Ventanas\ventana_crear_docente.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventana_Login.vb">
+    <Compile Include="Ventanas\Ventana_Login.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventana_Login.Designer.vb">
+    <Compile Include="Ventanas\Ventana_Login.Designer.vb">
       <DependentUpon>Ventana_Login.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ventana_Principal.Designer.vb">
+    <Compile Include="Ventanas\ventana_modificar_alumno.Designer.vb">
+      <DependentUpon>ventana_modificar_alumno.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_modificar_alumno.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\ventana_modificar_docente.Designer.vb">
+      <DependentUpon>ventana_modificar_docente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_modificar_docente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\Ventana_Principal.Designer.vb">
       <DependentUpon>Ventana_Principal.vb</DependentUpon>
     </Compile>
-    <Compile Include="Ventana_Principal.vb">
+    <Compile Include="Ventanas\Ventana_Principal.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="modulos\Modulo_Usuarios.vb" />
@@ -136,22 +148,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Ventanas\ventana_cambiar_password.resx">
+      <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VentanaConfiguracion.resx">
+    <EmbeddedResource Include="Ventanas\VentanaConfiguracion.resx">
       <DependentUpon>VentanaConfiguracion.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventana_crear_alumno.resx">
+    <EmbeddedResource Include="Ventanas\ventana_crear_alumno.resx">
       <DependentUpon>ventana_crear_alumno.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventana_crear_docente.resx">
+    <EmbeddedResource Include="Ventanas\ventana_crear_docente.resx">
       <DependentUpon>ventana_crear_docente.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventana_Login.resx">
+    <EmbeddedResource Include="Ventanas\Ventana_Login.resx">
       <DependentUpon>Ventana_Login.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ventana_Principal.resx">
+    <EmbeddedResource Include="Ventanas\ventana_modificar_alumno.resx">
+      <DependentUpon>ventana_modificar_alumno.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_modificar_docente.resx">
+      <DependentUpon>ventana_modificar_docente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Ventana_Principal.resx">
       <DependentUpon>Ventana_Principal.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -319,6 +337,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-books-read-literature-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-book-trash-education-remove-30d96a3dea2d0c0a-512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noun_713090_cc-e1484300306678.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\132224-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noun_713090_cc-e14843003066781.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

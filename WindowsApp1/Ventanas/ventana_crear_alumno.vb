@@ -57,4 +57,12 @@ Public Class ventana_crear_alumno
         'Si ta todo bien ta todo bien
         Return True
     End Function
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
+    End Sub
+
+    Private Sub lblCrear_Alumnos_Titulo_Click(sender As Object, e As EventArgs) Handles lblCrear_Alumnos_Titulo.Click
+
+    End Sub
 End Class

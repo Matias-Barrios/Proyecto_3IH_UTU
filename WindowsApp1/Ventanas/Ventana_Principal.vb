@@ -65,4 +65,16 @@
     Private Sub btnDocentesCrearNuevo_Click(sender As Object, e As EventArgs) Handles btnDocentesCrearNuevo.Click
         ventana_crear_docente.ShowDialog()
     End Sub
+
+    Private Sub btnAlumnosModificar_Click(sender As Object, e As EventArgs) Handles btnAlumnosModificar.Click
+        ventana_modificar_alumno.ShowDialog()
+    End Sub
+
+    Private Sub btnAlumnosEliminar_Click(sender As Object, e As EventArgs) Handles btnAlumnosEliminar.Click
+
+    End Sub
+
+    Private Sub btnDocentesModificar_Click(sender As Object, e As EventArgs) Handles btnDocentesModificar.Click
+        ventana_modificar_docente.ShowDialog()
+    End Sub
 End Class
