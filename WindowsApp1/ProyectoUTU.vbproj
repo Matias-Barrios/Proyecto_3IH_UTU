@@ -76,6 +76,12 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="modulos\Encripcion_Passwords.vb" />
+    <Compile Include="controles_personalizados\Persona_Vista.Designer.vb">
+      <DependentUpon>Persona_Vista.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controles_personalizados\Persona_Vista.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Ventanas\ventana_cambiar_password.Designer.vb">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
     </Compile>
@@ -148,6 +154,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="controles_personalizados\Persona_Vista.resx">
+      <DependentUpon>Persona_Vista.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_cambiar_password.resx">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
     </EmbeddedResource>

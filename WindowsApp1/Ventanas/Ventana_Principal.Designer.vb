@@ -33,10 +33,10 @@ Partial Class Ventana_Principal
         Me.btnMaterias = New System.Windows.Forms.Button()
         Me.tabPrincipal = New System.Windows.Forms.TabControl()
         Me.tabPrincipalAlumnos = New System.Windows.Forms.TabPage()
+        Me.pnlAlumnosFichas = New System.Windows.Forms.Panel()
         Me.btnAlumnosModificar = New System.Windows.Forms.Button()
         Me.btnAlumnosEliminar = New System.Windows.Forms.Button()
         Me.btnAlumnosCrearNuevo = New System.Windows.Forms.Button()
-        Me.datagridAlumnos = New System.Windows.Forms.DataGridView()
         Me.btnAlumnosImprimir = New System.Windows.Forms.Button()
         Me.pnlAlumnosFiltrar = New System.Windows.Forms.Panel()
         Me.btnAlumnosFiltrar = New System.Windows.Forms.Button()
@@ -109,7 +109,6 @@ Partial Class Ventana_Principal
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
-        CType(Me.datagridAlumnos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlAlumnosFiltrar.SuspendLayout()
         Me.tabPrincipalMaterias.SuspendLayout()
         CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -237,10 +236,10 @@ Partial Class Ventana_Principal
         'tabPrincipalAlumnos
         '
         Me.tabPrincipalAlumnos.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.tabPrincipalAlumnos.Controls.Add(Me.pnlAlumnosFichas)
         Me.tabPrincipalAlumnos.Controls.Add(Me.btnAlumnosModificar)
         Me.tabPrincipalAlumnos.Controls.Add(Me.btnAlumnosEliminar)
         Me.tabPrincipalAlumnos.Controls.Add(Me.btnAlumnosCrearNuevo)
-        Me.tabPrincipalAlumnos.Controls.Add(Me.datagridAlumnos)
         Me.tabPrincipalAlumnos.Controls.Add(Me.btnAlumnosImprimir)
         Me.tabPrincipalAlumnos.Controls.Add(Me.pnlAlumnosFiltrar)
         Me.tabPrincipalAlumnos.Controls.Add(Me.lblAlumnos_Titulo)
@@ -250,6 +249,13 @@ Partial Class Ventana_Principal
         Me.tabPrincipalAlumnos.Size = New System.Drawing.Size(836, 526)
         Me.tabPrincipalAlumnos.TabIndex = 0
         Me.tabPrincipalAlumnos.Text = "Alumnos"
+        '
+        'pnlAlumnosFichas
+        '
+        Me.pnlAlumnosFichas.Location = New System.Drawing.Point(12, 232)
+        Me.pnlAlumnosFichas.Name = "pnlAlumnosFichas"
+        Me.pnlAlumnosFichas.Size = New System.Drawing.Size(818, 247)
+        Me.pnlAlumnosFichas.TabIndex = 26
         '
         'btnAlumnosModificar
         '
@@ -295,17 +301,6 @@ Partial Class Ventana_Principal
         Me.btnAlumnosCrearNuevo.Size = New System.Drawing.Size(59, 57)
         Me.btnAlumnosCrearNuevo.TabIndex = 23
         Me.btnAlumnosCrearNuevo.UseVisualStyleBackColor = False
-        '
-        'datagridAlumnos
-        '
-        Me.datagridAlumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.datagridAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagridAlumnos.Location = New System.Drawing.Point(12, 207)
-        Me.datagridAlumnos.Name = "datagridAlumnos"
-        Me.datagridAlumnos.Size = New System.Drawing.Size(817, 272)
-        Me.datagridAlumnos.TabIndex = 22
         '
         'btnAlumnosImprimir
         '
@@ -1221,7 +1216,6 @@ Partial Class Ventana_Principal
         Me.pnlUsuario_logueado.ResumeLayout(False)
         Me.tabPrincipal.ResumeLayout(False)
         Me.tabPrincipalAlumnos.ResumeLayout(False)
-        CType(Me.datagridAlumnos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.pnlAlumnosFiltrar.ResumeLayout(False)
         Me.pnlAlumnosFiltrar.PerformLayout()
         Me.tabPrincipalMaterias.ResumeLayout(False)
@@ -1283,7 +1277,6 @@ Partial Class Ventana_Principal
     Friend WithEvents pnlUsuariosBotonImprimir As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents btnAlumnosFiltrar As Button
-    Friend WithEvents datagridAlumnos As DataGridView
     Friend WithEvents btnAlumnosImprimir As Button
     Friend WithEvents btnVentanaPrincipalConfiguracion As Button
     Friend WithEvents btnAlumnosModificar As Button
@@ -1327,4 +1320,5 @@ Partial Class Ventana_Principal
     Friend WithEvents TextBox3 As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents pnlAlumnosFichas As Panel
 End Class
