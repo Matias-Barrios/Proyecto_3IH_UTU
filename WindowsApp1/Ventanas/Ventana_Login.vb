@@ -39,27 +39,14 @@
         Try
             Ventana_Principal.usuario = Validar(usersList, Me.txtNombreUsuario.Text, Me.txtPassword.Text)
             Me.Hide()
-            Ventana_Principal.Show()
+            Ventana_Principal.ShowDialog()
         Catch ex As Exception
             MsgBox("Either your username or your password is incorrect", 0, "Authentication error")
         End Try
     End Sub
-    ' Esto hace que la ventana sea inamovible. Lo comento aca pero si despues lo queremos usar lo descomentamos
-    '
-    'Protected Overrides Sub WndProc(ByRef m As Message)
-    '    Const WM_NCLBUTTONDOWN As Integer = 161
-    '    Const WM_SYSCOMMAND As Integer = 274
-    '    Const HTCAPTION As Integer = 2
-    '    Const SC_MOVE As Integer = 61456
 
-    '    If (m.Msg = WM_SYSCOMMAND) And (m.WParam.ToInt32() = SC_MOVE) Then
-    '        Return
-    '    End If
-
-    '    If (m.Msg = WM_NCLBUTTONDOWN) And (m.WParam.ToInt32() = HTCAPTION) Then
-    '        Return
-    '    End If
-
-    '    MyBase.WndProc(m)
-    'End Sub
-End Class
+    Private Sub Cerra_Ventana(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
+        Me.Hide()
+        Ventana_Bienvenida.Show()
+    End Sub 'Form1_Closing
+End Class 'Form1

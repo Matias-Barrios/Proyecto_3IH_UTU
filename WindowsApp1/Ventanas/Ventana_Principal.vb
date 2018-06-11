@@ -78,7 +78,5 @@
         ventana_modificar_docente.ShowDialog()
     End Sub
 
-    Private Sub pnlAlumnosFichas_Paint(sender As Object, e As PaintEventArgs) Handles pnlAlumnosFichas.Paint
-        pnlAlumnosFichas.Controls.Add(New Persona_Vista)
-    End Sub
+
 End Class

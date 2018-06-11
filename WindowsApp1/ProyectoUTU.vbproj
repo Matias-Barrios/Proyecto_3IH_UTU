@@ -152,6 +152,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Ventanas\Ventana_Bienvenida.Designer.vb">
+      <DependentUpon>Ventana_Bienvenida.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Ventana_Bienvenida.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="controles_personalizados\Persona_Vista.resx">
@@ -186,6 +192,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Ventana_Bienvenida.resx">
+      <DependentUpon>Ventana_Bienvenida.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -361,6 +370,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\noun_713090_cc-e14843003066781.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\isologotipo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
