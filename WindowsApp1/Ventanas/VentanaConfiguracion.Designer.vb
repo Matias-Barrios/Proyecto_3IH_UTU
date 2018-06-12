@@ -88,7 +88,7 @@ Partial Class VentanaConfiguracion
         Me.btnVentanaConfiguracionCambiarPassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnVentanaConfiguracionCambiarPassword.Font = New System.Drawing.Font("Arial Rounded MT Bold", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVentanaConfiguracionCambiarPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaConfiguracionCambiarPassword.Location = New System.Drawing.Point(12, 76)
+        Me.btnVentanaConfiguracionCambiarPassword.Location = New System.Drawing.Point(147, 150)
         Me.btnVentanaConfiguracionCambiarPassword.Name = "btnVentanaConfiguracionCambiarPassword"
         Me.btnVentanaConfiguracionCambiarPassword.Size = New System.Drawing.Size(172, 32)
         Me.btnVentanaConfiguracionCambiarPassword.TabIndex = 15
@@ -104,9 +104,9 @@ Partial Class VentanaConfiguracion
         Me.btnVentanaConfiguracionCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnVentanaConfiguracionCancel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVentanaConfiguracionCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaConfiguracionCancel.Location = New System.Drawing.Point(319, 410)
+        Me.btnVentanaConfiguracionCancel.Location = New System.Drawing.Point(104, 399)
         Me.btnVentanaConfiguracionCancel.Name = "btnVentanaConfiguracionCancel"
-        Me.btnVentanaConfiguracionCancel.Size = New System.Drawing.Size(86, 39)
+        Me.btnVentanaConfiguracionCancel.Size = New System.Drawing.Size(45, 45)
         Me.btnVentanaConfiguracionCancel.TabIndex = 14
         Me.btnVentanaConfiguracionCancel.UseVisualStyleBackColor = False
         '
@@ -119,9 +119,9 @@ Partial Class VentanaConfiguracion
         Me.btnVentanaConfiguracionOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnVentanaConfiguracionOK.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVentanaConfiguracionOK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaConfiguracionOK.Location = New System.Drawing.Point(65, 410)
+        Me.btnVentanaConfiguracionOK.Location = New System.Drawing.Point(318, 399)
         Me.btnVentanaConfiguracionOK.Name = "btnVentanaConfiguracionOK"
-        Me.btnVentanaConfiguracionOK.Size = New System.Drawing.Size(86, 39)
+        Me.btnVentanaConfiguracionOK.Size = New System.Drawing.Size(45, 45)
         Me.btnVentanaConfiguracionOK.TabIndex = 13
         Me.btnVentanaConfiguracionOK.UseVisualStyleBackColor = False
         '

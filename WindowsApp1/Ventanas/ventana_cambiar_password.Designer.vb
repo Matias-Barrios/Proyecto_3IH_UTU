@@ -41,9 +41,9 @@ Partial Class VentanaCambiarPassword
         Me.btnVentanaCambiarPasswordCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnVentanaCambiarPasswordCancel.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVentanaCambiarPasswordCancel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaCambiarPasswordCancel.Location = New System.Drawing.Point(266, 174)
+        Me.btnVentanaCambiarPasswordCancel.Location = New System.Drawing.Point(74, 174)
         Me.btnVentanaCambiarPasswordCancel.Name = "btnVentanaCambiarPasswordCancel"
-        Me.btnVentanaCambiarPasswordCancel.Size = New System.Drawing.Size(86, 39)
+        Me.btnVentanaCambiarPasswordCancel.Size = New System.Drawing.Size(45, 45)
         Me.btnVentanaCambiarPasswordCancel.TabIndex = 16
         Me.btnVentanaCambiarPasswordCancel.UseVisualStyleBackColor = False
         '
@@ -56,9 +56,9 @@ Partial Class VentanaCambiarPassword
         Me.btnVentanaCambiarPasswordOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnVentanaCambiarPasswordOK.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVentanaCambiarPasswordOK.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaCambiarPasswordOK.Location = New System.Drawing.Point(21, 174)
+        Me.btnVentanaCambiarPasswordOK.Location = New System.Drawing.Point(259, 174)
         Me.btnVentanaCambiarPasswordOK.Name = "btnVentanaCambiarPasswordOK"
-        Me.btnVentanaCambiarPasswordOK.Size = New System.Drawing.Size(86, 39)
+        Me.btnVentanaCambiarPasswordOK.Size = New System.Drawing.Size(45, 45)
         Me.btnVentanaCambiarPasswordOK.TabIndex = 15
         Me.btnVentanaCambiarPasswordOK.UseVisualStyleBackColor = False
         '
@@ -140,7 +140,7 @@ Partial Class VentanaCambiarPassword
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(102, Byte), Integer), CType(CType(204, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.Gray
         Me.ClientSize = New System.Drawing.Size(384, 261)
         Me.Controls.Add(Me.txtVentanaCambiarPasswordNuevoRepetido)
         Me.Controls.Add(Me.lblVentanaCambiarPasswordNuevoRepetido)
@@ -155,7 +155,7 @@ Partial Class VentanaCambiarPassword
         Me.MinimizeBox = False
         Me.MinimumSize = New System.Drawing.Size(400, 300)
         Me.Name = "VentanaCambiarPassword"
-        Me.Text = "Cambiar password"
+        Me.Text = "Cambiar Password"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

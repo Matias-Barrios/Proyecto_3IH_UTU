@@ -3,10 +3,8 @@
 Public Class ventana_crear_alumno
     Private Sub ventana_crear_alumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Adherir_Validacion(txtCrearAlumnoCI, TipoValidacion.Solo_cedulas)
-        Adherir_Validacion(txtCrearAlumnoPrimerNombre, TipoValidacion.Solo_nombres)
-        Adherir_Validacion(txtCrearAlumnoSegundoNombre, TipoValidacion.Solo_nombres)
-        Adherir_Validacion(txtCrearAlumnoPrimerApellido, TipoValidacion.Solo_nombres)
-        Adherir_Validacion(txtCrearAlumnoSegundoApellido, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(txtCrearAlumnoNombre, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(txtCrearAlumnoApellido, TipoValidacion.Solo_nombres)
         Adherir_Validacion(txtCrearAlumnoEmail, TipoValidacion.Solo_Email)
         datepickerCrearAlumnoFechaNacimiento.MaxDate = Date.Now
     End Sub
@@ -28,23 +26,13 @@ Public Class ventana_crear_alumno
             Return False
         End If
 
-        If Regex.Matches(txtCrearAlumnoPrimerNombre.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
+        If Regex.Matches(txtCrearAlumnoNombre.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
             MsgBox("Debe completar el campo 'Primer Nombre' correctamente!")
             Return False
         End If
 
-        If Regex.Matches(txtCrearAlumnoSegundoNombre.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
-            MsgBox("Debe completar el campo 'Segundo Nombre' correctamente!")
-            Return False
-        End If
-
-        If Regex.Matches(txtCrearAlumnoPrimerApellido.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
+        If Regex.Matches(txtCrearAlumnoApellido.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
             MsgBox("Debe completar el campo 'Primer Apellido' correctamente!")
-            Return False
-        End If
-
-        If Regex.Matches(txtCrearAlumnoSegundoApellido.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
-            MsgBox("Debe completar el campo 'Segundo Apellido' correctamente!")
             Return False
         End If
 
@@ -58,11 +46,4 @@ Public Class ventana_crear_alumno
         Return True
     End Function
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
-
-    Private Sub lblCrear_Alumnos_Titulo_Click(sender As Object, e As EventArgs) Handles lblCrear_Alumnos_Titulo.Click
-
-    End Sub
 End Class
