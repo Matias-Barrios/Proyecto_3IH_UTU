@@ -25,41 +25,25 @@ Partial Class Ventana_Principal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ventana_Principal))
         Me.btnLogoff = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado = New System.Windows.Forms.Panel()
-        Me.b_lblRol_Dinamico = New WindowsApp1.BorderLabel()
-        Me.b_lblRol_fijo = New WindowsApp1.BorderLabel()
-        Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
-        Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
         Me.btnAlumnos = New System.Windows.Forms.Button()
         Me.btnMaterias = New System.Windows.Forms.Button()
         Me.tabPrincipal = New System.Windows.Forms.TabControl()
         Me.tabPrincipalAlumnos = New System.Windows.Forms.TabPage()
         Me.datagridAlumnos = New System.Windows.Forms.DataGridView()
-        Me.btnAlumnosModificar = New System.Windows.Forms.Button()
-        Me.btnAlumnosEliminar = New System.Windows.Forms.Button()
-        Me.btnAlumnosCrearNuevo = New System.Windows.Forms.Button()
-        Me.btnAlumnosImprimir = New System.Windows.Forms.Button()
         Me.pnlAlumnosFiltrar = New System.Windows.Forms.Panel()
-        Me.btnAlumnosFiltrar = New System.Windows.Forms.Button()
         Me.txtAlumnosFiltrarNombre = New System.Windows.Forms.TextBox()
         Me.lblAlumnosNombre = New System.Windows.Forms.Label()
         Me.txtAlumnosFiltrarCedula = New System.Windows.Forms.TextBox()
         Me.lblAlumnosCedula = New System.Windows.Forms.Label()
         Me.lblAlumnoslblFiltrar = New System.Windows.Forms.Label()
-        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
         Me.tabPrincipalMaterias = New System.Windows.Forms.TabPage()
-        Me.btnMateriasModificar = New System.Windows.Forms.Button()
-        Me.btnMateriasEliminar = New System.Windows.Forms.Button()
-        Me.btnMateriasCrear = New System.Windows.Forms.Button()
         Me.datagridMaterias = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.btnMateriasFiltrar = New System.Windows.Forms.Button()
         Me.txtMateriasDescripcion = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtMateriasFiltrarNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.btnMateriasImprimir = New System.Windows.Forms.Button()
-        Me.lblMaterias = New WindowsApp1.BorderLabel()
         Me.tabPrincipalTareas = New System.Windows.Forms.TabPage()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.cboAsignatura = New System.Windows.Forms.ComboBox()
@@ -68,66 +52,82 @@ Partial Class Ventana_Principal
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.cbxInstituto = New System.Windows.Forms.Label()
-        Me.btnModificarCalificaciones = New System.Windows.Forms.Button()
-        Me.btnEliminarCalificaciones = New System.Windows.Forms.Button()
-        Me.btnCrearCalificaciones = New System.Windows.Forms.Button()
         Me.datagridCalificaciones = New System.Windows.Forms.DataGridView()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.cboCategoriacalifiacion = New System.Windows.Forms.ComboBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.btnCalificacionesFiltrar = New System.Windows.Forms.Button()
         Me.txtTemaCalificacion = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtIDCalificacion = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.btnEvaluacionesImprimir = New System.Windows.Forms.Button()
-        Me.lblTareas = New WindowsApp1.BorderLabel()
         Me.tabPrincipalDocentes = New System.Windows.Forms.TabPage()
-        Me.btnDocentesModificar = New System.Windows.Forms.Button()
-        Me.btnDocentesEliminar = New System.Windows.Forms.Button()
-        Me.btnDocentesCrearNuevo = New System.Windows.Forms.Button()
         Me.datagridDocentes = New System.Windows.Forms.DataGridView()
         Me.pnlDocentesFiltros = New System.Windows.Forms.Panel()
-        Me.btnDocentesFiltrarRUN = New System.Windows.Forms.Button()
         Me.txtDocenteFiltrarNombre = New System.Windows.Forms.TextBox()
         Me.lblDocentesFiltrarNombre = New System.Windows.Forms.Label()
         Me.txtDocentesFiltrarCedula = New System.Windows.Forms.TextBox()
         Me.lblDocentesFiltrarCedula = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnDocentesImprimir = New System.Windows.Forms.Button()
-        Me.lblDocentes = New WindowsApp1.BorderLabel()
         Me.tabPrincipalUsuarios = New System.Windows.Forms.TabPage()
         Me.pnlUsuariosFiltro = New System.Windows.Forms.Panel()
-        Me.btnUsuariosBotonFiltrarNombre = New System.Windows.Forms.Button()
         Me.pnlUsuariosFiltroNombreUsuario = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.btnUsuariosImprimir = New System.Windows.Forms.Button()
         Me.datagridUsuarios = New System.Windows.Forms.DataGridView()
-        Me.btnUsuariosModificar = New System.Windows.Forms.Button()
-        Me.btnUsuariosBotonEliminarUsuario = New System.Windows.Forms.Button()
-        Me.btnUsuariosBotonCrearNuevo = New System.Windows.Forms.Button()
-        Me.lblUsuarios = New WindowsApp1.BorderLabel()
         Me.tabpageInstitutos = New System.Windows.Forms.TabPage()
         Me.datagridInstitutos = New System.Windows.Forms.DataGridView()
-        Me.btnInstitutoImprimir = New System.Windows.Forms.Button()
-        Me.btnInstitutoModificar = New System.Windows.Forms.Button()
-        Me.btnInstitutoEliminar = New System.Windows.Forms.Button()
-        Me.btnInstitutoCrear = New System.Windows.Forms.Button()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.btnInstitutoFiltrar = New System.Windows.Forms.Button()
         Me.txtNombreInstitutoFiltrar = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtIDInstitutoFiltrar = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.BorderLabel1 = New WindowsApp1.BorderLabel()
         Me.btnTareas = New System.Windows.Forms.Button()
         Me.btnDocentes = New System.Windows.Forms.Button()
         Me.btnUsuarios = New System.Windows.Forms.Button()
-        Me.btnVentanaPrincipalConfiguracion = New System.Windows.Forms.Button()
         Me.btnVentanaPrincipalInstitutos = New System.Windows.Forms.Button()
+        Me.btnVentanaPrincipalConfiguracion = New System.Windows.Forms.Button()
+        Me.btnAlumnosModificar = New System.Windows.Forms.Button()
+        Me.btnAlumnosEliminar = New System.Windows.Forms.Button()
+        Me.btnAlumnosCrearNuevo = New System.Windows.Forms.Button()
+        Me.btnAlumnosImprimir = New System.Windows.Forms.Button()
+        Me.btnAlumnosFiltrar = New System.Windows.Forms.Button()
+        Me.btnMateriasModificar = New System.Windows.Forms.Button()
+        Me.btnMateriasEliminar = New System.Windows.Forms.Button()
+        Me.btnMateriasCrear = New System.Windows.Forms.Button()
+        Me.btnMateriasFiltrar = New System.Windows.Forms.Button()
+        Me.btnMateriasImprimir = New System.Windows.Forms.Button()
+        Me.btnModificarCalificaciones = New System.Windows.Forms.Button()
+        Me.btnEliminarCalificaciones = New System.Windows.Forms.Button()
+        Me.btnCrearCalificaciones = New System.Windows.Forms.Button()
+        Me.btnCalificacionesFiltrar = New System.Windows.Forms.Button()
+        Me.btnEvaluacionesImprimir = New System.Windows.Forms.Button()
+        Me.btnDocentesModificar = New System.Windows.Forms.Button()
+        Me.btnDocentesEliminar = New System.Windows.Forms.Button()
+        Me.btnDocentesCrearNuevo = New System.Windows.Forms.Button()
+        Me.btnDocentesFiltrarRUN = New System.Windows.Forms.Button()
+        Me.btnDocentesImprimir = New System.Windows.Forms.Button()
+        Me.btnUsuariosBotonFiltrarNombre = New System.Windows.Forms.Button()
+        Me.btnUsuariosImprimir = New System.Windows.Forms.Button()
+        Me.btnUsuariosModificar = New System.Windows.Forms.Button()
+        Me.btnUsuariosBotonEliminarUsuario = New System.Windows.Forms.Button()
+        Me.btnUsuariosBotonCrearNuevo = New System.Windows.Forms.Button()
+        Me.btnInstitutoImprimir = New System.Windows.Forms.Button()
+        Me.btnInstitutoModificar = New System.Windows.Forms.Button()
+        Me.btnInstitutoEliminar = New System.Windows.Forms.Button()
+        Me.btnInstitutoCrear = New System.Windows.Forms.Button()
+        Me.btnInstitutoFiltrar = New System.Windows.Forms.Button()
+        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
+        Me.lblMaterias = New WindowsApp1.BorderLabel()
+        Me.lblTareas = New WindowsApp1.BorderLabel()
+        Me.lblDocentes = New WindowsApp1.BorderLabel()
+        Me.lblUsuarios = New WindowsApp1.BorderLabel()
+        Me.BorderLabel1 = New WindowsApp1.BorderLabel()
+        Me.b_lblRol_Dinamico = New WindowsApp1.BorderLabel()
+        Me.b_lblRol_fijo = New WindowsApp1.BorderLabel()
+        Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
+        Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
@@ -177,46 +177,6 @@ Partial Class Ventana_Principal
         Me.pnlUsuario_logueado.Name = "pnlUsuario_logueado"
         Me.pnlUsuario_logueado.Size = New System.Drawing.Size(211, 71)
         Me.pnlUsuario_logueado.TabIndex = 6
-        '
-        'b_lblRol_Dinamico
-        '
-        Me.b_lblRol_Dinamico.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblRol_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.b_lblRol_Dinamico.Location = New System.Drawing.Point(120, 33)
-        Me.b_lblRol_Dinamico.Name = "b_lblRol_Dinamico"
-        Me.b_lblRol_Dinamico.Size = New System.Drawing.Size(74, 24)
-        Me.b_lblRol_Dinamico.TabIndex = 4
-        Me.b_lblRol_Dinamico.Text = "rol"
-        '
-        'b_lblRol_fijo
-        '
-        Me.b_lblRol_fijo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblRol_fijo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.b_lblRol_fijo.Location = New System.Drawing.Point(3, 33)
-        Me.b_lblRol_fijo.Name = "b_lblRol_fijo"
-        Me.b_lblRol_fijo.Size = New System.Drawing.Size(138, 36)
-        Me.b_lblRol_fijo.TabIndex = 3
-        Me.b_lblRol_fijo.Text = "Rol : "
-        '
-        'b_lblNombreUsuario_Dinamico
-        '
-        Me.b_lblNombreUsuario_Dinamico.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblNombreUsuario_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.b_lblNombreUsuario_Dinamico.Location = New System.Drawing.Point(122, 7)
-        Me.b_lblNombreUsuario_Dinamico.Name = "b_lblNombreUsuario_Dinamico"
-        Me.b_lblNombreUsuario_Dinamico.Size = New System.Drawing.Size(79, 24)
-        Me.b_lblNombreUsuario_Dinamico.TabIndex = 2
-        Me.b_lblNombreUsuario_Dinamico.Text = "usuario"
-        '
-        'b_lblusuarioLogueado_nombre
-        '
-        Me.b_lblusuarioLogueado_nombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblusuarioLogueado_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.b_lblusuarioLogueado_nombre.Location = New System.Drawing.Point(4, 7)
-        Me.b_lblusuarioLogueado_nombre.Name = "b_lblusuarioLogueado_nombre"
-        Me.b_lblusuarioLogueado_nombre.Size = New System.Drawing.Size(120, 36)
-        Me.b_lblusuarioLogueado_nombre.TabIndex = 1
-        Me.b_lblusuarioLogueado_nombre.Text = "Bienvenido,"
         '
         'btnAlumnos
         '
@@ -290,67 +250,6 @@ Partial Class Ventana_Principal
         Me.datagridAlumnos.Size = New System.Drawing.Size(818, 272)
         Me.datagridAlumnos.TabIndex = 30
         '
-        'btnAlumnosModificar
-        '
-        Me.btnAlumnosModificar.BackColor = System.Drawing.Color.White
-        Me.btnAlumnosModificar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
-        Me.btnAlumnosModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAlumnosModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAlumnosModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlumnosModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAlumnosModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnAlumnosModificar.Location = New System.Drawing.Point(121, 47)
-        Me.btnAlumnosModificar.Name = "btnAlumnosModificar"
-        Me.btnAlumnosModificar.Size = New System.Drawing.Size(50, 50)
-        Me.btnAlumnosModificar.TabIndex = 25
-        Me.btnAlumnosModificar.UseVisualStyleBackColor = False
-        '
-        'btnAlumnosEliminar
-        '
-        Me.btnAlumnosEliminar.BackColor = System.Drawing.Color.White
-        Me.btnAlumnosEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
-        Me.btnAlumnosEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAlumnosEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAlumnosEliminar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlumnosEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAlumnosEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnAlumnosEliminar.Location = New System.Drawing.Point(65, 47)
-        Me.btnAlumnosEliminar.Name = "btnAlumnosEliminar"
-        Me.btnAlumnosEliminar.Size = New System.Drawing.Size(50, 50)
-        Me.btnAlumnosEliminar.TabIndex = 24
-        Me.btnAlumnosEliminar.UseVisualStyleBackColor = False
-        '
-        'btnAlumnosCrearNuevo
-        '
-        Me.btnAlumnosCrearNuevo.BackColor = System.Drawing.Color.White
-        Me.btnAlumnosCrearNuevo.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_user_group_man_man
-        Me.btnAlumnosCrearNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAlumnosCrearNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAlumnosCrearNuevo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlumnosCrearNuevo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAlumnosCrearNuevo.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnAlumnosCrearNuevo.Location = New System.Drawing.Point(9, 47)
-        Me.btnAlumnosCrearNuevo.Name = "btnAlumnosCrearNuevo"
-        Me.btnAlumnosCrearNuevo.Size = New System.Drawing.Size(50, 50)
-        Me.btnAlumnosCrearNuevo.TabIndex = 23
-        Me.btnAlumnosCrearNuevo.UseVisualStyleBackColor = False
-        '
-        'btnAlumnosImprimir
-        '
-        Me.btnAlumnosImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAlumnosImprimir.BackColor = System.Drawing.Color.White
-        Me.btnAlumnosImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
-        Me.btnAlumnosImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAlumnosImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAlumnosImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlumnosImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAlumnosImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnAlumnosImprimir.Location = New System.Drawing.Point(792, 485)
-        Me.btnAlumnosImprimir.Name = "btnAlumnosImprimir"
-        Me.btnAlumnosImprimir.Size = New System.Drawing.Size(35, 35)
-        Me.btnAlumnosImprimir.TabIndex = 21
-        Me.btnAlumnosImprimir.UseVisualStyleBackColor = False
-        '
         'pnlAlumnosFiltrar
         '
         Me.pnlAlumnosFiltrar.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -366,21 +265,6 @@ Partial Class Ventana_Principal
         Me.pnlAlumnosFiltrar.Name = "pnlAlumnosFiltrar"
         Me.pnlAlumnosFiltrar.Size = New System.Drawing.Size(818, 100)
         Me.pnlAlumnosFiltrar.TabIndex = 6
-        '
-        'btnAlumnosFiltrar
-        '
-        Me.btnAlumnosFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnAlumnosFiltrar.BackColor = System.Drawing.Color.White
-        Me.btnAlumnosFiltrar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.find_user_male
-        Me.btnAlumnosFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnAlumnosFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAlumnosFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAlumnosFiltrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnAlumnosFiltrar.Location = New System.Drawing.Point(738, 30)
-        Me.btnAlumnosFiltrar.Name = "btnAlumnosFiltrar"
-        Me.btnAlumnosFiltrar.Size = New System.Drawing.Size(35, 35)
-        Me.btnAlumnosFiltrar.TabIndex = 16
-        Me.btnAlumnosFiltrar.UseVisualStyleBackColor = False
         '
         'txtAlumnosFiltrarNombre
         '
@@ -434,16 +318,6 @@ Partial Class Ventana_Principal
         Me.lblAlumnoslblFiltrar.TabIndex = 7
         Me.lblAlumnoslblFiltrar.Text = "Filtrar"
         '
-        'lblAlumnos_Titulo
-        '
-        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(6, 4)
-        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
-        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
-        Me.lblAlumnos_Titulo.TabIndex = 5
-        Me.lblAlumnos_Titulo.Text = "Alumnos"
-        '
         'tabPrincipalMaterias
         '
         Me.tabPrincipalMaterias.BackColor = System.Drawing.Color.Silver
@@ -460,51 +334,6 @@ Partial Class Ventana_Principal
         Me.tabPrincipalMaterias.Size = New System.Drawing.Size(836, 526)
         Me.tabPrincipalMaterias.TabIndex = 1
         Me.tabPrincipalMaterias.Text = "Asignaturas"
-        '
-        'btnMateriasModificar
-        '
-        Me.btnMateriasModificar.BackColor = System.Drawing.Color.White
-        Me.btnMateriasModificar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
-        Me.btnMateriasModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMateriasModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnMateriasModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMateriasModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMateriasModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnMateriasModificar.Location = New System.Drawing.Point(121, 47)
-        Me.btnMateriasModificar.Name = "btnMateriasModificar"
-        Me.btnMateriasModificar.Size = New System.Drawing.Size(50, 50)
-        Me.btnMateriasModificar.TabIndex = 31
-        Me.btnMateriasModificar.UseVisualStyleBackColor = False
-        '
-        'btnMateriasEliminar
-        '
-        Me.btnMateriasEliminar.BackColor = System.Drawing.Color.White
-        Me.btnMateriasEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_book_trash_education_remove_30d96a3dea2d0c0a_512x512
-        Me.btnMateriasEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMateriasEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnMateriasEliminar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMateriasEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMateriasEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnMateriasEliminar.Location = New System.Drawing.Point(65, 47)
-        Me.btnMateriasEliminar.Name = "btnMateriasEliminar"
-        Me.btnMateriasEliminar.Size = New System.Drawing.Size(50, 50)
-        Me.btnMateriasEliminar.TabIndex = 30
-        Me.btnMateriasEliminar.UseVisualStyleBackColor = False
-        '
-        'btnMateriasCrear
-        '
-        Me.btnMateriasCrear.BackColor = System.Drawing.Color.White
-        Me.btnMateriasCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_books_read_literature_512
-        Me.btnMateriasCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMateriasCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnMateriasCrear.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMateriasCrear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMateriasCrear.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnMateriasCrear.Location = New System.Drawing.Point(9, 47)
-        Me.btnMateriasCrear.Name = "btnMateriasCrear"
-        Me.btnMateriasCrear.Size = New System.Drawing.Size(50, 50)
-        Me.btnMateriasCrear.TabIndex = 29
-        Me.btnMateriasCrear.UseVisualStyleBackColor = False
         '
         'datagridMaterias
         '
@@ -533,21 +362,6 @@ Partial Class Ventana_Principal
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(818, 100)
         Me.Panel1.TabIndex = 26
-        '
-        'btnMateriasFiltrar
-        '
-        Me.btnMateriasFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnMateriasFiltrar.BackColor = System.Drawing.Color.White
-        Me.btnMateriasFiltrar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.search_filled
-        Me.btnMateriasFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMateriasFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnMateriasFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMateriasFiltrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMateriasFiltrar.Location = New System.Drawing.Point(626, 52)
-        Me.btnMateriasFiltrar.Name = "btnMateriasFiltrar"
-        Me.btnMateriasFiltrar.Size = New System.Drawing.Size(35, 35)
-        Me.btnMateriasFiltrar.TabIndex = 16
-        Me.btnMateriasFiltrar.UseVisualStyleBackColor = False
         '
         'txtMateriasDescripcion
         '
@@ -600,32 +414,6 @@ Partial Class Ventana_Principal
         Me.Label4.Size = New System.Drawing.Size(72, 24)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Filtrar"
-        '
-        'btnMateriasImprimir
-        '
-        Me.btnMateriasImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMateriasImprimir.BackColor = System.Drawing.Color.White
-        Me.btnMateriasImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
-        Me.btnMateriasImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnMateriasImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnMateriasImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnMateriasImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnMateriasImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnMateriasImprimir.Location = New System.Drawing.Point(792, 485)
-        Me.btnMateriasImprimir.Name = "btnMateriasImprimir"
-        Me.btnMateriasImprimir.Size = New System.Drawing.Size(35, 35)
-        Me.btnMateriasImprimir.TabIndex = 27
-        Me.btnMateriasImprimir.UseVisualStyleBackColor = False
-        '
-        'lblMaterias
-        '
-        Me.lblMaterias.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblMaterias.Location = New System.Drawing.Point(3, 4)
-        Me.lblMaterias.Name = "lblMaterias"
-        Me.lblMaterias.Size = New System.Drawing.Size(168, 36)
-        Me.lblMaterias.TabIndex = 11
-        Me.lblMaterias.Text = "Asignaturas"
         '
         'tabPrincipalTareas
         '
@@ -692,11 +480,11 @@ Partial Class Ventana_Principal
         '
         Me.Label16.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label16.Location = New System.Drawing.Point(478, 1)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(86, 21)
+        Me.Label16.Size = New System.Drawing.Size(86, 20)
         Me.Label16.TabIndex = 21
         Me.Label16.Text = "Asignatura"
         '
@@ -704,11 +492,11 @@ Partial Class Ventana_Principal
         '
         Me.Label15.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.Label15.Location = New System.Drawing.Point(250, 1)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(54, 21)
+        Me.Label15.Size = New System.Drawing.Size(54, 20)
         Me.Label15.TabIndex = 20
         Me.Label15.Text = "Grupo"
         '
@@ -716,58 +504,13 @@ Partial Class Ventana_Principal
         '
         Me.cbxInstituto.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbxInstituto.AutoSize = True
-        Me.cbxInstituto.Font = New System.Drawing.Font("Arial Unicode MS", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cbxInstituto.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbxInstituto.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.cbxInstituto.Location = New System.Drawing.Point(27, 1)
         Me.cbxInstituto.Name = "cbxInstituto"
-        Me.cbxInstituto.Size = New System.Drawing.Size(65, 21)
+        Me.cbxInstituto.Size = New System.Drawing.Size(67, 20)
         Me.cbxInstituto.TabIndex = 19
         Me.cbxInstituto.Text = "Instituto"
-        '
-        'btnModificarCalificaciones
-        '
-        Me.btnModificarCalificaciones.BackColor = System.Drawing.Color.White
-        Me.btnModificarCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
-        Me.btnModificarCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnModificarCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnModificarCalificaciones.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnModificarCalificaciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnModificarCalificaciones.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnModificarCalificaciones.Location = New System.Drawing.Point(121, 47)
-        Me.btnModificarCalificaciones.Name = "btnModificarCalificaciones"
-        Me.btnModificarCalificaciones.Size = New System.Drawing.Size(50, 50)
-        Me.btnModificarCalificaciones.TabIndex = 38
-        Me.btnModificarCalificaciones.UseVisualStyleBackColor = False
-        '
-        'btnEliminarCalificaciones
-        '
-        Me.btnEliminarCalificaciones.BackColor = System.Drawing.Color.White
-        Me.btnEliminarCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_book_trash_education_remove_30d96a3dea2d0c0a_512x512
-        Me.btnEliminarCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnEliminarCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnEliminarCalificaciones.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEliminarCalificaciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnEliminarCalificaciones.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnEliminarCalificaciones.Location = New System.Drawing.Point(65, 47)
-        Me.btnEliminarCalificaciones.Name = "btnEliminarCalificaciones"
-        Me.btnEliminarCalificaciones.Size = New System.Drawing.Size(50, 50)
-        Me.btnEliminarCalificaciones.TabIndex = 37
-        Me.btnEliminarCalificaciones.UseVisualStyleBackColor = False
-        '
-        'btnCrearCalificaciones
-        '
-        Me.btnCrearCalificaciones.BackColor = System.Drawing.Color.White
-        Me.btnCrearCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_books_read_literature_512
-        Me.btnCrearCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCrearCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearCalificaciones.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearCalificaciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrearCalificaciones.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnCrearCalificaciones.Location = New System.Drawing.Point(9, 47)
-        Me.btnCrearCalificaciones.Name = "btnCrearCalificaciones"
-        Me.btnCrearCalificaciones.Size = New System.Drawing.Size(50, 50)
-        Me.btnCrearCalificaciones.TabIndex = 36
-        Me.btnCrearCalificaciones.UseVisualStyleBackColor = False
         '
         'datagridCalificaciones
         '
@@ -821,21 +564,6 @@ Partial Class Ventana_Principal
         Me.Label8.Text = "Categoria"
         Me.Label8.UseMnemonic = False
         '
-        'btnCalificacionesFiltrar
-        '
-        Me.btnCalificacionesFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnCalificacionesFiltrar.BackColor = System.Drawing.Color.White
-        Me.btnCalificacionesFiltrar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.search_filled
-        Me.btnCalificacionesFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCalificacionesFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCalificacionesFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCalificacionesFiltrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCalificacionesFiltrar.Location = New System.Drawing.Point(742, 52)
-        Me.btnCalificacionesFiltrar.Name = "btnCalificacionesFiltrar"
-        Me.btnCalificacionesFiltrar.Size = New System.Drawing.Size(35, 35)
-        Me.btnCalificacionesFiltrar.TabIndex = 16
-        Me.btnCalificacionesFiltrar.UseVisualStyleBackColor = False
-        '
         'txtTemaCalificacion
         '
         Me.txtTemaCalificacion.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -888,32 +616,6 @@ Partial Class Ventana_Principal
         Me.Label7.TabIndex = 7
         Me.Label7.Text = "Filtrar"
         '
-        'btnEvaluacionesImprimir
-        '
-        Me.btnEvaluacionesImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnEvaluacionesImprimir.BackColor = System.Drawing.Color.White
-        Me.btnEvaluacionesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
-        Me.btnEvaluacionesImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnEvaluacionesImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnEvaluacionesImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnEvaluacionesImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnEvaluacionesImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnEvaluacionesImprimir.Location = New System.Drawing.Point(792, 485)
-        Me.btnEvaluacionesImprimir.Name = "btnEvaluacionesImprimir"
-        Me.btnEvaluacionesImprimir.Size = New System.Drawing.Size(35, 35)
-        Me.btnEvaluacionesImprimir.TabIndex = 34
-        Me.btnEvaluacionesImprimir.UseVisualStyleBackColor = False
-        '
-        'lblTareas
-        '
-        Me.lblTareas.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTareas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblTareas.Location = New System.Drawing.Point(3, 3)
-        Me.lblTareas.Name = "lblTareas"
-        Me.lblTareas.Size = New System.Drawing.Size(219, 36)
-        Me.lblTareas.TabIndex = 12
-        Me.lblTareas.Text = "Calificaciones"
-        '
         'tabPrincipalDocentes
         '
         Me.tabPrincipalDocentes.BackColor = System.Drawing.Color.Silver
@@ -930,51 +632,6 @@ Partial Class Ventana_Principal
         Me.tabPrincipalDocentes.Size = New System.Drawing.Size(836, 526)
         Me.tabPrincipalDocentes.TabIndex = 3
         Me.tabPrincipalDocentes.Text = "Docentes"
-        '
-        'btnDocentesModificar
-        '
-        Me.btnDocentesModificar.BackColor = System.Drawing.Color.White
-        Me.btnDocentesModificar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
-        Me.btnDocentesModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDocentesModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDocentesModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDocentesModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnDocentesModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnDocentesModificar.Location = New System.Drawing.Point(121, 47)
-        Me.btnDocentesModificar.Name = "btnDocentesModificar"
-        Me.btnDocentesModificar.Size = New System.Drawing.Size(50, 50)
-        Me.btnDocentesModificar.TabIndex = 32
-        Me.btnDocentesModificar.UseVisualStyleBackColor = False
-        '
-        'btnDocentesEliminar
-        '
-        Me.btnDocentesEliminar.BackColor = System.Drawing.Color.White
-        Me.btnDocentesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
-        Me.btnDocentesEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDocentesEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDocentesEliminar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDocentesEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnDocentesEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnDocentesEliminar.Location = New System.Drawing.Point(65, 47)
-        Me.btnDocentesEliminar.Name = "btnDocentesEliminar"
-        Me.btnDocentesEliminar.Size = New System.Drawing.Size(50, 50)
-        Me.btnDocentesEliminar.TabIndex = 31
-        Me.btnDocentesEliminar.UseVisualStyleBackColor = False
-        '
-        'btnDocentesCrearNuevo
-        '
-        Me.btnDocentesCrearNuevo.BackColor = System.Drawing.Color.White
-        Me.btnDocentesCrearNuevo.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_user_group_man_man
-        Me.btnDocentesCrearNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDocentesCrearNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDocentesCrearNuevo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDocentesCrearNuevo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnDocentesCrearNuevo.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnDocentesCrearNuevo.Location = New System.Drawing.Point(9, 47)
-        Me.btnDocentesCrearNuevo.Name = "btnDocentesCrearNuevo"
-        Me.btnDocentesCrearNuevo.Size = New System.Drawing.Size(50, 50)
-        Me.btnDocentesCrearNuevo.TabIndex = 30
-        Me.btnDocentesCrearNuevo.UseVisualStyleBackColor = False
         '
         'datagridDocentes
         '
@@ -1003,21 +660,6 @@ Partial Class Ventana_Principal
         Me.pnlDocentesFiltros.Name = "pnlDocentesFiltros"
         Me.pnlDocentesFiltros.Size = New System.Drawing.Size(818, 100)
         Me.pnlDocentesFiltros.TabIndex = 27
-        '
-        'btnDocentesFiltrarRUN
-        '
-        Me.btnDocentesFiltrarRUN.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnDocentesFiltrarRUN.BackColor = System.Drawing.Color.White
-        Me.btnDocentesFiltrarRUN.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.find_user_male
-        Me.btnDocentesFiltrarRUN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDocentesFiltrarRUN.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDocentesFiltrarRUN.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDocentesFiltrarRUN.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnDocentesFiltrarRUN.Location = New System.Drawing.Point(738, 28)
-        Me.btnDocentesFiltrarRUN.Name = "btnDocentesFiltrarRUN"
-        Me.btnDocentesFiltrarRUN.Size = New System.Drawing.Size(35, 35)
-        Me.btnDocentesFiltrarRUN.TabIndex = 16
-        Me.btnDocentesFiltrarRUN.UseVisualStyleBackColor = False
         '
         'txtDocenteFiltrarNombre
         '
@@ -1071,39 +713,13 @@ Partial Class Ventana_Principal
         Me.Label3.TabIndex = 7
         Me.Label3.Text = "Filtrar"
         '
-        'btnDocentesImprimir
-        '
-        Me.btnDocentesImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnDocentesImprimir.BackColor = System.Drawing.Color.White
-        Me.btnDocentesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
-        Me.btnDocentesImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnDocentesImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDocentesImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDocentesImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnDocentesImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnDocentesImprimir.Location = New System.Drawing.Point(792, 485)
-        Me.btnDocentesImprimir.Name = "btnDocentesImprimir"
-        Me.btnDocentesImprimir.Size = New System.Drawing.Size(35, 35)
-        Me.btnDocentesImprimir.TabIndex = 28
-        Me.btnDocentesImprimir.UseVisualStyleBackColor = False
-        '
-        'lblDocentes
-        '
-        Me.lblDocentes.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDocentes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblDocentes.Location = New System.Drawing.Point(3, 3)
-        Me.lblDocentes.Name = "lblDocentes"
-        Me.lblDocentes.Size = New System.Drawing.Size(136, 36)
-        Me.lblDocentes.TabIndex = 13
-        Me.lblDocentes.Text = "Docentes"
-        '
         'tabPrincipalUsuarios
         '
         Me.tabPrincipalUsuarios.BackColor = System.Drawing.Color.Silver
         Me.tabPrincipalUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.tabPrincipalUsuarios.Controls.Add(Me.pnlUsuariosFiltro)
-        Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosImprimir)
         Me.tabPrincipalUsuarios.Controls.Add(Me.datagridUsuarios)
+        Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosImprimir)
         Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosModificar)
         Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosBotonEliminarUsuario)
         Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosBotonCrearNuevo)
@@ -1128,21 +744,6 @@ Partial Class Ventana_Principal
         Me.pnlUsuariosFiltro.Name = "pnlUsuariosFiltro"
         Me.pnlUsuariosFiltro.Size = New System.Drawing.Size(650, 50)
         Me.pnlUsuariosFiltro.TabIndex = 28
-        '
-        'btnUsuariosBotonFiltrarNombre
-        '
-        Me.btnUsuariosBotonFiltrarNombre.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnUsuariosBotonFiltrarNombre.BackColor = System.Drawing.Color.White
-        Me.btnUsuariosBotonFiltrarNombre.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.find_user_male
-        Me.btnUsuariosBotonFiltrarNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnUsuariosBotonFiltrarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUsuariosBotonFiltrarNombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUsuariosBotonFiltrarNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUsuariosBotonFiltrarNombre.Location = New System.Drawing.Point(597, 8)
-        Me.btnUsuariosBotonFiltrarNombre.Name = "btnUsuariosBotonFiltrarNombre"
-        Me.btnUsuariosBotonFiltrarNombre.Size = New System.Drawing.Size(35, 35)
-        Me.btnUsuariosBotonFiltrarNombre.TabIndex = 16
-        Me.btnUsuariosBotonFiltrarNombre.UseVisualStyleBackColor = False
         '
         'pnlUsuariosFiltroNombreUsuario
         '
@@ -1176,6 +777,503 @@ Partial Class Ventana_Principal
         Me.Label14.TabIndex = 7
         Me.Label14.Text = "Filtrar"
         '
+        'datagridUsuarios
+        '
+        Me.datagridUsuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.datagridUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.datagridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridUsuarios.Location = New System.Drawing.Point(9, 105)
+        Me.datagridUsuarios.Name = "datagridUsuarios"
+        Me.datagridUsuarios.Size = New System.Drawing.Size(818, 376)
+        Me.datagridUsuarios.TabIndex = 19
+        '
+        'tabpageInstitutos
+        '
+        Me.tabpageInstitutos.BackColor = System.Drawing.Color.Silver
+        Me.tabpageInstitutos.Controls.Add(Me.datagridInstitutos)
+        Me.tabpageInstitutos.Controls.Add(Me.Panel5)
+        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoImprimir)
+        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoModificar)
+        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoEliminar)
+        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoCrear)
+        Me.tabpageInstitutos.Controls.Add(Me.BorderLabel1)
+        Me.tabpageInstitutos.Location = New System.Drawing.Point(4, 22)
+        Me.tabpageInstitutos.Name = "tabpageInstitutos"
+        Me.tabpageInstitutos.Size = New System.Drawing.Size(836, 526)
+        Me.tabpageInstitutos.TabIndex = 5
+        Me.tabpageInstitutos.Text = "Institutos"
+        '
+        'datagridInstitutos
+        '
+        Me.datagridInstitutos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.datagridInstitutos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.datagridInstitutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.datagridInstitutos.Location = New System.Drawing.Point(9, 209)
+        Me.datagridInstitutos.Name = "datagridInstitutos"
+        Me.datagridInstitutos.Size = New System.Drawing.Size(818, 272)
+        Me.datagridInstitutos.TabIndex = 34
+        '
+        'Panel5
+        '
+        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.btnInstitutoFiltrar)
+        Me.Panel5.Controls.Add(Me.txtNombreInstitutoFiltrar)
+        Me.Panel5.Controls.Add(Me.Label9)
+        Me.Panel5.Controls.Add(Me.txtIDInstitutoFiltrar)
+        Me.Panel5.Controls.Add(Me.Label10)
+        Me.Panel5.Controls.Add(Me.Label11)
+        Me.Panel5.Location = New System.Drawing.Point(9, 103)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(818, 100)
+        Me.Panel5.TabIndex = 28
+        '
+        'txtNombreInstitutoFiltrar
+        '
+        Me.txtNombreInstitutoFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtNombreInstitutoFiltrar.Location = New System.Drawing.Point(419, 43)
+        Me.txtNombreInstitutoFiltrar.Name = "txtNombreInstitutoFiltrar"
+        Me.txtNombreInstitutoFiltrar.Size = New System.Drawing.Size(298, 20)
+        Me.txtNombreInstitutoFiltrar.TabIndex = 11
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label9.Location = New System.Drawing.Point(330, 43)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(83, 22)
+        Me.Label9.TabIndex = 10
+        Me.Label9.Text = "Nombre"
+        Me.Label9.UseMnemonic = False
+        '
+        'txtIDInstitutoFiltrar
+        '
+        Me.txtIDInstitutoFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.txtIDInstitutoFiltrar.Location = New System.Drawing.Point(119, 43)
+        Me.txtIDInstitutoFiltrar.Name = "txtIDInstitutoFiltrar"
+        Me.txtIDInstitutoFiltrar.Size = New System.Drawing.Size(185, 20)
+        Me.txtIDInstitutoFiltrar.TabIndex = 9
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label10.Location = New System.Drawing.Point(3, 43)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(110, 22)
+        Me.Label10.TabIndex = 8
+        Me.Label10.Text = "ID Instituto"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label11.Location = New System.Drawing.Point(12, 8)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(72, 24)
+        Me.Label11.TabIndex = 7
+        Me.Label11.Text = "Filtrar"
+        '
+        'btnTareas
+        '
+        Me.btnTareas.BackColor = System.Drawing.Color.White
+        Me.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTareas.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTareas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnTareas.Location = New System.Drawing.Point(12, 192)
+        Me.btnTareas.Name = "btnTareas"
+        Me.btnTareas.Size = New System.Drawing.Size(211, 39)
+        Me.btnTareas.TabIndex = 11
+        Me.btnTareas.Text = "Calificaciones"
+        Me.btnTareas.UseVisualStyleBackColor = False
+        '
+        'btnDocentes
+        '
+        Me.btnDocentes.BackColor = System.Drawing.Color.White
+        Me.btnDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDocentes.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDocentes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnDocentes.Location = New System.Drawing.Point(12, 237)
+        Me.btnDocentes.Name = "btnDocentes"
+        Me.btnDocentes.Size = New System.Drawing.Size(211, 39)
+        Me.btnDocentes.TabIndex = 12
+        Me.btnDocentes.Text = "Docentes"
+        Me.btnDocentes.UseVisualStyleBackColor = False
+        '
+        'btnUsuarios
+        '
+        Me.btnUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnUsuarios.BackColor = System.Drawing.Color.White
+        Me.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnUsuarios.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUsuarios.Location = New System.Drawing.Point(12, 479)
+        Me.btnUsuarios.Name = "btnUsuarios"
+        Me.btnUsuarios.Size = New System.Drawing.Size(211, 39)
+        Me.btnUsuarios.TabIndex = 13
+        Me.btnUsuarios.Text = "Usuarios"
+        Me.btnUsuarios.UseVisualStyleBackColor = False
+        '
+        'btnVentanaPrincipalInstitutos
+        '
+        Me.btnVentanaPrincipalInstitutos.BackColor = System.Drawing.Color.White
+        Me.btnVentanaPrincipalInstitutos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnVentanaPrincipalInstitutos.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentanaPrincipalInstitutos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnVentanaPrincipalInstitutos.Location = New System.Drawing.Point(12, 282)
+        Me.btnVentanaPrincipalInstitutos.Name = "btnVentanaPrincipalInstitutos"
+        Me.btnVentanaPrincipalInstitutos.Size = New System.Drawing.Size(211, 39)
+        Me.btnVentanaPrincipalInstitutos.TabIndex = 22
+        Me.btnVentanaPrincipalInstitutos.Text = "Institutos"
+        Me.btnVentanaPrincipalInstitutos.UseVisualStyleBackColor = False
+        '
+        'btnVentanaPrincipalConfiguracion
+        '
+        Me.btnVentanaPrincipalConfiguracion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnVentanaPrincipalConfiguracion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.btnVentanaPrincipalConfiguracion.BackColor = System.Drawing.Color.White
+        Me.btnVentanaPrincipalConfiguracion.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.configuration_gears
+        Me.btnVentanaPrincipalConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnVentanaPrincipalConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnVentanaPrincipalConfiguracion.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentanaPrincipalConfiguracion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnVentanaPrincipalConfiguracion.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnVentanaPrincipalConfiguracion.Location = New System.Drawing.Point(184, 525)
+        Me.btnVentanaPrincipalConfiguracion.Name = "btnVentanaPrincipalConfiguracion"
+        Me.btnVentanaPrincipalConfiguracion.Size = New System.Drawing.Size(39, 39)
+        Me.btnVentanaPrincipalConfiguracion.TabIndex = 21
+        Me.btnVentanaPrincipalConfiguracion.UseVisualStyleBackColor = False
+        '
+        'btnAlumnosModificar
+        '
+        Me.btnAlumnosModificar.BackColor = System.Drawing.Color.White
+        Me.btnAlumnosModificar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
+        Me.btnAlumnosModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAlumnosModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAlumnosModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAlumnosModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAlumnosModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnAlumnosModificar.Location = New System.Drawing.Point(121, 47)
+        Me.btnAlumnosModificar.Name = "btnAlumnosModificar"
+        Me.btnAlumnosModificar.Size = New System.Drawing.Size(50, 50)
+        Me.btnAlumnosModificar.TabIndex = 25
+        Me.btnAlumnosModificar.UseVisualStyleBackColor = False
+        '
+        'btnAlumnosEliminar
+        '
+        Me.btnAlumnosEliminar.BackColor = System.Drawing.Color.White
+        Me.btnAlumnosEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
+        Me.btnAlumnosEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAlumnosEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAlumnosEliminar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAlumnosEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAlumnosEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnAlumnosEliminar.Location = New System.Drawing.Point(65, 47)
+        Me.btnAlumnosEliminar.Name = "btnAlumnosEliminar"
+        Me.btnAlumnosEliminar.Size = New System.Drawing.Size(50, 50)
+        Me.btnAlumnosEliminar.TabIndex = 24
+        Me.btnAlumnosEliminar.UseVisualStyleBackColor = False
+        '
+        'btnAlumnosCrearNuevo
+        '
+        Me.btnAlumnosCrearNuevo.BackColor = System.Drawing.Color.White
+        Me.btnAlumnosCrearNuevo.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_user_group_man_man
+        Me.btnAlumnosCrearNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAlumnosCrearNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAlumnosCrearNuevo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAlumnosCrearNuevo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAlumnosCrearNuevo.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnAlumnosCrearNuevo.Location = New System.Drawing.Point(9, 47)
+        Me.btnAlumnosCrearNuevo.Name = "btnAlumnosCrearNuevo"
+        Me.btnAlumnosCrearNuevo.Size = New System.Drawing.Size(50, 50)
+        Me.btnAlumnosCrearNuevo.TabIndex = 23
+        Me.btnAlumnosCrearNuevo.UseVisualStyleBackColor = False
+        '
+        'btnAlumnosImprimir
+        '
+        Me.btnAlumnosImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAlumnosImprimir.BackColor = System.Drawing.Color.White
+        Me.btnAlumnosImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnAlumnosImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAlumnosImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAlumnosImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAlumnosImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAlumnosImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnAlumnosImprimir.Location = New System.Drawing.Point(792, 485)
+        Me.btnAlumnosImprimir.Name = "btnAlumnosImprimir"
+        Me.btnAlumnosImprimir.Size = New System.Drawing.Size(35, 35)
+        Me.btnAlumnosImprimir.TabIndex = 21
+        Me.btnAlumnosImprimir.UseVisualStyleBackColor = False
+        '
+        'btnAlumnosFiltrar
+        '
+        Me.btnAlumnosFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnAlumnosFiltrar.BackColor = System.Drawing.Color.White
+        Me.btnAlumnosFiltrar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.find_user_male
+        Me.btnAlumnosFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnAlumnosFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnAlumnosFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAlumnosFiltrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnAlumnosFiltrar.Location = New System.Drawing.Point(738, 30)
+        Me.btnAlumnosFiltrar.Name = "btnAlumnosFiltrar"
+        Me.btnAlumnosFiltrar.Size = New System.Drawing.Size(35, 35)
+        Me.btnAlumnosFiltrar.TabIndex = 16
+        Me.btnAlumnosFiltrar.UseVisualStyleBackColor = False
+        '
+        'btnMateriasModificar
+        '
+        Me.btnMateriasModificar.BackColor = System.Drawing.Color.White
+        Me.btnMateriasModificar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
+        Me.btnMateriasModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMateriasModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMateriasModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMateriasModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMateriasModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnMateriasModificar.Location = New System.Drawing.Point(121, 47)
+        Me.btnMateriasModificar.Name = "btnMateriasModificar"
+        Me.btnMateriasModificar.Size = New System.Drawing.Size(50, 50)
+        Me.btnMateriasModificar.TabIndex = 31
+        Me.btnMateriasModificar.UseVisualStyleBackColor = False
+        '
+        'btnMateriasEliminar
+        '
+        Me.btnMateriasEliminar.BackColor = System.Drawing.Color.White
+        Me.btnMateriasEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_book_trash_education_remove_30d96a3dea2d0c0a_512x512
+        Me.btnMateriasEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMateriasEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMateriasEliminar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMateriasEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMateriasEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnMateriasEliminar.Location = New System.Drawing.Point(65, 47)
+        Me.btnMateriasEliminar.Name = "btnMateriasEliminar"
+        Me.btnMateriasEliminar.Size = New System.Drawing.Size(50, 50)
+        Me.btnMateriasEliminar.TabIndex = 30
+        Me.btnMateriasEliminar.UseVisualStyleBackColor = False
+        '
+        'btnMateriasCrear
+        '
+        Me.btnMateriasCrear.BackColor = System.Drawing.Color.White
+        Me.btnMateriasCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_books_read_literature_512
+        Me.btnMateriasCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMateriasCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMateriasCrear.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMateriasCrear.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMateriasCrear.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnMateriasCrear.Location = New System.Drawing.Point(9, 47)
+        Me.btnMateriasCrear.Name = "btnMateriasCrear"
+        Me.btnMateriasCrear.Size = New System.Drawing.Size(50, 50)
+        Me.btnMateriasCrear.TabIndex = 29
+        Me.btnMateriasCrear.UseVisualStyleBackColor = False
+        '
+        'btnMateriasFiltrar
+        '
+        Me.btnMateriasFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnMateriasFiltrar.BackColor = System.Drawing.Color.White
+        Me.btnMateriasFiltrar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.search_filled
+        Me.btnMateriasFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMateriasFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMateriasFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMateriasFiltrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMateriasFiltrar.Location = New System.Drawing.Point(626, 52)
+        Me.btnMateriasFiltrar.Name = "btnMateriasFiltrar"
+        Me.btnMateriasFiltrar.Size = New System.Drawing.Size(35, 35)
+        Me.btnMateriasFiltrar.TabIndex = 16
+        Me.btnMateriasFiltrar.UseVisualStyleBackColor = False
+        '
+        'btnMateriasImprimir
+        '
+        Me.btnMateriasImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMateriasImprimir.BackColor = System.Drawing.Color.White
+        Me.btnMateriasImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnMateriasImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnMateriasImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMateriasImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnMateriasImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnMateriasImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnMateriasImprimir.Location = New System.Drawing.Point(792, 485)
+        Me.btnMateriasImprimir.Name = "btnMateriasImprimir"
+        Me.btnMateriasImprimir.Size = New System.Drawing.Size(35, 35)
+        Me.btnMateriasImprimir.TabIndex = 27
+        Me.btnMateriasImprimir.UseVisualStyleBackColor = False
+        '
+        'btnModificarCalificaciones
+        '
+        Me.btnModificarCalificaciones.BackColor = System.Drawing.Color.White
+        Me.btnModificarCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
+        Me.btnModificarCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnModificarCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnModificarCalificaciones.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarCalificaciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnModificarCalificaciones.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnModificarCalificaciones.Location = New System.Drawing.Point(121, 47)
+        Me.btnModificarCalificaciones.Name = "btnModificarCalificaciones"
+        Me.btnModificarCalificaciones.Size = New System.Drawing.Size(50, 50)
+        Me.btnModificarCalificaciones.TabIndex = 38
+        Me.btnModificarCalificaciones.UseVisualStyleBackColor = False
+        '
+        'btnEliminarCalificaciones
+        '
+        Me.btnEliminarCalificaciones.BackColor = System.Drawing.Color.White
+        Me.btnEliminarCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_book_trash_education_remove_30d96a3dea2d0c0a_512x512
+        Me.btnEliminarCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnEliminarCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEliminarCalificaciones.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEliminarCalificaciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnEliminarCalificaciones.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnEliminarCalificaciones.Location = New System.Drawing.Point(65, 47)
+        Me.btnEliminarCalificaciones.Name = "btnEliminarCalificaciones"
+        Me.btnEliminarCalificaciones.Size = New System.Drawing.Size(50, 50)
+        Me.btnEliminarCalificaciones.TabIndex = 37
+        Me.btnEliminarCalificaciones.UseVisualStyleBackColor = False
+        '
+        'btnCrearCalificaciones
+        '
+        Me.btnCrearCalificaciones.BackColor = System.Drawing.Color.White
+        Me.btnCrearCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_books_read_literature_512
+        Me.btnCrearCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnCrearCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCrearCalificaciones.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearCalificaciones.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCrearCalificaciones.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnCrearCalificaciones.Location = New System.Drawing.Point(9, 47)
+        Me.btnCrearCalificaciones.Name = "btnCrearCalificaciones"
+        Me.btnCrearCalificaciones.Size = New System.Drawing.Size(50, 50)
+        Me.btnCrearCalificaciones.TabIndex = 36
+        Me.btnCrearCalificaciones.UseVisualStyleBackColor = False
+        '
+        'btnCalificacionesFiltrar
+        '
+        Me.btnCalificacionesFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnCalificacionesFiltrar.BackColor = System.Drawing.Color.White
+        Me.btnCalificacionesFiltrar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.search_filled
+        Me.btnCalificacionesFiltrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnCalificacionesFiltrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCalificacionesFiltrar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCalificacionesFiltrar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnCalificacionesFiltrar.Location = New System.Drawing.Point(742, 52)
+        Me.btnCalificacionesFiltrar.Name = "btnCalificacionesFiltrar"
+        Me.btnCalificacionesFiltrar.Size = New System.Drawing.Size(35, 35)
+        Me.btnCalificacionesFiltrar.TabIndex = 16
+        Me.btnCalificacionesFiltrar.UseVisualStyleBackColor = False
+        '
+        'btnEvaluacionesImprimir
+        '
+        Me.btnEvaluacionesImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnEvaluacionesImprimir.BackColor = System.Drawing.Color.White
+        Me.btnEvaluacionesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnEvaluacionesImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnEvaluacionesImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnEvaluacionesImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEvaluacionesImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnEvaluacionesImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnEvaluacionesImprimir.Location = New System.Drawing.Point(792, 485)
+        Me.btnEvaluacionesImprimir.Name = "btnEvaluacionesImprimir"
+        Me.btnEvaluacionesImprimir.Size = New System.Drawing.Size(35, 35)
+        Me.btnEvaluacionesImprimir.TabIndex = 34
+        Me.btnEvaluacionesImprimir.UseVisualStyleBackColor = False
+        '
+        'btnDocentesModificar
+        '
+        Me.btnDocentesModificar.BackColor = System.Drawing.Color.White
+        Me.btnDocentesModificar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.multi_edit
+        Me.btnDocentesModificar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDocentesModificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDocentesModificar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDocentesModificar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnDocentesModificar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnDocentesModificar.Location = New System.Drawing.Point(121, 47)
+        Me.btnDocentesModificar.Name = "btnDocentesModificar"
+        Me.btnDocentesModificar.Size = New System.Drawing.Size(50, 50)
+        Me.btnDocentesModificar.TabIndex = 32
+        Me.btnDocentesModificar.UseVisualStyleBackColor = False
+        '
+        'btnDocentesEliminar
+        '
+        Me.btnDocentesEliminar.BackColor = System.Drawing.Color.White
+        Me.btnDocentesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
+        Me.btnDocentesEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDocentesEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDocentesEliminar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDocentesEliminar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnDocentesEliminar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnDocentesEliminar.Location = New System.Drawing.Point(65, 47)
+        Me.btnDocentesEliminar.Name = "btnDocentesEliminar"
+        Me.btnDocentesEliminar.Size = New System.Drawing.Size(50, 50)
+        Me.btnDocentesEliminar.TabIndex = 31
+        Me.btnDocentesEliminar.UseVisualStyleBackColor = False
+        '
+        'btnDocentesCrearNuevo
+        '
+        Me.btnDocentesCrearNuevo.BackColor = System.Drawing.Color.White
+        Me.btnDocentesCrearNuevo.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_user_group_man_man
+        Me.btnDocentesCrearNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDocentesCrearNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDocentesCrearNuevo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDocentesCrearNuevo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnDocentesCrearNuevo.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnDocentesCrearNuevo.Location = New System.Drawing.Point(9, 47)
+        Me.btnDocentesCrearNuevo.Name = "btnDocentesCrearNuevo"
+        Me.btnDocentesCrearNuevo.Size = New System.Drawing.Size(50, 50)
+        Me.btnDocentesCrearNuevo.TabIndex = 30
+        Me.btnDocentesCrearNuevo.UseVisualStyleBackColor = False
+        '
+        'btnDocentesFiltrarRUN
+        '
+        Me.btnDocentesFiltrarRUN.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnDocentesFiltrarRUN.BackColor = System.Drawing.Color.White
+        Me.btnDocentesFiltrarRUN.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.find_user_male
+        Me.btnDocentesFiltrarRUN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDocentesFiltrarRUN.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDocentesFiltrarRUN.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDocentesFiltrarRUN.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnDocentesFiltrarRUN.Location = New System.Drawing.Point(738, 28)
+        Me.btnDocentesFiltrarRUN.Name = "btnDocentesFiltrarRUN"
+        Me.btnDocentesFiltrarRUN.Size = New System.Drawing.Size(35, 35)
+        Me.btnDocentesFiltrarRUN.TabIndex = 16
+        Me.btnDocentesFiltrarRUN.UseVisualStyleBackColor = False
+        '
+        'btnDocentesImprimir
+        '
+        Me.btnDocentesImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnDocentesImprimir.BackColor = System.Drawing.Color.White
+        Me.btnDocentesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnDocentesImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnDocentesImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnDocentesImprimir.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDocentesImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnDocentesImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btnDocentesImprimir.Location = New System.Drawing.Point(792, 485)
+        Me.btnDocentesImprimir.Name = "btnDocentesImprimir"
+        Me.btnDocentesImprimir.Size = New System.Drawing.Size(35, 35)
+        Me.btnDocentesImprimir.TabIndex = 28
+        Me.btnDocentesImprimir.UseVisualStyleBackColor = False
+        '
+        'btnUsuariosBotonFiltrarNombre
+        '
+        Me.btnUsuariosBotonFiltrarNombre.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.btnUsuariosBotonFiltrarNombre.BackColor = System.Drawing.Color.White
+        Me.btnUsuariosBotonFiltrarNombre.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.find_user_male
+        Me.btnUsuariosBotonFiltrarNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnUsuariosBotonFiltrarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnUsuariosBotonFiltrarNombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnUsuariosBotonFiltrarNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnUsuariosBotonFiltrarNombre.Location = New System.Drawing.Point(597, 8)
+        Me.btnUsuariosBotonFiltrarNombre.Name = "btnUsuariosBotonFiltrarNombre"
+        Me.btnUsuariosBotonFiltrarNombre.Size = New System.Drawing.Size(35, 35)
+        Me.btnUsuariosBotonFiltrarNombre.TabIndex = 16
+        Me.btnUsuariosBotonFiltrarNombre.UseVisualStyleBackColor = False
+        '
         'btnUsuariosImprimir
         '
         Me.btnUsuariosImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -1191,18 +1289,6 @@ Partial Class Ventana_Principal
         Me.btnUsuariosImprimir.Size = New System.Drawing.Size(35, 35)
         Me.btnUsuariosImprimir.TabIndex = 20
         Me.btnUsuariosImprimir.UseVisualStyleBackColor = False
-        '
-        'datagridUsuarios
-        '
-        Me.datagridUsuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.datagridUsuarios.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.datagridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagridUsuarios.Location = New System.Drawing.Point(9, 105)
-        Me.datagridUsuarios.Name = "datagridUsuarios"
-        Me.datagridUsuarios.Size = New System.Drawing.Size(818, 376)
-        Me.datagridUsuarios.TabIndex = 19
         '
         'btnUsuariosModificar
         '
@@ -1248,44 +1334,6 @@ Partial Class Ventana_Principal
         Me.btnUsuariosBotonCrearNuevo.Size = New System.Drawing.Size(50, 50)
         Me.btnUsuariosBotonCrearNuevo.TabIndex = 14
         Me.btnUsuariosBotonCrearNuevo.UseVisualStyleBackColor = False
-        '
-        'lblUsuarios
-        '
-        Me.lblUsuarios.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblUsuarios.Location = New System.Drawing.Point(2, 2)
-        Me.lblUsuarios.Name = "lblUsuarios"
-        Me.lblUsuarios.Size = New System.Drawing.Size(136, 36)
-        Me.lblUsuarios.TabIndex = 14
-        Me.lblUsuarios.Text = "Usuarios"
-        '
-        'tabpageInstitutos
-        '
-        Me.tabpageInstitutos.BackColor = System.Drawing.Color.Silver
-        Me.tabpageInstitutos.Controls.Add(Me.datagridInstitutos)
-        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoImprimir)
-        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoModificar)
-        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoEliminar)
-        Me.tabpageInstitutos.Controls.Add(Me.btnInstitutoCrear)
-        Me.tabpageInstitutos.Controls.Add(Me.Panel5)
-        Me.tabpageInstitutos.Controls.Add(Me.BorderLabel1)
-        Me.tabpageInstitutos.Location = New System.Drawing.Point(4, 22)
-        Me.tabpageInstitutos.Name = "tabpageInstitutos"
-        Me.tabpageInstitutos.Size = New System.Drawing.Size(836, 526)
-        Me.tabpageInstitutos.TabIndex = 5
-        Me.tabpageInstitutos.Text = "Institutos"
-        '
-        'datagridInstitutos
-        '
-        Me.datagridInstitutos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.datagridInstitutos.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.datagridInstitutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.datagridInstitutos.Location = New System.Drawing.Point(9, 209)
-        Me.datagridInstitutos.Name = "datagridInstitutos"
-        Me.datagridInstitutos.Size = New System.Drawing.Size(818, 272)
-        Me.datagridInstitutos.TabIndex = 34
         '
         'btnInstitutoImprimir
         '
@@ -1348,22 +1396,6 @@ Partial Class Ventana_Principal
         Me.btnInstitutoCrear.TabIndex = 29
         Me.btnInstitutoCrear.UseVisualStyleBackColor = False
         '
-        'Panel5
-        '
-        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.btnInstitutoFiltrar)
-        Me.Panel5.Controls.Add(Me.txtNombreInstitutoFiltrar)
-        Me.Panel5.Controls.Add(Me.Label9)
-        Me.Panel5.Controls.Add(Me.txtIDInstitutoFiltrar)
-        Me.Panel5.Controls.Add(Me.Label10)
-        Me.Panel5.Controls.Add(Me.Label11)
-        Me.Panel5.Location = New System.Drawing.Point(9, 103)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(818, 100)
-        Me.Panel5.TabIndex = 28
-        '
         'btnInstitutoFiltrar
         '
         Me.btnInstitutoFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
@@ -1379,57 +1411,55 @@ Partial Class Ventana_Principal
         Me.btnInstitutoFiltrar.TabIndex = 16
         Me.btnInstitutoFiltrar.UseVisualStyleBackColor = False
         '
-        'txtNombreInstitutoFiltrar
+        'lblAlumnos_Titulo
         '
-        Me.txtNombreInstitutoFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtNombreInstitutoFiltrar.Location = New System.Drawing.Point(419, 43)
-        Me.txtNombreInstitutoFiltrar.Name = "txtNombreInstitutoFiltrar"
-        Me.txtNombreInstitutoFiltrar.Size = New System.Drawing.Size(298, 20)
-        Me.txtNombreInstitutoFiltrar.TabIndex = 11
+        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(6, 4)
+        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
+        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
+        Me.lblAlumnos_Titulo.TabIndex = 5
+        Me.lblAlumnos_Titulo.Text = "Alumnos"
         '
-        'Label9
+        'lblMaterias
         '
-        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label9.Location = New System.Drawing.Point(330, 43)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(83, 22)
-        Me.Label9.TabIndex = 10
-        Me.Label9.Text = "Nombre"
-        Me.Label9.UseMnemonic = False
+        Me.lblMaterias.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblMaterias.Location = New System.Drawing.Point(3, 4)
+        Me.lblMaterias.Name = "lblMaterias"
+        Me.lblMaterias.Size = New System.Drawing.Size(168, 36)
+        Me.lblMaterias.TabIndex = 11
+        Me.lblMaterias.Text = "Asignaturas"
         '
-        'txtIDInstitutoFiltrar
+        'lblTareas
         '
-        Me.txtIDInstitutoFiltrar.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.txtIDInstitutoFiltrar.Location = New System.Drawing.Point(119, 43)
-        Me.txtIDInstitutoFiltrar.Name = "txtIDInstitutoFiltrar"
-        Me.txtIDInstitutoFiltrar.Size = New System.Drawing.Size(185, 20)
-        Me.txtIDInstitutoFiltrar.TabIndex = 9
+        Me.lblTareas.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTareas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblTareas.Location = New System.Drawing.Point(3, 3)
+        Me.lblTareas.Name = "lblTareas"
+        Me.lblTareas.Size = New System.Drawing.Size(219, 36)
+        Me.lblTareas.TabIndex = 12
+        Me.lblTareas.Text = "Calificaciones"
         '
-        'Label10
+        'lblDocentes
         '
-        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label10.Location = New System.Drawing.Point(3, 43)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(110, 22)
-        Me.Label10.TabIndex = 8
-        Me.Label10.Text = "ID Instituto"
+        Me.lblDocentes.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDocentes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblDocentes.Location = New System.Drawing.Point(3, 3)
+        Me.lblDocentes.Name = "lblDocentes"
+        Me.lblDocentes.Size = New System.Drawing.Size(136, 36)
+        Me.lblDocentes.TabIndex = 13
+        Me.lblDocentes.Text = "Docentes"
         '
-        'Label11
+        'lblUsuarios
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label11.Location = New System.Drawing.Point(12, 8)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(72, 24)
-        Me.Label11.TabIndex = 7
-        Me.Label11.Text = "Filtrar"
+        Me.lblUsuarios.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblUsuarios.Location = New System.Drawing.Point(2, 2)
+        Me.lblUsuarios.Name = "lblUsuarios"
+        Me.lblUsuarios.Size = New System.Drawing.Size(136, 36)
+        Me.lblUsuarios.TabIndex = 14
+        Me.lblUsuarios.Text = "Usuarios"
         '
         'BorderLabel1
         '
@@ -1441,75 +1471,45 @@ Partial Class Ventana_Principal
         Me.BorderLabel1.TabIndex = 27
         Me.BorderLabel1.Text = "Institutos"
         '
-        'btnTareas
+        'b_lblRol_Dinamico
         '
-        Me.btnTareas.BackColor = System.Drawing.Color.White
-        Me.btnTareas.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnTareas.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnTareas.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnTareas.Location = New System.Drawing.Point(12, 192)
-        Me.btnTareas.Name = "btnTareas"
-        Me.btnTareas.Size = New System.Drawing.Size(211, 39)
-        Me.btnTareas.TabIndex = 11
-        Me.btnTareas.Text = "Calificaciones"
-        Me.btnTareas.UseVisualStyleBackColor = False
+        Me.b_lblRol_Dinamico.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblRol_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.b_lblRol_Dinamico.Location = New System.Drawing.Point(120, 33)
+        Me.b_lblRol_Dinamico.Name = "b_lblRol_Dinamico"
+        Me.b_lblRol_Dinamico.Size = New System.Drawing.Size(74, 24)
+        Me.b_lblRol_Dinamico.TabIndex = 4
+        Me.b_lblRol_Dinamico.Text = "rol"
         '
-        'btnDocentes
+        'b_lblRol_fijo
         '
-        Me.btnDocentes.BackColor = System.Drawing.Color.White
-        Me.btnDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDocentes.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnDocentes.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnDocentes.Location = New System.Drawing.Point(12, 237)
-        Me.btnDocentes.Name = "btnDocentes"
-        Me.btnDocentes.Size = New System.Drawing.Size(211, 39)
-        Me.btnDocentes.TabIndex = 12
-        Me.btnDocentes.Text = "Docentes"
-        Me.btnDocentes.UseVisualStyleBackColor = False
+        Me.b_lblRol_fijo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblRol_fijo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.b_lblRol_fijo.Location = New System.Drawing.Point(3, 33)
+        Me.b_lblRol_fijo.Name = "b_lblRol_fijo"
+        Me.b_lblRol_fijo.Size = New System.Drawing.Size(138, 36)
+        Me.b_lblRol_fijo.TabIndex = 3
+        Me.b_lblRol_fijo.Text = "Rol : "
         '
-        'btnUsuarios
+        'b_lblNombreUsuario_Dinamico
         '
-        Me.btnUsuarios.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnUsuarios.BackColor = System.Drawing.Color.White
-        Me.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUsuarios.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUsuarios.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUsuarios.Location = New System.Drawing.Point(12, 479)
-        Me.btnUsuarios.Name = "btnUsuarios"
-        Me.btnUsuarios.Size = New System.Drawing.Size(211, 39)
-        Me.btnUsuarios.TabIndex = 13
-        Me.btnUsuarios.Text = "Usuarios"
-        Me.btnUsuarios.UseVisualStyleBackColor = False
+        Me.b_lblNombreUsuario_Dinamico.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblNombreUsuario_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.b_lblNombreUsuario_Dinamico.Location = New System.Drawing.Point(122, 7)
+        Me.b_lblNombreUsuario_Dinamico.Name = "b_lblNombreUsuario_Dinamico"
+        Me.b_lblNombreUsuario_Dinamico.Size = New System.Drawing.Size(79, 24)
+        Me.b_lblNombreUsuario_Dinamico.TabIndex = 2
+        Me.b_lblNombreUsuario_Dinamico.Text = "usuario"
         '
-        'btnVentanaPrincipalConfiguracion
+        'b_lblusuarioLogueado_nombre
         '
-        Me.btnVentanaPrincipalConfiguracion.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnVentanaPrincipalConfiguracion.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.btnVentanaPrincipalConfiguracion.BackColor = System.Drawing.Color.White
-        Me.btnVentanaPrincipalConfiguracion.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.configuration_gears
-        Me.btnVentanaPrincipalConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnVentanaPrincipalConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnVentanaPrincipalConfiguracion.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentanaPrincipalConfiguracion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaPrincipalConfiguracion.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnVentanaPrincipalConfiguracion.Location = New System.Drawing.Point(184, 525)
-        Me.btnVentanaPrincipalConfiguracion.Name = "btnVentanaPrincipalConfiguracion"
-        Me.btnVentanaPrincipalConfiguracion.Size = New System.Drawing.Size(39, 39)
-        Me.btnVentanaPrincipalConfiguracion.TabIndex = 21
-        Me.btnVentanaPrincipalConfiguracion.UseVisualStyleBackColor = False
-        '
-        'btnVentanaPrincipalInstitutos
-        '
-        Me.btnVentanaPrincipalInstitutos.BackColor = System.Drawing.Color.White
-        Me.btnVentanaPrincipalInstitutos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnVentanaPrincipalInstitutos.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnVentanaPrincipalInstitutos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVentanaPrincipalInstitutos.Location = New System.Drawing.Point(12, 282)
-        Me.btnVentanaPrincipalInstitutos.Name = "btnVentanaPrincipalInstitutos"
-        Me.btnVentanaPrincipalInstitutos.Size = New System.Drawing.Size(211, 39)
-        Me.btnVentanaPrincipalInstitutos.TabIndex = 22
-        Me.btnVentanaPrincipalInstitutos.Text = "Institutos"
-        Me.btnVentanaPrincipalInstitutos.UseVisualStyleBackColor = False
+        Me.b_lblusuarioLogueado_nombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblusuarioLogueado_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.b_lblusuarioLogueado_nombre.Location = New System.Drawing.Point(4, 7)
+        Me.b_lblusuarioLogueado_nombre.Name = "b_lblusuarioLogueado_nombre"
+        Me.b_lblusuarioLogueado_nombre.Size = New System.Drawing.Size(120, 36)
+        Me.b_lblusuarioLogueado_nombre.TabIndex = 1
+        Me.b_lblusuarioLogueado_nombre.Text = "Bienvenido,"
         '
         'Ventana_Principal
         '

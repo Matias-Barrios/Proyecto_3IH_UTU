@@ -82,5 +82,7 @@
         Me.tabPrincipal.SelectedTab = Me.tabpageInstitutos
     End Sub
 
-
+    Private Sub btnCrearCalificaciones_Click(sender As Object, e As EventArgs) Handles btnCrearCalificaciones.Click
+        ventana_crear_calificaciones.ShowDialog()
+    End Sub
 End Class
