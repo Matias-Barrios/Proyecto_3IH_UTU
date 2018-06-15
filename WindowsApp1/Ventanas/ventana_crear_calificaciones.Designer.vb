@@ -25,18 +25,16 @@ Partial Class ventana_crear_calificaciones
         Me.txtCrearCalificaciones_Nombre_Descriptivo = New System.Windows.Forms.TextBox()
         Me.lblNombreCalificacion = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.lblCrearCalificaciones_Nombre_Materia = New System.Windows.Forms.Label()
-        Me.txtCrearCalificaciones_Nombre_Materia = New System.Windows.Forms.TextBox()
-        Me.chkCrearCalificacion_Asignar_A = New System.Windows.Forms.CheckedListBox()
-        Me.lblCrearCalificacion_Asignar_A = New System.Windows.Forms.Label()
-        Me.rchCrearCalificacion_Comentario = New System.Windows.Forms.RichTextBox()
-        Me.lblCrearCalificacion_Comentario = New System.Windows.Forms.Label()
-        Me.lstCrearCalificacion_tipo = New System.Windows.Forms.ListBox()
-        Me.lblCrearCalificacion_Tipo = New System.Windows.Forms.Label()
-        Me.nudCrearCalificacion_Nota = New System.Windows.Forms.NumericUpDown()
-        Me.lbl_CrearCalificacion_Nota = New System.Windows.Forms.Label()
-        Me.btnCrearCalificacion_Cancelar = New System.Windows.Forms.Button()
         Me.btnCrearCalificacion_Aceptar = New System.Windows.Forms.Button()
+        Me.btnCrearCalificacion_Cancelar = New System.Windows.Forms.Button()
+        Me.lbl_CrearCalificacion_Nota = New System.Windows.Forms.Label()
+        Me.nudCrearCalificacion_Nota = New System.Windows.Forms.NumericUpDown()
+        Me.lblCrearCalificacion_Tipo = New System.Windows.Forms.Label()
+        Me.lstCrearCalificacion_tipo = New System.Windows.Forms.ListBox()
+        Me.lblCrearCalificacion_Comentario = New System.Windows.Forms.Label()
+        Me.rchCrearCalificacion_Comentario = New System.Windows.Forms.RichTextBox()
+        Me.lblCrearCalificacion_Asignar_A = New System.Windows.Forms.Label()
+        Me.chkCrearCalificacion_Asignar_A = New System.Windows.Forms.CheckedListBox()
         Me.Panel1.SuspendLayout()
         CType(Me.nudCrearCalificacion_Nota, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -75,8 +73,6 @@ Partial Class ventana_crear_calificaciones
         Me.Panel1.Controls.Add(Me.rchCrearCalificacion_Comentario)
         Me.Panel1.Controls.Add(Me.lblCrearCalificacion_Asignar_A)
         Me.Panel1.Controls.Add(Me.chkCrearCalificacion_Asignar_A)
-        Me.Panel1.Controls.Add(Me.lblCrearCalificaciones_Nombre_Materia)
-        Me.Panel1.Controls.Add(Me.txtCrearCalificaciones_Nombre_Materia)
         Me.Panel1.Controls.Add(Me.lblNombreCalificacion)
         Me.Panel1.Controls.Add(Me.txtCrearCalificaciones_Nombre_Descriptivo)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
@@ -84,102 +80,18 @@ Partial Class ventana_crear_calificaciones
         Me.Panel1.Size = New System.Drawing.Size(693, 638)
         Me.Panel1.TabIndex = 12
         '
-        'lblCrearCalificaciones_Nombre_Materia
+        'btnCrearCalificacion_Aceptar
         '
-        Me.lblCrearCalificaciones_Nombre_Materia.AutoSize = True
-        Me.lblCrearCalificaciones_Nombre_Materia.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrearCalificaciones_Nombre_Materia.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearCalificaciones_Nombre_Materia.Location = New System.Drawing.Point(21, 103)
-        Me.lblCrearCalificaciones_Nombre_Materia.Name = "lblCrearCalificaciones_Nombre_Materia"
-        Me.lblCrearCalificaciones_Nombre_Materia.Size = New System.Drawing.Size(79, 22)
-        Me.lblCrearCalificaciones_Nombre_Materia.TabIndex = 12
-        Me.lblCrearCalificaciones_Nombre_Materia.Text = "Materia"
-        '
-        'txtCrearCalificaciones_Nombre_Materia
-        '
-        Me.txtCrearCalificaciones_Nombre_Materia.Location = New System.Drawing.Point(25, 128)
-        Me.txtCrearCalificaciones_Nombre_Materia.Name = "txtCrearCalificaciones_Nombre_Materia"
-        Me.txtCrearCalificaciones_Nombre_Materia.Size = New System.Drawing.Size(262, 20)
-        Me.txtCrearCalificaciones_Nombre_Materia.TabIndex = 13
-        '
-        'chkCrearCalificacion_Asignar_A
-        '
-        Me.chkCrearCalificacion_Asignar_A.FormattingEnabled = True
-        Me.chkCrearCalificacion_Asignar_A.Location = New System.Drawing.Point(312, 47)
-        Me.chkCrearCalificacion_Asignar_A.Name = "chkCrearCalificacion_Asignar_A"
-        Me.chkCrearCalificacion_Asignar_A.Size = New System.Drawing.Size(358, 274)
-        Me.chkCrearCalificacion_Asignar_A.TabIndex = 14
-        '
-        'lblCrearCalificacion_Asignar_A
-        '
-        Me.lblCrearCalificacion_Asignar_A.AutoSize = True
-        Me.lblCrearCalificacion_Asignar_A.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrearCalificacion_Asignar_A.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearCalificacion_Asignar_A.Location = New System.Drawing.Point(308, 16)
-        Me.lblCrearCalificacion_Asignar_A.Name = "lblCrearCalificacion_Asignar_A"
-        Me.lblCrearCalificacion_Asignar_A.Size = New System.Drawing.Size(120, 22)
-        Me.lblCrearCalificacion_Asignar_A.TabIndex = 15
-        Me.lblCrearCalificacion_Asignar_A.Text = "Asignar a ..."
-        '
-        'rchCrearCalificacion_Comentario
-        '
-        Me.rchCrearCalificacion_Comentario.Location = New System.Drawing.Point(25, 378)
-        Me.rchCrearCalificacion_Comentario.Name = "rchCrearCalificacion_Comentario"
-        Me.rchCrearCalificacion_Comentario.Size = New System.Drawing.Size(645, 152)
-        Me.rchCrearCalificacion_Comentario.TabIndex = 16
-        Me.rchCrearCalificacion_Comentario.Text = ""
-        '
-        'lblCrearCalificacion_Comentario
-        '
-        Me.lblCrearCalificacion_Comentario.AutoSize = True
-        Me.lblCrearCalificacion_Comentario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrearCalificacion_Comentario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearCalificacion_Comentario.Location = New System.Drawing.Point(21, 339)
-        Me.lblCrearCalificacion_Comentario.Name = "lblCrearCalificacion_Comentario"
-        Me.lblCrearCalificacion_Comentario.Size = New System.Drawing.Size(116, 22)
-        Me.lblCrearCalificacion_Comentario.TabIndex = 17
-        Me.lblCrearCalificacion_Comentario.Text = "Comentario"
-        '
-        'lstCrearCalificacion_tipo
-        '
-        Me.lstCrearCalificacion_tipo.FormattingEnabled = True
-        Me.lstCrearCalificacion_tipo.Items.AddRange(New Object() {"Trabajo_Laboratorio", "Trabajo_domiciliario", "Trabajo_practico", "Trabajo_Investigacion", "Trabajo_escrito", "Oral", "Parcial", "Primera_entrega_proyecto", "Segunda_entrega_proyecto", "Entrega_final_proyecto", "Defensa_individual", "Defensa_grupal", "Es_proyecto"})
-        Me.lstCrearCalificacion_tipo.Location = New System.Drawing.Point(25, 206)
-        Me.lstCrearCalificacion_tipo.Name = "lstCrearCalificacion_tipo"
-        Me.lstCrearCalificacion_tipo.Size = New System.Drawing.Size(262, 43)
-        Me.lstCrearCalificacion_tipo.TabIndex = 18
-        '
-        'lblCrearCalificacion_Tipo
-        '
-        Me.lblCrearCalificacion_Tipo.AutoSize = True
-        Me.lblCrearCalificacion_Tipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCrearCalificacion_Tipo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearCalificacion_Tipo.Location = New System.Drawing.Point(21, 177)
-        Me.lblCrearCalificacion_Tipo.Name = "lblCrearCalificacion_Tipo"
-        Me.lblCrearCalificacion_Tipo.Size = New System.Drawing.Size(50, 22)
-        Me.lblCrearCalificacion_Tipo.TabIndex = 19
-        Me.lblCrearCalificacion_Tipo.Text = "Tipo"
-        '
-        'nudCrearCalificacion_Nota
-        '
-        Me.nudCrearCalificacion_Nota.Location = New System.Drawing.Point(25, 295)
-        Me.nudCrearCalificacion_Nota.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
-        Me.nudCrearCalificacion_Nota.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.nudCrearCalificacion_Nota.Name = "nudCrearCalificacion_Nota"
-        Me.nudCrearCalificacion_Nota.Size = New System.Drawing.Size(262, 20)
-        Me.nudCrearCalificacion_Nota.TabIndex = 20
-        Me.nudCrearCalificacion_Nota.Value = New Decimal(New Integer() {1, 0, 0, 0})
-        '
-        'lbl_CrearCalificacion_Nota
-        '
-        Me.lbl_CrearCalificacion_Nota.AutoSize = True
-        Me.lbl_CrearCalificacion_Nota.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_CrearCalificacion_Nota.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lbl_CrearCalificacion_Nota.Location = New System.Drawing.Point(21, 266)
-        Me.lbl_CrearCalificacion_Nota.Name = "lbl_CrearCalificacion_Nota"
-        Me.lbl_CrearCalificacion_Nota.Size = New System.Drawing.Size(53, 22)
-        Me.lbl_CrearCalificacion_Nota.TabIndex = 21
-        Me.lbl_CrearCalificacion_Nota.Text = "Nota"
+        Me.btnCrearCalificacion_Aceptar.BackColor = System.Drawing.Color.White
+        Me.btnCrearCalificacion_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnCrearCalificacion_Aceptar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearCalificacion_Aceptar.ForeColor = System.Drawing.Color.Green
+        Me.btnCrearCalificacion_Aceptar.Location = New System.Drawing.Point(459, 582)
+        Me.btnCrearCalificacion_Aceptar.Name = "btnCrearCalificacion_Aceptar"
+        Me.btnCrearCalificacion_Aceptar.Size = New System.Drawing.Size(211, 39)
+        Me.btnCrearCalificacion_Aceptar.TabIndex = 23
+        Me.btnCrearCalificacion_Aceptar.Text = "Aceptar"
+        Me.btnCrearCalificacion_Aceptar.UseVisualStyleBackColor = False
         '
         'btnCrearCalificacion_Cancelar
         '
@@ -194,18 +106,84 @@ Partial Class ventana_crear_calificaciones
         Me.btnCrearCalificacion_Cancelar.Text = "Cancelar"
         Me.btnCrearCalificacion_Cancelar.UseVisualStyleBackColor = False
         '
-        'btnCrearCalificacion_Aceptar
+        'lbl_CrearCalificacion_Nota
         '
-        Me.btnCrearCalificacion_Aceptar.BackColor = System.Drawing.Color.White
-        Me.btnCrearCalificacion_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearCalificacion_Aceptar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearCalificacion_Aceptar.ForeColor = System.Drawing.Color.Green
-        Me.btnCrearCalificacion_Aceptar.Location = New System.Drawing.Point(459, 582)
-        Me.btnCrearCalificacion_Aceptar.Name = "btnCrearCalificacion_Aceptar"
-        Me.btnCrearCalificacion_Aceptar.Size = New System.Drawing.Size(211, 39)
-        Me.btnCrearCalificacion_Aceptar.TabIndex = 23
-        Me.btnCrearCalificacion_Aceptar.Text = "Aceptar"
-        Me.btnCrearCalificacion_Aceptar.UseVisualStyleBackColor = False
+        Me.lbl_CrearCalificacion_Nota.AutoSize = True
+        Me.lbl_CrearCalificacion_Nota.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_CrearCalificacion_Nota.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lbl_CrearCalificacion_Nota.Location = New System.Drawing.Point(21, 266)
+        Me.lbl_CrearCalificacion_Nota.Name = "lbl_CrearCalificacion_Nota"
+        Me.lbl_CrearCalificacion_Nota.Size = New System.Drawing.Size(53, 22)
+        Me.lbl_CrearCalificacion_Nota.TabIndex = 21
+        Me.lbl_CrearCalificacion_Nota.Text = "Nota"
+        '
+        'nudCrearCalificacion_Nota
+        '
+        Me.nudCrearCalificacion_Nota.Location = New System.Drawing.Point(25, 295)
+        Me.nudCrearCalificacion_Nota.Maximum = New Decimal(New Integer() {12, 0, 0, 0})
+        Me.nudCrearCalificacion_Nota.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
+        Me.nudCrearCalificacion_Nota.Name = "nudCrearCalificacion_Nota"
+        Me.nudCrearCalificacion_Nota.Size = New System.Drawing.Size(262, 20)
+        Me.nudCrearCalificacion_Nota.TabIndex = 20
+        Me.nudCrearCalificacion_Nota.Value = New Decimal(New Integer() {1, 0, 0, 0})
+        '
+        'lblCrearCalificacion_Tipo
+        '
+        Me.lblCrearCalificacion_Tipo.AutoSize = True
+        Me.lblCrearCalificacion_Tipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCalificacion_Tipo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblCrearCalificacion_Tipo.Location = New System.Drawing.Point(21, 84)
+        Me.lblCrearCalificacion_Tipo.Name = "lblCrearCalificacion_Tipo"
+        Me.lblCrearCalificacion_Tipo.Size = New System.Drawing.Size(50, 22)
+        Me.lblCrearCalificacion_Tipo.TabIndex = 19
+        Me.lblCrearCalificacion_Tipo.Text = "Tipo"
+        '
+        'lstCrearCalificacion_tipo
+        '
+        Me.lstCrearCalificacion_tipo.FormattingEnabled = True
+        Me.lstCrearCalificacion_tipo.Items.AddRange(New Object() {"Trabajo_Laboratorio", "Trabajo_domiciliario", "Trabajo_practico", "Trabajo_Investigacion", "Trabajo_escrito", "Oral", "Parcial", "Primera_entrega_proyecto", "Segunda_entrega_proyecto", "Entrega_final_proyecto", "Defensa_individual", "Defensa_grupal", "Es_proyecto"})
+        Me.lstCrearCalificacion_tipo.Location = New System.Drawing.Point(25, 115)
+        Me.lstCrearCalificacion_tipo.Name = "lstCrearCalificacion_tipo"
+        Me.lstCrearCalificacion_tipo.Size = New System.Drawing.Size(262, 134)
+        Me.lstCrearCalificacion_tipo.TabIndex = 18
+        '
+        'lblCrearCalificacion_Comentario
+        '
+        Me.lblCrearCalificacion_Comentario.AutoSize = True
+        Me.lblCrearCalificacion_Comentario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCalificacion_Comentario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblCrearCalificacion_Comentario.Location = New System.Drawing.Point(21, 339)
+        Me.lblCrearCalificacion_Comentario.Name = "lblCrearCalificacion_Comentario"
+        Me.lblCrearCalificacion_Comentario.Size = New System.Drawing.Size(116, 22)
+        Me.lblCrearCalificacion_Comentario.TabIndex = 17
+        Me.lblCrearCalificacion_Comentario.Text = "Comentario"
+        '
+        'rchCrearCalificacion_Comentario
+        '
+        Me.rchCrearCalificacion_Comentario.Location = New System.Drawing.Point(25, 378)
+        Me.rchCrearCalificacion_Comentario.Name = "rchCrearCalificacion_Comentario"
+        Me.rchCrearCalificacion_Comentario.Size = New System.Drawing.Size(645, 152)
+        Me.rchCrearCalificacion_Comentario.TabIndex = 16
+        Me.rchCrearCalificacion_Comentario.Text = ""
+        '
+        'lblCrearCalificacion_Asignar_A
+        '
+        Me.lblCrearCalificacion_Asignar_A.AutoSize = True
+        Me.lblCrearCalificacion_Asignar_A.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCalificacion_Asignar_A.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblCrearCalificacion_Asignar_A.Location = New System.Drawing.Point(308, 16)
+        Me.lblCrearCalificacion_Asignar_A.Name = "lblCrearCalificacion_Asignar_A"
+        Me.lblCrearCalificacion_Asignar_A.Size = New System.Drawing.Size(120, 22)
+        Me.lblCrearCalificacion_Asignar_A.TabIndex = 15
+        Me.lblCrearCalificacion_Asignar_A.Text = "Asignar a ..."
+        '
+        'chkCrearCalificacion_Asignar_A
+        '
+        Me.chkCrearCalificacion_Asignar_A.FormattingEnabled = True
+        Me.chkCrearCalificacion_Asignar_A.Location = New System.Drawing.Point(312, 47)
+        Me.chkCrearCalificacion_Asignar_A.Name = "chkCrearCalificacion_Asignar_A"
+        Me.chkCrearCalificacion_Asignar_A.Size = New System.Drawing.Size(358, 274)
+        Me.chkCrearCalificacion_Asignar_A.TabIndex = 14
         '
         'ventana_crear_calificaciones
         '
@@ -226,8 +204,6 @@ Partial Class ventana_crear_calificaciones
     Friend WithEvents txtCrearCalificaciones_Nombre_Descriptivo As TextBox
     Friend WithEvents lblNombreCalificacion As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents lblCrearCalificaciones_Nombre_Materia As Label
-    Friend WithEvents txtCrearCalificaciones_Nombre_Materia As TextBox
     Friend WithEvents lblCrearCalificacion_Comentario As Label
     Friend WithEvents rchCrearCalificacion_Comentario As RichTextBox
     Friend WithEvents lblCrearCalificacion_Asignar_A As Label

@@ -15,6 +15,12 @@
         Me.tabPrincipal.Appearance = TabAppearance.FlatButtons
         Me.tabPrincipal.ItemSize = New Size(0, 1)
         Me.tabPrincipal.SizeMode = TabSizeMode.Fixed
+
+        Me.tabCalificaciones_Vista.Appearance = TabAppearance.FlatButtons
+        Me.tabCalificaciones_Vista.ItemSize = New Size(0, 1)
+        Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
+
+
         Adherir_Validacion(txtAlumnosFiltrarCedula, TipoValidacion.Solo_cedulas)
         Adherir_Validacion(txtAlumnosFiltrarNombre, TipoValidacion.Solo_nombres)
         Adherir_Validacion(pnlUsuariosFiltroNombreUsuario, TipoValidacion.Solo_username)
@@ -84,5 +90,21 @@
 
     Private Sub btnCrearCalificaciones_Click(sender As Object, e As EventArgs) Handles btnCrearCalificaciones.Click
         ventana_crear_calificaciones.ShowDialog()
+    End Sub
+
+    Private Sub tabPrincipalTareas_Click(sender As Object, e As EventArgs) Handles tabPrincipalTareas.Click
+
+    End Sub
+
+    Private Sub rdioCalificaciones_Ver_Por_Calificacion_CheckedChanged(sender As Object, e As EventArgs) Handles rdioCalificaciones_Ver_Por_Calificacion.CheckedChanged
+
+        Me.tabCalificaciones_Vista.SelectedTab = Me.tabCalificaciones_Vista_Por_Calificacion
+
+    End Sub
+
+    Private Sub rdioCalificaciones_Ver_Por_Alumno_CheckedChanged(sender As Object, e As EventArgs) Handles rdioCalificaciones_Ver_Por_Alumno.CheckedChanged
+
+        Me.tabCalificaciones_Vista.SelectedTab = Me.tabCalificaiones_Vista_Alumnos
+
     End Sub
 End Class
