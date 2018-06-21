@@ -111,4 +111,8 @@
     Private Sub btnMateriasCrear_Click(sender As Object, e As EventArgs) Handles btnMateriasCrear.Click
         ventana_crear_asignatura.ShowDialog()
     End Sub
+
+    Private Sub btnInstitutoCrear_Click(sender As Object, e As EventArgs) Handles btnInstitutoCrear.Click
+        ventana_crear_institutos.ShowDialog()
+    End Sub
 End Class

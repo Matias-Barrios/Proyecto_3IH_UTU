@@ -170,6 +170,12 @@
     <Compile Include="ventana_crear_asignatura.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ventana_crear_institutos.Designer.vb">
+      <DependentUpon>ventana_crear_institutos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ventana_crear_institutos.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="controles_personalizados\Persona_Vista.resx">
@@ -213,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ventana_crear_asignatura.resx">
       <DependentUpon>ventana_crear_asignatura.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ventana_crear_institutos.resx">
+      <DependentUpon>ventana_crear_institutos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
