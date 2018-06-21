@@ -82,6 +82,7 @@
     <Compile Include="controles_personalizados\Persona_Vista.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="modulos\InformixConexion.vb" />
     <Compile Include="Ventanas\ventana_cambiar_password.Designer.vb">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
     </Compile>

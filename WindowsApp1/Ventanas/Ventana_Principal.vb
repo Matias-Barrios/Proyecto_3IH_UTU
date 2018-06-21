@@ -3,6 +3,8 @@
     Public usuario = New Modulo_Usuarios.User("", "", "")
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' conectar("Driver={InformixRemoto};Database=gestion_utu;Host=45.79.7.217;Server=miServidor;Service=50000;Protocol=onsoctcp;UID=;Password=;")
         maximizarVentana(Me)
         Me.b_lblRol_fijo.border_thickness = 2
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
