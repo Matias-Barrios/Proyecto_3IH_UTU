@@ -107,4 +107,8 @@
         Me.tabCalificaciones_Vista.SelectedTab = Me.tabCalificaiones_Vista_Alumnos
 
     End Sub
+
+    Private Sub btnMateriasCrear_Click(sender As Object, e As EventArgs) Handles btnMateriasCrear.Click
+        ventana_crear_asignatura.ShowDialog()
+    End Sub
 End Class

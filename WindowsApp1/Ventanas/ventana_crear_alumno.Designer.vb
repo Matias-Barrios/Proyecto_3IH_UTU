@@ -67,11 +67,11 @@ Partial Class ventana_crear_alumno
         '
         Me.rdioCrearAlumnoHaceProyecto.AutoSize = True
         Me.rdioCrearAlumnoHaceProyecto.Checked = True
-        Me.rdioCrearAlumnoHaceProyecto.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!)
+        Me.rdioCrearAlumnoHaceProyecto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
         Me.rdioCrearAlumnoHaceProyecto.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.rdioCrearAlumnoHaceProyecto.Location = New System.Drawing.Point(19, 223)
         Me.rdioCrearAlumnoHaceProyecto.Name = "rdioCrearAlumnoHaceProyecto"
-        Me.rdioCrearAlumnoHaceProyecto.Size = New System.Drawing.Size(172, 26)
+        Me.rdioCrearAlumnoHaceProyecto.Size = New System.Drawing.Size(161, 28)
         Me.rdioCrearAlumnoHaceProyecto.TabIndex = 31
         Me.rdioCrearAlumnoHaceProyecto.TabStop = True
         Me.rdioCrearAlumnoHaceProyecto.Text = "Hace proyecto?"
@@ -100,11 +100,11 @@ Partial Class ventana_crear_alumno
         'lblCrearAlumnoCI
         '
         Me.lblCrearAlumnoCI.AutoSize = True
-        Me.lblCrearAlumnoCI.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearAlumnoCI.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoCI.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearAlumnoCI.Location = New System.Drawing.Point(6, 9)
         Me.lblCrearAlumnoCI.Name = "lblCrearAlumnoCI"
-        Me.lblCrearAlumnoCI.Size = New System.Drawing.Size(30, 22)
+        Me.lblCrearAlumnoCI.Size = New System.Drawing.Size(27, 24)
         Me.lblCrearAlumnoCI.TabIndex = 19
         Me.lblCrearAlumnoCI.Text = "CI"
         '
@@ -118,11 +118,11 @@ Partial Class ventana_crear_alumno
         'lblCrearAlumnoFechaNacimiento
         '
         Me.lblCrearAlumnoFechaNacimiento.AutoSize = True
-        Me.lblCrearAlumnoFechaNacimiento.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearAlumnoFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoFechaNacimiento.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearAlumnoFechaNacimiento.Location = New System.Drawing.Point(18, 178)
         Me.lblCrearAlumnoFechaNacimiento.Name = "lblCrearAlumnoFechaNacimiento"
-        Me.lblCrearAlumnoFechaNacimiento.Size = New System.Drawing.Size(173, 22)
+        Me.lblCrearAlumnoFechaNacimiento.Size = New System.Drawing.Size(164, 24)
         Me.lblCrearAlumnoFechaNacimiento.TabIndex = 28
         Me.lblCrearAlumnoFechaNacimiento.Text = "Fecha Nacimiento"
         '
@@ -139,11 +139,11 @@ Partial Class ventana_crear_alumno
         'lblCrearAlumnoEmail
         '
         Me.lblCrearAlumnoEmail.AutoSize = True
-        Me.lblCrearAlumnoEmail.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearAlumnoEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearAlumnoEmail.Location = New System.Drawing.Point(18, 137)
         Me.lblCrearAlumnoEmail.Name = "lblCrearAlumnoEmail"
-        Me.lblCrearAlumnoEmail.Size = New System.Drawing.Size(61, 22)
+        Me.lblCrearAlumnoEmail.Size = New System.Drawing.Size(57, 24)
         Me.lblCrearAlumnoEmail.TabIndex = 26
         Me.lblCrearAlumnoEmail.Text = "Email"
         '
@@ -170,22 +170,22 @@ Partial Class ventana_crear_alumno
         'lblCrearAlumnoApellido
         '
         Me.lblCrearAlumnoApellido.AutoSize = True
-        Me.lblCrearAlumnoApellido.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearAlumnoApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoApellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearAlumnoApellido.Location = New System.Drawing.Point(18, 100)
         Me.lblCrearAlumnoApellido.Name = "lblCrearAlumnoApellido"
-        Me.lblCrearAlumnoApellido.Size = New System.Drawing.Size(85, 22)
+        Me.lblCrearAlumnoApellido.Size = New System.Drawing.Size(79, 24)
         Me.lblCrearAlumnoApellido.TabIndex = 20
         Me.lblCrearAlumnoApellido.Text = "Apellido"
         '
         'lblCrear_alumno_nombre
         '
         Me.lblCrear_alumno_nombre.AutoSize = True
-        Me.lblCrear_alumno_nombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrear_alumno_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrear_alumno_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrear_alumno_nombre.Location = New System.Drawing.Point(18, 62)
         Me.lblCrear_alumno_nombre.Name = "lblCrear_alumno_nombre"
-        Me.lblCrear_alumno_nombre.Size = New System.Drawing.Size(83, 22)
+        Me.lblCrear_alumno_nombre.Size = New System.Drawing.Size(79, 24)
         Me.lblCrear_alumno_nombre.TabIndex = 18
         Me.lblCrear_alumno_nombre.Text = "Nombre"
         '
@@ -198,9 +198,9 @@ Partial Class ventana_crear_alumno
         Me.btnCrearAlumnoCancelar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.cancel
         Me.btnCrearAlumnoCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCrearAlumnoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearAlumnoCancelar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearAlumnoCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearAlumnoCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrearAlumnoCancelar.Location = New System.Drawing.Point(55, 604)
+        Me.btnCrearAlumnoCancelar.Location = New System.Drawing.Point(21, 600)
         Me.btnCrearAlumnoCancelar.Name = "btnCrearAlumnoCancelar"
         Me.btnCrearAlumnoCancelar.Size = New System.Drawing.Size(45, 45)
         Me.btnCrearAlumnoCancelar.TabIndex = 20
@@ -215,9 +215,9 @@ Partial Class ventana_crear_alumno
         Me.btnCrearAlumnoAceptar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.checkmark_filled
         Me.btnCrearAlumnoAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCrearAlumnoAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearAlumnoAceptar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearAlumnoAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearAlumnoAceptar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrearAlumnoAceptar.Location = New System.Drawing.Point(363, 604)
+        Me.btnCrearAlumnoAceptar.Location = New System.Drawing.Point(388, 600)
         Me.btnCrearAlumnoAceptar.Name = "btnCrearAlumnoAceptar"
         Me.btnCrearAlumnoAceptar.Size = New System.Drawing.Size(45, 45)
         Me.btnCrearAlumnoAceptar.TabIndex = 19
@@ -228,7 +228,7 @@ Partial Class ventana_crear_alumno
         Me.lblCrear_Alumnos_Titulo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblCrear_Alumnos_Titulo.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrear_Alumnos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrear_Alumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrear_Alumnos_Titulo.Location = New System.Drawing.Point(20, 22)
         Me.lblCrear_Alumnos_Titulo.Name = "lblCrear_Alumnos_Titulo"
@@ -241,7 +241,7 @@ Partial Class ventana_crear_alumno
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(449, 661)
+        Me.ClientSize = New System.Drawing.Size(449, 662)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.btnCrearAlumnoCancelar)
         Me.Controls.Add(Me.btnCrearAlumnoAceptar)
