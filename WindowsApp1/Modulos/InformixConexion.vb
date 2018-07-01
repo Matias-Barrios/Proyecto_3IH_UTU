@@ -28,4 +28,11 @@ Module InformixConexion
         Return Environment.GetEnvironmentVariable("GESTION_PASSWORD")
     End Function
 
+    Public Function realizar_query(query As String) As OdbcDataReader
+        Dim comando = New OdbcCommand
+        comando.CommandText = query
+        comando.Connection = conexionODBC
+        Return comando.ExecuteReader()
+    End Function
+
 End Module
