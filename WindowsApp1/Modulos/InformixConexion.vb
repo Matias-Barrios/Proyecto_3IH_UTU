@@ -1,24 +1,31 @@
 ﻿Imports System.Data.Odbc
 
 Module InformixConexion
+    Dim conexionODBC As New OdbcConnection
 
-
-    Public Function conectar(conn_strin As String) As OdbcConnection
-        ' Dim ConnectionString As String = "Host=" + HOST + "; " + "Service=" + SERVICENUM + "; " + "Server=" + SERVER + "; " + "Database=" + DATABASE + "; " + "User Id=" + User + "; " + "Password=" + PASSWORD + "; "
-        ' conn_strin = "FileDsn=c:\informix.odbc;UID=admin_proyecto;PWD=tercero2018"
-        ' "Database=gestion_utu;Host=45.79.7.217;Server=miServidor;Service=50000;Protocol=onsoctcp;UID=admin_proyecto;Password=tercero2018;"
-        Dim conexionODBC As New OdbcConnection
+    Public Sub conectar(conn_strin As String)
         conexionODBC.ConnectionString = conn_strin
         Try
             conexionODBC.Open()
             Console.WriteLine("Conectado a Informix")
         Catch ex As OdbcException
             MsgBox(ex.ToString())
-            Throw ex
         End Try
 
-        Return conexionODBC
+    End Sub
 
+    Public Sub cerrar_conexion()
+        Console.WriteLine("Cerrando conexion!")
+        conexionODBC.Close()
+    End Sub
+
+    Public Function NOMBRE_USUARIO() As String
+        Console.WriteLine("USERNAME " & Environment.GetEnvironmentVariable("GESTION_USERNAME") & System.Environment.GetEnvironmentVariable("COMPUTERNAME"))
+        Return Environment.GetEnvironmentVariable("GESTION_USERNAME")
+    End Function
+
+    Public Function CONTRASENIA() As String
+        Return Environment.GetEnvironmentVariable("GESTION_PASSWORD")
     End Function
 
 End Module

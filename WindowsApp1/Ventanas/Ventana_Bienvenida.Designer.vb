@@ -33,7 +33,7 @@ Partial Class Ventana_Bienvenida
         Me.btnIngresarAlSistema.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnIngresarAlSistema.BackColor = System.Drawing.Color.White
         Me.btnIngresarAlSistema.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnIngresarAlSistema.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnIngresarAlSistema.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnIngresarAlSistema.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnIngresarAlSistema.Location = New System.Drawing.Point(39, 472)
         Me.btnIngresarAlSistema.Name = "btnIngresarAlSistema"
@@ -47,7 +47,7 @@ Partial Class Ventana_Bienvenida
         Me.btnModoInvitado.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnModoInvitado.BackColor = System.Drawing.Color.White
         Me.btnModoInvitado.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnModoInvitado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModoInvitado.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnModoInvitado.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnModoInvitado.Location = New System.Drawing.Point(527, 472)
         Me.btnModoInvitado.Name = "btnModoInvitado"
@@ -71,7 +71,7 @@ Partial Class Ventana_Bienvenida
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnModoInvitado)
         Me.Controls.Add(Me.btnIngresarAlSistema)

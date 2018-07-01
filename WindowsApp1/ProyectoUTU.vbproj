@@ -165,16 +165,16 @@
     <Compile Include="Ventanas\Ventana_Bienvenida.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventana_crear_asignatura.Designer.vb">
+    <Compile Include="Ventanas\ventana_crear_asignatura.Designer.vb">
       <DependentUpon>ventana_crear_asignatura.vb</DependentUpon>
     </Compile>
-    <Compile Include="ventana_crear_asignatura.vb">
+    <Compile Include="Ventanas\ventana_crear_asignatura.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ventana_crear_institutos.Designer.vb">
+    <Compile Include="Ventanas\ventana_crear_institutos.Designer.vb">
       <DependentUpon>ventana_crear_institutos.vb</DependentUpon>
     </Compile>
-    <Compile Include="ventana_crear_institutos.vb">
+    <Compile Include="Ventanas\ventana_crear_institutos.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -218,10 +218,10 @@
     <EmbeddedResource Include="Ventanas\Ventana_Bienvenida.resx">
       <DependentUpon>Ventana_Bienvenida.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventana_crear_asignatura.resx">
+    <EmbeddedResource Include="Ventanas\ventana_crear_asignatura.resx">
       <DependentUpon>ventana_crear_asignatura.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ventana_crear_institutos.resx">
+    <EmbeddedResource Include="Ventanas\ventana_crear_institutos.resx">
       <DependentUpon>ventana_crear_institutos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
