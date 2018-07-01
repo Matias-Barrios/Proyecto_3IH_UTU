@@ -41,7 +41,7 @@
             Me.Hide()
             Ventana_Principal.ShowDialog()
         Catch ex As Exception
-            MsgBox("Either your username or your password is incorrect", 0, "Authentication error")
+            MsgBox("Su nombre de usuario o contraseña es incorrecto", 0, "Error de autenticacion")
         End Try
     End Sub
 

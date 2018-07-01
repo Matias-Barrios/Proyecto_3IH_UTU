@@ -476,6 +476,8 @@ Partial Class Ventana_Principal
         '
         'datagridMaterias
         '
+        Me.datagridMaterias.AllowUserToAddRows = False
+        Me.datagridMaterias.AllowUserToDeleteRows = False
         Me.datagridMaterias.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)

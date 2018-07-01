@@ -3,8 +3,7 @@
     Public usuario = New Modulo_Usuarios.User("", "", "")
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-
+        'datagridAlumnos.DataSource = realizar_query(CONSULTAS_SELECT_ALUMNOS())
 
         maximizarVentana(Me)
         Me.b_lblRol_fijo.border_thickness = 2
@@ -41,11 +40,12 @@
 
     Private Sub btnAlumnos_Click(sender As Object, e As EventArgs) Handles btnAlumnos.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalAlumnos
-        datagridAlumnos.DataSource = realizar_query(CONSULTAS_SELECT_ALUMNOS())
+        datagridAlumnos.DataSource = hacer_consulta(CONSULTAS_SELECT_ALUMNOS())
     End Sub
 
     Private Sub btnMaterias_Click(sender As Object, e As EventArgs) Handles btnMaterias.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalMaterias
+        datagridMaterias.DataSource = hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS())
     End Sub
 
     Private Sub btnTareas_Click(sender As Object, e As EventArgs) Handles btnTareas.Click
