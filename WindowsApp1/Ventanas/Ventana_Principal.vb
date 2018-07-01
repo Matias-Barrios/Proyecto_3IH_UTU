@@ -5,6 +5,7 @@
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
+
         maximizarVentana(Me)
         Me.b_lblRol_fijo.border_thickness = 2
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
@@ -40,6 +41,7 @@
 
     Private Sub btnAlumnos_Click(sender As Object, e As EventArgs) Handles btnAlumnos.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalAlumnos
+        datagridAlumnos.DataSource = realizar_query(CONSULTAS_SELECT_ALUMNOS())
     End Sub
 
     Private Sub btnMaterias_Click(sender As Object, e As EventArgs) Handles btnMaterias.Click
@@ -88,6 +90,8 @@
 
     Private Sub btnVentanaPrincipalInstitutos_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalInstitutos.Click
         Me.tabPrincipal.SelectedTab = Me.tabpageInstitutos
+        datagridInstitutos.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS())
+
     End Sub
 
     Private Sub btnCrearCalificaciones_Click(sender As Object, e As EventArgs) Handles btnCrearCalificaciones.Click
@@ -116,5 +120,9 @@
 
     Private Sub btnInstitutoCrear_Click(sender As Object, e As EventArgs) Handles btnInstitutoCrear.Click
         ventana_crear_institutos.ShowDialog()
+    End Sub
+
+    Private Sub frmProgramma_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        Ventana_Login.Show()
     End Sub
 End Class

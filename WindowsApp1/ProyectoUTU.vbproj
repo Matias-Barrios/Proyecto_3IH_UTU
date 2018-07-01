@@ -75,6 +75,7 @@
     <Compile Include="clases_personalizadas\BorderLabel.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="modulos\Consultas.vb" />
     <Compile Include="modulos\Encripcion_Passwords.vb" />
     <Compile Include="controles_personalizados\Persona_Vista.Designer.vb">
       <DependentUpon>Persona_Vista.vb</DependentUpon>

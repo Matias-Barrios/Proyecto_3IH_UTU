@@ -28,11 +28,45 @@ Module InformixConexion
         Return Environment.GetEnvironmentVariable("GESTION_PASSWORD")
     End Function
 
-    Public Function realizar_query(query As String) As OdbcDataReader
-        Dim comando = New OdbcCommand
-        comando.CommandText = query
-        comando.Connection = conexionODBC
-        Return comando.ExecuteReader()
+    Public Function realizar_query(query As String) As DataTable
+
+        Dim data_adapter As New OdbcDataAdapter
+
+        Dim tabla As New DataTable
+
+        With data_adapter
+
+            .SelectCommand.Connection = conexionODBC
+
+            .SelectCommand.CommandText = query
+
+            .Fill(tabla)
+
+            '.Dispose()
+
+        End With
+
+        Return tabla
+
     End Function
+
+    Public Function hacer_consulta(query As String) As DataTable
+        Try
+
+            Dim dt As New DataTable()
+            Dim da As OdbcDataAdapter = New OdbcDataAdapter(query, conexionODBC)
+            da.Fill(dt)
+            If dt.Rows.Count = 0 Then
+                Throw New Exception("No se encontraron registros para : " + query)
+            End If
+            Return dt
+        Catch ex As Exception
+            Throw ex
+
+        End Try
+    End Function
+
+
+
 
 End Module
