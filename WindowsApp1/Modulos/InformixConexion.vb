@@ -43,6 +43,7 @@ Module InformixConexion
 
 
         End Try
+        Return New DataTable
     End Function
 
 
