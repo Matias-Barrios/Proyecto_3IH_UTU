@@ -17,7 +17,7 @@
         Return "SELECT * FROM Orientaciones AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_DOCENTES() As String
-        Return "SELECT * FROM Personas WHERE tipo = 'Docente' AND baja = 'f'"
+        Return "SELECT * FROM Personas WHERE tipo='Profesor'"
     End Function
     Public Function CONSULTAS_SELECT_GRUPOS() As String
         Return "SELECT * FROM Grupos AND baja = 'f'"

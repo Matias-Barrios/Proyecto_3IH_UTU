@@ -14,15 +14,15 @@
 
     End Class
 
-    Public Function Validar(usersList As List(Of User), nombre As String, password As String) As User
+    Public Function Validar(usersList As List(Of User), nombre As String, password As String) As Boolean
 
         For Each user As Object In usersList
             If nombre = user.Name() And password = user.Password() Then
-                Return user
+                Return True
             End If
         Next
 
-        Throw New UnauthorizedAccessException
+        Return False
     End Function
 
 

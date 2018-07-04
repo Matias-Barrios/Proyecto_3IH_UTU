@@ -18,16 +18,6 @@ Module InformixConexion
         Console.WriteLine("Cerrando conexion!")
         conexionODBC.Close()
     End Sub
-
-    Public Function NOMBRE_USUARIO() As String
-        Console.WriteLine("USERNAME " & Environment.GetEnvironmentVariable("GESTION_USERNAME") & System.Environment.GetEnvironmentVariable("COMPUTERNAME"))
-        Return Environment.GetEnvironmentVariable("GESTION_USERNAME")
-    End Function
-
-    Public Function CONTRASENIA() As String
-        Return Environment.GetEnvironmentVariable("GESTION_PASSWORD")
-    End Function
-
     Public Function hacer_consulta(query As String) As DataTable
         Try
 
@@ -46,7 +36,13 @@ Module InformixConexion
         Return New DataTable
     End Function
 
+    Public Function NOMBRE_USUARIO() As String
+        Return Environment.GetEnvironmentVariable("GESTION_USERNAME")
+    End Function
 
+    Public Function CONTRASENIA() As String
+        Return Environment.GetEnvironmentVariable("GESTION_PASSWORD")
+    End Function
 
 
 End Module

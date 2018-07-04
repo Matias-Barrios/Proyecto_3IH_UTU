@@ -36,17 +36,18 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-        Try
-            Ventana_Principal.usuario = Validar(usersList, Me.txtNombreUsuario.Text, Me.txtPassword.Text)
+
+        If Validar(usersList, Me.txtNombreUsuario.Text, Me.txtPassword.Text) Then
             Me.Hide()
             Ventana_Principal.ShowDialog()
-        Catch ex As Exception
+        Else
             MsgBox("Su nombre de usuario o contraseña es incorrecto", 0, "Error de autenticacion")
-        End Try
+        End If
+
     End Sub
 
     Private Sub Cerra_Ventana(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles MyBase.Closing
         Me.Hide()
         Ventana_Bienvenida.Show()
-    End Sub 'Form1_Closing
-End Class 'Form1
+    End Sub
+End Class

@@ -4,7 +4,7 @@
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        datagridAlumnos.DataSource = hacer_consulta(CONSULTAS_SELECT_ALUMNOS())
+        dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
 
         maximizarVentana(Me)
         Me.b_lblRol_fijo.border_thickness = 2
@@ -41,23 +41,26 @@
 
     Private Sub btnAlumnos_Click(sender As Object, e As EventArgs) Handles btnAlumnos.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalAlumnos
-        datagridAlumnos.DataSource = hacer_consulta(CONSULTAS_SELECT_ALUMNOS())
+        dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
     End Sub
 
     Private Sub btnMaterias_Click(sender As Object, e As EventArgs) Handles btnMaterias.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalMaterias
-        datagridMaterias.DataSource = hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS())
+        dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
     End Sub
 
     Private Sub btnTareas_Click(sender As Object, e As EventArgs) Handles btnTareas.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalTareas
+        dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDocentes.Click
+        dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalDocentes
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
+        dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalUsuarios
     End Sub
 
@@ -69,7 +72,7 @@
         VentanaConfiguracion.ShowDialog()
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles btnAlumnosCrearNuevo.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs)
         ventana_crear_alumno.ShowDialog()
     End Sub
 
@@ -77,11 +80,11 @@
         ventana_crear_docente.ShowDialog()
     End Sub
 
-    Private Sub btnAlumnosModificar_Click(sender As Object, e As EventArgs) Handles btnAlumnosModificar.Click
+    Private Sub btnAlumnosModificar_Click(sender As Object, e As EventArgs)
         ventana_modificar_alumno.ShowDialog()
     End Sub
 
-    Private Sub btnAlumnosEliminar_Click(sender As Object, e As EventArgs) Handles btnAlumnosEliminar.Click
+    Private Sub btnAlumnosEliminar_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -91,7 +94,7 @@
 
     Private Sub btnVentanaPrincipalInstitutos_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalInstitutos.Click
         Me.tabPrincipal.SelectedTab = Me.tabpageInstitutos
-        datagridInstitutos.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS())
+        dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
 
     End Sub
 
@@ -125,5 +128,10 @@
 
     Private Sub frmProgramma_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Ventana_Login.Show()
+    End Sub
+
+    Private Sub btn_Grupos_Click(sender As Object, e As EventArgs) Handles btn_Grupos.Click
+        dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+        Me.tabPrincipal.SelectedTab = Me.tabpage_Grupos
     End Sub
 End Class

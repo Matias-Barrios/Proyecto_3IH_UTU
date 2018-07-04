@@ -75,6 +75,12 @@
     <Compile Include="clases_personalizadas\BorderLabel.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="controles_personalizados\DGVPaginado.Designer.vb">
+      <DependentUpon>DGVPaginado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="controles_personalizados\DGVPaginado.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="modulos\Consultas.vb" />
     <Compile Include="modulos\Encripcion_Passwords.vb" />
     <Compile Include="controles_personalizados\Persona_Vista.Designer.vb">
@@ -182,6 +188,9 @@
   <ItemGroup>
     <EmbeddedResource Include="controles_personalizados\Persona_Vista.resx">
       <DependentUpon>Persona_Vista.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controles_personalizados\DGVPaginado.resx">
+      <DependentUpon>DGVPaginado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_cambiar_password.resx">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
