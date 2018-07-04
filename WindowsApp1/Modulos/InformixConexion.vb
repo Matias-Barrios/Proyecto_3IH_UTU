@@ -31,6 +31,7 @@ Module InformixConexion
         Catch ex As Exception
             MsgBox("Se ha producido una excepcion realizando la consulta : " + ex.ToString())
 
+            Return New DataTable().Rows.Add({}).Table()
 
         End Try
         Return New DataTable
