@@ -60,12 +60,12 @@
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
-        dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+        dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalUsuarios
     End Sub
 
     Private Sub pnlUsuariosBotonCrearNuevo_Click(sender As Object, e As EventArgs) Handles btnUsuariosBotonCrearNuevo.Click
-
+        ventana_crear_usuario.ShowDialog()
     End Sub
 
     Private Sub btnVentanaPrincipalConfiguracion_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalConfiguracion.Click

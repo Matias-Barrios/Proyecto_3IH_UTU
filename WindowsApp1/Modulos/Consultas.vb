@@ -20,7 +20,7 @@
         Return "SELECT * FROM Personas WHERE tipo='Profesor' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_GRUPOS() As String
-        Return "SELECT * FROM Grupos WHERE baja = 'f'"
+        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Institutos.nombre,Orientaciones.nombre_orientacion FROM Grupos,Institutos,Orientaciones WHERE Grupos.baja = 'f' and Grupos.foranea_id_instituto = Institutos.id_instituto and Grupos.foranea_id_orientacion = Orientaciones.id_orientacion and  Grupos.baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_ADMINISTRADORES() As String
         Return "SELECT * FROM Personas WHERE tipo = 'Administrador' AND baja = 'f'"
@@ -31,4 +31,13 @@
     Public Function CONSULTAS_SELECT_CALIFICACIONES() As String
         Return "SELECT * FROM Calificaciones WHERE baja = 'f'"
     End Function
+
+    Public Function CONSULTAS_SELECT_USUARIOS() As String
+        Return "SELECT * FROM Personas WHERE baja = 'f' AND encriptacion_hash is not null AND baja = 'f'"
+    End Function
+
+    Public Function CONSULTAS_SELECT_POTENCIALES_USUARIOS() As String
+        Return "SELECT * FROM Personas WHERE baja = 'f' AND tipo IN ('Admin','Profesor','Administrativo')"
+    End Function
+
 End Module

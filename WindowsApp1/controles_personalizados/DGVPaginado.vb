@@ -6,18 +6,31 @@
     Private items_por_pagina As Integer = 50
 
     Public Sub Cargar_datos(dt As DataTable)
-        total_los_datos = dt
-        total = dt.Rows.Count
-        maximo_paginas = Math.Ceiling(total / items_por_pagina)
-        lbl_vista_numeracion.Text = (pagina + 1) & "/" & maximo_paginas
-        dgv_Vista.DataSource = Split(total_los_datos)
-        Habilitar_Botones()
+        If dt.Rows.Count() <> 0 Then
+            total_los_datos = dt
+            total = dt.Rows.Count
+            maximo_paginas = Math.Ceiling(total / items_por_pagina)
+            lbl_vista_numeracion.Text = (pagina + 1) & "/" & maximo_paginas & " Total de rows : " & total
+            dgv_Vista.DataSource = Split(total_los_datos)
+            btn_Prev.Enabled = False
+            btn_Siguiente.Enabled = True
+            btn_UltimaPagina.Enabled = True
+            btn_Primera.Enabled = True
+            Habilitar_Botones()
+        Else
+            btn_Prev.Enabled = False
+            btn_Siguiente.Enabled = False
+            btn_UltimaPagina.Enabled = False
+            btn_Primera.Enabled = False
+        End If
+
     End Sub
 
     Private Function Split(dt As DataTable) As DataTable
-        lbl_vista_numeracion.Text = (pagina + 1) & "/" & maximo_paginas
+        lbl_vista_numeracion.Text = (pagina + 1) & "/" & maximo_paginas & " Total de rows : " & total
         Habilitar_Botones()
         Return dt.Select.Skip(items_por_pagina * pagina).Take(items_por_pagina).CopyToDataTable()
+
     End Function
 
 

@@ -82,11 +82,11 @@ Partial Class ventana_crear_docente
         Me.lblCrearDocenteGrado.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCrearDocenteGrado.AutoSize = True
-        Me.lblCrearDocenteGrado.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearDocenteGrado.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearDocenteGrado.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearDocenteGrado.Location = New System.Drawing.Point(18, 216)
         Me.lblCrearDocenteGrado.Name = "lblCrearDocenteGrado"
-        Me.lblCrearDocenteGrado.Size = New System.Drawing.Size(67, 22)
+        Me.lblCrearDocenteGrado.Size = New System.Drawing.Size(62, 24)
         Me.lblCrearDocenteGrado.TabIndex = 31
         Me.lblCrearDocenteGrado.Text = "Grado"
         '
@@ -115,11 +115,11 @@ Partial Class ventana_crear_docente
         'lblCrearDocenteCI
         '
         Me.lblCrearDocenteCI.AutoSize = True
-        Me.lblCrearDocenteCI.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearDocenteCI.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearDocenteCI.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearDocenteCI.Location = New System.Drawing.Point(6, 9)
         Me.lblCrearDocenteCI.Name = "lblCrearDocenteCI"
-        Me.lblCrearDocenteCI.Size = New System.Drawing.Size(30, 22)
+        Me.lblCrearDocenteCI.Size = New System.Drawing.Size(27, 24)
         Me.lblCrearDocenteCI.TabIndex = 19
         Me.lblCrearDocenteCI.Text = "CI"
         '
@@ -137,11 +137,11 @@ Partial Class ventana_crear_docente
         Me.lblCrearDocenteFechaNacimiento.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCrearDocenteFechaNacimiento.AutoSize = True
-        Me.lblCrearDocenteFechaNacimiento.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearDocenteFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearDocenteFechaNacimiento.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearDocenteFechaNacimiento.Location = New System.Drawing.Point(18, 178)
         Me.lblCrearDocenteFechaNacimiento.Name = "lblCrearDocenteFechaNacimiento"
-        Me.lblCrearDocenteFechaNacimiento.Size = New System.Drawing.Size(173, 22)
+        Me.lblCrearDocenteFechaNacimiento.Size = New System.Drawing.Size(164, 24)
         Me.lblCrearDocenteFechaNacimiento.TabIndex = 28
         Me.lblCrearDocenteFechaNacimiento.Text = "Fecha Nacimiento"
         '
@@ -162,11 +162,11 @@ Partial Class ventana_crear_docente
         Me.lblCrearDocenteEmail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCrearDocenteEmail.AutoSize = True
-        Me.lblCrearDocenteEmail.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearDocenteEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearDocenteEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearDocenteEmail.Location = New System.Drawing.Point(18, 139)
         Me.lblCrearDocenteEmail.Name = "lblCrearDocenteEmail"
-        Me.lblCrearDocenteEmail.Size = New System.Drawing.Size(61, 22)
+        Me.lblCrearDocenteEmail.Size = New System.Drawing.Size(57, 24)
         Me.lblCrearDocenteEmail.TabIndex = 26
         Me.lblCrearDocenteEmail.Text = "Email"
         '
@@ -199,11 +199,11 @@ Partial Class ventana_crear_docente
         Me.lblCrearDocenteApellido.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCrearDocenteApellido.AutoSize = True
-        Me.lblCrearDocenteApellido.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearDocenteApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearDocenteApellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearDocenteApellido.Location = New System.Drawing.Point(18, 101)
         Me.lblCrearDocenteApellido.Name = "lblCrearDocenteApellido"
-        Me.lblCrearDocenteApellido.Size = New System.Drawing.Size(85, 22)
+        Me.lblCrearDocenteApellido.Size = New System.Drawing.Size(79, 24)
         Me.lblCrearDocenteApellido.TabIndex = 20
         Me.lblCrearDocenteApellido.Text = "Apellido"
         '
@@ -212,11 +212,11 @@ Partial Class ventana_crear_docente
         Me.lblCrear_docente_nombre.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCrear_docente_nombre.AutoSize = True
-        Me.lblCrear_docente_nombre.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrear_docente_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrear_docente_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrear_docente_nombre.Location = New System.Drawing.Point(18, 62)
         Me.lblCrear_docente_nombre.Name = "lblCrear_docente_nombre"
-        Me.lblCrear_docente_nombre.Size = New System.Drawing.Size(88, 22)
+        Me.lblCrear_docente_nombre.Size = New System.Drawing.Size(84, 24)
         Me.lblCrear_docente_nombre.TabIndex = 18
         Me.lblCrear_docente_nombre.Text = "Nombre "
         '
@@ -227,7 +227,7 @@ Partial Class ventana_crear_docente
         Me.btnCrearDocenteCancelar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.cancel
         Me.btnCrearDocenteCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCrearDocenteCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearDocenteCancelar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearDocenteCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearDocenteCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnCrearDocenteCancelar.Location = New System.Drawing.Point(356, 588)
         Me.btnCrearDocenteCancelar.Name = "btnCrearDocenteCancelar"
@@ -242,7 +242,7 @@ Partial Class ventana_crear_docente
         Me.btnCrearDocenteAceptar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.checkmark_filled
         Me.btnCrearDocenteAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCrearDocenteAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearDocenteAceptar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearDocenteAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearDocenteAceptar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnCrearDocenteAceptar.Location = New System.Drawing.Point(67, 587)
         Me.btnCrearDocenteAceptar.Name = "btnCrearDocenteAceptar"
@@ -255,7 +255,7 @@ Partial Class ventana_crear_docente
         Me.lblCrear_Docente_Titulo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.lblCrear_Docente_Titulo.Font = New System.Drawing.Font("Bauhaus 93", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrear_Docente_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrear_Docente_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrear_Docente_Titulo.Location = New System.Drawing.Point(54, 9)
         Me.lblCrear_Docente_Titulo.Name = "lblCrear_Docente_Titulo"
@@ -268,7 +268,7 @@ Partial Class ventana_crear_docente
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(471, 635)
+        Me.ClientSize = New System.Drawing.Size(471, 636)
         Me.Controls.Add(Me.pnlCrearDocente)
         Me.Controls.Add(Me.btnCrearDocenteCancelar)
         Me.Controls.Add(Me.btnCrearDocenteAceptar)

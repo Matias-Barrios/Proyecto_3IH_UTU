@@ -89,6 +89,7 @@
     <Compile Include="controles_personalizados\Persona_Vista.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="modulos\Expresiones_Regulares.vb" />
     <Compile Include="modulos\InformixConexion.vb" />
     <Compile Include="Ventanas\ventana_cambiar_password.Designer.vb">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
@@ -184,6 +185,12 @@
     <Compile Include="Ventanas\ventana_crear_institutos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventanas\ventana_crear_usuario.Designer.vb">
+      <DependentUpon>ventana_crear_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_crear_usuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="controles_personalizados\Persona_Vista.resx">
@@ -233,6 +240,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_crear_institutos.resx">
       <DependentUpon>ventana_crear_institutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_crear_usuario.resx">
+      <DependentUpon>ventana_crear_usuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
