@@ -67,4 +67,16 @@
         pagina = pagina + 1
         dgv_Vista.DataSource = Split(total_los_datos)
     End Sub
+    Public Function Fila_Seleccionada() As DataGridViewSelectedRowCollection
+        Return dgv_Vista.SelectedRows()
+    End Function
+    Public Sub Set_MultiSelect(opcion As Boolean)
+        dgv_Vista.MultiSelect = opcion
+    End Sub
+
+    Public Function Cantidad_Selecciones() As Integer
+        Return dgv_Vista.Rows.GetRowCount(DataGridViewElementStates.Selected)
+    End Function
+
+
 End Class

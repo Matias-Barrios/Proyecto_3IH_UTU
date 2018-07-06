@@ -1,5 +1,6 @@
 ﻿Module Consultas
 
+
     Public Function CONSULTAS_SELECT_ALUMNOS() As String
         Return "SELECT * FROM Personas WHERE tipo = 'Alumno' AND baja = 'f'"
     End Function
@@ -40,4 +41,7 @@
         Return "SELECT * FROM Personas WHERE baja = 'f' AND tipo IN ('Admin','Profesor','Administrativo')"
     End Function
 
+    Public Function CREAR_USUARIO(CI As Integer, hash As String, sal As String) As String
+        Return "UPDATE Personas set encriptacion_hash = '" & hash & "',encriptacion_sal = '" & sal & "'  WHERE CI = " & CI
+    End Function
 End Module

@@ -5,13 +5,22 @@ Public Class ventana_crear_usuario
         Adherir_Validacion(txtCrearUsuario_Password, TipoValidacion.Solo_password)
         Adherir_Validacion(txt_Crear_Usuario_RepetirPassword, TipoValidacion.Solo_password)
         dgvP_Usuarios_Seleccion.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_POTENCIALES_USUARIOS()))
+        dgvP_Usuarios_Seleccion.Set_MultiSelect(False)
     End Sub
 
     Private Sub btnCrear_Usuario_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrear_Usuario_Aceptar.Click
         If validar_inputs() Then
-            ' TODO - Aca va el codigo que crea un nuevo usuario en al BD de tipo Alumno
+            Console.WriteLine("Tamaño : " & dgvP_Usuarios_Seleccion.Cantidad_Selecciones())
+            For Each fila In dgvP_Usuarios_Seleccion.Fila_Seleccionada()
+                Dim sal = Crear_Sal()
+
+                hacer_consulta(CREAR_USUARIO(fila.Cells("CI").Value(), Hash512(txtCrearUsuario_Password.Text, sal), sal))
+            Next
+
         End If
     End Sub
+
+
     Private Function validar_inputs()
 
         If Regex.Matches(txtCrearUsuario_Password.Text, PASSWORD_VALIDO()).Count <> 1 Then
@@ -29,6 +38,10 @@ Public Class ventana_crear_usuario
             Return False
         End If
 
+        If dgvP_Usuarios_Seleccion.Cantidad_Selecciones() = 0 Then
+            MsgBox("Debe seleccionar a una persona de la lista")
+            Return False
+        End If
 
         'Si ta todo bien ta todo bien
         Return True

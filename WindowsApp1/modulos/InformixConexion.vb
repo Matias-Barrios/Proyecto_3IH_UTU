@@ -9,7 +9,8 @@ Module InformixConexion
             conexionODBC.Open()
             Console.WriteLine("Conectado a Informix")
         Catch ex As OdbcException
-            MsgBox(ex.ToString())
+            MsgBox("Lo lamento pero la conexion a la BD ha fallado. Autodestruccion en 3...2...1... BOOM! : " & ex.ToString())
+            Environment.Exit(6)
         End Try
 
     End Sub
@@ -24,16 +25,14 @@ Module InformixConexion
             Dim dt As New DataTable()
             Dim da As OdbcDataAdapter = New OdbcDataAdapter(query, conexionODBC)
             da.Fill(dt)
-            If dt.Rows.Count = 0 Then
-                MsgBox("No se encontraron registros para : " + query)
-            End If
             Return dt
         Catch ex As Exception
             MsgBox("Se ha producido una excepcion realizando la consulta : " + ex.ToString())
 
 
+
         End Try
-        Return New DataTable
+
     End Function
 
     Public Function NOMBRE_USUARIO() As String
