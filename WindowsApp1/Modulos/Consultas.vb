@@ -44,4 +44,7 @@
     Public Function CREAR_USUARIO(CI As Integer, hash As String, sal As String) As String
         Return "UPDATE Personas set encriptacion_hash = '" & hash & "',encriptacion_sal = '" & sal & "'  WHERE CI = " & CI
     End Function
+    Public Function BAJA_LOGICA_USUARIO(CI As Integer) As String
+        Return "UPDATE Personas set encriptacion_hash = null,encriptacion_sal = null  WHERE CI = " & CI
+    End Function
 End Module

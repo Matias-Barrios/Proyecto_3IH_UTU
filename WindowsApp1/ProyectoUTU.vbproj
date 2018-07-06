@@ -91,6 +91,7 @@
     </Compile>
     <Compile Include="modulos\Expresiones_Regulares.vb" />
     <Compile Include="modulos\InformixConexion.vb" />
+    <Compile Include="modulos\Mensajes_Al_Usuario.vb" />
     <Compile Include="Ventanas\ventana_cambiar_password.Designer.vb">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
     </Compile>
@@ -148,6 +149,12 @@
       <DependentUpon>ventana_modificar_docente.vb</DependentUpon>
     </Compile>
     <Compile Include="Ventanas\ventana_modificar_docente.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\ventana_modificar_password_usuario.Designer.vb">
+      <DependentUpon>ventana_modificar_password_usuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_modificar_password_usuario.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ventanas\Ventana_Principal.Designer.vb">
@@ -222,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_modificar_docente.resx">
       <DependentUpon>ventana_modificar_docente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_modificar_password_usuario.resx">
+      <DependentUpon>ventana_modificar_password_usuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Ventana_Principal.resx">
       <DependentUpon>Ventana_Principal.vb</DependentUpon>

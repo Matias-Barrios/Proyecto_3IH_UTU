@@ -32,7 +32,7 @@ Module InformixConexion
 
 
         End Try
-
+        Return New DataTable
     End Function
 
     Public Function NOMBRE_USUARIO() As String

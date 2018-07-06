@@ -11,12 +11,15 @@ Public Class ventana_crear_usuario
     Private Sub btnCrear_Usuario_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrear_Usuario_Aceptar.Click
         If validar_inputs() Then
             Console.WriteLine("Tamaño : " & dgvP_Usuarios_Seleccion.Cantidad_Selecciones())
-            For Each fila In dgvP_Usuarios_Seleccion.Fila_Seleccionada()
+            For Each fila In dgvP_Usuarios_Seleccion.Filas_Seleccionadas()
                 Dim sal = Crear_Sal()
 
                 hacer_consulta(CREAR_USUARIO(fila.Cells("CI").Value(), Hash512(txtCrearUsuario_Password.Text, sal), sal))
             Next
-
+            MsgBox(MENSAJE_EXITO())
+            Me.Dispose()
+            Ventana_Principal.dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
+            Ventana_Principal.Show()
         End If
     End Sub
 

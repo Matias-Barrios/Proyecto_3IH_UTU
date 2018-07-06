@@ -134,4 +134,28 @@
         dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
         Me.tabPrincipal.SelectedTab = Me.tabpage_Grupos
     End Sub
+
+    Private Sub btnUsuariosBotonEliminarUsuario_Click(sender As Object, e As EventArgs) Handles btnUsuariosBotonEliminarUsuario.Click
+        If dgvP_Usuarios.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Usuarios.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_USUARIO(fila.Cells("CI").Value()))
+                Next
+                MsgBox(MENSAJE_EXITO())
+                dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
+            Else
+                MsgBox(SELECCIONE_AL_MENOS_UNO())
+            End If
+        End If
+    End Sub
+
+    Private Sub btnUsuariosModificar_Click(sender As Object, e As EventArgs) Handles btnUsuariosModificar.Click
+        If dgvP_Usuarios.Cantidad_Selecciones() = 1 Then
+            ventana_modificar_password_usuario.usuario_a_modificar = dgvP_Usuarios.Filas_Seleccionadas().Item(0)
+            ventana_modificar_password_usuario.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+        End If
+    End Sub
 End Class
