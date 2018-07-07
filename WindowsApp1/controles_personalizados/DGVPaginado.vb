@@ -1,9 +1,11 @@
-﻿Public Class DGVPaginado
+﻿Imports System.Text.RegularExpressions
+Public Class DGVPaginado
     Private total_los_datos = New DataTable
     Private total As Integer = 0
     Private pagina As Integer = 0
     Private maximo_paginas As Integer = 0
     Private items_por_pagina As Integer = 50
+    Dim columnas_escondidas As New List(Of String)
 
     Public Sub Cargar_datos(dt As DataTable)
         If dt.Rows.Count() <> 0 Then
@@ -78,5 +80,25 @@
         Return dgv_Vista.Rows.GetRowCount(DataGridViewElementStates.Selected)
     End Function
 
-
+    Private Sub dgv_Vista_CellContentClick(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgv_Vista.DataBindingComplete
+        For Each columna In columnas_escondidas
+            Try
+                dgv_Vista.Columns(columna).Visible = False
+            Catch ex As Exception
+                MsgBox("Error ocultando columna : " & columna & "  " & ex.ToString())
+            End Try
+        Next
+    End Sub
+    Public Sub Esconder_columnas(columnas As String)
+        If Not Regex.Match(columnas, ESCONDER_COLUMNAS_INPUT_VALIDO()).Success Then
+            MsgBox("No se pudieron esconder las columnas. El input tiene un formato invalido : " & columnas)
+        Else
+            For Each column In columnas.Split(",")
+                columnas_escondidas.Add(column)
+            Next
+        End If
+    End Sub
+    Public Sub Mostrar_Columnas(columnas As String)
+        columnas_escondidas.Clear()
+    End Sub
 End Class

@@ -26,13 +26,10 @@ Module InformixConexion
             Dim dt As New DataTable()
             Dim da As OdbcDataAdapter = New OdbcDataAdapter(query, conexionODBC)
             da.Fill(dt)
-            If Not Regex.Match(query, "^SELECT ").Success Then
-                MsgBox(MENSAJE_EXITO())
-            End If
 
             Return dt
-        Catch ex As Exception
-            MsgBox("Se ha producido una excepcion realizando la consulta : " + ex.ToString())
+        Catch ex As OdbcException
+            MsgBox(PRODUCIDO_EXCEPCION_CONSULTA() & " : " & ex.ToString())
 
 
 

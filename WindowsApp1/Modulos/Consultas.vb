@@ -65,4 +65,7 @@
     Public Function BAJA_LOGICA_INSTITUTO(id_instituto As Integer) As String
         Return "UPDATE Institutos SET baja = 't'  WHERE id_instituto = " & id_instituto
     End Function
+    Public Function BAJA_LOGICA_ORIENTACION(id_orientacion As Integer) As String
+        Return "UPDATE Orientaciones SET baja = 't'  WHERE id_orientacion = " & id_orientacion
+    End Function
 End Module

@@ -11,5 +11,7 @@
     Public Function SELECCIONE_SOLO_UNO() As String
         Return "Debe seleccionar UN solo item"
     End Function
-
+    Public Function PRODUCIDO_EXCEPCION_CONSULTA() As String
+        Return "Se ha producido un error realizando la operacion"
+    End Function
 End Module
