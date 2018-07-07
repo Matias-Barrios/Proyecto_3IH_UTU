@@ -285,4 +285,30 @@
 
         End If
     End Sub
+
+    Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
+        Me.tabPrincipal.SelectedTab = Me.tabCiudades
+        dgvP_Ciudades.Esconder_columnas("id_ciudad,baja")
+        dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+    End Sub
+
+    Private Sub btnCiudadesEliminar_Click(sender As Object, e As EventArgs) Handles btnCiudadesEliminar.Click
+        If dgvP_Ciudades.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Ciudades.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_CIUDAD(fila.Cells("id_ciudad").Value()))
+                Next
+
+                dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CIUDADES()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnAlumnosCrearNuevo_Click(sender As Object, e As EventArgs) Handles btnAlumnosCrearNuevo.Click
+        ventana_crear_alumno.ShowDialog()
+    End Sub
 End Class

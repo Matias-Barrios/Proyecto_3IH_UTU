@@ -68,4 +68,23 @@
     Public Function BAJA_LOGICA_ORIENTACION(id_orientacion As Integer) As String
         Return "UPDATE Orientaciones SET baja = 't'  WHERE id_orientacion = " & id_orientacion
     End Function
+    Public Function BAJA_LOGICA_CIUDAD(id_ciudad As Integer) As String
+        Return "UPDATE Ciudad SET baja = 't'  WHERE id_ciudad = " & id_ciudad
+    End Function
+    Public Function CREAR_ALUMNO(CI As String, primer_nombre As String, segundo_nombre As String, primer_apellido As String, segundo_apellido As String, fecha_nacimiento As Date, email As String, hace_proyecto As Boolean, convertir_fecha_ingles As Boolean) As String
+        Dim fecha_con_formato As String
+        Dim hace_proyecto_como_letra As String = "t"
+        If convertir_fecha_ingles Then
+            fecha_con_formato = fecha_nacimiento.ToString("dd/MM/yyyy")
+        Else
+            fecha_con_formato = fecha_nacimiento.ToString("MM/dd/yyyy")
+        End If
+        If hace_proyecto = False Then
+            hace_proyecto_como_letra = "f"
+        End If
+        Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
+                VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & "NULL" & ",'" & hace_proyecto_como_letra & "'," & 1 & "," & "'Examen Febrero'" & "," & "'Alumno'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
+
+        Return consulta
+    End Function
 End Module

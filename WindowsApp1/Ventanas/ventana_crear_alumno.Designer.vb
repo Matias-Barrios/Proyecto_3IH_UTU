@@ -23,7 +23,6 @@ Partial Class ventana_crear_alumno
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.rdioCrearAlumnoHaceProyecto = New System.Windows.Forms.RadioButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtCrearAlumnoCI = New System.Windows.Forms.TextBox()
         Me.lblCrearAlumnoCI = New System.Windows.Forms.Label()
@@ -31,60 +30,56 @@ Partial Class ventana_crear_alumno
         Me.lblCrearAlumnoFechaNacimiento = New System.Windows.Forms.Label()
         Me.txtCrearAlumnoEmail = New System.Windows.Forms.TextBox()
         Me.lblCrearAlumnoEmail = New System.Windows.Forms.Label()
-        Me.txtCrearAlumnoApellido = New System.Windows.Forms.TextBox()
-        Me.txtCrearAlumnoNombre = New System.Windows.Forms.TextBox()
+        Me.txtCrearAlumnoSegundoApellido = New System.Windows.Forms.TextBox()
+        Me.txtCrearAlumnoPrimerNombre = New System.Windows.Forms.TextBox()
         Me.lblCrearAlumnoApellido = New System.Windows.Forms.Label()
         Me.lblCrear_alumno_nombre = New System.Windows.Forms.Label()
-        Me.btnCrearAlumnoCancelar = New System.Windows.Forms.Button()
-        Me.btnCrearAlumnoAceptar = New System.Windows.Forms.Button()
         Me.lblCrear_Alumnos_Titulo = New WindowsApp1.BorderLabel()
+        Me.txtCrearAlumnoSegundoNombre = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtCrearAlumnoPrimerApellido = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnModificar_Usuario_Aceptar = New System.Windows.Forms.Button()
+        Me.btnModificarUsuario_Cancelar = New System.Windows.Forms.Button()
+        Me.chkHaceProyecto = New System.Windows.Forms.CheckBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
         '
-        Me.Panel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.Gray
-        Me.Panel1.Controls.Add(Me.rdioCrearAlumnoHaceProyecto)
+        Me.Panel1.Controls.Add(Me.Label3)
+        Me.Panel1.Controls.Add(Me.chkHaceProyecto)
+        Me.Panel1.Controls.Add(Me.txtCrearAlumnoPrimerApellido)
+        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.txtCrearAlumnoSegundoNombre)
+        Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.datepickerCrearAlumnoFechaNacimiento)
         Me.Panel1.Controls.Add(Me.lblCrearAlumnoFechaNacimiento)
         Me.Panel1.Controls.Add(Me.txtCrearAlumnoEmail)
         Me.Panel1.Controls.Add(Me.lblCrearAlumnoEmail)
-        Me.Panel1.Controls.Add(Me.txtCrearAlumnoApellido)
-        Me.Panel1.Controls.Add(Me.txtCrearAlumnoNombre)
+        Me.Panel1.Controls.Add(Me.txtCrearAlumnoSegundoApellido)
+        Me.Panel1.Controls.Add(Me.txtCrearAlumnoPrimerNombre)
         Me.Panel1.Controls.Add(Me.lblCrearAlumnoApellido)
         Me.Panel1.Controls.Add(Me.lblCrear_alumno_nombre)
-        Me.Panel1.Location = New System.Drawing.Point(21, 76)
+        Me.Panel1.Location = New System.Drawing.Point(21, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(412, 518)
+        Me.Panel1.Size = New System.Drawing.Size(412, 334)
         Me.Panel1.TabIndex = 21
-        '
-        'rdioCrearAlumnoHaceProyecto
-        '
-        Me.rdioCrearAlumnoHaceProyecto.AutoSize = True
-        Me.rdioCrearAlumnoHaceProyecto.Checked = True
-        Me.rdioCrearAlumnoHaceProyecto.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!)
-        Me.rdioCrearAlumnoHaceProyecto.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.rdioCrearAlumnoHaceProyecto.Location = New System.Drawing.Point(19, 223)
-        Me.rdioCrearAlumnoHaceProyecto.Name = "rdioCrearAlumnoHaceProyecto"
-        Me.rdioCrearAlumnoHaceProyecto.Size = New System.Drawing.Size(161, 28)
-        Me.rdioCrearAlumnoHaceProyecto.TabIndex = 31
-        Me.rdioCrearAlumnoHaceProyecto.TabStop = True
-        Me.rdioCrearAlumnoHaceProyecto.Text = "Hace proyecto?"
-        Me.rdioCrearAlumnoHaceProyecto.UseVisualStyleBackColor = True
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel2.Controls.Add(Me.txtCrearAlumnoCI)
         Me.Panel2.Controls.Add(Me.lblCrearAlumnoCI)
-        Me.Panel2.Location = New System.Drawing.Point(22, 14)
+        Me.Panel2.Location = New System.Drawing.Point(16, 15)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(368, 42)
+        Me.Panel2.Size = New System.Drawing.Size(371, 42)
         Me.Panel2.TabIndex = 30
         '
         'txtCrearAlumnoCI
@@ -110,7 +105,7 @@ Partial Class ventana_crear_alumno
         '
         'datepickerCrearAlumnoFechaNacimiento
         '
-        Me.datepickerCrearAlumnoFechaNacimiento.Location = New System.Drawing.Point(197, 178)
+        Me.datepickerCrearAlumnoFechaNacimiento.Location = New System.Drawing.Point(194, 258)
         Me.datepickerCrearAlumnoFechaNacimiento.Name = "datepickerCrearAlumnoFechaNacimiento"
         Me.datepickerCrearAlumnoFechaNacimiento.Size = New System.Drawing.Size(193, 20)
         Me.datepickerCrearAlumnoFechaNacimiento.TabIndex = 29
@@ -120,7 +115,7 @@ Partial Class ventana_crear_alumno
         Me.lblCrearAlumnoFechaNacimiento.AutoSize = True
         Me.lblCrearAlumnoFechaNacimiento.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoFechaNacimiento.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearAlumnoFechaNacimiento.Location = New System.Drawing.Point(18, 178)
+        Me.lblCrearAlumnoFechaNacimiento.Location = New System.Drawing.Point(15, 258)
         Me.lblCrearAlumnoFechaNacimiento.Name = "lblCrearAlumnoFechaNacimiento"
         Me.lblCrearAlumnoFechaNacimiento.Size = New System.Drawing.Size(164, 24)
         Me.lblCrearAlumnoFechaNacimiento.TabIndex = 28
@@ -128,7 +123,7 @@ Partial Class ventana_crear_alumno
         '
         'txtCrearAlumnoEmail
         '
-        Me.txtCrearAlumnoEmail.Location = New System.Drawing.Point(197, 139)
+        Me.txtCrearAlumnoEmail.Location = New System.Drawing.Point(194, 219)
         Me.txtCrearAlumnoEmail.MaxLength = 100
         Me.txtCrearAlumnoEmail.Name = "txtCrearAlumnoEmail"
         Me.txtCrearAlumnoEmail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
@@ -141,87 +136,53 @@ Partial Class ventana_crear_alumno
         Me.lblCrearAlumnoEmail.AutoSize = True
         Me.lblCrearAlumnoEmail.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoEmail.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearAlumnoEmail.Location = New System.Drawing.Point(18, 137)
+        Me.lblCrearAlumnoEmail.Location = New System.Drawing.Point(15, 217)
         Me.lblCrearAlumnoEmail.Name = "lblCrearAlumnoEmail"
         Me.lblCrearAlumnoEmail.Size = New System.Drawing.Size(57, 24)
         Me.lblCrearAlumnoEmail.TabIndex = 26
         Me.lblCrearAlumnoEmail.Text = "Email"
         '
-        'txtCrearAlumnoApellido
+        'txtCrearAlumnoSegundoApellido
         '
-        Me.txtCrearAlumnoApellido.Location = New System.Drawing.Point(197, 100)
-        Me.txtCrearAlumnoApellido.MaxLength = 50
-        Me.txtCrearAlumnoApellido.Name = "txtCrearAlumnoApellido"
-        Me.txtCrearAlumnoApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtCrearAlumnoApellido.ShortcutsEnabled = False
-        Me.txtCrearAlumnoApellido.Size = New System.Drawing.Size(193, 20)
-        Me.txtCrearAlumnoApellido.TabIndex = 24
+        Me.txtCrearAlumnoSegundoApellido.Location = New System.Drawing.Point(194, 180)
+        Me.txtCrearAlumnoSegundoApellido.MaxLength = 25
+        Me.txtCrearAlumnoSegundoApellido.Name = "txtCrearAlumnoSegundoApellido"
+        Me.txtCrearAlumnoSegundoApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtCrearAlumnoSegundoApellido.ShortcutsEnabled = False
+        Me.txtCrearAlumnoSegundoApellido.Size = New System.Drawing.Size(193, 20)
+        Me.txtCrearAlumnoSegundoApellido.TabIndex = 24
         '
-        'txtCrearAlumnoNombre
+        'txtCrearAlumnoPrimerNombre
         '
-        Me.txtCrearAlumnoNombre.Location = New System.Drawing.Point(197, 62)
-        Me.txtCrearAlumnoNombre.MaxLength = 25
-        Me.txtCrearAlumnoNombre.Name = "txtCrearAlumnoNombre"
-        Me.txtCrearAlumnoNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtCrearAlumnoNombre.ShortcutsEnabled = False
-        Me.txtCrearAlumnoNombre.Size = New System.Drawing.Size(193, 20)
-        Me.txtCrearAlumnoNombre.TabIndex = 22
+        Me.txtCrearAlumnoPrimerNombre.Location = New System.Drawing.Point(191, 63)
+        Me.txtCrearAlumnoPrimerNombre.MaxLength = 25
+        Me.txtCrearAlumnoPrimerNombre.Name = "txtCrearAlumnoPrimerNombre"
+        Me.txtCrearAlumnoPrimerNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtCrearAlumnoPrimerNombre.ShortcutsEnabled = False
+        Me.txtCrearAlumnoPrimerNombre.Size = New System.Drawing.Size(196, 20)
+        Me.txtCrearAlumnoPrimerNombre.TabIndex = 22
         '
         'lblCrearAlumnoApellido
         '
         Me.lblCrearAlumnoApellido.AutoSize = True
         Me.lblCrearAlumnoApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoApellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearAlumnoApellido.Location = New System.Drawing.Point(18, 100)
+        Me.lblCrearAlumnoApellido.Location = New System.Drawing.Point(15, 180)
         Me.lblCrearAlumnoApellido.Name = "lblCrearAlumnoApellido"
-        Me.lblCrearAlumnoApellido.Size = New System.Drawing.Size(79, 24)
+        Me.lblCrearAlumnoApellido.Size = New System.Drawing.Size(162, 24)
         Me.lblCrearAlumnoApellido.TabIndex = 20
-        Me.lblCrearAlumnoApellido.Text = "Apellido"
+        Me.lblCrearAlumnoApellido.Text = "Segundo Apellido"
         '
         'lblCrear_alumno_nombre
         '
         Me.lblCrear_alumno_nombre.AutoSize = True
         Me.lblCrear_alumno_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrear_alumno_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrear_alumno_nombre.Location = New System.Drawing.Point(18, 62)
+        Me.lblCrear_alumno_nombre.Location = New System.Drawing.Point(15, 63)
         Me.lblCrear_alumno_nombre.Name = "lblCrear_alumno_nombre"
-        Me.lblCrear_alumno_nombre.Size = New System.Drawing.Size(79, 24)
+        Me.lblCrear_alumno_nombre.Size = New System.Drawing.Size(139, 24)
         Me.lblCrear_alumno_nombre.TabIndex = 18
-        Me.lblCrear_alumno_nombre.Text = "Nombre"
-        '
-        'btnCrearAlumnoCancelar
-        '
-        Me.btnCrearAlumnoCancelar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCrearAlumnoCancelar.BackColor = System.Drawing.Color.White
-        Me.btnCrearAlumnoCancelar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.cancel
-        Me.btnCrearAlumnoCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCrearAlumnoCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearAlumnoCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearAlumnoCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrearAlumnoCancelar.Location = New System.Drawing.Point(21, 600)
-        Me.btnCrearAlumnoCancelar.Name = "btnCrearAlumnoCancelar"
-        Me.btnCrearAlumnoCancelar.Size = New System.Drawing.Size(45, 45)
-        Me.btnCrearAlumnoCancelar.TabIndex = 20
-        Me.btnCrearAlumnoCancelar.UseVisualStyleBackColor = False
-        '
-        'btnCrearAlumnoAceptar
-        '
-        Me.btnCrearAlumnoAceptar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCrearAlumnoAceptar.BackColor = System.Drawing.Color.White
-        Me.btnCrearAlumnoAceptar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.checkmark_filled
-        Me.btnCrearAlumnoAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCrearAlumnoAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearAlumnoAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearAlumnoAceptar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrearAlumnoAceptar.Location = New System.Drawing.Point(388, 600)
-        Me.btnCrearAlumnoAceptar.Name = "btnCrearAlumnoAceptar"
-        Me.btnCrearAlumnoAceptar.Size = New System.Drawing.Size(45, 45)
-        Me.btnCrearAlumnoAceptar.TabIndex = 19
-        Me.btnCrearAlumnoAceptar.UseVisualStyleBackColor = False
+        Me.lblCrear_alumno_nombre.Text = "Primer Nombre"
         '
         'lblCrear_Alumnos_Titulo
         '
@@ -232,23 +193,112 @@ Partial Class ventana_crear_alumno
         Me.lblCrear_Alumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrear_Alumnos_Titulo.Location = New System.Drawing.Point(20, 22)
         Me.lblCrear_Alumnos_Titulo.Name = "lblCrear_Alumnos_Titulo"
-        Me.lblCrear_Alumnos_Titulo.Size = New System.Drawing.Size(388, 36)
+        Me.lblCrear_Alumnos_Titulo.Size = New System.Drawing.Size(388, 0)
         Me.lblCrear_Alumnos_Titulo.TabIndex = 18
         Me.lblCrear_Alumnos_Titulo.Text = "Cree un nuevo Alumno..."
+        '
+        'txtCrearAlumnoSegundoNombre
+        '
+        Me.txtCrearAlumnoSegundoNombre.Location = New System.Drawing.Point(191, 99)
+        Me.txtCrearAlumnoSegundoNombre.MaxLength = 25
+        Me.txtCrearAlumnoSegundoNombre.Name = "txtCrearAlumnoSegundoNombre"
+        Me.txtCrearAlumnoSegundoNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtCrearAlumnoSegundoNombre.ShortcutsEnabled = False
+        Me.txtCrearAlumnoSegundoNombre.Size = New System.Drawing.Size(196, 20)
+        Me.txtCrearAlumnoSegundoNombre.TabIndex = 33
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(12, 99)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(162, 24)
+        Me.Label1.TabIndex = 32
+        Me.Label1.Text = "Segundo Nombre"
+        '
+        'txtCrearAlumnoPrimerApellido
+        '
+        Me.txtCrearAlumnoPrimerApellido.Location = New System.Drawing.Point(191, 134)
+        Me.txtCrearAlumnoPrimerApellido.MaxLength = 25
+        Me.txtCrearAlumnoPrimerApellido.Name = "txtCrearAlumnoPrimerApellido"
+        Me.txtCrearAlumnoPrimerApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtCrearAlumnoPrimerApellido.ShortcutsEnabled = False
+        Me.txtCrearAlumnoPrimerApellido.Size = New System.Drawing.Size(196, 20)
+        Me.txtCrearAlumnoPrimerApellido.TabIndex = 35
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(12, 134)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(139, 24)
+        Me.Label2.TabIndex = 34
+        Me.Label2.Text = "Primer Apellido"
+        '
+        'btnModificar_Usuario_Aceptar
+        '
+        Me.btnModificar_Usuario_Aceptar.BackColor = System.Drawing.Color.White
+        Me.btnModificar_Usuario_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnModificar_Usuario_Aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar_Usuario_Aceptar.ForeColor = System.Drawing.Color.Green
+        Me.btnModificar_Usuario_Aceptar.Location = New System.Drawing.Point(250, 362)
+        Me.btnModificar_Usuario_Aceptar.Name = "btnModificar_Usuario_Aceptar"
+        Me.btnModificar_Usuario_Aceptar.Size = New System.Drawing.Size(183, 32)
+        Me.btnModificar_Usuario_Aceptar.TabIndex = 37
+        Me.btnModificar_Usuario_Aceptar.Text = "Aceptar"
+        Me.btnModificar_Usuario_Aceptar.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnModificar_Usuario_Aceptar.UseVisualStyleBackColor = False
+        '
+        'btnModificarUsuario_Cancelar
+        '
+        Me.btnModificarUsuario_Cancelar.BackColor = System.Drawing.Color.White
+        Me.btnModificarUsuario_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnModificarUsuario_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarUsuario_Cancelar.ForeColor = System.Drawing.Color.Red
+        Me.btnModificarUsuario_Cancelar.Location = New System.Drawing.Point(21, 362)
+        Me.btnModificarUsuario_Cancelar.Name = "btnModificarUsuario_Cancelar"
+        Me.btnModificarUsuario_Cancelar.Size = New System.Drawing.Size(183, 32)
+        Me.btnModificarUsuario_Cancelar.TabIndex = 36
+        Me.btnModificarUsuario_Cancelar.Text = "Cancelar"
+        Me.btnModificarUsuario_Cancelar.UseVisualStyleBackColor = False
+        '
+        'chkHaceProyecto
+        '
+        Me.chkHaceProyecto.AutoSize = True
+        Me.chkHaceProyecto.Location = New System.Drawing.Point(19, 308)
+        Me.chkHaceProyecto.Name = "chkHaceProyecto"
+        Me.chkHaceProyecto.Size = New System.Drawing.Size(15, 14)
+        Me.chkHaceProyecto.TabIndex = 36
+        Me.chkHaceProyecto.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label3.Location = New System.Drawing.Point(40, 300)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(143, 24)
+        Me.Label3.TabIndex = 37
+        Me.Label3.Text = "Hace proyecto?"
         '
         'ventana_crear_alumno
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(449, 662)
+        Me.ClientSize = New System.Drawing.Size(449, 411)
+        Me.Controls.Add(Me.btnModificar_Usuario_Aceptar)
+        Me.Controls.Add(Me.btnModificarUsuario_Cancelar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.btnCrearAlumnoCancelar)
-        Me.Controls.Add(Me.btnCrearAlumnoAceptar)
         Me.Controls.Add(Me.lblCrear_Alumnos_Titulo)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(465, 700)
-        Me.MinimumSize = New System.Drawing.Size(465, 700)
+        Me.MaximumSize = New System.Drawing.Size(465, 449)
+        Me.MinimumSize = New System.Drawing.Size(465, 449)
         Me.Name = "ventana_crear_alumno"
         Me.Text = "Crear Nuevo Alumno"
         Me.Panel1.ResumeLayout(False)
@@ -260,7 +310,6 @@ Partial Class ventana_crear_alumno
     End Sub
 
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents rdioCrearAlumnoHaceProyecto As RadioButton
     Friend WithEvents Panel2 As Panel
     Friend WithEvents txtCrearAlumnoCI As TextBox
     Friend WithEvents lblCrearAlumnoCI As Label
@@ -268,11 +317,17 @@ Partial Class ventana_crear_alumno
     Friend WithEvents lblCrearAlumnoFechaNacimiento As Label
     Friend WithEvents txtCrearAlumnoEmail As TextBox
     Friend WithEvents lblCrearAlumnoEmail As Label
-    Friend WithEvents txtCrearAlumnoApellido As TextBox
-    Friend WithEvents txtCrearAlumnoNombre As TextBox
+    Friend WithEvents txtCrearAlumnoSegundoApellido As TextBox
+    Friend WithEvents txtCrearAlumnoPrimerNombre As TextBox
     Friend WithEvents lblCrearAlumnoApellido As Label
     Friend WithEvents lblCrear_alumno_nombre As Label
-    Friend WithEvents btnCrearAlumnoCancelar As Button
-    Friend WithEvents btnCrearAlumnoAceptar As Button
     Friend WithEvents lblCrear_Alumnos_Titulo As BorderLabel
+    Friend WithEvents txtCrearAlumnoPrimerApellido As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtCrearAlumnoSegundoNombre As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnModificar_Usuario_Aceptar As Button
+    Friend WithEvents btnModificarUsuario_Cancelar As Button
+    Friend WithEvents Label3 As Label
+    Friend WithEvents chkHaceProyecto As CheckBox
 End Class

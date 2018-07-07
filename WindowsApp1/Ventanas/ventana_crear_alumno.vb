@@ -3,40 +3,33 @@
 Public Class ventana_crear_alumno
     Private Sub ventana_crear_alumno_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Adherir_Validacion(txtCrearAlumnoCI, TipoValidacion.Solo_cedulas)
-        Adherir_Validacion(txtCrearAlumnoNombre, TipoValidacion.Solo_nombres)
-        Adherir_Validacion(txtCrearAlumnoApellido, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(txtCrearAlumnoPrimerNombre, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(txtCrearAlumnoSegundoNombre, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(txtCrearAlumnoPrimerApellido, TipoValidacion.Solo_nombres)
+        Adherir_Validacion(txtCrearAlumnoSegundoApellido, TipoValidacion.Solo_nombres)
         Adherir_Validacion(txtCrearAlumnoEmail, TipoValidacion.Solo_Email)
         datepickerCrearAlumnoFechaNacimiento.MaxDate = Date.Now
     End Sub
 
-    Private Sub btnCrearAlumnoCancelar_Click(sender As Object, e As EventArgs) Handles btnCrearAlumnoCancelar.Click
-        Me.Close()
-    End Sub
-
-    Private Sub btnCrearAlumnoAceptar_Click(sender As Object, e As EventArgs) Handles btnCrearAlumnoAceptar.Click
-        If validar_inputs() Then
-            ' TODO - Aca va el codigo que crea un nuevo usuario en al BD de tipo Alumno
-        End If
-    End Sub
 
     Private Function validar_inputs()
 
-        If Regex.Matches(txtCrearAlumnoCI.Text, "^[0-9]{10}$").Count <> 1 Then
+        If Regex.Matches(txtCrearAlumnoCI.Text, CEDULA_VALIDA()).Count <> 1 Then
             MsgBox("Debe completar el campo 'CI' correctamente!")
             Return False
         End If
 
-        If Regex.Matches(txtCrearAlumnoNombre.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
+        If Regex.Matches(txtCrearAlumnoPrimerNombre.Text, NOMBRE_VALIDO()).Count <> 1 Then
             MsgBox("Debe completar el campo 'Primer Nombre' correctamente!")
             Return False
         End If
 
-        If Regex.Matches(txtCrearAlumnoApellido.Text, "^[a-zA-Z][a-zA-Z ]+$").Count <> 1 Then
+        If Regex.Matches(txtCrearAlumnoPrimerApellido.Text, NOMBRE_VALIDO()).Count <> 1 Then
             MsgBox("Debe completar el campo 'Primer Apellido' correctamente!")
             Return False
         End If
 
-        If Regex.Matches(txtCrearAlumnoEmail.Text, "^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,3})$").Count <> 1 Then
+        If Regex.Matches(txtCrearAlumnoEmail.Text, EMAIL_VALIDO()).Count <> 1 Then
             MsgBox("Debe completar el campo 'Email' correctamente!")
             Return False
         End If
@@ -45,5 +38,17 @@ Public Class ventana_crear_alumno
         'Si ta todo bien ta todo bien
         Return True
     End Function
+
+    Private Sub btnModificarUsuario_Cancelar_Click(sender As Object, e As EventArgs) Handles btnModificarUsuario_Cancelar.Click
+        Me.Dispose()
+    End Sub
+
+    Private Sub btnModificar_Usuario_Aceptar_Click(sender As Object, e As EventArgs) Handles btnModificar_Usuario_Aceptar.Click
+        If validar_inputs() Then
+            hacer_consulta(CREAR_ALUMNO(txtCrearAlumnoCI.Text, txtCrearAlumnoPrimerNombre.Text, txtCrearAlumnoSegundoNombre.Text, txtCrearAlumnoPrimerApellido.Text, txtCrearAlumnoSegundoApellido.Text, datepickerCrearAlumnoFechaNacimiento.Value(), txtCrearAlumnoEmail.Text, chkHaceProyecto.Checked, True))
+            Me.Dispose()
+            Ventana_Principal.dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+        End If
+    End Sub
 
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.Odbc
+Imports System.Text.RegularExpressions
 
 Module InformixConexion
     Dim conexionODBC As New OdbcConnection
@@ -25,14 +26,15 @@ Module InformixConexion
             Dim dt As New DataTable()
             Dim da As OdbcDataAdapter = New OdbcDataAdapter(query, conexionODBC)
             da.Fill(dt)
+
             Return dt
-        Catch ex As Exception
-            MsgBox("Se ha producido una excepcion realizando la consulta : " + ex.ToString())
+        Catch ex As OdbcException
+            MsgBox(PRODUCIDO_EXCEPCION_CONSULTA() & " : " & ex.ToString())
 
 
 
         End Try
-
+        Return New DataTable
     End Function
 
     Public Function NOMBRE_USUARIO() As String
