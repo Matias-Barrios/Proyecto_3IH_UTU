@@ -13,7 +13,7 @@
         Try
             conectar("Driver={IBM INFORMIX ODBC DRIVER};Database=gestion_utu;Host=45.79.7.217;Server=miServidor;Service=50000;Protocol=onsoctcp;UID=" & NOMBRE_USUARIO() & ";PWD=" & CONTRASENIA() & ";Client_Locale=en_US.CP1252;DB_LOCALE=en_US.819;")
         Catch ex As Exception
-            MsgBox("Se produjo un error conectandose a Informix")
+            MsgBox("Se produjo un error conectandose a Informix!")
         End Try
     End Sub
     Private Sub frmProgramma_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
