@@ -42,9 +42,27 @@
     End Function
 
     Public Function CREAR_USUARIO(CI As Integer, hash As String, sal As String) As String
-        Return "UPDATE Personas set encriptacion_hash = '" & hash & "',encriptacion_sal = '" & sal & "'  WHERE CI = " & CI
+        Return "UPDATE Personas SET encriptacion_hash = '" & hash & "',encriptacion_sal = '" & sal & "'  WHERE CI = " & CI
     End Function
     Public Function BAJA_LOGICA_USUARIO(CI As Integer) As String
-        Return "UPDATE Personas set encriptacion_hash = null,encriptacion_sal = null  WHERE CI = " & CI
+        Return "UPDATE Personas SET encriptacion_hash = null,encriptacion_sal = null  WHERE CI = " & CI
+    End Function
+    Public Function BAJA_LOGICA_ALUMNO(CI As Integer) As String
+        Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+    End Function
+    Public Function BAJA_LOGICA_GRUPO(id_grupo As Integer) As String
+        Return "UPDATE Grupos SET baja = 't'  WHERE id_grupo = " & id_grupo
+    End Function
+    Public Function BAJA_LOGICA_ASIGNATURA(id_asignatura As Integer) As String
+        Return "UPDATE Asignaturas SET baja = 't'  WHERE id_asignatura = " & id_asignatura
+    End Function
+    Public Function BAJA_LOGICA_CALIFICACION(id_calificacion As Integer) As String
+        Return "UPDATE Calificaciones SET baja = 't'  WHERE id_calificacion = " & id_calificacion
+    End Function
+    Public Function BAJA_LOGICA_DOCENTE(CI As Integer) As String
+        Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+    End Function
+    Public Function BAJA_LOGICA_INSTITUTO(id_instituto As Integer) As String
+        Return "UPDATE Institutos SET baja = 't'  WHERE id_instituto = " & id_instituto
     End Function
 End Module

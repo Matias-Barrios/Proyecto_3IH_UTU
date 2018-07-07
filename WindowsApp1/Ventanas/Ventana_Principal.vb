@@ -142,11 +142,13 @@
                 For Each fila In dgvP_Usuarios.Filas_Seleccionadas()
                     hacer_consulta(BAJA_LOGICA_USUARIO(fila.Cells("CI").Value()))
                 Next
-                MsgBox(MENSAJE_EXITO())
+
                 dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
-            Else
-                MsgBox(SELECCIONE_AL_MENOS_UNO())
             End If
+
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
         End If
     End Sub
 
@@ -156,6 +158,102 @@
             ventana_modificar_password_usuario.ShowDialog()
         Else
             MsgBox(SELECCIONE_SOLO_UNO())
+        End If
+    End Sub
+
+    Private Sub btnAlumnosEliminar_Click_1(sender As Object, e As EventArgs) Handles btnAlumnosEliminar.Click
+        If dgvP_Alumnos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Alumnos.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_ALUMNO(fila.Cells("CI").Value()))
+                Next
+
+                dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+            End If
+        Else
+                MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnGrupos_Eliminar_Click(sender As Object, e As EventArgs) Handles btnGrupos_Eliminar.Click
+        If dgvP_Grupos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Grupos.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_GRUPO(fila.Cells("id_grupo").Value()))
+                Next
+
+                dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnMateriasEliminar_Click(sender As Object, e As EventArgs) Handles btnMateriasEliminar.Click
+        If dgvP_Asignaturas.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Asignaturas.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_ASIGNATURA(fila.Cells("id_asignatura").Value()))
+                Next
+
+                dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnEliminarCalificaciones_Click(sender As Object, e As EventArgs) Handles btnEliminarCalificaciones.Click
+        If dgvP_Calificaciones.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Calificaciones.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_CALIFICACION(fila.Cells("id_calificacion").Value()))
+                Next
+
+                dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnDocentesEliminar_Click(sender As Object, e As EventArgs) Handles btnDocentesEliminar.Click
+        If dgvP_Docentes.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Docentes.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_DOCENTE(fila.Cells("CI").Value()))
+                Next
+
+                dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnInstitutoEliminar_Click(sender As Object, e As EventArgs) Handles btnInstitutoEliminar.Click
+        If dgvP_Institutos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Institutos.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_INSTITUTO(fila.Cells("id_instituto").Value()))
+                Next
+
+                dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
         End If
     End Sub
 End Class
