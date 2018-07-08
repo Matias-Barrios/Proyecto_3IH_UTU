@@ -87,4 +87,31 @@
 
         Return consulta
     End Function
+    Public Function MODIFICAR_ALUMNO(CI_original As Integer, alumno As DataGridViewRow, convertir_fecha_ingles As Boolean) As String
+        Dim fecha_con_formato As String
+        Dim hace_proyecto_como_letra As String = "t"
+        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & alumno.Cells("fecha_nacimiento").Value().GetType().ToString())
+        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & alumno.Cells("fecha_nacimiento").Value().ToString())
+        If convertir_fecha_ingles Then
+            fecha_con_formato = alumno.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
+        Else
+            fecha_con_formato = alumno.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
+        End If
+        If alumno.Cells("hace_proyecto").Value() = False Then
+            hace_proyecto_como_letra = "f"
+        End If
+        Dim consulta As String = "UPDATE Personas SET " &
+                " CI = " & alumno.Cells("CI").Value() & "," &
+                " primer_nombre = '" & alumno.Cells("primer_nombre").Value() & "'," &
+                " segundo_nombre = '" & alumno.Cells("segundo_nombre").Value() & "'," &
+                " primer_apellido = '" & alumno.Cells("primer_apellido").Value() & "'," &
+                " segundo_apellido = '" & alumno.Cells("primer_apellido").Value() & "'," &
+                " fecha_nacimiento = " & fecha_con_formato & "," &
+                " email = '" & alumno.Cells("email").Value() & "'," &
+                " hace_proyecto = '" & alumno.Cells("hace_proyecto").Value() & "'," &
+                " nota_final_pro = '" & alumno.Cells("nota_final_pro").Value() & "'," &
+                " WHERE CI = " & CI_original & ")"
+        Console.WriteLine(consulta)
+        Return consulta
+    End Function
 End Module

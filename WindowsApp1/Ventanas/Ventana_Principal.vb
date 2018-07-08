@@ -311,4 +311,14 @@
     Private Sub btnAlumnosCrearNuevo_Click(sender As Object, e As EventArgs) Handles btnAlumnosCrearNuevo.Click
         ventana_crear_alumno.ShowDialog()
     End Sub
+
+    Private Sub btnAlumnosModificar_Click_1(sender As Object, e As EventArgs) Handles btnAlumnosModificar.Click
+        If Not dgvP_Alumnos.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_alumno.Preparar_Ventana_Modificacion(dgvP_Alumnos.Filas_Seleccionadas().Item(0))
+            ventana_crear_alumno.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
+    End Sub
 End Class
