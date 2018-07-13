@@ -29,6 +29,7 @@ Partial Class DGVPaginado
         Me.btn_Prev = New System.Windows.Forms.Button()
         Me.btn_Siguiente = New System.Windows.Forms.Button()
         Me.lbl_vista_numeracion = New System.Windows.Forms.Label()
+        Me.txtFiltro = New System.Windows.Forms.TextBox()
         CType(Me.dgv_Vista, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -41,10 +42,10 @@ Partial Class DGVPaginado
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv_Vista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_Vista.Location = New System.Drawing.Point(4, 3)
+        Me.dgv_Vista.Location = New System.Drawing.Point(4, 24)
         Me.dgv_Vista.Name = "dgv_Vista"
         Me.dgv_Vista.ReadOnly = True
-        Me.dgv_Vista.Size = New System.Drawing.Size(692, 395)
+        Me.dgv_Vista.Size = New System.Drawing.Size(692, 374)
         Me.dgv_Vista.TabIndex = 0
         '
         'Panel1
@@ -112,11 +113,20 @@ Partial Class DGVPaginado
         Me.lbl_vista_numeracion.Text = "0"
         Me.lbl_vista_numeracion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'txtFiltro
+        '
+        Me.txtFiltro.Dock = System.Windows.Forms.DockStyle.Top
+        Me.txtFiltro.Location = New System.Drawing.Point(0, 0)
+        Me.txtFiltro.Name = "txtFiltro"
+        Me.txtFiltro.Size = New System.Drawing.Size(699, 20)
+        Me.txtFiltro.TabIndex = 2
+        '
         'DGVPaginado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.AliceBlue
+        Me.Controls.Add(Me.txtFiltro)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.dgv_Vista)
         Me.Name = "DGVPaginado"
@@ -124,6 +134,7 @@ Partial Class DGVPaginado
         CType(Me.dgv_Vista, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
@@ -134,4 +145,5 @@ Partial Class DGVPaginado
     Friend WithEvents btn_Prev As Button
     Friend WithEvents btn_Siguiente As Button
     Friend WithEvents lbl_vista_numeracion As Label
+    Friend WithEvents txtFiltro As TextBox
 End Class
