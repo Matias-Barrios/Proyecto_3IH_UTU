@@ -1,4 +1,5 @@
 ﻿Imports System.Text.RegularExpressions
+Imports Validar_Entradas
 Public Class DGVPaginado
     Private todos_los_datos = New DataTable
     Private total As Integer = 0
@@ -6,10 +7,14 @@ Public Class DGVPaginado
     Private maximo_paginas As Integer = 0
     Private items_por_pagina As Integer = 50
     Dim columnas_escondidas As New List(Of String)
+    Private filtro_tmp As String = ""
     Private filtro As String = ""
-    Private columnas As DataGridViewColumnCollection
+
 
     Public Sub Cargar_datos(dt As DataTable)
+        Adherir_Validacion(txtFiltro, TipoValidacion.Solo_numeros_o_letras)
+        filtro_tmp = ""
+        filtro = ""
         If dt.Rows.Count() <> 0 Then
             todos_los_datos = dt
             total = dt.Rows.Count
@@ -21,6 +26,18 @@ Public Class DGVPaginado
             btn_UltimaPagina.Enabled = True
             btn_Primera.Enabled = True
             Habilitar_Botones()
+            For Each column In dgv_Vista.Columns
+                If Type.GetTypeCode(column.ValueType) = TypeCode.Int32 Then
+                    filtro_tmp = filtro_tmp & "  Convert(" & column.Name() & ", 'System.String') " & " LIKE " & "'*XXXXXXELFILTROVAAQUIELFILTROVAAQUIELFILTROVAAQUIELFILTROVAAQUIXXXXXXX*'" & " OR"
+                End If
+                If Type.GetTypeCode(column.ValueType) = TypeCode.String Then
+                    filtro_tmp = filtro_tmp & " " & column.Name() & " LIKE '*" & "XXXXXXELFILTROVAAQUIELFILTROVAAQUIELFILTROVAAQUIELFILTROVAAQUIXXXXXXX" & "*' OR"
+                End If
+
+            Next
+            Dim rgx As New Regex(" OR$")
+            filtro_tmp = rgx.Replace(filtro_tmp, "")
+            Console.WriteLine("Esto es filtro inicialmente : " & filtro_tmp)
         Else
             btn_Prev.Enabled = False
             btn_Siguiente.Enabled = False
@@ -28,9 +45,11 @@ Public Class DGVPaginado
             btn_Primera.Enabled = False
         End If
 
+
     End Sub
 
     Private Function Split(dt As DataTable) As DataTable
+        Console.WriteLine("Esto es filtro " & filtro)
         Dim data_tmp = New DataTable
         If dt.Select(filtro).Count = 0 Then
             total = 0
@@ -109,7 +128,6 @@ Public Class DGVPaginado
                 MsgBox("Error ocultando columna : " & columna & "  " & ex.ToString())
             End Try
         Next
-        columnas = dgv_Vista.Columns
     End Sub
     Public Sub Esconder_columnas(columnas As String)
         If Not Regex.Match(columnas, ESCONDER_COLUMNAS_INPUT_VALIDO()).Success Then
@@ -125,23 +143,9 @@ Public Class DGVPaginado
     End Sub
     Private Sub txtFiltro_TextChanged(sender As Object, e As EventArgs) Handles txtFiltro.TextChanged
         pagina = 0
-        filtro = ""
-        'Console.WriteLine("Columnas : " & columnas.DisplayedColumnCount(False))
         If Not String.IsNullOrEmpty(txtFiltro.Text) Then
-            For Each column In columnas
-                If Type.GetTypeCode(column.ValueType) = TypeCode.Int32 And Regex.Match(Trim(txtFiltro.Text), "^[0-9]+$").Success Then
-
-                    filtro = filtro & " " & column.Name() & " = " & txtFiltro.Text & " OR"
-                End If
-                If Type.GetTypeCode(column.ValueType) = TypeCode.String Then
-
-                    filtro = filtro & " " & column.Name() & " LIKE '*" & txtFiltro.Text & "*' OR"
-                End If
-
-            Next
-            Dim rgx As New Regex(" OR$")
-            filtro = rgx.Replace(filtro, "")
-            Console.WriteLine("Filtro " & filtro)
+            Dim rgx As New Regex("XXXXXXELFILTROVAAQUIELFILTROVAAQUIELFILTROVAAQUIELFILTROVAAQUIXXXXXXX")
+            filtro = rgx.Replace(filtro_tmp, txtFiltro.Text)
             Me.dgv_Vista.DataSource = Split(todos_los_datos)
         Else
             filtro = ""

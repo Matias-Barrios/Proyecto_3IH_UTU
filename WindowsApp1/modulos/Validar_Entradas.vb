@@ -13,6 +13,7 @@ Module Validar_Entradas
         Solo_username = 9
         Solo_IP = 10
         Solo_digitos = 10
+        Solo_numeros_o_letras = 11
     End Enum
     Public Sub Adherir_Validacion(ByRef CTRL As Windows.Forms.TextBox, ByVal Validation_Type As TipoValidacion)
         Dim txt As Windows.Forms.TextBox = CTRL
@@ -37,8 +38,10 @@ Module Validar_Entradas
                 AddHandler txt.KeyPress, AddressOf Solo_username
             Case TipoValidacion.Solo_IP
                 AddHandler txt.KeyPress, AddressOf Solo_IP
-            Case TipoValidacion.Solo_Digitos
+            Case TipoValidacion.Solo_digitos
                 AddHandler txt.KeyPress, AddressOf Solo_digitos
+            Case TipoValidacion.Solo_numeros_o_letras
+                AddHandler txt.KeyPress, AddressOf solo_numeros_o_letras
         End Select
     End Sub
     Public Sub solo_numeros(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
@@ -99,6 +102,12 @@ Module Validar_Entradas
     End Sub
     Public Sub solo_characteres(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If InStr("1234567890!@#$%^&*()_+=-", e.KeyChar) > 0 Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+    End Sub
+    Public Sub solo_numeros_o_letras(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If Not e.KeyChar.ToString() Like "[a-zA-Z0-9]" And Asc(e.KeyChar) <> 8 Then
             e.KeyChar = Chr(0)
             e.Handled = True
         End If
