@@ -36,9 +36,9 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteNombre = New System.Windows.Forms.TextBox()
         Me.lblCrearDocenteApellido = New System.Windows.Forms.Label()
         Me.lblCrear_docente_nombre = New System.Windows.Forms.Label()
-        Me.btnCrearDocenteCancelar = New System.Windows.Forms.Button()
-        Me.btnCrearDocenteAceptar = New System.Windows.Forms.Button()
         Me.lblCrear_Docente_Titulo = New WindowsApp1.BorderLabel()
+        Me.btnModificar_Usuario_Aceptar = New System.Windows.Forms.Button()
+        Me.btnModificarUsuario_Cancelar = New System.Windows.Forms.Button()
         Me.pnlCrearDocente.SuspendLayout()
         CType(Me.nudCrearDocenteGrado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCrearDocenteCI.SuspendLayout()
@@ -46,8 +46,9 @@ Partial Class ventana_crear_docente
         '
         'pnlCrearDocente
         '
-        Me.pnlCrearDocente.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.pnlCrearDocente.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pnlCrearDocente.BackColor = System.Drawing.Color.Gray
         Me.pnlCrearDocente.Controls.Add(Me.nudCrearDocenteGrado)
         Me.pnlCrearDocente.Controls.Add(Me.lblCrearDocenteGrado)
@@ -60,9 +61,9 @@ Partial Class ventana_crear_docente
         Me.pnlCrearDocente.Controls.Add(Me.txtCrearDocenteNombre)
         Me.pnlCrearDocente.Controls.Add(Me.lblCrearDocenteApellido)
         Me.pnlCrearDocente.Controls.Add(Me.lblCrear_docente_nombre)
-        Me.pnlCrearDocente.Location = New System.Drawing.Point(27, 63)
+        Me.pnlCrearDocente.Location = New System.Drawing.Point(12, 52)
         Me.pnlCrearDocente.Name = "pnlCrearDocente"
-        Me.pnlCrearDocente.Size = New System.Drawing.Size(423, 518)
+        Me.pnlCrearDocente.Size = New System.Drawing.Size(438, 271)
         Me.pnlCrearDocente.TabIndex = 25
         '
         'nudCrearDocenteGrado
@@ -73,7 +74,7 @@ Partial Class ventana_crear_docente
         Me.nudCrearDocenteGrado.Maximum = New Decimal(New Integer() {7, 0, 0, 0})
         Me.nudCrearDocenteGrado.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudCrearDocenteGrado.Name = "nudCrearDocenteGrado"
-        Me.nudCrearDocenteGrado.Size = New System.Drawing.Size(129, 20)
+        Me.nudCrearDocenteGrado.Size = New System.Drawing.Size(144, 20)
         Me.nudCrearDocenteGrado.TabIndex = 32
         Me.nudCrearDocenteGrado.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
@@ -99,7 +100,7 @@ Partial Class ventana_crear_docente
         Me.pnlCrearDocenteCI.Controls.Add(Me.lblCrearDocenteCI)
         Me.pnlCrearDocenteCI.Location = New System.Drawing.Point(22, 14)
         Me.pnlCrearDocenteCI.Name = "pnlCrearDocenteCI"
-        Me.pnlCrearDocenteCI.Size = New System.Drawing.Size(379, 42)
+        Me.pnlCrearDocenteCI.Size = New System.Drawing.Size(394, 42)
         Me.pnlCrearDocenteCI.TabIndex = 30
         '
         'txtCrearDocenteCI
@@ -109,7 +110,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteCI.Name = "txtCrearDocenteCI"
         Me.txtCrearDocenteCI.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocenteCI.ShortcutsEnabled = False
-        Me.txtCrearDocenteCI.Size = New System.Drawing.Size(193, 20)
+        Me.txtCrearDocenteCI.Size = New System.Drawing.Size(208, 20)
         Me.txtCrearDocenteCI.TabIndex = 31
         '
         'lblCrearDocenteCI
@@ -117,7 +118,7 @@ Partial Class ventana_crear_docente
         Me.lblCrearDocenteCI.AutoSize = True
         Me.lblCrearDocenteCI.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearDocenteCI.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearDocenteCI.Location = New System.Drawing.Point(6, 9)
+        Me.lblCrearDocenteCI.Location = New System.Drawing.Point(3, 9)
         Me.lblCrearDocenteCI.Name = "lblCrearDocenteCI"
         Me.lblCrearDocenteCI.Size = New System.Drawing.Size(27, 24)
         Me.lblCrearDocenteCI.TabIndex = 19
@@ -129,7 +130,7 @@ Partial Class ventana_crear_docente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.datepickerCrearDocenteFechaNacimiento.Location = New System.Drawing.Point(200, 178)
         Me.datepickerCrearDocenteFechaNacimiento.Name = "datepickerCrearDocenteFechaNacimiento"
-        Me.datepickerCrearDocenteFechaNacimiento.Size = New System.Drawing.Size(193, 20)
+        Me.datepickerCrearDocenteFechaNacimiento.Size = New System.Drawing.Size(208, 20)
         Me.datepickerCrearDocenteFechaNacimiento.TabIndex = 29
         '
         'lblCrearDocenteFechaNacimiento
@@ -154,7 +155,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteEmail.Name = "txtCrearDocenteEmail"
         Me.txtCrearDocenteEmail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocenteEmail.ShortcutsEnabled = False
-        Me.txtCrearDocenteEmail.Size = New System.Drawing.Size(193, 20)
+        Me.txtCrearDocenteEmail.Size = New System.Drawing.Size(208, 20)
         Me.txtCrearDocenteEmail.TabIndex = 27
         '
         'lblCrearDocenteEmail
@@ -179,7 +180,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteApellido.Name = "txtCrearDocenteApellido"
         Me.txtCrearDocenteApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocenteApellido.ShortcutsEnabled = False
-        Me.txtCrearDocenteApellido.Size = New System.Drawing.Size(193, 20)
+        Me.txtCrearDocenteApellido.Size = New System.Drawing.Size(208, 20)
         Me.txtCrearDocenteApellido.TabIndex = 24
         '
         'txtCrearDocenteNombre
@@ -191,7 +192,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteNombre.Name = "txtCrearDocenteNombre"
         Me.txtCrearDocenteNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocenteNombre.ShortcutsEnabled = False
-        Me.txtCrearDocenteNombre.Size = New System.Drawing.Size(193, 20)
+        Me.txtCrearDocenteNombre.Size = New System.Drawing.Size(208, 20)
         Me.txtCrearDocenteNombre.TabIndex = 22
         '
         'lblCrearDocenteApellido
@@ -220,36 +221,6 @@ Partial Class ventana_crear_docente
         Me.lblCrear_docente_nombre.TabIndex = 18
         Me.lblCrear_docente_nombre.Text = "Nombre "
         '
-        'btnCrearDocenteCancelar
-        '
-        Me.btnCrearDocenteCancelar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnCrearDocenteCancelar.BackColor = System.Drawing.Color.White
-        Me.btnCrearDocenteCancelar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.cancel
-        Me.btnCrearDocenteCancelar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCrearDocenteCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearDocenteCancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearDocenteCancelar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrearDocenteCancelar.Location = New System.Drawing.Point(356, 588)
-        Me.btnCrearDocenteCancelar.Name = "btnCrearDocenteCancelar"
-        Me.btnCrearDocenteCancelar.Size = New System.Drawing.Size(45, 45)
-        Me.btnCrearDocenteCancelar.TabIndex = 24
-        Me.btnCrearDocenteCancelar.UseVisualStyleBackColor = False
-        '
-        'btnCrearDocenteAceptar
-        '
-        Me.btnCrearDocenteAceptar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnCrearDocenteAceptar.BackColor = System.Drawing.Color.White
-        Me.btnCrearDocenteAceptar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.checkmark_filled
-        Me.btnCrearDocenteAceptar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCrearDocenteAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearDocenteAceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearDocenteAceptar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnCrearDocenteAceptar.Location = New System.Drawing.Point(67, 587)
-        Me.btnCrearDocenteAceptar.Name = "btnCrearDocenteAceptar"
-        Me.btnCrearDocenteAceptar.Size = New System.Drawing.Size(45, 45)
-        Me.btnCrearDocenteAceptar.TabIndex = 23
-        Me.btnCrearDocenteAceptar.UseVisualStyleBackColor = False
-        '
         'lblCrear_Docente_Titulo
         '
         Me.lblCrear_Docente_Titulo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
@@ -257,24 +228,57 @@ Partial Class ventana_crear_docente
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblCrear_Docente_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrear_Docente_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrear_Docente_Titulo.Location = New System.Drawing.Point(54, 9)
+        Me.lblCrear_Docente_Titulo.Location = New System.Drawing.Point(17, 9)
         Me.lblCrear_Docente_Titulo.Name = "lblCrear_Docente_Titulo"
-        Me.lblCrear_Docente_Titulo.Size = New System.Drawing.Size(339, 36)
+        Me.lblCrear_Docente_Titulo.Size = New System.Drawing.Size(340, 40)
         Me.lblCrear_Docente_Titulo.TabIndex = 22
         Me.lblCrear_Docente_Titulo.Text = "Cree un nuevo Docente..."
+        '
+        'btnModificar_Usuario_Aceptar
+        '
+        Me.btnModificar_Usuario_Aceptar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnModificar_Usuario_Aceptar.BackColor = System.Drawing.Color.White
+        Me.btnModificar_Usuario_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnModificar_Usuario_Aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificar_Usuario_Aceptar.ForeColor = System.Drawing.Color.Green
+        Me.btnModificar_Usuario_Aceptar.Location = New System.Drawing.Point(267, 338)
+        Me.btnModificar_Usuario_Aceptar.Name = "btnModificar_Usuario_Aceptar"
+        Me.btnModificar_Usuario_Aceptar.Size = New System.Drawing.Size(183, 32)
+        Me.btnModificar_Usuario_Aceptar.TabIndex = 39
+        Me.btnModificar_Usuario_Aceptar.Text = "Aceptar"
+        Me.btnModificar_Usuario_Aceptar.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.btnModificar_Usuario_Aceptar.UseVisualStyleBackColor = False
+        '
+        'btnModificarUsuario_Cancelar
+        '
+        Me.btnModificarUsuario_Cancelar.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnModificarUsuario_Cancelar.BackColor = System.Drawing.Color.White
+        Me.btnModificarUsuario_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnModificarUsuario_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnModificarUsuario_Cancelar.ForeColor = System.Drawing.Color.Red
+        Me.btnModificarUsuario_Cancelar.Location = New System.Drawing.Point(12, 338)
+        Me.btnModificarUsuario_Cancelar.Name = "btnModificarUsuario_Cancelar"
+        Me.btnModificarUsuario_Cancelar.Size = New System.Drawing.Size(183, 32)
+        Me.btnModificarUsuario_Cancelar.TabIndex = 38
+        Me.btnModificarUsuario_Cancelar.Text = "Cancelar"
+        Me.btnModificarUsuario_Cancelar.UseVisualStyleBackColor = False
         '
         'ventana_crear_docente
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(471, 636)
+        Me.ClientSize = New System.Drawing.Size(472, 398)
+        Me.Controls.Add(Me.btnModificar_Usuario_Aceptar)
         Me.Controls.Add(Me.pnlCrearDocente)
-        Me.Controls.Add(Me.btnCrearDocenteCancelar)
-        Me.Controls.Add(Me.btnCrearDocenteAceptar)
+        Me.Controls.Add(Me.btnModificarUsuario_Cancelar)
         Me.Controls.Add(Me.lblCrear_Docente_Titulo)
-        Me.MaximumSize = New System.Drawing.Size(487, 674)
-        Me.MinimumSize = New System.Drawing.Size(487, 674)
+        Me.Location = New System.Drawing.Point(488, 436)
+        Me.MaximumSize = New System.Drawing.Size(488, 436)
         Me.Name = "ventana_crear_docente"
         Me.Text = "Crear nuevo docente"
         Me.pnlCrearDocente.ResumeLayout(False)
@@ -298,9 +302,9 @@ Partial Class ventana_crear_docente
     Friend WithEvents txtCrearDocenteNombre As TextBox
     Friend WithEvents lblCrearDocenteApellido As Label
     Friend WithEvents lblCrear_docente_nombre As Label
-    Friend WithEvents btnCrearDocenteCancelar As Button
-    Friend WithEvents btnCrearDocenteAceptar As Button
     Friend WithEvents lblCrear_Docente_Titulo As BorderLabel
     Friend WithEvents nudCrearDocenteGrado As NumericUpDown
     Friend WithEvents lblCrearDocenteGrado As Label
+    Friend WithEvents btnModificar_Usuario_Aceptar As Button
+    Friend WithEvents btnModificarUsuario_Cancelar As Button
 End Class

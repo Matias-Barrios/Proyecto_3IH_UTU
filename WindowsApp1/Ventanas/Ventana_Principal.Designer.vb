@@ -84,11 +84,6 @@ Partial Class Ventana_Principal
         Me.btnDocentesCrearNuevo = New System.Windows.Forms.Button()
         Me.btnDocentesImprimir = New System.Windows.Forms.Button()
         Me.tabPrincipalUsuarios = New System.Windows.Forms.TabPage()
-        Me.pnlUsuariosFiltro = New System.Windows.Forms.Panel()
-        Me.btnUsuariosBotonFiltrarNombre = New System.Windows.Forms.Button()
-        Me.pnlUsuariosFiltroNombreUsuario = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.btnUsuariosImprimir = New System.Windows.Forms.Button()
         Me.btnUsuariosModificar = New System.Windows.Forms.Button()
         Me.btnUsuariosBotonEliminarUsuario = New System.Windows.Forms.Button()
@@ -154,7 +149,6 @@ Partial Class Ventana_Principal
         Me.Panel4.SuspendLayout()
         Me.tabPrincipalDocentes.SuspendLayout()
         Me.tabPrincipalUsuarios.SuspendLayout()
-        Me.pnlUsuariosFiltro.SuspendLayout()
         Me.tabpageInstitutos.SuspendLayout()
         Me.tabOrientaciones.SuspendLayout()
         Me.tabCiudades.SuspendLayout()
@@ -972,7 +966,6 @@ Partial Class Ventana_Principal
         Me.tabPrincipalUsuarios.BackColor = System.Drawing.Color.Silver
         Me.tabPrincipalUsuarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.tabPrincipalUsuarios.Controls.Add(Me.dgvP_Usuarios)
-        Me.tabPrincipalUsuarios.Controls.Add(Me.pnlUsuariosFiltro)
         Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosImprimir)
         Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosModificar)
         Me.tabPrincipalUsuarios.Controls.Add(Me.btnUsuariosBotonEliminarUsuario)
@@ -984,67 +977,6 @@ Partial Class Ventana_Principal
         Me.tabPrincipalUsuarios.Size = New System.Drawing.Size(836, 526)
         Me.tabPrincipalUsuarios.TabIndex = 4
         Me.tabPrincipalUsuarios.Text = "Usuarios"
-        '
-        'pnlUsuariosFiltro
-        '
-        Me.pnlUsuariosFiltro.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.pnlUsuariosFiltro.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.pnlUsuariosFiltro.Controls.Add(Me.btnUsuariosBotonFiltrarNombre)
-        Me.pnlUsuariosFiltro.Controls.Add(Me.pnlUsuariosFiltroNombreUsuario)
-        Me.pnlUsuariosFiltro.Controls.Add(Me.Label12)
-        Me.pnlUsuariosFiltro.Controls.Add(Me.Label14)
-        Me.pnlUsuariosFiltro.Location = New System.Drawing.Point(177, 47)
-        Me.pnlUsuariosFiltro.Name = "pnlUsuariosFiltro"
-        Me.pnlUsuariosFiltro.Size = New System.Drawing.Size(650, 50)
-        Me.pnlUsuariosFiltro.TabIndex = 28
-        '
-        'btnUsuariosBotonFiltrarNombre
-        '
-        Me.btnUsuariosBotonFiltrarNombre.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.btnUsuariosBotonFiltrarNombre.BackColor = System.Drawing.Color.White
-        Me.btnUsuariosBotonFiltrarNombre.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.find_user_male
-        Me.btnUsuariosBotonFiltrarNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnUsuariosBotonFiltrarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnUsuariosBotonFiltrarNombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUsuariosBotonFiltrarNombre.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnUsuariosBotonFiltrarNombre.Location = New System.Drawing.Point(597, 8)
-        Me.btnUsuariosBotonFiltrarNombre.Name = "btnUsuariosBotonFiltrarNombre"
-        Me.btnUsuariosBotonFiltrarNombre.Size = New System.Drawing.Size(35, 35)
-        Me.btnUsuariosBotonFiltrarNombre.TabIndex = 16
-        Me.btnUsuariosBotonFiltrarNombre.UseVisualStyleBackColor = False
-        '
-        'pnlUsuariosFiltroNombreUsuario
-        '
-        Me.pnlUsuariosFiltroNombreUsuario.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.pnlUsuariosFiltroNombreUsuario.Location = New System.Drawing.Point(274, 23)
-        Me.pnlUsuariosFiltroNombreUsuario.Name = "pnlUsuariosFiltroNombreUsuario"
-        Me.pnlUsuariosFiltroNombreUsuario.Size = New System.Drawing.Size(307, 20)
-        Me.pnlUsuariosFiltroNombreUsuario.TabIndex = 11
-        '
-        'Label12
-        '
-        Me.Label12.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label12.Location = New System.Drawing.Point(110, 23)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(148, 24)
-        Me.Label12.TabIndex = 10
-        Me.Label12.Text = "Nombre Usuario"
-        Me.Label12.UseMnemonic = False
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label14.Location = New System.Drawing.Point(3, 7)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(67, 25)
-        Me.Label14.TabIndex = 7
-        Me.Label14.Text = "Filtrar"
         '
         'btnUsuariosImprimir
         '
@@ -1716,8 +1648,6 @@ Partial Class Ventana_Principal
         Me.Panel4.PerformLayout()
         Me.tabPrincipalDocentes.ResumeLayout(False)
         Me.tabPrincipalUsuarios.ResumeLayout(False)
-        Me.pnlUsuariosFiltro.ResumeLayout(False)
-        Me.pnlUsuariosFiltro.PerformLayout()
         Me.tabpageInstitutos.ResumeLayout(False)
         Me.tabOrientaciones.ResumeLayout(False)
         Me.tabCiudades.ResumeLayout(False)
@@ -1778,11 +1708,6 @@ Partial Class Ventana_Principal
     Friend WithEvents BorderLabel1 As BorderLabel
     Friend WithEvents btnVentanaPrincipalInstitutos As Button
     Friend WithEvents btnInstitutoImprimir As Button
-    Friend WithEvents pnlUsuariosFiltro As Panel
-    Friend WithEvents btnUsuariosBotonFiltrarNombre As Button
-    Friend WithEvents pnlUsuariosFiltroNombreUsuario As TextBox
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label14 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents cboAsignatura As ComboBox
     Friend WithEvents cboGrupo As ComboBox

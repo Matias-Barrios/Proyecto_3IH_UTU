@@ -7,7 +7,7 @@
         datepickerCrearDocenteFechaNacimiento.MaxDate = Date.Now
     End Sub
 
-    Private Sub btnCrearDocenteCancelar_Click(sender As Object, e As EventArgs) Handles btnCrearDocenteCancelar.Click
+    Private Sub btnCrearDocenteCancelar_Click(sender As Object, e As EventArgs)
         Me.Close()
     End Sub
 

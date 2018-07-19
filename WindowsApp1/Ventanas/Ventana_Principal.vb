@@ -23,9 +23,6 @@
         Me.tabCalificaciones_Vista.ItemSize = New Size(0, 1)
         Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
 
-
-
-        Adherir_Validacion(pnlUsuariosFiltroNombreUsuario, TipoValidacion.Solo_username)
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
