@@ -269,12 +269,12 @@ Partial Class ventana_crear_alumno
         '
         'txtCrearAlumnoSegundoApellido
         '
-        Me.txtCrearAlumnoSegundoApellido.Location = New System.Drawing.Point(194, 180)
+        Me.txtCrearAlumnoSegundoApellido.Location = New System.Drawing.Point(191, 170)
         Me.txtCrearAlumnoSegundoApellido.MaxLength = 25
         Me.txtCrearAlumnoSegundoApellido.Name = "txtCrearAlumnoSegundoApellido"
         Me.txtCrearAlumnoSegundoApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearAlumnoSegundoApellido.ShortcutsEnabled = False
-        Me.txtCrearAlumnoSegundoApellido.Size = New System.Drawing.Size(193, 20)
+        Me.txtCrearAlumnoSegundoApellido.Size = New System.Drawing.Size(196, 20)
         Me.txtCrearAlumnoSegundoApellido.TabIndex = 24
         '
         'txtCrearAlumnoPrimerNombre
@@ -292,7 +292,7 @@ Partial Class ventana_crear_alumno
         Me.lblCrearAlumnoApellido.AutoSize = True
         Me.lblCrearAlumnoApellido.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearAlumnoApellido.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCrearAlumnoApellido.Location = New System.Drawing.Point(15, 180)
+        Me.lblCrearAlumnoApellido.Location = New System.Drawing.Point(15, 167)
         Me.lblCrearAlumnoApellido.Name = "lblCrearAlumnoApellido"
         Me.lblCrearAlumnoApellido.Size = New System.Drawing.Size(162, 24)
         Me.lblCrearAlumnoApellido.TabIndex = 20

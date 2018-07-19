@@ -154,4 +154,16 @@
         Console.WriteLine(consulta)
         Return consulta
     End Function
+    Public Function CREAR_DOCENTE(CI As String, primer_nombre As String, segundo_nombre As String, primer_apellido As String, segundo_apellido As String, fecha_nacimiento As Date, email As String, grado As Integer, convertir_fecha_ingles As Boolean) As String
+        Dim fecha_con_formato As String
+        If convertir_fecha_ingles Then
+            fecha_con_formato = fecha_nacimiento.ToString("dd/MM/yyyy")
+        Else
+            fecha_con_formato = fecha_nacimiento.ToString("MM/dd/yyyy")
+        End If
+        Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
+                VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & grado & ",'" & "f" & "'," & "NULL" & "," & "Examen Febrero" & "," & "'Profesor'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
+        Console.WriteLine(consulta)
+        Return consulta
+    End Function
 End Module
