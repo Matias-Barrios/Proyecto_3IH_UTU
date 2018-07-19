@@ -6,7 +6,7 @@ Public Class DGVPaginado
     Private pagina As Integer = 0
     Private maximo_paginas As Integer = 0
     Private items_por_pagina As Integer = 50
-    Dim columnas_escondidas As New List(Of String)
+
     Private filtro_tmp As String = ""
     Private filtro As String = ""
 
@@ -72,14 +72,18 @@ Public Class DGVPaginado
 
         If pagina = 0 Then
             btn_Prev.Enabled = False
+            btn_Primera.Enabled = False
         Else
             btn_Prev.Enabled = True
+            btn_Primera.Enabled = True
         End If
 
         If pagina = (maximo_paginas - 1) Then
             btn_Siguiente.Enabled = False
+            btn_UltimaPagina.Enabled = False
         Else
             btn_Siguiente.Enabled = True
+            btn_UltimaPagina.Enabled = True
         End If
         If total = 0 Then
             btn_Prev.Enabled = False
@@ -87,6 +91,7 @@ Public Class DGVPaginado
             btn_UltimaPagina.Enabled = False
             btn_Primera.Enabled = False
         End If
+
 
     End Sub
 
@@ -120,27 +125,7 @@ Public Class DGVPaginado
         Return dgv_Vista.Rows.GetRowCount(DataGridViewElementStates.Selected)
     End Function
 
-    Private Sub dgv_Vista_CellContentClick(sender As Object, e As DataGridViewBindingCompleteEventArgs) Handles dgv_Vista.DataBindingComplete
-        For Each columna In columnas_escondidas
-            Try
-                dgv_Vista.Columns(columna).Visible = False
-            Catch ex As Exception
-                MsgBox("Error ocultando columna : " & columna & "  " & ex.ToString())
-            End Try
-        Next
-    End Sub
-    Public Sub Esconder_columnas(columnas As String)
-        If Not Regex.Match(columnas, ESCONDER_COLUMNAS_INPUT_VALIDO()).Success Then
-            MsgBox("No se pudieron esconder las columnas. El input tiene un formato invalido : " & columnas)
-        Else
-            For Each column In columnas.Split(",")
-                columnas_escondidas.Add(column)
-            Next
-        End If
-    End Sub
-    Public Sub Mostrar_Columnas(columnas As String)
-        columnas_escondidas.Clear()
-    End Sub
+
     Private Sub txtFiltro_TextChanged(sender As Object, e As EventArgs) Handles txtFiltro.TextChanged
         pagina = 0
         If Not String.IsNullOrEmpty(txtFiltro.Text) Then

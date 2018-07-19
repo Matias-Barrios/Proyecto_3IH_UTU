@@ -107,7 +107,7 @@ Module Validar_Entradas
         End If
     End Sub
     Public Sub solo_numeros_o_letras(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        If Not e.KeyChar.ToString() Like "[a-zA-Z0-9]" And Asc(e.KeyChar) <> 8 Then
+        If Not e.KeyChar.ToString() Like "[a-zA-Z0-9 ]" And Asc(e.KeyChar) <> 8 Then
             e.KeyChar = Chr(0)
             e.Handled = True
         End If

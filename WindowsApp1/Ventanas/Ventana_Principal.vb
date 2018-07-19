@@ -24,8 +24,7 @@
         Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
 
 
-        Adherir_Validacion(txtAlumnosFiltrarCedula, TipoValidacion.Solo_cedulas)
-        Adherir_Validacion(txtAlumnosFiltrarNombre, TipoValidacion.Solo_nombres)
+
         Adherir_Validacion(pnlUsuariosFiltroNombreUsuario, TipoValidacion.Solo_username)
     End Sub
 
@@ -41,30 +40,30 @@
 
     Private Sub btnAlumnos_Click(sender As Object, e As EventArgs) Handles btnAlumnos.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalAlumnos
-        dgvP_Alumnos.Esconder_columnas("baja")
+
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
     End Sub
 
     Private Sub btnMaterias_Click(sender As Object, e As EventArgs) Handles btnMaterias.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalMaterias
-        dgvP_Asignaturas.Esconder_columnas("id_asignatura,baja")
+
         dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
     End Sub
 
     Private Sub btnTareas_Click(sender As Object, e As EventArgs) Handles btnTareas.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalTareas
-        dgvP_Calificaciones.Esconder_columnas("id_calificacion,baja")
+
         dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDocentes.Click
-        dgvP_Docentes.Esconder_columnas("baja")
+
         dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalDocentes
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
-        dgvP_Usuarios.Esconder_columnas("baja")
+
         dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalUsuarios
     End Sub
@@ -99,7 +98,7 @@
 
     Private Sub btnVentanaPrincipalInstitutos_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalInstitutos.Click
         Me.tabPrincipal.SelectedTab = Me.tabpageInstitutos
-        dgvP_Institutos.Esconder_columnas("id_instituto,baja")
+
         dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
 
     End Sub
@@ -137,7 +136,7 @@
     End Sub
 
     Private Sub btn_Grupos_Click(sender As Object, e As EventArgs) Handles btn_Grupos.Click
-        dgvP_Grupos.Esconder_columnas("id_grupo")
+
         dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
         Me.tabPrincipal.SelectedTab = Me.tabpage_Grupos
     End Sub
@@ -266,7 +265,7 @@
 
     Private Sub btnVentanaPrincipalOrientaciones_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalOrientaciones.Click
         Me.tabPrincipal.SelectedTab = Me.tabOrientaciones
-        dgvP_Orientaciones.Esconder_columnas("id_orientacion,baja")
+
         dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
     End Sub
 
@@ -288,7 +287,7 @@
 
     Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
         Me.tabPrincipal.SelectedTab = Me.tabCiudades
-        dgvP_Ciudades.Esconder_columnas("id_ciudad,baja")
+
         dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
     End Sub
 
@@ -320,5 +319,9 @@
             MsgBox(SELECCIONE_SOLO_UNO())
 
         End If
+    End Sub
+
+    Private Sub btnGrupos_Agregar_Click(sender As Object, e As EventArgs) Handles btnGrupos_Agregar.Click
+
     End Sub
 End Class

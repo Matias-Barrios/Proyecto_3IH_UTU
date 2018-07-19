@@ -2,43 +2,83 @@
 
 
     Public Function CONSULTAS_SELECT_ALUMNOS() As String
-        Return "SELECT * FROM Personas WHERE tipo = 'Alumno' AND baja = 'f'"
+        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
+                FROM Personas 
+                WHERE tipo = 'Alumno' AND baja = 'f'"
     End Function
 
     Public Function CONSULTAS_SELECT_INSTITUTOS() As String
-        Return "SELECT * FROM Institutos WHERE baja = 'f'"
+        Return "SELECT id_instituto,nombre,calle,numero,telefonos,email,Ciudad.nombre_ciudad 
+                FROM Institutos,Ciudad 
+                WHERE Institutos.baja = 'f' and Institutos.foranea_id_ciudad = Ciudad.id_ciudad"
     End Function
     Public Function CONSULTAS_SELECT_ASIGNATURAS() As String
-        Return "SELECT * FROM Asignaturas WHERE baja = 'f'"
+        Return "SELECT id_asignatura,nombre_asignatura,descripcion 
+                FROM Asignaturas 
+                WHERE baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_CIUDADES() As String
-        Return "SELECT * FROM Ciudad WHERE baja = 'f'"
+        Return "SELECT id_ciudad,nombre_ciudad,nombre_departamento   
+                FROM Ciudad 
+                WHERE baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_ORIENTACIONES() As String
-        Return "SELECT * FROM Orientaciones WHERE baja = 'f'"
+        Return "SELECT id_orientacion,nombre_orientacion,descripcion 
+                FROM Orientaciones 
+                WHERE baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_DOCENTES() As String
-        Return "SELECT * FROM Personas WHERE tipo='Profesor' AND baja = 'f'"
+        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email,grado
+                FROM Personas 
+                WHERE tipo = 'Profesor' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_GRUPOS() As String
-        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Institutos.nombre,Orientaciones.nombre_orientacion FROM Grupos,Institutos,Orientaciones WHERE Grupos.baja = 'f' and Grupos.foranea_id_instituto = Institutos.id_instituto and Grupos.foranea_id_orientacion = Orientaciones.id_orientacion and  Grupos.baja = 'f'"
+        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Institutos.nombre,Orientaciones.nombre_orientacion 
+                FROM Grupos,Institutos,Orientaciones 
+                WHERE Grupos.baja = 'f' and Grupos.foranea_id_instituto = Institutos.id_instituto and Grupos.foranea_id_orientacion = Orientaciones.id_orientacion and  Grupos.baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_ADMINISTRADORES() As String
-        Return "SELECT * FROM Personas WHERE tipo = 'Administrador' AND baja = 'f'"
+        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+                FROM Personas 
+                WHERE tipo = 'Administrador' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_ADMINS() As String
-        Return "SELECT * FROM Personas WHERE tipo = 'Admin' AND baja = 'f'"
+        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+                FROM Personas 
+                WHERE tipo = 'Admin' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_CALIFICACIONES() As String
-        Return "SELECT * FROM Calificaciones WHERE baja = 'f'"
+        Return "SELECT id_calificacion,
+		                (Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_docente,
+		                CI_docente,
+		                (Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_alumno,
+		                CI_alumno,
+		                Asignaturas.nombre_asignatura, 
+		                Grupos.nombre_grupo,
+		                Institutos.nombre,
+		                nombre_calificacion,
+		                categoria,
+		                fecha,
+		                comentario,
+		                nota
+                FROM Calificaciones,Personas,Asignaturas,Grupos,Institutos
+                WHERE Calificaciones.baja = 'f' 
+                and ( CI_docente = Personas.CI or CI_alumno = Personas.CI ) 
+                and Asignaturas.id_asignatura =  Calificaciones.id_asignatura 
+                and Grupos.id_grupo = Calificaciones.id_grupo
+                and Institutos.id_instituto   = Calificaciones.id_instituto"
     End Function
 
     Public Function CONSULTAS_SELECT_USUARIOS() As String
-        Return "SELECT * FROM Personas WHERE baja = 'f' AND encriptacion_hash is not null AND baja = 'f'"
+        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+                FROM Personas
+                WHERE baja = 'f' AND encriptacion_hash is not null AND baja = 'f'"
     End Function
 
     Public Function CONSULTAS_SELECT_POTENCIALES_USUARIOS() As String
-        Return "SELECT * FROM Personas WHERE baja = 'f' AND tipo IN ('Admin','Profesor','Administrativo')"
+        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+                FROM Personas 
+                WHERE baja = 'f' AND tipo IN ('Admin','Profesor','Administrativo')"
     End Function
 
     Public Function CREAR_USUARIO(CI As Integer, hash As String, sal As String) As String
@@ -108,9 +148,9 @@
                 " segundo_apellido = '" & alumno.Cells("primer_apellido").Value() & "'," &
                 " fecha_nacimiento = " & fecha_con_formato & "," &
                 " email = '" & alumno.Cells("email").Value() & "'," &
-                " hace_proyecto = '" & alumno.Cells("hace_proyecto").Value() & "'," &
-                " nota_final_pro = '" & alumno.Cells("nota_final_pro").Value() & "'," &
-                " WHERE CI = " & CI_original & ")"
+                " hace_proyecto = '" & hace_proyecto_como_letra & "'," &
+                " nota_final_pro = '" & alumno.Cells("nota_final_pro").Value() & "'" &
+                " WHERE CI = " & CI_original
         Console.WriteLine(consulta)
         Return consulta
     End Function

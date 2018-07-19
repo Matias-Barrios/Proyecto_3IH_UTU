@@ -51,15 +51,15 @@ Public Class ventana_crear_alumno
         If Not es_modificacion Then
             If validar_inputs() Then
                 hacer_consulta(CREAR_ALUMNO(txtCrearAlumnoCI.Text, txtCrearAlumnoPrimerNombre.Text, txtCrearAlumnoSegundoNombre.Text, txtCrearAlumnoPrimerApellido.Text, txtCrearAlumnoSegundoApellido.Text, datepickerCrearAlumnoFechaNacimiento.Value(), txtCrearAlumnoEmail.Text, chkHaceProyecto.Checked, True))
-                Me.Dispose()
                 Ventana_Principal.dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+                Me.Dispose()
             End If
         Else
             If validar_inputs() Then
                 Preparar_Alumno()
                 hacer_consulta(MODIFICAR_ALUMNO(CI_original, alumno, True))
-                Me.Dispose()
                 Ventana_Principal.dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+                Me.Dispose()
             End If
         End If
 
