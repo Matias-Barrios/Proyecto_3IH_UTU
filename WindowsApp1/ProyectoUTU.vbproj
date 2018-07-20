@@ -92,6 +92,12 @@
     <Compile Include="modulos\Expresiones_Regulares.vb" />
     <Compile Include="modulos\InformixConexion.vb" />
     <Compile Include="modulos\Mensajes_Al_Usuario.vb" />
+    <Compile Include="Ventanas\ventana_crear_grupo.Designer.vb">
+      <DependentUpon>ventana_crear_grupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_crear_grupo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\ventana_cambiar_password.Designer.vb">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controles_personalizados\DGVPaginado.resx">
       <DependentUpon>DGVPaginado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_crear_grupo.resx">
+      <DependentUpon>ventana_crear_grupo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_cambiar_password.resx">
       <DependentUpon>ventana_cambiar_password.vb</DependentUpon>

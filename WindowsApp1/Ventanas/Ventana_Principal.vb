@@ -319,6 +319,16 @@
     End Sub
 
     Private Sub btnGrupos_Agregar_Click(sender As Object, e As EventArgs) Handles btnGrupos_Agregar.Click
+        ventana_crear_grupo.Show()
+    End Sub
 
+    Private Sub btn_Grupos_Modificar_Click(sender As Object, e As EventArgs) Handles btn_Grupos_Modificar.Click
+        If Not dgvP_Grupos.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_grupo.Preparar_Ventana_Modificacion(dgvP_Grupos.Filas_Seleccionadas().Item(0))
+            ventana_crear_grupo.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
     End Sub
 End Class

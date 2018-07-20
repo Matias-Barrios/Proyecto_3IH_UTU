@@ -12,6 +12,16 @@
                 FROM Institutos,Ciudad 
                 WHERE Institutos.baja = 'f' and Institutos.foranea_id_ciudad = Ciudad.id_ciudad"
     End Function
+    Public Function CONSULTAS_SELECT_INSTITUTOS_PARA_LISTBOX() As String
+        Return "SELECT id_instituto,nombre  
+                FROM Institutos 
+                WHERE Institutos.baja = 'f'"
+    End Function
+    Public Function CONSULTAS_SELECT_ORIENTACIONES_PARA_LISTBOX() As String
+        Return "SELECT id_orientacion,nombre_orientacion  
+                FROM Orientaciones 
+                WHERE Orientaciones.baja = 'f'"
+    End Function
     Public Function CONSULTAS_SELECT_ASIGNATURAS() As String
         Return "SELECT id_asignatura,nombre_asignatura,descripcion 
                 FROM Asignaturas 
@@ -33,7 +43,7 @@
                 WHERE tipo = 'Profesor' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_GRUPOS() As String
-        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Institutos.nombre,Orientaciones.nombre_orientacion 
+        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Grupos.turno,Institutos.nombre,Orientaciones.nombre_orientacion 
                 FROM Grupos,Institutos,Orientaciones 
                 WHERE Grupos.baja = 'f' and Grupos.foranea_id_instituto = Institutos.id_instituto and Grupos.foranea_id_orientacion = Orientaciones.id_orientacion and  Grupos.baja = 'f'"
     End Function
@@ -154,6 +164,17 @@
         Console.WriteLine(consulta)
         Return consulta
     End Function
+    Public Function MODIFICAR_GRUPO(id_grupo_original As Integer, Grupo As DataGridViewRow, id_instituto As Integer, id_orientacion As Integer) As String
+        Dim consulta As String = "UPDATE Grupos SET " &
+                " turno = '" & Grupo.Cells("turno").Value() & "'," &
+                " foranea_id_instituto  = " & id_instituto & "," &
+                " foranea_id_orientacion  = " & id_orientacion & "," &
+                " WHERE id_grupo = " & id_grupo_original
+        Console.WriteLine(consulta)
+        Return consulta
+    End Function
+
+
     Public Function CREAR_DOCENTE(CI As String, primer_nombre As String, segundo_nombre As String, primer_apellido As String, segundo_apellido As String, fecha_nacimiento As Date, email As String, grado As Integer, convertir_fecha_ingles As Boolean) As String
         Dim fecha_con_formato As String
         If convertir_fecha_ingles Then
@@ -164,6 +185,15 @@
         Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
                 VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & grado & ",'" & "f" & "'," & "NULL" & "," & "Examen Febrero" & "," & "'Profesor'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
         Console.WriteLine(consulta)
+        Return consulta
+    End Function
+    Public Function CREAR_GRUPO(nombre As String, turno As String, id_instituto As Integer, id_orientacion As Integer) As String
+
+
+        Dim consulta As String = "INSERT INTO Grupos (foranea_id_instituto, nombre_grupo, turno, baja, foranea_id_orientacion)
+                VALUES(" & id_instituto & ",'" & nombre & "','" & turno & "','" & "f" & "'," & id_orientacion & ")"
+        Console.WriteLine(consulta)
+
         Return consulta
     End Function
 End Module

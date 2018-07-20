@@ -17,6 +17,9 @@ Module Expresiones_Regulares
     Public Function CEDULA_VALIDA() As String
         Return "^[0-9]{8,12}$"
     End Function
+    Public Function GRUPO_NOMBRE_VALIDO() As String
+        Return "^[1-3][A-Z][A-Z]$"
+    End Function
 
 
 End Module
