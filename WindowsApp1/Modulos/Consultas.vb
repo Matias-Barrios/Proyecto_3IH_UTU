@@ -59,24 +59,24 @@
     End Function
     Public Function CONSULTAS_SELECT_CALIFICACIONES() As String
         Return "SELECT id_calificacion,
-		                (Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_docente,
+		                (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido from Personas where Personas.CI = CI_docente) AS nombre_docente,
 		                CI_docente,
-		                (Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_alumno,
+		                (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido  from Personas where Personas.CI = CI_alumno) AS nombre_alumno,
 		                CI_alumno,
 		                Asignaturas.nombre_asignatura, 
 		                Grupos.nombre_grupo,
 		                Institutos.nombre,
 		                nombre_calificacion,
 		                categoria,
-		                fecha,
+		                TO_CHAR(fecha, '%A %B %d, %Y %R'),
 		                comentario,
 		                nota
-                FROM Calificaciones,Personas,Asignaturas,Grupos,Institutos
+                FROM Calificaciones,Asignaturas,Grupos,Institutos
                 WHERE Calificaciones.baja = 'f' 
-                and ( CI_docente = Personas.CI or CI_alumno = Personas.CI ) 
                 and Asignaturas.id_asignatura =  Calificaciones.id_asignatura 
                 and Grupos.id_grupo = Calificaciones.id_grupo
-                and Institutos.id_instituto   = Calificaciones.id_instituto"
+		and Institutos.id_instituto = Calificaciones.id_instituto
+		order by fecha DESC"
     End Function
 
     Public Function CONSULTAS_SELECT_USUARIOS() As String
