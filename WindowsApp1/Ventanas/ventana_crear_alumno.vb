@@ -46,6 +46,10 @@ Public Class ventana_crear_alumno
     Private Sub btnModificarUsuario_Cancelar_Click(sender As Object, e As EventArgs) Handles btnModificarUsuario_Cancelar.Click
         Me.Dispose()
     End Sub
+    Private Sub Cerrar_Ventana(sender As Object, e As EventArgs) Handles Me.Closing
+        Me.Dispose()
+    End Sub
+
 
     Private Sub btnModificar_Usuario_Aceptar_Click(sender As Object, e As EventArgs) Handles btnModificar_Usuario_Aceptar.Click
         If Not es_modificacion Then

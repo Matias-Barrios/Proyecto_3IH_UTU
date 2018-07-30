@@ -2,7 +2,7 @@
 
 
     Public Function CONSULTAS_SELECT_ALUMNOS() As String
-        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
+        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
                 FROM Personas 
                 WHERE tipo = 'Alumno' AND baja = 'f'"
     End Function
@@ -38,22 +38,22 @@
                 WHERE baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_DOCENTES() As String
-        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email,grado
+        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,grado
                 FROM Personas 
                 WHERE tipo = 'Profesor' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_GRUPOS() As String
-        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Grupos.turno,Institutos.nombre,Orientaciones.nombre_orientacion 
+        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Grupos.turno,Institutos.id_instituto,Institutos.nombre,Orientaciones.id_orientacion,Orientaciones.nombre_orientacion 
                 FROM Grupos,Institutos,Orientaciones 
                 WHERE Grupos.baja = 'f' and Grupos.foranea_id_instituto = Institutos.id_instituto and Grupos.foranea_id_orientacion = Orientaciones.id_orientacion and  Grupos.baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_ADMINISTRADORES() As String
-        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas 
                 WHERE tipo = 'Administrador' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_ADMINS() As String
-        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,fecha_nacimiento,email
                 FROM Personas 
                 WHERE tipo = 'Admin' AND baja = 'f'"
     End Function
@@ -80,13 +80,13 @@
     End Function
 
     Public Function CONSULTAS_SELECT_USUARIOS() As String
-        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email 
                 FROM Personas
                 WHERE baja = 'f' AND encriptacion_hash is not null AND baja = 'f'"
     End Function
 
     Public Function CONSULTAS_SELECT_POTENCIALES_USUARIOS() As String
-        Return "SELECT CI, (primer_nombre || ' ' || segundo_nombre || ' ' || primer_apellido || ' ' || segundo_apellido ) AS nombre_completo,fecha_nacimiento,email
+        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas 
                 WHERE baja = 'f' AND tipo IN ('Admin','Profesor','Administrativo')"
     End Function
@@ -194,6 +194,24 @@
                 VALUES(" & id_instituto & ",'" & nombre & "','" & turno & "','" & "f" & "'," & id_orientacion & ")"
         Console.WriteLine(consulta)
 
+        Return consulta
+    End Function
+    Public Function CREAR_ASIGNATURA(nombre As String, descripcion As String) As String
+
+
+        Dim consulta As String = "INSERT INTO Asignaturas (nombre_asignatura  , descripcion, baja)
+                VALUES('" & nombre & "','" & descripcion & "'," & "'f'" & ")"
+        Console.WriteLine(consulta)
+
+        Return consulta
+    End Function
+    Public Function MODIFICAR_ASIGNATURA(asignatura As DataGridViewRow) As String
+
+        Dim consulta As String = "UPDATE Asignaturas SET " &
+                " nombre_asignatura = '" & asignatura.Cells("nombre_asignatura").Value() & "'," &
+                " descripcion = '" & asignatura.Cells("descripcion").Value() & "'" &
+                " WHERE id_asignatura = " & asignatura.Cells("id_asignatura").Value()
+        Console.WriteLine(consulta)
         Return consulta
     End Function
 End Module

@@ -18,6 +18,10 @@ Public Class ventana_crear_grupo
         lstCrearGrupo_Instituto.DisplayMember = "nombre"
         lstCrearGrupo_Orientacion.DataSource = hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES_PARA_LISTBOX())
         lstCrearGrupo_Orientacion.DisplayMember = "nombre_orientacion"
+        If es_modificacion Then
+            lstCrearGrupo_Instituto.SetSelected(lstCrearGrupo_Instituto.FindString(elGrupo.Cells("nombre").Value()), True)
+        End If
+
     End Sub
 
     Private Sub btnCrearGrupo_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrearGrupo_Aceptar.Click
@@ -40,9 +44,10 @@ Public Class ventana_crear_grupo
     Public Sub Preparar_Ventana_Modificacion(grupo As DataGridViewRow)
         Try
             es_modificacion = True
-            grupo = grupo
+            elGrupo = grupo
             id_grupo_original = grupo.Cells("id_grupo").Value()
             txtCrearGrupoNombre.Text = grupo.Cells("nombre_grupo").Value()
+
 
 
         Catch ex As Exception

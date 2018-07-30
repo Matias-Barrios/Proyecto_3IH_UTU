@@ -10,6 +10,7 @@ Module Expresiones_Regulares
     Public Function NOMBRE_VALIDO() As String
         Return "^[a-zA-Z][a-zA-Z ]+$"
     End Function
+
     Public Function EMAIL_VALIDO() As String
         Return "^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,3})$"
     End Function

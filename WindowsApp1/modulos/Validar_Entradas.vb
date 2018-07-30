@@ -15,6 +15,7 @@ Module Validar_Entradas
         Solo_digitos = 10
         Solo_numeros_o_letras = 11
         Solo_numeros_letras_mayusculas_sin_espacio = 12
+        Solo_descripciones = 13
     End Enum
     Public Sub Adherir_Validacion(ByRef CTRL As Windows.Forms.TextBox, ByVal Validation_Type As TipoValidacion)
         Dim txt As Windows.Forms.TextBox = CTRL
@@ -45,6 +46,8 @@ Module Validar_Entradas
                 AddHandler txt.KeyPress, AddressOf solo_numeros_o_letras
             Case TipoValidacion.Solo_numeros_letras_mayusculas_sin_espacio
                 AddHandler txt.KeyPress, AddressOf solo_numeros_letras_mayusculas_sin_espacio
+            Case TipoValidacion.Solo_descripciones
+                AddHandler txt.KeyPress, AddressOf solo_descripciones
         End Select
     End Sub
     Public Sub solo_numeros(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
@@ -105,6 +108,12 @@ Module Validar_Entradas
     End Sub
     Public Sub solo_characteres(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         If InStr("1234567890!@#$%^&*()_+=-", e.KeyChar) > 0 Then
+            e.KeyChar = Chr(0)
+            e.Handled = True
+        End If
+    End Sub
+    Public Sub solo_descripciones(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
+        If InStr("[a-zA-Z0-9,.!?'-_ ]", e.KeyChar) > 0 Then
             e.KeyChar = Chr(0)
             e.Handled = True
         End If

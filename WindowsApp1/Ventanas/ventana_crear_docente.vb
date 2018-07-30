@@ -15,7 +15,10 @@ Public Class ventana_crear_docente
     End Sub
 
     Private Sub btnCrearDocenteCancelar_Click(sender As Object, e As EventArgs)
-        Me.Close()
+        Me.Dispose()
+    End Sub
+    Private Sub Cerrar_ventana(sender As Object, e As EventArgs) Handles Me.Closing
+        Me.Dispose()
     End Sub
 
     Private Sub btnCrearDocente_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrearDocente_Aceptar.Click

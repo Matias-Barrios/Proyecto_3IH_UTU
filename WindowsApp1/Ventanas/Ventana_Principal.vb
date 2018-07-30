@@ -331,4 +331,14 @@
 
         End If
     End Sub
+
+    Private Sub btnMateriasModificar_Click(sender As Object, e As EventArgs) Handles btnMateriasModificar.Click
+        If Not dgvP_Asignaturas.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_asignatura.Preparar_Ventana_Modificacion(dgvP_Asignaturas.Filas_Seleccionadas().Item(0))
+            ventana_crear_asignatura.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
+    End Sub
 End Class
