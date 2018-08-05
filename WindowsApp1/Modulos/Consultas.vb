@@ -17,6 +17,29 @@
                 FROM Institutos 
                 WHERE Institutos.baja = 'f'"
     End Function
+
+    Public Function CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX() As String
+        Return "select id_instituto, nombre
+        from Institutos, relacion_docente_trabaja_instituto
+        where id_instituto = foranea_id_instituto
+        and foranea_ci_docente = 14893499"
+    End Function
+
+    Public Function CONSULTAS_SELECT_GRUPOS_CALIFICACIONES_COMBOBOX() As String
+        Return "select id_grupo, nombre_grupo
+        from Grupos, relacion_docente_asignatura_grupos
+        where id_grupo = foranea_id_grupo
+        and foranea_ci_docente = 14893499"
+    End Function
+
+
+    Public Function CONSULTAS_SELECT_ASIGNATURAS_CALIFICACIONES_COMBOBOX() As String
+        Return "select id_asignatura, nombre_asignatura
+    from Asignaturas, relacion_docente_asignatura_grupos
+    where id_asignatura = foranea_id_asignatura
+    and foranea_ci_docente = 14893499"
+    End Function
+
     Public Function CONSULTAS_SELECT_ORIENTACIONES_PARA_LISTBOX() As String
         Return "SELECT id_orientacion,nombre_orientacion  
                 FROM Orientaciones 

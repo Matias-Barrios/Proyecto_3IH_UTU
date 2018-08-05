@@ -6,6 +6,18 @@
 
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
 
+
+        cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
+        cboInstituto.DisplayMember = "nombre"
+
+        cboGrupo.DataSource = hacer_consulta(CONSULTAS_SELECT_GRUPOS_CALIFICACIONES_COMBOBOX())
+        cboGrupo.DisplayMember = "nombre_grupo"
+
+        cboAsignatura.DataSource = hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS_CALIFICACIONES_COMBOBOX())
+        cboAsignatura.DisplayMember = "nombre_asignatura"
+
+
+
         maximizarVentana(Me)
         Me.b_lblRol_fijo.border_thickness = 2
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
