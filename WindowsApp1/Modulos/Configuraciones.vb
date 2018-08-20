@@ -9,6 +9,7 @@
         Public Property Protocolo As String
         Public Property LOCALE_Cliente As String
         Public Property LOCALE_DB As String
+
     End Class
 
     Public Class Configuracion
