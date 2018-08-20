@@ -82,6 +82,7 @@
     <Compile Include="controles_personalizados\DGVPaginado.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="modulos\Configuraciones.vb" />
     <Compile Include="modulos\Consultas.vb" />
     <Compile Include="modulos\Encripcion_Passwords.vb" />
     <Compile Include="controles_personalizados\Persona_Vista.Designer.vb">
@@ -266,6 +267,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="conf\conf_nube.json" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -442,5 +444,6 @@
   <ItemGroup>
     <None Include="Resources\isologotipo.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

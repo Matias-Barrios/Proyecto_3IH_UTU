@@ -1,0 +1,12 @@
+﻿{
+  "ConexionODBC" : {
+        "Driver" : "",
+        "Ip_servidor" : "",
+        "Host " : "",
+        "ServerInstance" : "",
+        "Servicio" : "",
+        "Protocolo" : "",
+        "LOCALE_Cliente" : "",
+        "LOCALE_DB" : ""
+    }
+}
