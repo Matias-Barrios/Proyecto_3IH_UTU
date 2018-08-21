@@ -1,12 +1,14 @@
 ﻿{
   "ConexionODBC" : {
         "Driver" : "IBM INFORMIX ODBC DRIVER (64-bit)",
-        "Ip_servidor" : "gestion_utu",
-        "Host " : "45.79.7.217",
+        "Database" : "gestion_utu",
+        "Host " : "22.79.7.217",
         "ServerInstance" : "miServidor",
         "Servicio" : "50000",
         "Protocolo" : "onsoctcp",
         "LOCALE_Cliente" : "en_US.CP1252",
-        "LOCALE_DB" : "en_US.819"
+        "LOCALE_DB" : "en_US.819",
+		"ENV_USERNAME" : "GESTION_USERNAME",
+		"ENV_PASSWORD" : "GESTION_PASSWORD"
     }
 }
