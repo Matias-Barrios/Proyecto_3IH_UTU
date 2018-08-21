@@ -1,20 +1,19 @@
 ﻿Public Class Ventana_Principal
 
+
     Public usuario = New Modulo_Usuarios.User("", "", "")
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
 
+        'Console.WriteLine("row >>>>>   " & hacer_consulta(CONSULTAS_SELECT_GRUPOS_CALIFICACIONES_COMBOBOX()).Rows(0).Item("id_grupo"))
+        ' cerrar_conexion()
+        'Environment.Exit(8)
+
 
         cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
         cboInstituto.DisplayMember = "nombre"
-
-        cboGrupo.DataSource = hacer_consulta(CONSULTAS_SELECT_GRUPOS_CALIFICACIONES_COMBOBOX())
-        cboGrupo.DisplayMember = "nombre_grupo"
-
-        cboAsignatura.DataSource = hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS_CALIFICACIONES_COMBOBOX())
-        cboAsignatura.DisplayMember = "nombre_asignatura"
 
 
 
@@ -62,7 +61,7 @@
     Private Sub btnTareas_Click(sender As Object, e As EventArgs) Handles btnTareas.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalTareas
 
-        dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
+        dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo)))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDocentes.Click
@@ -114,11 +113,11 @@
 
     Private Sub btnCrearCalificaciones_Click(sender As Object, e As EventArgs) Handles btnCrearCalificaciones.Click
         ventana_crear_calificaciones.ShowDialog()
+
+
+
     End Sub
 
-    Private Sub tabPrincipalTareas_Click(sender As Object, e As EventArgs) Handles tabPrincipalTareas.Click
-
-    End Sub
 
     Private Sub rdioCalificaciones_Ver_Por_Calificacion_CheckedChanged(sender As Object, e As EventArgs) Handles rdioCalificaciones_Ver_Por_Calificacion.CheckedChanged
 
@@ -297,7 +296,7 @@
     Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
         Me.tabPrincipal.SelectedTab = Me.tabCiudades
 
-        dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+        dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CIUDADES()))
     End Sub
 
     Private Sub btnCiudadesEliminar_Click(sender As Object, e As EventArgs) Handles btnCiudadesEliminar.Click
@@ -352,5 +351,41 @@
             MsgBox(SELECCIONE_SOLO_UNO())
 
         End If
+    End Sub
+
+    Private Sub cboGrupo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboGrupo.SelectedIndexChanged
+
+
+        cboAsignatura.DataSource = hacer_consulta(COMBOBOX_CALIFICACIONES_GRUPO(cboGrupo, cboInstituto))
+        cboAsignatura.DisplayMember = "nombre_asignatura"
+
+
+    End Sub
+
+    Private Sub cboAsignatura_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboAsignatura.SelectedIndexChanged
+
+
+    End Sub
+
+    Private Sub cboInstituto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboInstituto.SelectedIndexChanged
+
+
+        cboGrupo.DataSource = hacer_consulta(COMBOBOX_CALIFICACIONES_INSTITUTO(cboInstituto))
+        cboGrupo.DisplayMember = "nombre_grupo"
+
+
+    End Sub
+
+    Private Sub btnCalificacionesFiltrar_Click(sender As Object, e As EventArgs) Handles btnCalificacionesFiltrar.Click
+
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+        dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo)))
+
+
     End Sub
 End Class

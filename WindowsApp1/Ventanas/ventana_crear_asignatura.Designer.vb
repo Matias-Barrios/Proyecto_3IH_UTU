@@ -147,7 +147,7 @@ Partial Class ventana_crear_asignatura
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(683, 619)
+        Me.ClientSize = New System.Drawing.Size(683, 618)
         Me.Controls.Add(Me.btnCrearAsignaturaAceptar)
         Me.Controls.Add(Me.pnlCrearAsignatura)
         Me.Controls.Add(Me.btnCrearAsignaturaCancelar)
