@@ -2,7 +2,7 @@
   "ConexionODBC" : {
         "Driver" : "IBM INFORMIX ODBC DRIVER (64-bit)",
         "Database" : "gestion_utu",
-        "Host" : "22.79.7.217",
+        "Host" : "45.79.7.217",
         "ServerInstance" : "miServidor",
         "Servicio" : "50000",
         "Protocolo" : "onsoctcp",

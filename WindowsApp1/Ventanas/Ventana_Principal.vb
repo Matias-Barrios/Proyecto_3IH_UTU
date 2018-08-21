@@ -3,7 +3,7 @@
     Public usuario = New Modulo_Usuarios.User("", "", "")
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'Ventana_cargando.Show()
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
 
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
@@ -43,7 +43,7 @@
         Me.tabCalificaciones_Vista.Appearance = TabAppearance.FlatButtons
         Me.tabCalificaciones_Vista.ItemSize = New Size(0, 1)
         Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
-
+        'Ventana_cargando.Dispose()
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
