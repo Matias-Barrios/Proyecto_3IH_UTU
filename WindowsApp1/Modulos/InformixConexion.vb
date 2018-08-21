@@ -11,6 +11,7 @@ Module InformixConexion
             Console.WriteLine("Conectado a Informix")
         Catch ex As OdbcException
             MsgBox("Lo lamento pero la conexion a la BD ha fallado. Autodestruccion en 3...2...1... BOOM! : " & ex.ToString())
+            cerrar_conexion()
             Environment.Exit(6)
         End Try
 
