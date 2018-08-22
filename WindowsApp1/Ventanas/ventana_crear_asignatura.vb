@@ -5,7 +5,7 @@ Public Class ventana_crear_asignatura
 
 
     Private Sub ventana_crear_asignatura_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Adherir_Validacion(txtCrearAsignaturaNombre, TipoValidacion.Solo_descripciones)
+        Adherir_Validacion(txtCrearAsignaturaNombre, TipoValidacion.solo_nombres_espacio)
     End Sub
 
 
@@ -61,5 +61,6 @@ Public Class ventana_crear_asignatura
         asignatura.Cells("nombre_asignatura").Value() = txtCrearAsignaturaNombre.Text
         asignatura.Cells("descripcion").Value() = rchCrearAsignatura_Descripcion.Text
     End Sub
+
 
 End Class

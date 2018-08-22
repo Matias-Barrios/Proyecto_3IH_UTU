@@ -1,5 +1,8 @@
 ﻿Module Consultas
 
+    Public uno As New Integer
+    Public dos As New Integer
+    Public tres As New Integer
 
     Public Function CONSULTAS_SELECT_ALUMNOS() As String
         Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
@@ -19,26 +22,14 @@
     End Function
 
     Public Function CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX() As String
+
         Return "select id_instituto, nombre
         from Institutos, relacion_docente_trabaja_instituto
         where id_instituto = foranea_id_instituto
         and foranea_ci_docente = 14893499"
+
     End Function
 
-    Public Function CONSULTAS_SELECT_GRUPOS_CALIFICACIONES_COMBOBOX() As String
-        Return "select id_grupo, nombre_grupo
-        from Grupos, relacion_docente_asignatura_grupos
-        where id_grupo = foranea_id_grupo
-        and foranea_ci_docente = 14893499"
-    End Function
-
-
-    Public Function CONSULTAS_SELECT_ASIGNATURAS_CALIFICACIONES_COMBOBOX() As String
-        Return "select id_asignatura, nombre_asignatura
-    from Asignaturas, relacion_docente_asignatura_grupos
-    where id_asignatura = foranea_id_asignatura
-    and foranea_ci_docente = 14893499"
-    End Function
 
     Public Function CONSULTAS_SELECT_ORIENTACIONES_PARA_LISTBOX() As String
         Return "SELECT id_orientacion,nombre_orientacion  
@@ -80,6 +71,9 @@
                 FROM Personas 
                 WHERE tipo = 'Admin' AND baja = 'f'"
     End Function
+
+
+
     Public Function CONSULTAS_SELECT_CALIFICACIONES() As String
         Return "SELECT id_calificacion,
 		                (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido from Personas where Personas.CI = CI_docente) AS nombre_docente,
@@ -237,4 +231,73 @@
         Console.WriteLine(consulta)
         Return consulta
     End Function
+
+    Public Function COMBOBOX_CALIFICACIONES_GRUPO(grupo As ComboBox, cboInstituto As ComboBox) As String
+
+        Dim prueba = grupo.SelectedIndex
+        Dim prueba1 = cboInstituto.SelectedIndex
+
+        Dim resultado
+        Dim resultado2
+
+        resultado = hacer_consulta(COMBOBOX_CALIFICACIONES_INSTITUTO(cboInstituto)).Rows(prueba).Item("id_grupo")
+        resultado2 = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX()).Rows(prueba1).Item("id_instituto")
+
+        Return "select id_asignatura, nombre_asignatura
+    from Asignaturas, relacion_docente_asignatura_grupos, institutos
+    where id_asignatura = foranea_id_asignatura
+    and foranea_ci_docente = 14893499
+    and foranea_id_grupo = " & resultado & "
+    and id_instituto = " & resultado2
+
+
+    End Function
+
+    Public Function COMBOBOX_CALIFICACIONES_INSTITUTO(cboInstituto As ComboBox) As String
+
+        Dim prueba1 = cboInstituto.SelectedIndex
+
+        Dim resultado2
+
+        resultado2 = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX()).Rows(prueba1).Item("id_instituto")
+
+        Return "select id_grupo, nombre_grupo
+        from Grupos A, relacion_docente_asignatura_grupos B
+        where id_grupo = foranea_id_grupo
+        and foranea_ci_docente = 14893499
+        and B.foranea_id_instituto =" & resultado2
+
+
+
+    End Function
+
+    Public Function COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura As ComboBox, cboInstituto As ComboBox, cboGrupo As ComboBox) As String
+
+        Dim prueba1 = cboInstituto.SelectedIndex
+        Dim prueba2 = cboGrupo.SelectedIndex
+        Dim prueba = cboAsignatura.SelectedIndex
+
+        uno = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX()).Rows(prueba1).Item("id_instituto")
+        dos = hacer_consulta(COMBOBOX_CALIFICACIONES_INSTITUTO(cboInstituto)).Rows(prueba2).Item("id_grupo")
+        tres = hacer_consulta(COMBOBOX_CALIFICACIONES_GRUPO(cboGrupo, cboInstituto)).Rows(prueba).Item("id_asignatura")
+
+        Return "select id_calificacion,
+       CI_alumno,
+	   (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido  from Personas where Personas.CI = CI_alumno) AS nombre_alumno,
+	   nombre_calificacion,    	 
+	   nota,
+	   categoria,
+	   comentario,
+	   TO_CHAR(fecha, '%A %B %d, %Y %R') as Fecha
+       from calificaciones a
+       where a.baja = 'f' 
+       and ci_docente = 14893499
+       and a.id_grupo = " & dos & "
+       and a.id_instituto = " & uno & "
+       and a.id_asignatura = " & tres
+
+    End Function
+
+
+
 End Module

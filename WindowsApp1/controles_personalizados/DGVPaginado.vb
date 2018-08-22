@@ -137,4 +137,6 @@ Public Class DGVPaginado
             Me.dgv_Vista.DataSource = Split(todos_los_datos)
         End If
     End Sub
+
+
 End Class
