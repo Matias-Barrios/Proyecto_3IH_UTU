@@ -134,6 +134,7 @@ Partial Class Ventana_Principal
         Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
         Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.btn_alumnos_Refrescar = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
@@ -242,6 +243,7 @@ Partial Class Ventana_Principal
         '
         'Panel7
         '
+        Me.Panel7.Controls.Add(Me.btn_alumnos_Refrescar)
         Me.Panel7.Controls.Add(Me.btnAlumnosModificar)
         Me.Panel7.Controls.Add(Me.btnAlumnosEliminar)
         Me.Panel7.Controls.Add(Me.btnAlumnosCrearNuevo)
@@ -1622,6 +1624,21 @@ Partial Class Ventana_Principal
         Me.Button2.TabIndex = 26
         Me.Button2.UseVisualStyleBackColor = False
         '
+        'btn_alumnos_Refrescar
+        '
+        Me.btn_alumnos_Refrescar.BackColor = System.Drawing.Color.White
+        Me.btn_alumnos_Refrescar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.database_restore
+        Me.btn_alumnos_Refrescar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_alumnos_Refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_alumnos_Refrescar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_alumnos_Refrescar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_alumnos_Refrescar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_alumnos_Refrescar.Location = New System.Drawing.Point(750, 11)
+        Me.btn_alumnos_Refrescar.Name = "btn_alumnos_Refrescar"
+        Me.btn_alumnos_Refrescar.Size = New System.Drawing.Size(35, 35)
+        Me.btn_alumnos_Refrescar.TabIndex = 32
+        Me.btn_alumnos_Refrescar.UseVisualStyleBackColor = False
+        '
         'Ventana_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1783,4 +1800,6 @@ Partial Class Ventana_Principal
     Friend WithEvents dgvP_Ciudades As DGVPaginado
     Friend WithEvents dgvP_Alumnos As DGVPaginado
     Friend WithEvents Button2 As Button
+    Friend WithEvents btn_alumnos_Refrescar As Button
+
 End Class

@@ -11,6 +11,7 @@ Module InformixConexion
             Console.WriteLine("Conectado a Informix")
         Catch ex As OdbcException
             MsgBox("Lo lamento pero la conexion a la BD ha fallado. Autodestruccion en 3...2...1... BOOM! : " & ex.ToString())
+            cerrar_conexion()
             Environment.Exit(6)
         End Try
 
@@ -30,19 +31,16 @@ Module InformixConexion
             Return dt
         Catch ex As OdbcException
             MsgBox(PRODUCIDO_EXCEPCION_CONSULTA() & " : " & ex.ToString())
-
-
-
         End Try
         Return New DataTable
     End Function
 
-    Public Function NOMBRE_USUARIO() As String
-        Return Environment.GetEnvironmentVariable("GESTION_USERNAME")
+    Public Function NOMBRE_USUARIO(env_us As String) As String
+        Return Environment.GetEnvironmentVariable(env_us)
     End Function
 
-    Public Function CONTRASENIA() As String
-        Return Environment.GetEnvironmentVariable("GESTION_PASSWORD")
+    Public Function CONTRASENIA(env_password) As String
+        Return Environment.GetEnvironmentVariable(env_password)
     End Function
 
 

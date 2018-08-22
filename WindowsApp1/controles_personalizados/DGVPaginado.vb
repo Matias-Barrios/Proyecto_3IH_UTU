@@ -37,7 +37,7 @@ Public Class DGVPaginado
             Next
             Dim rgx As New Regex(" OR$")
             filtro_tmp = rgx.Replace(filtro_tmp, "")
-            Console.WriteLine("Esto es filtro inicialmente : " & filtro_tmp)
+
         Else
             btn_Prev.Enabled = False
             btn_Siguiente.Enabled = False
@@ -49,7 +49,7 @@ Public Class DGVPaginado
     End Sub
 
     Private Function Split(dt As DataTable) As DataTable
-        Console.WriteLine("Esto es filtro " & filtro)
+
         Dim data_tmp = New DataTable
         If dt.Select(filtro).Count = 0 Then
             total = 0

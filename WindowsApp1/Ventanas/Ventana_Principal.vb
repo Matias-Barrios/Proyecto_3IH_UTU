@@ -4,14 +4,22 @@
     Public usuario = New Modulo_Usuarios.User("", "", "")
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'Ventana_cargando.Show()
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
 
         'Console.WriteLine("row >>>>>   " & hacer_consulta(CONSULTAS_SELECT_GRUPOS_CALIFICACIONES_COMBOBOX()).Rows(0).Item("id_grupo"))
         ' cerrar_conexion()
         'Environment.Exit(8)
 
-
+        dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+        dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
+        dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
+        dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
+        dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
+        dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
+        dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+        dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+        dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
         cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
         cboInstituto.DisplayMember = "nombre"
 
@@ -33,7 +41,7 @@
         Me.tabCalificaciones_Vista.Appearance = TabAppearance.FlatButtons
         Me.tabCalificaciones_Vista.ItemSize = New Size(0, 1)
         Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
-
+        'Ventana_cargando.Dispose()
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
@@ -46,33 +54,27 @@
         LogOff()
     End Sub
 
+    Private Sub btnVentanaPrincipalOrientaciones_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalOrientaciones.Click
+        Me.tabPrincipal.SelectedTab = Me.tabOrientaciones
+    End Sub
     Private Sub btnAlumnos_Click(sender As Object, e As EventArgs) Handles btnAlumnos.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalAlumnos
-
-        dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
     End Sub
 
     Private Sub btnMaterias_Click(sender As Object, e As EventArgs) Handles btnMaterias.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalMaterias
-
-        dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
     End Sub
 
     Private Sub btnTareas_Click(sender As Object, e As EventArgs) Handles btnTareas.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalTareas
-
         dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo)))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDocentes.Click
-
-        dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalDocentes
     End Sub
 
     Private Sub btnUsuarios_Click(sender As Object, e As EventArgs) Handles btnUsuarios.Click
-
-        dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalUsuarios
     End Sub
 
@@ -106,9 +108,6 @@
 
     Private Sub btnVentanaPrincipalInstitutos_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalInstitutos.Click
         Me.tabPrincipal.SelectedTab = Me.tabpageInstitutos
-
-        dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
-
     End Sub
 
     Private Sub btnCrearCalificaciones_Click(sender As Object, e As EventArgs) Handles btnCrearCalificaciones.Click
@@ -120,15 +119,11 @@
 
 
     Private Sub rdioCalificaciones_Ver_Por_Calificacion_CheckedChanged(sender As Object, e As EventArgs) Handles rdioCalificaciones_Ver_Por_Calificacion.CheckedChanged
-
         Me.tabCalificaciones_Vista.SelectedTab = Me.tabCalificaciones_Vista_Por_Calificacion
-
     End Sub
 
     Private Sub rdioCalificaciones_Ver_Por_Alumno_CheckedChanged(sender As Object, e As EventArgs) Handles rdioCalificaciones_Ver_Por_Alumno.CheckedChanged
-
         Me.tabCalificaciones_Vista.SelectedTab = Me.tabCalificaiones_Vista_Alumnos
-
     End Sub
 
     Private Sub btnMateriasCrear_Click(sender As Object, e As EventArgs) Handles btnMateriasCrear.Click
@@ -144,9 +139,10 @@
     End Sub
 
     Private Sub btn_Grupos_Click(sender As Object, e As EventArgs) Handles btn_Grupos.Click
-
-        dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
         Me.tabPrincipal.SelectedTab = Me.tabpage_Grupos
+    End Sub
+    Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
+        Me.tabPrincipal.SelectedTab = Me.tabCiudades
     End Sub
 
     Private Sub btnUsuariosBotonEliminarUsuario_Click(sender As Object, e As EventArgs) Handles btnUsuariosBotonEliminarUsuario.Click
@@ -270,13 +266,6 @@
 
         End If
     End Sub
-
-    Private Sub btnVentanaPrincipalOrientaciones_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalOrientaciones.Click
-        Me.tabPrincipal.SelectedTab = Me.tabOrientaciones
-
-        dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
-    End Sub
-
     Private Sub btnOrientacionesEliminar_Click(sender As Object, e As EventArgs) Handles btnOrientacionesEliminar.Click
         If dgvP_Orientaciones.Cantidad_Selecciones() > 0 Then
             If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
@@ -298,7 +287,6 @@
 
         dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CIUDADES()))
     End Sub
-
     Private Sub btnCiudadesEliminar_Click(sender As Object, e As EventArgs) Handles btnCiudadesEliminar.Click
         If dgvP_Ciudades.Cantidad_Selecciones() > 0 Then
             If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then

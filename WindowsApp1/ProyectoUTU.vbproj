@@ -48,6 +48,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -82,6 +85,7 @@
     <Compile Include="controles_personalizados\DGVPaginado.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="modulos\Configuraciones.vb" />
     <Compile Include="modulos\Consultas.vb" />
     <Compile Include="modulos\Encripcion_Passwords.vb" />
     <Compile Include="controles_personalizados\Persona_Vista.Designer.vb">
@@ -93,6 +97,12 @@
     <Compile Include="modulos\Expresiones_Regulares.vb" />
     <Compile Include="modulos\InformixConexion.vb" />
     <Compile Include="modulos\Mensajes_Al_Usuario.vb" />
+    <Compile Include="Ventanas\Ventana_cargando.Designer.vb">
+      <DependentUpon>Ventana_cargando.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Ventana_cargando.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\ventana_crear_grupo.Designer.vb">
       <DependentUpon>ventana_crear_grupo.vb</DependentUpon>
     </Compile>
@@ -213,6 +223,9 @@
     <EmbeddedResource Include="controles_personalizados\DGVPaginado.resx">
       <DependentUpon>DGVPaginado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Ventana_cargando.resx">
+      <DependentUpon>Ventana_cargando.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_crear_grupo.resx">
       <DependentUpon>ventana_crear_grupo.vb</DependentUpon>
     </EmbeddedResource>
@@ -266,6 +279,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="conf\conf_nube.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -278,6 +294,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
     <None Include="Resources\user-group-icon-32334.png" />
   </ItemGroup>
   <ItemGroup>
@@ -442,5 +459,9 @@
   <ItemGroup>
     <None Include="Resources\isologotipo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jar-loading.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <ProjectExtensions />
 </Project>
