@@ -1,5 +1,27 @@
 ﻿Module Modulo_Comportamiento_Ventanas
 
+    Public Sub verificarRol(rol As String)
+
+        If rol = "Administrativo" Then
+            Ventana_Principal.btnUsuarios.Enabled = False
+            Ventana_Principal.btnVentanaPrincipalConfiguracion.Enabled = False
+            Ventana_Principal.btnTareas.Enabled = False
+
+        End If
+
+        If rol = "Profe" Then
+            Ventana_Principal.btnMaterias.Enabled = False
+            Ventana_Principal.btn_Grupos.Enabled = False
+            Ventana_Principal.btnDocentes.Enabled = False
+            Ventana_Principal.btnVentanaPrincipalInstitutos.Enabled = False
+            Ventana_Principal.btnVentanaPrincipalOrientaciones.Enabled = False
+            Ventana_Principal.btnCiudad.Enabled = False
+            Ventana_Principal.btnUsuarios.Enabled = False
+            Ventana_Principal.btnVentanaPrincipalConfiguracion.Enabled = False
+        End If
+
+    End Sub
+
     Public Sub centrarVentana(ventana As Form)
         Dim boundWidth As Integer = Screen.PrimaryScreen.Bounds.Width
         Dim boundHeight As Integer = Screen.PrimaryScreen.Bounds.Height
@@ -7,6 +29,8 @@
         Dim y As Integer = boundHeight - ventana.Height
         ventana.Location = New Point(x / 2, y / 2)
     End Sub
+
+
     Public Sub maximizarVentana(ventana As Form)
         ventana.WindowState = FormWindowState.Maximized
     End Sub

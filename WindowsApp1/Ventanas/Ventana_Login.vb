@@ -39,6 +39,7 @@
 
         If Validar(usersList, Me.txtNombreUsuario.Text, Me.txtPassword.Text) Then
             Me.Hide()
+            Modulo_Comportamiento_Ventanas.verificarRol("Profe")
             Ventana_Principal.ShowDialog()
         Else
             MsgBox("Su nombre de usuario o contraseña es incorrecto", 0, "Error de autenticacion")
