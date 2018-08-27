@@ -141,9 +141,6 @@
     Private Sub btn_Grupos_Click(sender As Object, e As EventArgs) Handles btn_Grupos.Click
         Me.tabPrincipal.SelectedTab = Me.tabpage_Grupos
     End Sub
-    Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
-        Me.tabPrincipal.SelectedTab = Me.tabCiudades
-    End Sub
 
     Private Sub btnUsuariosBotonEliminarUsuario_Click(sender As Object, e As EventArgs) Handles btnUsuariosBotonEliminarUsuario.Click
         If dgvP_Usuarios.Cantidad_Selecciones() > 0 Then
