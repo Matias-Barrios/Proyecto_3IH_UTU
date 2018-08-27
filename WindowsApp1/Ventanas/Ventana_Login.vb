@@ -6,9 +6,6 @@
 
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        usersList.Add(New User("Matias", "1234", "admin"))
-        usersList.Add(New User("Leonardo", "1234", "admin"))
-        usersList.Add(New User("Cristian", "1234", "admin"))
         btnLogin.Enabled = False
         centrarVentana(Me)
         removerMarco(Ventana_Principal)

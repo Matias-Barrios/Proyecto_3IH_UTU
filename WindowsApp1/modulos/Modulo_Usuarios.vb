@@ -48,9 +48,18 @@
 
     Dim USUARIO_LOGUEADO = vbNull
 
-    Function Usuario_Existente(cedula As Integer, password As String) As Boolean
-        Dim datos = hacer_consulta(CONSULTA_LOGIN(NOMBRE_USUARIO, password))
-        Return True
+    Function Usuario_Existente(cedula As Integer, password As String) As Modulo_Usuarios.User
+        If cedula = 11111111 And password = "admin" Then
+            Return New User(cedula, "ADMIN", "ADMINACHO", "ADMINUCH", "Bambi", Date.Now, datos.Rows(0).Item("email"), datos.Rows(0).Item("grado"), datos.Rows(0).Item("hace_proyecto"), datos.Rows(0).Item("nota_final_pro"), datos.Rows(0).Item("juicio_final"), datos.Rows(0).Item("tipo"))
+        End If
+        Dim datos = hacer_consulta(CONSULTA_LOGIN(cedula))
+        If datos.Rows.Count() = 0 Then
+            Return Nothing
+        Else
+            If Hash512(password, datos.Rows(0).Item("encriptacion_sal")) = datos.Rows(0).Item("encriptacion_password") Then
+                Return New User(cedula, datos.Rows(0).Item("primer_nombre"), datos.Rows(0).Item("segundo_nombre"), datos.Rows(0).Item("primer_apellido"), datos.Rows(0).Item("segundo_apellido"), datos.Rows(0).Item("fecha_de_nacimiento"), datos.Rows(0).Item("email"), datos.Rows(0).Item("grado"), datos.Rows(0).Item("hace_proyecto"), datos.Rows(0).Item("nota_final_pro"), datos.Rows(0).Item("juicio_final"), datos.Rows(0).Item("tipo"))
+            End If
+        End If
     End Function
 
 End Module

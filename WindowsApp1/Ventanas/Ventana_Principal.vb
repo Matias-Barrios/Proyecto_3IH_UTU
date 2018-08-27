@@ -1,7 +1,7 @@
 ﻿Public Class Ventana_Principal
 
 
-    Public usuario = New Modulo_Usuarios.User("", "", "")
+    Public usuario = vbNull
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'Ventana_cargando.Show()
