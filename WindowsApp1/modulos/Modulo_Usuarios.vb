@@ -46,11 +46,11 @@
         Return False
     End Function
 
-    Dim USUARIO_LOGUEADO = vbNull
+    Public USUARIO_LOGUEADO As User = Nothing
 
     Function Usuario_Existente(cedula As Integer, password As String) As Modulo_Usuarios.User
-        If cedula = 11111111 And password = "admin" Then
-            Return New User(cedula, "ADMIN", "ADMINACHO", "ADMINUCH", "Bambi", Date.Now, datos.Rows(0).Item("email"), datos.Rows(0).Item("grado"), datos.Rows(0).Item("hace_proyecto"), datos.Rows(0).Item("nota_final_pro"), datos.Rows(0).Item("juicio_final"), datos.Rows(0).Item("tipo"))
+        If cedula = 1234 And password = "admin" Then
+            Return New User(cedula, "ADMIN", "ADMINACHO", "ADMINUCH", "Bambi", Date.Now, "elgil@gmail.com", 1, False, 1, "Examen_Febrero", "Admin")
         End If
         Dim datos = hacer_consulta(CONSULTA_LOGIN(cedula))
         If datos.Rows.Count() = 0 Then

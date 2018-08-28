@@ -1,0 +1,14 @@
+﻿{
+  "ConexionODBC" : {
+        "Driver" : "IBM INFORMIX ODBC DRIVER (64-bit)",
+        "Database" : "tres_ih_dos",
+        "Host" : "10.0.29.6",
+        "ServerInstance" : "ol_informix1",
+        "Servicio" : "1526",
+        "Protocolo" : "olsoctcp",
+        "LOCALE_Cliente" : "en_US.CP1252",
+        "LOCALE_DB" : "en_US.819",
+		"ENV_USERNAME" : "GESTION_USERNAME",
+		"ENV_PASSWORD" : "GESTION_PASSWORD"
+    }
+}

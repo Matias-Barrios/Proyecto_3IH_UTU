@@ -279,6 +279,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="conf\conf_its.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="conf\conf_nube.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

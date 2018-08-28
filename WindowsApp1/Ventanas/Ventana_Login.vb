@@ -33,10 +33,13 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
-
-        If Validar(usersList, Me.txtNombreUsuario.Text, Me.txtPassword.Text) Then
+        USUARIO_LOGUEADO = Usuario_Existente(Me.txtNombreUsuario.Text.Trim(), Me.txtPassword.Text.Trim())
+        If USUARIO_LOGUEADO IsNot Nothing Then
+            Ventana_Principal.b_lblRol_Dinamico.Text = USUARIO_LOGUEADO.tipo
+            Ventana_Principal.b_lblNombreUsuario_Dinamico.Text = USUARIO_LOGUEADO.primer_nombre & " " & USUARIO_LOGUEADO.primer_apellido
             Me.Hide()
-            Modulo_Comportamiento_Ventanas.verificarRol("Profe")
+            Console.WriteLine("El usuario logueado es : " + USUARIO_LOGUEADO.tipo)
+            Modulo_Comportamiento_Ventanas.verificarRol(USUARIO_LOGUEADO.tipo)
             Ventana_Principal.ShowDialog()
         Else
             MsgBox("Su nombre de usuario o contraseña es incorrecto", 0, "Error de autenticacion")

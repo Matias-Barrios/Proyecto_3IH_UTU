@@ -26,7 +26,7 @@
 
 
         maximizarVentana(Me)
-        Me.b_lblRol_fijo.border_thickness = 2
+
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
         Me.b_lblNombreUsuario_Dinamico.outline_color = Color.White
         Me.b_lblNombreUsuario_Dinamico.border_thickness = 3

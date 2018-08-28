@@ -9,7 +9,7 @@
 
         End If
 
-        If rol = "Profe" Then
+        If rol = "Profesor" Then
             Ventana_Principal.btnMaterias.Enabled = False
             Ventana_Principal.btn_Grupos.Enabled = False
             Ventana_Principal.btnDocentes.Enabled = False

@@ -36,11 +36,13 @@ Module InformixConexion
     End Function
 
     Public Function NOMBRE_USUARIO(env_us As String) As String
-        Return Environment.GetEnvironmentVariable(env_us)
+        Return "gabriel.barrios"
+        'Return Environment.GetEnvironmentVariable(env_us)
     End Function
 
     Public Function CONTRASENIA(env_password) As String
-        Return Environment.GetEnvironmentVariable(env_password)
+        Return "41217832"
+        'Return Environment.GetEnvironmentVariable(env_password)
     End Function
 
 
