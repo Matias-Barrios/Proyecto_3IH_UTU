@@ -299,7 +299,7 @@
     End Function
 
     Public Function CONSULTA_LOGIN(cedula As Integer) As String
-        Return "Select * as cantidad FROM Personas Where CI = " & cedula
+        Return "Select * FROM Personas Where CI = " & cedula
     End Function
 
 

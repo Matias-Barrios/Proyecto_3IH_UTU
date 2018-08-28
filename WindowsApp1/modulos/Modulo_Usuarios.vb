@@ -56,8 +56,8 @@
         If datos.Rows.Count() = 0 Then
             Return Nothing
         Else
-            If Hash512(password, datos.Rows(0).Item("encriptacion_sal")) = datos.Rows(0).Item("encriptacion_password") Then
-                Return New User(cedula, datos.Rows(0).Item("primer_nombre"), datos.Rows(0).Item("segundo_nombre"), datos.Rows(0).Item("primer_apellido"), datos.Rows(0).Item("segundo_apellido"), datos.Rows(0).Item("fecha_de_nacimiento"), datos.Rows(0).Item("email"), datos.Rows(0).Item("grado"), datos.Rows(0).Item("hace_proyecto"), datos.Rows(0).Item("nota_final_pro"), datos.Rows(0).Item("juicio_final"), datos.Rows(0).Item("tipo"))
+            If Hash512(password, datos.Rows(0).Item("encriptacion_sal")) = datos.Rows(0).Item("encriptacion_hash") Then
+                Return New User(cedula, datos.Rows(0).Item("primer_nombre"), datos.Rows(0).Item("segundo_nombre"), datos.Rows(0).Item("primer_apellido"), datos.Rows(0).Item("segundo_apellido"), datos.Rows(0).Item("fecha_nacimiento"), datos.Rows(0).Item("email"), datos.Rows(0).Item("grado"), datos.Rows(0).Item("hace_proyecto"), datos.Rows(0).Item("nota_final_pro"), datos.Rows(0).Item("juicio_final"), datos.Rows(0).Item("tipo"))
             End If
         End If
     End Function
