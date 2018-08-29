@@ -302,6 +302,33 @@
         Return "Select * FROM Personas Where CI = " & cedula
     End Function
 
+    Public Function CREAR_CALIFICACION(CI_docente As Integer, cedula_alumno As Integer, id_asignatura As Integer, id_grupo As Integer, id_instituto As Integer, nombre_calificacion As String, categoria As String, fecha As Date, comentario As String, nota As Integer, convertir_fecha_ingles As Boolean) As String
+        'INSERT INTO Calificaciones (CI_docente, CI_alumno, id_asignatura, id_grupo, id_instituto, nombre_calificacion, categoria, fecha, comentario, nota, baja )
+        'VALUES(54530570, 34596300, 58, 7, 1, "Un trabajillo", "Trabajo_laboratorio", "05/08/2018", "Esto es una descripcion", 2, "f");
+        Dim fecha_con_formato As String
+        If convertir_fecha_ingles Then
+            fecha_con_formato = fecha.ToString().Split(" ")(0)
+        Else
+            fecha_con_formato = fecha.ToString().Split(" ")(0)
+        End If
+
+        Dim consulta As String = "INSERT INTO Calificaciones (CI_docente, CI_alumno, id_asignatura, id_grupo, id_instituto, nombre_calificacion, categoria, fecha, comentario, nota, baja ) VALUES(" &
+            CI_docente & "," &
+            cedula_alumno & "," &
+            id_asignatura & "," &
+            id_grupo & "," &
+            id_instituto & ",'" &
+            nombre_calificacion & "','" &
+            categoria & "'," &
+            fecha & ",'" &
+            comentario & "'," &
+            nota & "," & "'f' )"
+
+        Console.WriteLine(consulta)
+        Return consulta
+
+    End Function
+
 
 
 

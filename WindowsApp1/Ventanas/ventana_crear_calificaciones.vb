@@ -19,16 +19,26 @@
         (select Personas.primer_nombre || ' ' || Personas.primer_apellido from Personas where Personas.CI = foranea_ci_alumno) AS nombre_alumno
         from relacion_alumno_asignatura_grupos
         where foranea_id_grupo = " & dos & "
-       And foranea_id_asignatura = " & tres & "
-       And foranea_id_instituto = " & uno
+        And foranea_id_asignatura = " & tres & "
+        And foranea_id_instituto = " & uno
 
     End Function
 
+    Private Function Validar() As Boolean
+        If String.IsNullOrEmpty(txtCrearCalificaciones_Nombre_Descriptivo.Text.Trim()) Then
+            MsgBox("Debe ingresar un valor a nombre descriptivo!")
+            Return False
+        End If
+        Return True
+    End Function
 
+    Private Sub btnCrearCalificacion_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrearCalificacion_Aceptar.Click
+        If Validar() Then
+            For Each alumno In chkCrearCalificacion_Asignar_A.SelectedItems
 
+                hacer_consulta(CREAR_CALIFICACION(USUARIO_LOGUEADO.CI, alumno.Row.Item("foranea_ci_alumno"), Ventana_Principal.cboAsignatura.SelectedItem.Row.Item("id_asignatura"), Ventana_Principal.cboGrupo.SelectedItem.Row.Item("id_grupo"), Ventana_Principal.cboInstituto.SelectedItem.Row.Item("id_instituto"), txtCrearCalificaciones_Nombre_Descriptivo.Text.Trim(), lstCrearCalificacion_tipo.SelectedItem, Now.Date, rchCrearCalificacion_Comentario.Text.Trim(), nudCrearCalificacion_Nota.Value(), True))
+            Next
 
-
-
-
-
+        End If
+    End Sub
 End Class

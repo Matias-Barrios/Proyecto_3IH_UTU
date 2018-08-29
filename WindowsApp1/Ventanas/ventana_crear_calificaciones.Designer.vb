@@ -49,11 +49,11 @@ Partial Class ventana_crear_calificaciones
         'lblNombreCalificacion
         '
         Me.lblNombreCalificacion.AutoSize = True
-        Me.lblNombreCalificacion.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblNombreCalificacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblNombreCalificacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblNombreCalificacion.Location = New System.Drawing.Point(21, 22)
         Me.lblNombreCalificacion.Name = "lblNombreCalificacion"
-        Me.lblNombreCalificacion.Size = New System.Drawing.Size(192, 22)
+        Me.lblNombreCalificacion.Size = New System.Drawing.Size(176, 24)
         Me.lblNombreCalificacion.TabIndex = 10
         Me.lblNombreCalificacion.Text = "Nombre Descriptivo"
         '
@@ -84,7 +84,7 @@ Partial Class ventana_crear_calificaciones
         '
         Me.btnCrearCalificacion_Aceptar.BackColor = System.Drawing.Color.White
         Me.btnCrearCalificacion_Aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearCalificacion_Aceptar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearCalificacion_Aceptar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearCalificacion_Aceptar.ForeColor = System.Drawing.Color.Green
         Me.btnCrearCalificacion_Aceptar.Location = New System.Drawing.Point(459, 582)
         Me.btnCrearCalificacion_Aceptar.Name = "btnCrearCalificacion_Aceptar"
@@ -97,7 +97,7 @@ Partial Class ventana_crear_calificaciones
         '
         Me.btnCrearCalificacion_Cancelar.BackColor = System.Drawing.Color.White
         Me.btnCrearCalificacion_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearCalificacion_Cancelar.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCrearCalificacion_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCrearCalificacion_Cancelar.ForeColor = System.Drawing.Color.Red
         Me.btnCrearCalificacion_Cancelar.Location = New System.Drawing.Point(25, 582)
         Me.btnCrearCalificacion_Cancelar.Name = "btnCrearCalificacion_Cancelar"
@@ -109,11 +109,11 @@ Partial Class ventana_crear_calificaciones
         'lbl_CrearCalificacion_Nota
         '
         Me.lbl_CrearCalificacion_Nota.AutoSize = True
-        Me.lbl_CrearCalificacion_Nota.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_CrearCalificacion_Nota.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbl_CrearCalificacion_Nota.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lbl_CrearCalificacion_Nota.Location = New System.Drawing.Point(21, 266)
         Me.lbl_CrearCalificacion_Nota.Name = "lbl_CrearCalificacion_Nota"
-        Me.lbl_CrearCalificacion_Nota.Size = New System.Drawing.Size(53, 22)
+        Me.lbl_CrearCalificacion_Nota.Size = New System.Drawing.Size(49, 24)
         Me.lbl_CrearCalificacion_Nota.TabIndex = 21
         Me.lbl_CrearCalificacion_Nota.Text = "Nota"
         '
@@ -130,11 +130,11 @@ Partial Class ventana_crear_calificaciones
         'lblCrearCalificacion_Tipo
         '
         Me.lblCrearCalificacion_Tipo.AutoSize = True
-        Me.lblCrearCalificacion_Tipo.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCalificacion_Tipo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearCalificacion_Tipo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearCalificacion_Tipo.Location = New System.Drawing.Point(21, 84)
         Me.lblCrearCalificacion_Tipo.Name = "lblCrearCalificacion_Tipo"
-        Me.lblCrearCalificacion_Tipo.Size = New System.Drawing.Size(50, 22)
+        Me.lblCrearCalificacion_Tipo.Size = New System.Drawing.Size(48, 24)
         Me.lblCrearCalificacion_Tipo.TabIndex = 19
         Me.lblCrearCalificacion_Tipo.Text = "Tipo"
         '
@@ -150,11 +150,11 @@ Partial Class ventana_crear_calificaciones
         'lblCrearCalificacion_Comentario
         '
         Me.lblCrearCalificacion_Comentario.AutoSize = True
-        Me.lblCrearCalificacion_Comentario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCalificacion_Comentario.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearCalificacion_Comentario.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearCalificacion_Comentario.Location = New System.Drawing.Point(21, 339)
         Me.lblCrearCalificacion_Comentario.Name = "lblCrearCalificacion_Comentario"
-        Me.lblCrearCalificacion_Comentario.Size = New System.Drawing.Size(116, 22)
+        Me.lblCrearCalificacion_Comentario.Size = New System.Drawing.Size(107, 24)
         Me.lblCrearCalificacion_Comentario.TabIndex = 17
         Me.lblCrearCalificacion_Comentario.Text = "Comentario"
         '
@@ -169,11 +169,11 @@ Partial Class ventana_crear_calificaciones
         'lblCrearCalificacion_Asignar_A
         '
         Me.lblCrearCalificacion_Asignar_A.AutoSize = True
-        Me.lblCrearCalificacion_Asignar_A.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCrearCalificacion_Asignar_A.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCrearCalificacion_Asignar_A.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lblCrearCalificacion_Asignar_A.Location = New System.Drawing.Point(308, 16)
         Me.lblCrearCalificacion_Asignar_A.Name = "lblCrearCalificacion_Asignar_A"
-        Me.lblCrearCalificacion_Asignar_A.Size = New System.Drawing.Size(120, 22)
+        Me.lblCrearCalificacion_Asignar_A.Size = New System.Drawing.Size(109, 24)
         Me.lblCrearCalificacion_Asignar_A.TabIndex = 15
         Me.lblCrearCalificacion_Asignar_A.Text = "Asignar a ..."
         '

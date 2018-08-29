@@ -4,13 +4,8 @@
     Public usuario = vbNull
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Ventana_cargando.Show()
+
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
-
-        'Console.WriteLine("row >>>>>   " & hacer_consulta(CONSULTAS_SELECT_GRUPOS_CALIFICACIONES_COMBOBOX()).Rows(0).Item("id_grupo"))
-        ' cerrar_conexion()
-        'Environment.Exit(8)
-
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
         dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
         dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
@@ -22,9 +17,6 @@
         dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
         cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
         cboInstituto.DisplayMember = "nombre"
-
-
-
         maximizarVentana(Me)
 
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
@@ -41,7 +33,7 @@
         Me.tabCalificaciones_Vista.Appearance = TabAppearance.FlatButtons
         Me.tabCalificaciones_Vista.ItemSize = New Size(0, 1)
         Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
-        'Ventana_cargando.Dispose()
+
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
@@ -281,8 +273,6 @@
 
     Private Sub btnCiudad_Click(sender As Object, e As EventArgs) Handles btnCiudad.Click
         Me.tabPrincipal.SelectedTab = Me.tabCiudades
-
-        dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CIUDADES()))
     End Sub
     Private Sub btnCiudadesEliminar_Click(sender As Object, e As EventArgs) Handles btnCiudadesEliminar.Click
         If dgvP_Ciudades.Cantidad_Selecciones() > 0 Then
@@ -361,11 +351,6 @@
 
     End Sub
 
-    Private Sub btnCalificacionesFiltrar_Click(sender As Object, e As EventArgs) Handles btnCalificacionesFiltrar.Click
-
-
-
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
 

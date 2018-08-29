@@ -5,7 +5,7 @@
     End Sub
 
     Private Sub Ventana_Bienvenida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Cargar_Configuracion(Application.StartupPath & "./conf/conf_its.json")
+        Cargar_Configuracion(Application.StartupPath & "./conf/conf_nube.json")
         Try
             Console.WriteLine(GET_Configuracion_ODBC())
             conectar(GET_Configuracion_ODBC())
