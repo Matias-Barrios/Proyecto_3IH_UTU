@@ -22,4 +22,12 @@
             e.Cancel = True
         End If
     End Sub
+
+    Private Sub btnModoInvitado_Click(sender As Object, e As EventArgs) Handles btnModoInvitado.Click
+
+        Me.Hide()
+
+        Invitado.ShowDialog()
+
+    End Sub
 End Class

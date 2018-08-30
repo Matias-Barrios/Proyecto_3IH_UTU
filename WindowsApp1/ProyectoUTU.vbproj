@@ -97,6 +97,12 @@
     <Compile Include="modulos\Expresiones_Regulares.vb" />
     <Compile Include="modulos\InformixConexion.vb" />
     <Compile Include="modulos\Mensajes_Al_Usuario.vb" />
+    <Compile Include="Ventanas\Invitado.Designer.vb">
+      <DependentUpon>Invitado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\Invitado.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Ventana_cargando.Designer.vb">
       <DependentUpon>Ventana_cargando.vb</DependentUpon>
     </Compile>
@@ -222,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="controles_personalizados\DGVPaginado.resx">
       <DependentUpon>DGVPaginado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\Invitado.resx">
+      <DependentUpon>Invitado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Ventana_cargando.resx">
       <DependentUpon>Ventana_cargando.vb</DependentUpon>

@@ -216,7 +216,7 @@
                     hacer_consulta(BAJA_LOGICA_CALIFICACION(fila.Cells("id_calificacion").Value()))
                 Next
 
-                dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
+                dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo)))
             End If
         Else
             MsgBox(SELECCIONE_AL_MENOS_UNO())

@@ -3,21 +3,22 @@
     Public Sub verificarRol(rol As String)
 
         If rol = "Administrativo" Then
-            Ventana_Principal.btnUsuarios.Enabled = False
-            Ventana_Principal.btnVentanaPrincipalConfiguracion.Enabled = False
-            Ventana_Principal.btnTareas.Enabled = False
+            Ventana_Principal.btnUsuarios.Visible = False
+            Ventana_Principal.btnVentanaPrincipalConfiguracion.Visible = False
+            Ventana_Principal.btnTareas.Visible = False
 
         End If
 
         If rol = "Profesor" Then
-            Ventana_Principal.btnMaterias.Enabled = False
-            Ventana_Principal.btn_Grupos.Enabled = False
-            Ventana_Principal.btnDocentes.Enabled = False
-            Ventana_Principal.btnVentanaPrincipalInstitutos.Enabled = False
-            Ventana_Principal.btnVentanaPrincipalOrientaciones.Enabled = False
-            Ventana_Principal.btnCiudad.Enabled = False
-            Ventana_Principal.btnUsuarios.Enabled = False
-            Ventana_Principal.btnVentanaPrincipalConfiguracion.Enabled = False
+            Ventana_Principal.btnMaterias.Visible = False
+            Ventana_Principal.btn_Grupos.Visible = False
+            Ventana_Principal.btnDocentes.Visible = False
+            Ventana_Principal.btnVentanaPrincipalInstitutos.Visible = False
+            Ventana_Principal.btnVentanaPrincipalOrientaciones.Visible = False
+            Ventana_Principal.btnCiudad.Visible = False
+            Ventana_Principal.btnUsuarios.Visible = False
+            Ventana_Principal.btnVentanaPrincipalConfiguracion.Visible = False
+            Ventana_Principal.btnTareas.Location = New Point(12, 101)
         End If
 
     End Sub
