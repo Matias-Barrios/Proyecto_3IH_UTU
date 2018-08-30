@@ -330,6 +330,20 @@
     End Function
 
 
+    Public Function CONSULTAS_INVITADOSALUMNOS(txtalumnoci As TextBox) As String
 
+        Dim ci
+
+        ci = Val(txtalumnoci.Text)
+
+        Return "select nombre_asignatura,
+       nota_final_asignatura,
+       juicio_final
+from relacion_alumno_asignatura_grupos, asignaturas , Personas
+where foranea_ci_alumno =  ci
+and ci =  " & ci & "
+and id_asignatura = foranea_id_asignatura
+and Personas.baja = 'f'"
+    End Function
 
 End Module

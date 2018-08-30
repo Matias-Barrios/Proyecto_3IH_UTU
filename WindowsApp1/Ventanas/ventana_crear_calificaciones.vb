@@ -39,6 +39,9 @@
                 hacer_consulta(CREAR_CALIFICACION(USUARIO_LOGUEADO.CI, alumno.Row.Item("foranea_ci_alumno"), Ventana_Principal.cboAsignatura.SelectedItem.Row.Item("id_asignatura"), Ventana_Principal.cboGrupo.SelectedItem.Row.Item("id_grupo"), Ventana_Principal.cboInstituto.SelectedItem.Row.Item("id_instituto"), txtCrearCalificaciones_Nombre_Descriptivo.Text.Trim(), lstCrearCalificacion_tipo.SelectedItem, Now.Date, rchCrearCalificacion_Comentario.Text.Trim(), nudCrearCalificacion_Nota.Value(), True))
             Next
 
+            MsgBox(MENSAJE_EXITO)
+
+            Ventana_Principal.dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(Ventana_Principal.cboAsignatura, Ventana_Principal.cboInstituto, Ventana_Principal.cboGrupo)))
         End If
     End Sub
 End Class

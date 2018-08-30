@@ -23,6 +23,10 @@ Partial Class ventana_crear_docente
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.pnlCrearDocente = New System.Windows.Forms.Panel()
+        Me.txtCrearDocenteSegundoApellido = New System.Windows.Forms.TextBox()
+        Me.txtCrearDocentePrimerApellido = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.nudCrearDocenteGrado = New System.Windows.Forms.NumericUpDown()
         Me.lblCrearDocenteGrado = New System.Windows.Forms.Label()
         Me.pnlCrearDocenteCI = New System.Windows.Forms.Panel()
@@ -39,10 +43,6 @@ Partial Class ventana_crear_docente
         Me.lblCrear_Docente_Titulo = New WindowsApp1.BorderLabel()
         Me.btnCrearDocente_Aceptar = New System.Windows.Forms.Button()
         Me.btnCrearDocenteCancelar = New System.Windows.Forms.Button()
-        Me.txtCrearDocenteSegundoApellido = New System.Windows.Forms.TextBox()
-        Me.txtCrearDocentePrimerApellido = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlCrearDocente.SuspendLayout()
         CType(Me.nudCrearDocenteGrado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlCrearDocenteCI.SuspendLayout()
@@ -71,6 +71,56 @@ Partial Class ventana_crear_docente
         Me.pnlCrearDocente.Name = "pnlCrearDocente"
         Me.pnlCrearDocente.Size = New System.Drawing.Size(438, 383)
         Me.pnlCrearDocente.TabIndex = 25
+        '
+        'txtCrearDocenteSegundoApellido
+        '
+        Me.txtCrearDocenteSegundoApellido.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtCrearDocenteSegundoApellido.Location = New System.Drawing.Point(200, 152)
+        Me.txtCrearDocenteSegundoApellido.MaxLength = 25
+        Me.txtCrearDocenteSegundoApellido.Name = "txtCrearDocenteSegundoApellido"
+        Me.txtCrearDocenteSegundoApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtCrearDocenteSegundoApellido.ShortcutsEnabled = False
+        Me.txtCrearDocenteSegundoApellido.Size = New System.Drawing.Size(208, 20)
+        Me.txtCrearDocenteSegundoApellido.TabIndex = 36
+        '
+        'txtCrearDocentePrimerApellido
+        '
+        Me.txtCrearDocentePrimerApellido.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.txtCrearDocentePrimerApellido.Location = New System.Drawing.Point(200, 122)
+        Me.txtCrearDocentePrimerApellido.MaxLength = 25
+        Me.txtCrearDocentePrimerApellido.Name = "txtCrearDocentePrimerApellido"
+        Me.txtCrearDocentePrimerApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txtCrearDocentePrimerApellido.ShortcutsEnabled = False
+        Me.txtCrearDocentePrimerApellido.Size = New System.Drawing.Size(208, 20)
+        Me.txtCrearDocentePrimerApellido.TabIndex = 35
+        '
+        'Label1
+        '
+        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label1.Location = New System.Drawing.Point(18, 149)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(159, 24)
+        Me.Label1.TabIndex = 34
+        Me.Label1.Text = "Segundo apellido"
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(18, 122)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(136, 24)
+        Me.Label2.TabIndex = 33
+        Me.Label2.Text = "Primer apellido"
         '
         'nudCrearDocenteGrado
         '
@@ -266,56 +316,6 @@ Partial Class ventana_crear_docente
         Me.btnCrearDocenteCancelar.TabIndex = 38
         Me.btnCrearDocenteCancelar.Text = "Cancelar"
         Me.btnCrearDocenteCancelar.UseVisualStyleBackColor = False
-        '
-        'txtCrearDocenteSegundoApellido
-        '
-        Me.txtCrearDocenteSegundoApellido.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCrearDocenteSegundoApellido.Location = New System.Drawing.Point(200, 152)
-        Me.txtCrearDocenteSegundoApellido.MaxLength = 25
-        Me.txtCrearDocenteSegundoApellido.Name = "txtCrearDocenteSegundoApellido"
-        Me.txtCrearDocenteSegundoApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtCrearDocenteSegundoApellido.ShortcutsEnabled = False
-        Me.txtCrearDocenteSegundoApellido.Size = New System.Drawing.Size(208, 20)
-        Me.txtCrearDocenteSegundoApellido.TabIndex = 36
-        '
-        'txtCrearDocentePrimerApellido
-        '
-        Me.txtCrearDocentePrimerApellido.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtCrearDocentePrimerApellido.Location = New System.Drawing.Point(200, 122)
-        Me.txtCrearDocentePrimerApellido.MaxLength = 25
-        Me.txtCrearDocentePrimerApellido.Name = "txtCrearDocentePrimerApellido"
-        Me.txtCrearDocentePrimerApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txtCrearDocentePrimerApellido.ShortcutsEnabled = False
-        Me.txtCrearDocentePrimerApellido.Size = New System.Drawing.Size(208, 20)
-        Me.txtCrearDocentePrimerApellido.TabIndex = 35
-        '
-        'Label1
-        '
-        Me.Label1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label1.Location = New System.Drawing.Point(18, 149)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(159, 24)
-        Me.Label1.TabIndex = 34
-        Me.Label1.Text = "Segundo apellido"
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Label2.Location = New System.Drawing.Point(18, 122)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(136, 24)
-        Me.Label2.TabIndex = 33
-        Me.Label2.Text = "Primer apellido"
         '
         'ventana_crear_docente
         '
