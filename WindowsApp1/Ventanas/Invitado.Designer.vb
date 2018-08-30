@@ -29,6 +29,8 @@ Partial Class Invitado
         Me.btnconsultar = New System.Windows.Forms.Button()
         Me.lblnotapro = New System.Windows.Forms.Label()
         Me.lblvalornotapro = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblnotafinalaprobacion = New System.Windows.Forms.Label()
         CType(Me.dvg_invitado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -88,9 +90,9 @@ Partial Class Invitado
         Me.lblnotapro.ForeColor = System.Drawing.Color.White
         Me.lblnotapro.Location = New System.Drawing.Point(37, 354)
         Me.lblnotapro.Name = "lblnotapro"
-        Me.lblnotapro.Size = New System.Drawing.Size(109, 20)
+        Me.lblnotapro.Size = New System.Drawing.Size(147, 20)
         Me.lblnotapro.TabIndex = 3
-        Me.lblnotapro.Text = "Nota Proyecto"
+        Me.lblnotapro.Text = "Nota Final Proyecto"
         '
         'lblvalornotapro
         '
@@ -102,12 +104,35 @@ Partial Class Invitado
         Me.lblvalornotapro.Size = New System.Drawing.Size(0, 20)
         Me.lblvalornotapro.TabIndex = 4
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(346, 354)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(212, 20)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Nota Final Aprobacion Curso"
+        '
+        'lblnotafinalaprobacion
+        '
+        Me.lblnotafinalaprobacion.AutoSize = True
+        Me.lblnotafinalaprobacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblnotafinalaprobacion.ForeColor = System.Drawing.Color.White
+        Me.lblnotafinalaprobacion.Location = New System.Drawing.Point(564, 354)
+        Me.lblnotafinalaprobacion.Name = "lblnotafinalaprobacion"
+        Me.lblnotafinalaprobacion.Size = New System.Drawing.Size(0, 20)
+        Me.lblnotafinalaprobacion.TabIndex = 6
+        '
         'Invitado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(736, 395)
+        Me.Controls.Add(Me.lblnotafinalaprobacion)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblvalornotapro)
         Me.Controls.Add(Me.lblnotapro)
         Me.Controls.Add(Me.Panel1)
@@ -129,4 +154,6 @@ Partial Class Invitado
     Friend WithEvents btnconsultar As Button
     Friend WithEvents lblnotapro As Label
     Friend WithEvents lblvalornotapro As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblnotafinalaprobacion As Label
 End Class

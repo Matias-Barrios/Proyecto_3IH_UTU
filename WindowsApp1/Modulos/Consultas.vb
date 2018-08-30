@@ -338,12 +338,39 @@
 
         Return "select nombre_asignatura,
        nota_final_asignatura,
+       Nota_final_pro as Nota_Proyecto_Por_Asignatura,
        juicio_final
 from relacion_alumno_asignatura_grupos, asignaturas , Personas
 where foranea_ci_alumno =  ci
 and ci =  " & ci & "
 and id_asignatura = foranea_id_asignatura
 and Personas.baja = 'f'"
+    End Function
+
+
+    Public Function CONSULTA_PROMEDIO_FINAL_ASIGNATURA(txtalumnoci As TextBox)
+
+        Dim ci
+
+        ci = Val(txtalumnoci.Text)
+
+        Return "select round ( coalesce(avg(nota_final_asignatura),0))
+        from relacion_alumno_asignatura_grupos
+        where  foranea_CI_alumno =" & ci
+
+    End Function
+
+    Public Function CONSULTA_PROMEDIO_FINAL_PROYECTO(txtalumnoci As TextBox)
+
+        Dim ci
+
+        ci = Val(txtalumnoci.Text)
+
+        Return "select round ( coalesce(avg(nota_final_asignatura),0))
+        from relacion_alumno_asignatura_grupos
+        where  foranea_CI_alumno =" & ci
+
+
     End Function
 
 End Module
