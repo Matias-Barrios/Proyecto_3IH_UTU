@@ -22,8 +22,8 @@
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
         Me.b_lblNombreUsuario_Dinamico.outline_color = Color.White
         Me.b_lblNombreUsuario_Dinamico.border_thickness = 3
-        Me.b_lblNombreUsuario_Dinamico.Text = Me.usuario.Name
-        Me.b_lblRol_Dinamico.Text = Me.usuario.Rol
+        Me.b_lblNombreUsuario_Dinamico.Text = Modulo_Usuarios.USUARIO_LOGUEADO.primer_nombre & " " & Modulo_Usuarios.USUARIO_LOGUEADO.primer_apellido
+        Me.b_lblRol_Dinamico.Text = Modulo_Usuarios.USUARIO_LOGUEADO.tipo
         Me.b_lblRol_Dinamico.border_thickness = 3
         Me.b_lblRol_Dinamico.outline_color = Color.White
         Me.tabPrincipal.Appearance = TabAppearance.FlatButtons
