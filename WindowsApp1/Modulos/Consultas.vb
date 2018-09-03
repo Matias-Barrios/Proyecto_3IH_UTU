@@ -26,13 +26,14 @@
         Return "select id_instituto, nombre
         from Institutos, relacion_docente_trabaja_instituto
         where id_instituto = foranea_id_instituto
-        and foranea_ci_docente = 14893499"
+        and Institutos.baja = 'f'
+        and foranea_ci_docente = " & USUARIO_LOGUEADO.CI
 
     End Function
 
 
     Public Function CONSULTAS_SELECT_ORIENTACIONES_PARA_LISTBOX() As String
-        Return "SELECT id_orientacion,nombre_orientacion  
+        Return "Select id_orientacion,nombre_orientacion  
                 FROM Orientaciones 
                 WHERE Orientaciones.baja = 'f'"
     End Function
@@ -246,7 +247,7 @@
         Return "select id_asignatura, nombre_asignatura
     from Asignaturas, relacion_docente_asignatura_grupos, institutos
     where id_asignatura = foranea_id_asignatura
-    and foranea_ci_docente = 14893499
+    and foranea_ci_docente = " & USUARIO_LOGUEADO.CI & "
     and foranea_id_grupo = " & resultado & "
     and id_instituto = " & resultado2
 
@@ -264,7 +265,7 @@
         Return "select id_grupo, nombre_grupo
         from Grupos A, relacion_docente_asignatura_grupos B
         where id_grupo = foranea_id_grupo
-        and foranea_ci_docente = 14893499
+        and foranea_ci_docente = " & USUARIO_LOGUEADO.CI & "
         and B.foranea_id_instituto =" & resultado2
 
 
@@ -276,6 +277,7 @@
         Dim prueba1 = cboInstituto.SelectedIndex
         Dim prueba2 = cboGrupo.SelectedIndex
         Dim prueba = cboAsignatura.SelectedIndex
+
 
         uno = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX()).Rows(prueba1).Item("id_instituto")
         dos = hacer_consulta(COMBOBOX_CALIFICACIONES_INSTITUTO(cboInstituto)).Rows(prueba2).Item("id_grupo")
@@ -291,7 +293,7 @@
 	   TO_CHAR(fecha, '%A %B %d, %Y %R') as Fecha
        from calificaciones a
        where a.baja = 'f' 
-       and ci_docente = 14893499
+       and ci_docente = " & USUARIO_LOGUEADO.CI & "
        and a.id_grupo = " & dos & "
        and a.id_instituto = " & uno & "
        and a.id_asignatura = " & tres
