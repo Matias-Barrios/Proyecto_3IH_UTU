@@ -373,4 +373,26 @@ and Personas.baja = 'f'"
 
     End Function
 
+    Public Function CREAR_ADMIN(CI As String, primer_nombre As String, segundo_nombre As String, primer_apellido As String, segundo_apellido As String, fecha_nacimiento As Date, email As String, admin As Boolean, convertir_fecha_ingles As Boolean) As String
+        Dim fecha_con_formato As String
+        Dim tipo_persona = "Admin"
+        If Not admin Then
+            tipo_persona = "Administrador"
+        End If
+        If convertir_fecha_ingles Then
+            fecha_con_formato = fecha_nacimiento.ToString("dd/MM/yyyy")
+        Else
+            fecha_con_formato = fecha_nacimiento.ToString("MM/dd/yyyy")
+        End If
+        Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
+                                  VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "', NULL ,'" & "f" & "'," & "NULL" & ",'" & "Examen Febrero" & "'," & "'" & tipo_persona & "'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
+        Console.WriteLine(consulta)
+        Return consulta
+    End Function
+
+    Public Function CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS() As String
+        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email 
+                FROM Personas
+                WHERE baja = 'f' and (tipo = 'Admin' OR tipo = 'Administrativo' )"
+    End Function
 End Module

@@ -15,6 +15,7 @@
         dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
         dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
         dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+        dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
         cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
         cboInstituto.DisplayMember = "nombre"
         maximizarVentana(Me)
@@ -357,5 +358,14 @@
         dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo)))
 
 
+    End Sub
+
+    Private Sub btnVentanaPrincipal_Admins_Administrativos_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipal_Admins_Administrativos.Click
+        Me.tabPrincipal.SelectedTab = Me.tabAdmins
+
+    End Sub
+
+    Private Sub btnAdmins_Crear_Click(sender As Object, e As EventArgs) Handles btnAdmins_Crear.Click
+        ventana_crear_admin.ShowDialog()
     End Sub
 End Class

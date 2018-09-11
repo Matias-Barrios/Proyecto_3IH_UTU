@@ -40,7 +40,7 @@ Partial Class Ventana_Login
         Me.txtNombreUsuario.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtNombreUsuario.Size = New System.Drawing.Size(201, 20)
         Me.txtNombreUsuario.TabIndex = 2
-        Me.txtNombreUsuario.Text = "Matias"
+        Me.txtNombreUsuario.Text = "1234"
         '
         'txtPassword
         '
@@ -50,13 +50,13 @@ Partial Class Ventana_Login
         Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtPassword.Size = New System.Drawing.Size(201, 20)
         Me.txtPassword.TabIndex = 3
-        Me.txtPassword.Text = "1234"
+        Me.txtPassword.Text = "admi"
         '
         'btnLogin
         '
         Me.btnLogin.BackColor = System.Drawing.Color.White
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnLogin.Font = New System.Drawing.Font("Arial Rounded MT Bold", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnLogin.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnLogin.Location = New System.Drawing.Point(31, 270)
         Me.btnLogin.Name = "btnLogin"
@@ -68,11 +68,11 @@ Partial Class Ventana_Login
         'b_lblPassword
         '
         Me.b_lblPassword.AutoSize = True
-        Me.b_lblPassword.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.b_lblPassword.ForeColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.b_lblPassword.Location = New System.Drawing.Point(58, 192)
         Me.b_lblPassword.Name = "b_lblPassword"
-        Me.b_lblPassword.Size = New System.Drawing.Size(146, 32)
+        Me.b_lblPassword.Size = New System.Drawing.Size(134, 31)
         Me.b_lblPassword.TabIndex = 6
         Me.b_lblPassword.Text = "Password"
         Me.b_lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -80,11 +80,11 @@ Partial Class Ventana_Login
         'b_lblNombreUsuario
         '
         Me.b_lblNombreUsuario.AutoSize = True
-        Me.b_lblNombreUsuario.Font = New System.Drawing.Font("Arial Rounded MT Bold", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblNombreUsuario.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.b_lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.b_lblNombreUsuario.Location = New System.Drawing.Point(72, 119)
         Me.b_lblNombreUsuario.Name = "b_lblNombreUsuario"
-        Me.b_lblNombreUsuario.Size = New System.Drawing.Size(118, 32)
+        Me.b_lblNombreUsuario.Size = New System.Drawing.Size(108, 31)
         Me.b_lblNombreUsuario.TabIndex = 5
         Me.b_lblNombreUsuario.Text = "Usuario"
         Me.b_lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -104,7 +104,7 @@ Partial Class Ventana_Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(259, 341)
+        Me.ClientSize = New System.Drawing.Size(259, 342)
         Me.Controls.Add(Me.picUserLogin)
         Me.Controls.Add(Me.b_lblPassword)
         Me.Controls.Add(Me.b_lblNombreUsuario)
