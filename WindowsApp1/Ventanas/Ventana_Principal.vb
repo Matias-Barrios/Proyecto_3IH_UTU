@@ -368,4 +368,30 @@
     Private Sub btnAdmins_Crear_Click(sender As Object, e As EventArgs) Handles btnAdmins_Crear.Click
         ventana_crear_admin.ShowDialog()
     End Sub
+
+    Private Sub btnAdmins_Eliminar_Click(sender As Object, e As EventArgs) Handles btnAdmins_Eliminar.Click
+        If dgv_Admins_Administrativos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgv_Admins_Administrativos.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_ADMIN(fila.Cells("CI").Value()))
+                Next
+
+                dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnAdmins_Modificar_Click(sender As Object, e As EventArgs) Handles btnAdmins_Modificar.Click
+        If Not dgv_Admins_Administrativos.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_admin.Preparar_Ventana_Modificacion(dgv_Admins_Administrativos.Filas_Seleccionadas().Item(0))
+            ventana_crear_admin.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
+    End Sub
 End Class

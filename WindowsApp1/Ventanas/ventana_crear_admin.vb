@@ -46,7 +46,7 @@ Public Class ventana_crear_admin
         Else
             If validar_inputs() Then
                 Preparar_Admin()
-                'hacer_consulta(MODIFICAR_ADMIN_ADMINISTRATIVO(CI_original, un_admin, True))
+                hacer_consulta(MODIFICAR_ADMIN_ADMINISTRATIVO(CI_original, un_admin, True))
                 Ventana_Principal.dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
                 Me.Dispose()
             End If

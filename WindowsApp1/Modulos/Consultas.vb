@@ -154,6 +154,33 @@
 
         Return consulta
     End Function
+
+    Public Function MODIFICAR_ADMIN_ADMINISTRATIVO(CI_original As Integer, un_admin As DataGridViewRow, convertir_fecha_ingles As Boolean) As String
+        Dim fecha_con_formato As String
+        Dim hace_proyecto_como_letra As String = "t"
+        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & un_admin.Cells("fecha_nacimiento").Value().GetType().ToString())
+        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & un_admin.Cells("fecha_nacimiento").Value().ToString())
+        If convertir_fecha_ingles Then
+            fecha_con_formato = un_admin.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
+        Else
+            fecha_con_formato = un_admin.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
+        End If
+
+        Dim consulta As String = "UPDATE Personas SET " &
+                " CI = " & un_admin.Cells("CI").Value() & "," &
+                " primer_nombre = '" & un_admin.Cells("primer_nombre").Value() & "'," &
+                " segundo_nombre = '" & un_admin.Cells("segundo_nombre").Value() & "'," &
+                " primer_apellido = '" & un_admin.Cells("primer_apellido").Value() & "'," &
+                " segundo_apellido = '" & un_admin.Cells("primer_apellido").Value() & "'," &
+                " fecha_nacimiento = " & fecha_con_formato & "," &
+                " email = '" & un_admin.Cells("email").Value() & "'," &
+                " hace_proyecto = 'f'," &
+                " nota_final_pro = '1'" &
+                " WHERE CI = " & CI_original
+        Console.WriteLine(consulta)
+        Return consulta
+    End Function
+
     Public Function MODIFICAR_ALUMNO(CI_original As Integer, alumno As DataGridViewRow, convertir_fecha_ingles As Boolean) As String
         Dim fecha_con_formato As String
         Dim hace_proyecto_como_letra As String = "t"
@@ -391,8 +418,11 @@ and Personas.baja = 'f'"
     End Function
 
     Public Function CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS() As String
-        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email 
+        Return "SELECT CI,tipo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas
-                WHERE baja = 'f' and (tipo = 'Admin' OR tipo = 'Administrativo' )"
+                WHERE baja = 'f' and (tipo = 'Admin' OR tipo = 'Administrador' )"
+    End Function
+    Public Function BAJA_LOGICA_ADMIN(CI As Integer) As String
+        Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
     End Function
 End Module
