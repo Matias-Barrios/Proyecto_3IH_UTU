@@ -24,14 +24,13 @@ Partial Class Invitado
     Private Sub InitializeComponent()
         Me.txtalumnosci = New System.Windows.Forms.TextBox()
         Me.lblingreseci = New System.Windows.Forms.Label()
-        Me.dvg_invitado = New System.Windows.Forms.DataGridView()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnconsultar = New System.Windows.Forms.Button()
         Me.lblnotapro = New System.Windows.Forms.Label()
         Me.lblvalornotapro = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblnotafinalaprobacion = New System.Windows.Forms.Label()
-        CType(Me.dvg_invitado, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.DgvCalificacion = New WindowsApp1.DGVPaginado()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,16 +51,6 @@ Partial Class Invitado
         Me.lblingreseci.Size = New System.Drawing.Size(117, 20)
         Me.lblingreseci.TabIndex = 1
         Me.lblingreseci.Text = "Ingrese Cedula"
-        '
-        'dvg_invitado
-        '
-        Me.dvg_invitado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.dvg_invitado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dvg_invitado.Enabled = False
-        Me.dvg_invitado.Location = New System.Drawing.Point(26, 132)
-        Me.dvg_invitado.Name = "dvg_invitado"
-        Me.dvg_invitado.Size = New System.Drawing.Size(687, 201)
-        Me.dvg_invitado.TabIndex = 2
         '
         'Panel1
         '
@@ -125,21 +114,28 @@ Partial Class Invitado
         Me.lblnotafinalaprobacion.Size = New System.Drawing.Size(0, 20)
         Me.lblnotafinalaprobacion.TabIndex = 6
         '
+        'DgvCalificacion
+        '
+        Me.DgvCalificacion.BackColor = System.Drawing.Color.AliceBlue
+        Me.DgvCalificacion.Location = New System.Drawing.Point(26, 122)
+        Me.DgvCalificacion.Name = "DgvCalificacion"
+        Me.DgvCalificacion.Size = New System.Drawing.Size(687, 218)
+        Me.DgvCalificacion.TabIndex = 7
+        '
         'Invitado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(736, 395)
+        Me.Controls.Add(Me.DgvCalificacion)
         Me.Controls.Add(Me.lblnotafinalaprobacion)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblvalornotapro)
         Me.Controls.Add(Me.lblnotapro)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.dvg_invitado)
         Me.Name = "Invitado"
         Me.Text = "Invitado"
-        CType(Me.dvg_invitado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
@@ -149,11 +145,11 @@ Partial Class Invitado
 
     Friend WithEvents txtalumnosci As TextBox
     Friend WithEvents lblingreseci As Label
-    Friend WithEvents dvg_invitado As DataGridView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents btnconsultar As Button
     Friend WithEvents lblnotapro As Label
     Friend WithEvents lblvalornotapro As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblnotafinalaprobacion As Label
+    Friend WithEvents DgvCalificacion As DGVPaginado
 End Class

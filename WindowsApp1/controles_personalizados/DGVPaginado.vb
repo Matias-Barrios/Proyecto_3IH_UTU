@@ -16,6 +16,16 @@ Public Class DGVPaginado
         filtro_tmp = ""
         filtro = ""
         If dt.Rows.Count() <> 0 Then
+
+            If total <= items_por_pagina Then
+
+                Panel1.Visible = False
+
+            Else
+
+                Panel1.Visible = True
+
+            End If
             todos_los_datos = dt
             total = dt.Rows.Count
             maximo_paginas = Math.Ceiling(total / items_por_pagina)
