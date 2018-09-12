@@ -293,37 +293,48 @@
         from Grupos A, relacion_docente_asignatura_grupos B
         where id_grupo = foranea_id_grupo
         and foranea_ci_docente = " & USUARIO_LOGUEADO.CI &
-        "and B.foranea_id_instituto =" & resultado2
-        and foranea_ci_docente = " & USUARIO_LOGUEADO.CI & "
+        "and B.foranea_id_instituto =" & resultado2 & "and foranea_ci_docente = " & USUARIO_LOGUEADO.CI & "
         and B.foranea_id_instituto =" & resultado2
     End Function
 
     Public Function COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura As ComboBox, cboInstituto As ComboBox, cboGrupo As ComboBox) As String
+        If USUARIO_LOGUEADO.tipo = "Profesor" Then
 
-        Dim prueba1 = cboInstituto.SelectedIndex
-        Dim prueba2 = cboGrupo.SelectedIndex
-        Dim prueba = cboAsignatura.SelectedIndex
+            Dim prueba1 = cboInstituto.SelectedIndex
+            Dim prueba2 = cboGrupo.SelectedIndex
+            Dim prueba = cboAsignatura.SelectedIndex
 
 
-        uno = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX()).Rows(prueba1).Item("id_instituto")
-        dos = hacer_consulta(COMBOBOX_CALIFICACIONES_INSTITUTO(cboInstituto)).Rows(prueba2).Item("id_grupo")
-        tres = hacer_consulta(COMBOBOX_CALIFICACIONES_GRUPO(cboGrupo, cboInstituto)).Rows(prueba).Item("id_asignatura")
+            uno = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX()).Rows(prueba1).Item("id_instituto")
+            dos = hacer_consulta(COMBOBOX_CALIFICACIONES_INSTITUTO(cboInstituto)).Rows(prueba2).Item("id_grupo")
+            tres = hacer_consulta(COMBOBOX_CALIFICACIONES_GRUPO(cboGrupo, cboInstituto)).Rows(prueba).Item("id_asignatura")
 
-        Return "select id_calificacion,
+            Return "select id_calificacion,
        CI_alumno,
-	   (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido  from Personas where Personas.CI = CI_alumno) AS nombre_alumno,
-	   nombre_calificacion,    	 
-	   nota,
-	   categoria,
-	   comentario,
-	   TO_CHAR(fecha, '%A %B %d, %Y %R') as Fecha
-       from calificaciones a
-       where a.baja = 'f'
-       and ci_docente = " & USUARIO_LOGUEADO.CI & 
-       and a.id_grupo = " & dos & "
-       and a.id_instituto = " & uno & "
+       (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido  from Personas where Personas.CI = CI_alumno) AS nombre_alumno,
+	   nombre_calificacion,
+       nota,
+       categoria,
+       comentario,
+       TO_CHAR(fecha, '%A %B %d, %Y %R') as Fecha
+       From calificaciones a
+       Where a.baja = 'f'
+       And ci_docente = " & USUARIO_LOGUEADO.CI &
+       " And a.id_grupo = " & dos & "
+       And a.id_instituto = " & uno & "
        and a.id_asignatura = " & tres
-
+        Else
+            Return "select id_calificacion,
+           CI_alumno,
+           (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido  from Personas where Personas.CI = CI_alumno) AS nombre_alumno,
+	       nombre_calificacion,
+           nota,
+           categoria,
+           comentario,
+           TO_CHAR(fecha, '%A %B %d, %Y %R') as Fecha
+           From calificaciones a
+           Where a.baja = 'f'"
+        End If
     End Function
 
     Public Function CONSULTA_LOGIN(cedula As Integer) As String
