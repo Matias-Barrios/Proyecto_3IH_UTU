@@ -292,11 +292,10 @@
         Return "select id_grupo, nombre_grupo
         from Grupos A, relacion_docente_asignatura_grupos B
         where id_grupo = foranea_id_grupo
+        and foranea_ci_docente = " & USUARIO_LOGUEADO.CI &
+        "and B.foranea_id_instituto =" & resultado2
         and foranea_ci_docente = " & USUARIO_LOGUEADO.CI & "
         and B.foranea_id_instituto =" & resultado2
-
-
-
     End Function
 
     Public Function COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura As ComboBox, cboInstituto As ComboBox, cboGrupo As ComboBox) As String
@@ -319,8 +318,8 @@
 	   comentario,
 	   TO_CHAR(fecha, '%A %B %d, %Y %R') as Fecha
        from calificaciones a
-       where a.baja = 'f' 
-       and ci_docente = " & USUARIO_LOGUEADO.CI & "
+       where a.baja = 'f'
+       and ci_docente = " & USUARIO_LOGUEADO.CI & 
        and a.id_grupo = " & dos & "
        and a.id_instituto = " & uno & "
        and a.id_asignatura = " & tres
