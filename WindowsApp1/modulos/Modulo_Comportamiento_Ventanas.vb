@@ -1,7 +1,10 @@
 ﻿Module Modulo_Comportamiento_Ventanas
 
     Public Sub verificarRol(rol As String)
+        If rol = "Admin" Then
+            Ventana_Principal.pnlCalificaciones_Comboboxes.Visible = False
 
+        End If
         If rol = "Administrativo" Then
             Ventana_Principal.btnUsuarios.Visible = False
             Ventana_Principal.btnVentanaPrincipalConfiguracion.Visible = False
