@@ -19,6 +19,8 @@
         cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
         cboInstituto.DisplayMember = "nombre"
         maximizarVentana(Me)
+        Rellenar_Control(lst_Agregar_grupo, CONSULTAS_TODOS_LOS_GRUPOS())
+        lst_Agregar_grupo.DisplayMember = "Grupo"
 
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
         Me.b_lblNombreUsuario_Dinamico.outline_color = Color.White
@@ -401,17 +403,18 @@
 
     Private Sub btn_agregar_a_un_grupo_Click(sender As Object, e As EventArgs) Handles btn_agregar_a_un_grupo.Click
         If dgvP_Alumnos.Cantidad_Selecciones() > 0 Then
-            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
-
-                For Each fila In dgvP_Orientaciones.Filas_Seleccionadas()
-                    hacer_consulta(BAJA_LOGICA_ORIENTACION(fila.Cells("id_orientacion").Value()))
+            If MessageBox.Show(SEGURO_ASIGNAR(lst_Agregar_grupo.SelectedValue().ToString()), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+                For Each fila In dgvP_Alumnos.Filas_Seleccionadas()
+                    If IsNothing(fila.Cells("nombre_grupo").Value()) Then
+                        hacer_consulta(BAJA_LOGICA_ORIENTACION(fila.Cells("id_orientacion").Value()))
+                    End If
                 Next
 
-                dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+                dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+
             End If
         Else
             MsgBox(SELECCIONE_AL_MENOS_UNO())
-
         End If
     End Sub
 End Class

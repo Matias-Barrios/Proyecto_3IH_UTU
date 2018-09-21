@@ -8,6 +8,9 @@
     Public Function SEGURO_ELIMINAR() As String
         Return "Seguro que quiere dar de baja los elementos seleccionados?"
     End Function
+    Public Function SEGURO_ASIGNAR(grupo As String) As String
+        Return "Seguro que quiere asignar a las personas sleccionados a el grupo " & grupo & "?"
+    End Function
     Public Function SELECCIONE_SOLO_UNO() As String
         Return "Debe seleccionar UN solo item"
     End Function

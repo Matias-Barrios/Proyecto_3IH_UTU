@@ -38,14 +38,16 @@ Partial Class DGVPaginado
         '
         Me.dgv_Vista.AllowUserToAddRows = False
         Me.dgv_Vista.AllowUserToDeleteRows = False
+        Me.dgv_Vista.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgv_Vista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgv_Vista.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_Vista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgv_Vista.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgv_Vista.Location = New System.Drawing.Point(0, 0)
+        Me.dgv_Vista.Location = New System.Drawing.Point(0, 26)
         Me.dgv_Vista.Name = "dgv_Vista"
         Me.dgv_Vista.ReadOnly = True
-        Me.dgv_Vista.Size = New System.Drawing.Size(699, 456)
+        Me.dgv_Vista.Size = New System.Drawing.Size(699, 430)
         Me.dgv_Vista.TabIndex = 0
         '
         'Panel1

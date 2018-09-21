@@ -5,9 +5,14 @@
     Public tres As New Integer
 
     Public Function CONSULTAS_SELECT_ALUMNOS() As String
-        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
+        Return "SELECT CI,tmp.nombre_grupo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
                 FROM Personas 
-                WHERE tipo = 'Alumno' AND baja = 'f'"
+                left JOIN (select distinct foranea_ci_alumno, grupos.nombre_grupo 
+							from relacion_alumno_asignatura_grupos
+							join Grupos on id_grupo = foranea_id_grupo
+							order by foranea_ci_alumno) as tmp
+				on tmp.foranea_ci_alumno = Personas.CI
+                WHERE tipo = 'Alumno' AND baja = 'f';"
     End Function
 
     Public Function CONSULTAS_SELECT_INSTITUTOS() As String
@@ -433,4 +438,10 @@ and Personas.baja = 'f'"
     Public Function BAJA_LOGICA_ADMIN(CI As Integer) As String
         Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
     End Function
+    Public Function CONSULTAS_TODOS_LOS_GRUPOS() As String
+        Return "SELECT id_grupo,foranea_id_instituto, ( Institutos.nombre || ' - ' || nombre_grupo ) as Grupo 
+                    from Grupos
+                    join Institutos on foranea_id_instituto = id_instituto"
+    End Function
+
 End Module

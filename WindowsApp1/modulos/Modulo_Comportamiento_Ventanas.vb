@@ -25,6 +25,9 @@
         End If
 
     End Sub
+    Public Sub Rellenar_Control(un_control As Object, query As String)
+        un_control.DataSource = hacer_consulta(query)
+    End Sub
 
     Public Sub centrarVentana(ventana As Form)
         Dim boundWidth As Integer = Screen.PrimaryScreen.Bounds.Width
