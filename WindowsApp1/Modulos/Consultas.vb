@@ -55,17 +55,17 @@
     Public Function CONSULTAS_SELECT_DOCENTES() As String
         Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,grado
                 FROM Personas 
-                WHERE tipo = 'Profesor' AND baja = 'f'"
+                WHERE tipo = 'Docente' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_GRUPOS() As String
         Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Grupos.turno,Institutos.id_instituto,Institutos.nombre,Orientaciones.id_orientacion,Orientaciones.nombre_orientacion 
                 FROM Grupos,Institutos,Orientaciones 
                 WHERE Grupos.baja = 'f' and Grupos.foranea_id_instituto = Institutos.id_instituto and Grupos.foranea_id_orientacion = Orientaciones.id_orientacion and  Grupos.baja = 'f'"
     End Function
-    Public Function CONSULTAS_SELECT_ADMINISTRADORES() As String
+    Public Function CONSULTAS_SELECT_AdministrativoES() As String
         Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas 
-                WHERE tipo = 'Administrador' AND baja = 'f'"
+                WHERE tipo = 'Administrativo' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_ADMINS() As String
         Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,fecha_nacimiento,email
@@ -106,7 +106,7 @@
     Public Function CONSULTAS_SELECT_POTENCIALES_USUARIOS() As String
         Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas 
-                WHERE baja = 'f' AND tipo IN ('Admin','Profesor','Administrativo')"
+                WHERE baja = 'f' AND tipo IN ('Admin','Docente','Administrativo')"
     End Function
 
     Public Function CREAR_USUARIO(CI As Integer, hash As String, sal As String) As String
@@ -159,8 +159,6 @@
     Public Function MODIFICAR_ADMIN_ADMINISTRATIVO(CI_original As Integer, un_admin As DataGridViewRow, convertir_fecha_ingles As Boolean) As String
         Dim fecha_con_formato As String
         Dim hace_proyecto_como_letra As String = "t"
-        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & un_admin.Cells("fecha_nacimiento").Value().GetType().ToString())
-        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & un_admin.Cells("fecha_nacimiento").Value().ToString())
         If convertir_fecha_ingles Then
             fecha_con_formato = un_admin.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
         Else
@@ -185,8 +183,6 @@
     Public Function MODIFICAR_ALUMNO(CI_original As Integer, alumno As DataGridViewRow, convertir_fecha_ingles As Boolean) As String
         Dim fecha_con_formato As String
         Dim hace_proyecto_como_letra As String = "t"
-        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & alumno.Cells("fecha_nacimiento").Value().GetType().ToString())
-        Console.WriteLine("SABELO!!!!!!!!!!!!!!!! " & alumno.Cells("fecha_nacimiento").Value().ToString())
         If convertir_fecha_ingles Then
             fecha_con_formato = alumno.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
         Else
@@ -228,7 +224,7 @@
             fecha_con_formato = fecha_nacimiento.ToString("MM/dd/yyyy")
         End If
         Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
-                VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & grado & ",'" & "f" & "'," & "NULL" & "," & "Examen Febrero" & "," & "'Profesor'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
+                VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & grado & ",'" & "f" & "'," & "NULL" & "," & "Examen Febrero" & "," & "'Docente'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
         Console.WriteLine(consulta)
         Return consulta
     End Function
@@ -298,7 +294,7 @@
     End Function
 
     Public Function COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura As ComboBox, cboInstituto As ComboBox, cboGrupo As ComboBox) As String
-        If USUARIO_LOGUEADO.tipo = "Profesor" Then
+        If USUARIO_LOGUEADO.tipo = "Docente" Then
 
             Dim prueba1 = cboInstituto.SelectedIndex
             Dim prueba2 = cboGrupo.SelectedIndex
@@ -416,7 +412,7 @@ and Personas.baja = 'f'"
         Dim fecha_con_formato As String
         Dim tipo_persona = "Admin"
         If Not admin Then
-            tipo_persona = "Administrador"
+            tipo_persona = "Administrativo"
         End If
         If convertir_fecha_ingles Then
             fecha_con_formato = fecha_nacimiento.ToString("dd/MM/yyyy")
@@ -432,7 +428,7 @@ and Personas.baja = 'f'"
     Public Function CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS() As String
         Return "SELECT CI,tipo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas
-                WHERE baja = 'f' and (tipo = 'Admin' OR tipo = 'Administrador' )"
+                WHERE baja = 'f' and (tipo = 'Admin' OR tipo = 'Administrativo' )"
     End Function
     Public Function BAJA_LOGICA_ADMIN(CI As Integer) As String
         Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI

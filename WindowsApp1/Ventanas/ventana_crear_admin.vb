@@ -40,7 +40,7 @@ Public Class ventana_crear_admin
         If Not es_modificacion Then
             If validar_inputs() Then
                 hacer_consulta(CREAR_ADMIN(txtAdmin_CI.Text, txtAdmin_primer_nombre.Text, txtAdmin_segundo_nombre.Text, txtAdmin_primer_apellido.Text, txtAdmin_segundo_apellido.Text, datepicker_Admin.Value(), txtAdmin_email.Text, rdoAdmin.Checked, True))
-                Ventana_Principal.dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+                Ventana_Principal.dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
                 Me.Dispose()
             End If
         Else

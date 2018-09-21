@@ -144,6 +144,7 @@ Partial Class Ventana_Principal
         Me.btnCiudad = New System.Windows.Forms.Button()
         Me.btnVentanaPrincipalConfiguracion = New System.Windows.Forms.Button()
         Me.btnVentanaPrincipal_Admins_Administrativos = New System.Windows.Forms.Button()
+        Me.btn_agregar_a_un_grupo = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
@@ -301,6 +302,7 @@ Partial Class Ventana_Principal
         '
         'Panel7
         '
+        Me.Panel7.Controls.Add(Me.btn_agregar_a_un_grupo)
         Me.Panel7.Controls.Add(Me.btn_alumnos_Refrescar)
         Me.Panel7.Controls.Add(Me.btnAlumnosModificar)
         Me.Panel7.Controls.Add(Me.btnAlumnosEliminar)
@@ -322,9 +324,9 @@ Partial Class Ventana_Principal
         Me.btn_alumnos_Refrescar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_alumnos_Refrescar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btn_alumnos_Refrescar.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btn_alumnos_Refrescar.Location = New System.Drawing.Point(750, 11)
+        Me.btn_alumnos_Refrescar.Location = New System.Drawing.Point(173, 53)
         Me.btn_alumnos_Refrescar.Name = "btn_alumnos_Refrescar"
-        Me.btn_alumnos_Refrescar.Size = New System.Drawing.Size(35, 35)
+        Me.btn_alumnos_Refrescar.Size = New System.Drawing.Size(45, 50)
         Me.btn_alumnos_Refrescar.TabIndex = 32
         Me.btn_alumnos_Refrescar.UseVisualStyleBackColor = False
         '
@@ -375,7 +377,6 @@ Partial Class Ventana_Principal
         '
         'btnAlumnosImprimir
         '
-        Me.btnAlumnosImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAlumnosImprimir.BackColor = System.Drawing.Color.White
         Me.btnAlumnosImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
         Me.btnAlumnosImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -383,9 +384,9 @@ Partial Class Ventana_Principal
         Me.btnAlumnosImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAlumnosImprimir.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.btnAlumnosImprimir.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.btnAlumnosImprimir.Location = New System.Drawing.Point(791, 10)
+        Me.btnAlumnosImprimir.Location = New System.Drawing.Point(236, 53)
         Me.btnAlumnosImprimir.Name = "btnAlumnosImprimir"
-        Me.btnAlumnosImprimir.Size = New System.Drawing.Size(35, 35)
+        Me.btnAlumnosImprimir.Size = New System.Drawing.Size(51, 53)
         Me.btnAlumnosImprimir.TabIndex = 28
         Me.btnAlumnosImprimir.UseVisualStyleBackColor = False
         '
@@ -1783,6 +1784,20 @@ Partial Class Ventana_Principal
         Me.btnVentanaPrincipal_Admins_Administrativos.Text = "Admins/Administrativos"
         Me.btnVentanaPrincipal_Admins_Administrativos.UseVisualStyleBackColor = False
         '
+        'btn_agregar_a_un_grupo
+        '
+        Me.btn_agregar_a_un_grupo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_agregar_a_un_grupo.BackColor = System.Drawing.Color.White
+        Me.btn_agregar_a_un_grupo.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_agregar_a_un_grupo.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_agregar_a_un_grupo.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_agregar_a_un_grupo.Location = New System.Drawing.Point(615, 10)
+        Me.btn_agregar_a_un_grupo.Name = "btn_agregar_a_un_grupo"
+        Me.btn_agregar_a_un_grupo.Size = New System.Drawing.Size(211, 34)
+        Me.btn_agregar_a_un_grupo.TabIndex = 27
+        Me.btn_agregar_a_un_grupo.Text = "Vincular a un grupo"
+        Me.btn_agregar_a_un_grupo.UseVisualStyleBackColor = False
+        '
         'Ventana_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1957,4 +1972,5 @@ Partial Class Ventana_Principal
     Friend WithEvents Button8 As Button
     Friend WithEvents BorderLabel3 As BorderLabel
     Friend WithEvents btnVentanaPrincipal_Admins_Administrativos As Button
+    Friend WithEvents btn_agregar_a_un_grupo As Button
 End Class

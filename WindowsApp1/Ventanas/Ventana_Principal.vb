@@ -394,4 +394,24 @@
 
         End If
     End Sub
+
+    Private Sub btn_alumnos_Refrescar_Click(sender As Object, e As EventArgs) Handles btn_alumnos_Refrescar.Click
+        dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+    End Sub
+
+    Private Sub btn_agregar_a_un_grupo_Click(sender As Object, e As EventArgs) Handles btn_agregar_a_un_grupo.Click
+        If dgvP_Alumnos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show("Seguro?", SEGURO_ELIMINAR(), MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+
+                For Each fila In dgvP_Orientaciones.Filas_Seleccionadas()
+                    hacer_consulta(BAJA_LOGICA_ORIENTACION(fila.Cells("id_orientacion").Value()))
+                Next
+
+                dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+
+        End If
+    End Sub
 End Class
