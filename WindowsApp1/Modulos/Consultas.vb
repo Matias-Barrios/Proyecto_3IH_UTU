@@ -471,7 +471,35 @@ and Personas.baja = 'f'"
         Return query
     End Function
 
-
-
+    Public Function CONSULTAS_TODOS_LAS_ASIGNATURAS() As String
+        Return "select distinct id_asignatura, ( id_asignatura || ' - ' || nombre_asignatura ) as Asignatura
+                    from Asignaturas"
+                    
+    End Function
+    Public Function CONSULTAS_VINCULAR_DOCENTE_A_GRUPO(ci As Integer, id_asignatura As Integer, id_grupo As Integer, id_instituto As Integer) As String
+        Dim query As String = "INSERT INTO 
+                Relacion_Docente_Asignatura_Grupos (foranea_CI_docente, foranea_id_asignatura, foranea_id_grupo, foranea_id_instituto)
+                VALUES ( " & ci.ToString() & " , " & id_asignatura.ToString() & " , " & id_grupo.ToString() & ", " & id_instituto.ToString() & " );"
+        Console.WriteLine(query)
+        Return query
+    End Function
+    Public Function CONSULTA_GRUPOS_ASIGNADOS_DOCENTE(ci As Integer) As String
+        Dim query As String = "select  distinct foranea_id_asignatura,foranea_id_grupo,Relacion_Docente_Asignatura_Grupos.foranea_id_instituto as Instituto, ( Institutos.nombre || ' - ' ||  nombre_grupo || ' - ' || nombre_asignatura ) as Asignacion
+                                from Relacion_Docente_Asignatura_Grupos 
+                                join Asignaturas on id_asignatura =  foranea_id_asignatura
+                                join Institutos on id_instituto = foranea_id_instituto
+                                join Grupos on foranea_id_grupo = id_grupo
+                                where foranea_ci_docente = " & ci & " ;"
+        Console.WriteLine(query)
+        Return query
+    End Function
+    Public Function CONSULTAS_DESVINCULAR_DOCENTE_GRUPO(id_instituto As Integer, id_grupo As Integer, id_asignatura As Integer) As String
+        Dim query As String = "DELETE FROM Relacion_Docente_Asignatura_Grupos
+                                WHERE foranea_id_instituto = " & id_instituto &
+                                "AND foranea_id_asignatura = " & id_asignatura &
+                                "AND foranea_id_grupo = " & id_grupo & ";"
+        Console.WriteLine(query)
+        Return query
+    End Function
 
 End Module

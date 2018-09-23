@@ -22,8 +22,10 @@
         lst_Agregar_grupo.DisplayMember = "Grupo"
         Rellenar_Control(listDocenteAsignarGrupo, CONSULTAS_TODOS_LOS_GRUPOS)
         listDocenteAsignarGrupo.DisplayMember = "Grupo"
-        Rellenar_Control(listAsignaturas, CONSULTAS_TODOS_LOS_GRUPOS)
-        listAsignaturas.DisplayMember = "Asignatura"
+        Rellenar_Control(listAsignaturasDocente, CONSULTAS_TODOS_LAS_ASIGNATURAS)
+        listAsignaturasDocente.DisplayMember = "Asignatura"
+
+
 
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
         Me.b_lblNombreUsuario_Dinamico.outline_color = Color.White
@@ -442,5 +444,39 @@
 
     Private Sub btnVincularAGrupoDocente_Click(sender As Object, e As EventArgs)
 
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        If dgvP_Docentes.Cantidad_Selecciones() = 1 Then
+            If MessageBox.Show(SEGURO_ASIGNAR(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+                For Each fila In dgvP_Docentes.Filas_Seleccionadas()
+                    hacer_consulta(CONSULTAS_VINCULAR_DOCENTE_A_GRUPO(fila.Cells("CI").Value(), listAsignaturasDocente.SelectedItem().Item("id_asignatura"), listDocenteAsignarGrupo.SelectedItem().Item("id_grupo"), listDocenteAsignarGrupo.SelectedItem().Item("foranea_id_instituto")))
+                Next
+
+                dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
+
+            End If
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+        End If
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles btn_ver_grupos_asignados_docente.Click
+        If dgvP_Docentes.Cantidad_Selecciones() = 1 Then
+
+            For Each fila In dgvP_Docentes.Filas_Seleccionadas()
+                ventana_ver_grupos_docente.lbl_nombre_docente.Text = fila.Cells("nombre_completo").Value()
+                ventana_ver_grupos_docente.txt_ver_cedula_docente.Text = fila.Cells("CI").Value()
+                ventana_ver_grupos_docente.chk_grupos_asignados_docente.DataSource = hacer_consulta(CONSULTA_GRUPOS_ASIGNADOS_DOCENTE(fila.Cells("CI").Value()))
+                ventana_ver_grupos_docente.chk_grupos_asignados_docente.DisplayMember = "Asignacion"
+                'hacer_consulta(CONSULTAS_VINCULAR_DOCENTE_A_GRUPO(fila.Cells("CI").Value(), listAsignaturasDocente.SelectedItem().Item("id_asignatura"), listDocenteAsignarGrupo.SelectedItem().Item("id_grupo"), listDocenteAsignarGrupo.SelectedItem().Item("foranea_id_instituto")))
+                ventana_ver_grupos_docente.ShowDialog()
+
+                dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
+            Next
+
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+        End If
     End Sub
 End Class
