@@ -6,7 +6,6 @@
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
-        dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
         dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
         dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
         dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
@@ -407,6 +406,24 @@
                 For Each fila In dgvP_Alumnos.Filas_Seleccionadas()
                     If IsDBNull(fila.Cells("Grupo").Value()) Then
                         hacer_consulta(CONSULTAS_ASIGNAR_ALUMNO_GRUPO(fila.Cells("CI").Value(), lst_Agregar_grupo.SelectedItem().Item("id_grupo"), lst_Agregar_grupo.SelectedItem().Item("foranea_id_instituto")))
+
+                    End If
+                Next
+
+                dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+        End If
+    End Sub
+
+    Private Sub btnDesvincular_Click(sender As Object, e As EventArgs) Handles btnDesvincular.Click
+        If dgvP_Alumnos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show(SEGURO_DESVINCULAR(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+                For Each fila In dgvP_Alumnos.Filas_Seleccionadas()
+                    If Not IsDBNull(fila.Cells("Grupo").Value()) Then
+                        hacer_consulta(CONSULTAS_DESVINCULAR_ALUMNO_GRUPO(fila.Cells("CI").Value()))
 
                     End If
                 Next

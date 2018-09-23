@@ -464,5 +464,14 @@ and Personas.baja = 'f'"
                     where foranea_id_grupo = " & id_grupo
     End Function
 
+    Public Function CONSULTAS_DESVINCULAR_ALUMNO_GRUPO(ci As Integer) As String
+        Dim query As String = "DELETE FROM Relacion_Alumno_Asignatura_Grupos
+                where foranea_CI_alumno = " & ci.ToString()
+        Console.WriteLine(query)
+        Return query
+    End Function
+
+
+
 
 End Module

@@ -9,7 +9,7 @@
         Return "Seguro que quiere dar de baja los elementos seleccionados?"
     End Function
     Public Function SEGURO_ASIGNAR() As String
-        Return "Seguro que quiere asignar a las personas sleccionados a el grupo ?"
+        Return "Seguro que quiere asignar a las personas seleccionados a el grupo ?"
     End Function
     Public Function SELECCIONE_SOLO_UNO() As String
         Return "Debe seleccionar UN solo item"
@@ -17,4 +17,9 @@
     Public Function PRODUCIDO_EXCEPCION_CONSULTA() As String
         Return "Se ha producido un error realizando la operacion"
     End Function
+
+    Public Function SEGURO_DESVINCULAR() As String
+        Return "Seguro que quiere desvincular a las personas seleccionados del grupo ?"
+    End Function
+
 End Module
