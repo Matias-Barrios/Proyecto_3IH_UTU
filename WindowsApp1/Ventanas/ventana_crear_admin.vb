@@ -67,8 +67,8 @@ Public Class ventana_crear_admin
             txtAdmin_primer_apellido.Text = un_admin.Cells("primer_apellido").Value()
             txtAdmin_segundo_apellido.Text = un_admin.Cells("segundo_apellido").Value()
             txtAdmin_email.Text = un_admin.Cells("email").Value()
-            Console.WriteLine("ES UN " + un_admin.Cells("tipo").Value())
-            If un_admin.Cells("tipo").Value() = "Administrador" Then
+
+            If un_admin.Cells("tipo").Value() = "Administrativo" Then
                 rdoAdministrativo.Checked = True
             Else
                 rdoAdmin.Checked = True

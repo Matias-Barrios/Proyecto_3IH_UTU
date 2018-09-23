@@ -8,7 +8,7 @@ Module InformixConexion
         conexionODBC.ConnectionString = conn_strin
         Try
             conexionODBC.Open()
-            Console.WriteLine("Conectado a Informix")
+
         Catch ex As OdbcException
             MsgBox("Lo lamento pero la conexion a la BD ha fallado. Autodestruccion en 3...2...1... BOOM! : " & ex.ToString())
             cerrar_conexion()
@@ -18,7 +18,7 @@ Module InformixConexion
     End Sub
 
     Public Sub cerrar_conexion()
-        Console.WriteLine("Cerrando conexion!")
+
         conexionODBC.Close()
     End Sub
     Public Function hacer_consulta(query As String) As DataTable

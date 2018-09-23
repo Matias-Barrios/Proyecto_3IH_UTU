@@ -38,7 +38,7 @@
             Ventana_Principal.b_lblRol_Dinamico.Text = USUARIO_LOGUEADO.tipo
             Ventana_Principal.b_lblNombreUsuario_Dinamico.Text = USUARIO_LOGUEADO.primer_nombre & " " & USUARIO_LOGUEADO.primer_apellido
             Me.Hide()
-            Console.WriteLine("El usuario logueado es : " + USUARIO_LOGUEADO.tipo)
+
             Modulo_Comportamiento_Ventanas.verificarRol(USUARIO_LOGUEADO.tipo)
             Ventana_Principal.ShowDialog()
         Else

@@ -403,10 +403,11 @@
 
     Private Sub btn_agregar_a_un_grupo_Click(sender As Object, e As EventArgs) Handles btn_agregar_a_un_grupo.Click
         If dgvP_Alumnos.Cantidad_Selecciones() > 0 Then
-            If MessageBox.Show(SEGURO_ASIGNAR(lst_Agregar_grupo.SelectedValue().ToString()), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(SEGURO_ASIGNAR(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
                 For Each fila In dgvP_Alumnos.Filas_Seleccionadas()
-                    If IsNothing(fila.Cells("nombre_grupo").Value()) Then
-                        hacer_consulta(BAJA_LOGICA_ORIENTACION(fila.Cells("id_orientacion").Value()))
+                    If IsDBNull(fila.Cells("Grupo").Value()) Then
+                        hacer_consulta(CONSULTAS_ASIGNAR_ALUMNO_GRUPO(fila.Cells("CI").Value(), lst_Agregar_grupo.SelectedItem().Item("id_grupo"), lst_Agregar_grupo.SelectedItem().Item("foranea_id_instituto")))
+
                     End If
                 Next
 

@@ -7,7 +7,7 @@
     Private Sub Ventana_Bienvenida_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargar_Configuracion(Application.StartupPath & "./conf/conf_nube.json")
         Try
-            Console.WriteLine(GET_Configuracion_ODBC())
+
             conectar(GET_Configuracion_ODBC())
         Catch ex As Exception
             MsgBox("Se produjo un error conectandose a Informix!")

@@ -10,7 +10,7 @@ Public Class ventana_crear_usuario
 
     Private Sub btnCrear_Usuario_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrear_Usuario_Aceptar.Click
         If validar_inputs() Then
-            Console.WriteLine("Tamaño : " & dgvP_Usuarios_Seleccion.Cantidad_Selecciones())
+
             For Each fila In dgvP_Usuarios_Seleccion.Filas_Seleccionadas()
                 Dim sal = Crear_Sal()
 

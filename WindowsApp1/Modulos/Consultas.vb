@@ -5,7 +5,7 @@
     Public tres As New Integer
 
     Public Function CONSULTAS_SELECT_ALUMNOS() As String
-        Return "SELECT CI,tmp.nombre_grupo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
+        Return "SELECT CI,tmp.nombre_grupo as Grupo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
                 FROM Personas 
                 left JOIN (select distinct foranea_ci_alumno, grupos.nombre_grupo 
 							from relacion_alumno_asignatura_grupos
@@ -439,9 +439,30 @@ and Personas.baja = 'f'"
         Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
     End Function
     Public Function CONSULTAS_TODOS_LOS_GRUPOS() As String
-        Return "SELECT id_grupo,foranea_id_instituto, ( Institutos.nombre || ' - ' || nombre_grupo ) as Grupo 
+        Return "SELECT id_grupo,foranea_id_instituto,foranea_id_orientacion, nombre_orientacion, ( nombre_orientacion || ' - ' || Institutos.nombre || ' - ' || nombre_grupo ) as Grupo 
                     from Grupos
-                    join Institutos on foranea_id_instituto = id_instituto"
+                    join Institutos on foranea_id_instituto = id_instituto
+                    join Orientaciones on foranea_id_orientacion = id_orientacion"
     End Function
+    Public Function CONSULTAS_ASIGNAR_ALUMNO_GRUPO(ci As Integer, id_grupo As Integer, id_instituto As Integer) As String
+        Dim materias_del_grupo = hacer_consulta(OBTENER_ASIGNATURAS_GRUPO(id_grupo))
+        If materias_del_grupo.Rows().Count() = 0 Then
+            MsgBox("Parece que el grupo con Id : " & id_grupo & " no tiene asignadas asignaturas!!")
+            Return "SELECT 1 FROM (1) as tmp"
+        End If
+        Dim query As String
+        For Each materia In materias_del_grupo.Rows()
+            query += vbNewLine & " INSERT INTO Relacion_Alumno_Asignatura_Grupos (foranea_CI_alumno, foranea_id_asignatura, foranea_id_grupo, foranea_id_instituto, nota_final_asignatura, nota_final_asignatura_proyecto)
+                        VALUES ( " & ci & " , " & materia.Item("foranea_id_asignatura").ToString() & ", " & id_grupo.ToString() & ", " & id_instituto.ToString() & ", 1, 1) ; " & vbNewLine
+        Next
+        Console.WriteLine(query)
+        Return query
+    End Function
+    Public Function OBTENER_ASIGNATURAS_GRUPO(id_grupo As Integer) As String
+        Return "select distinct foranea_id_asignatura 
+                    from Relacion_Grupos_Formado_Asignaturas
+                    where foranea_id_grupo = " & id_grupo
+    End Function
+
 
 End Module
