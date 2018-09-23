@@ -20,6 +20,10 @@
         maximizarVentana(Me)
         Rellenar_Control(lst_Agregar_grupo, CONSULTAS_TODOS_LOS_GRUPOS())
         lst_Agregar_grupo.DisplayMember = "Grupo"
+        Rellenar_Control(listDocenteAsignarGrupo, CONSULTAS_TODOS_LOS_GRUPOS)
+        listDocenteAsignarGrupo.DisplayMember = "Grupo"
+        Rellenar_Control(listAsignaturas, CONSULTAS_TODOS_LOS_GRUPOS)
+        listAsignaturas.DisplayMember = "Asignatura"
 
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
         Me.b_lblNombreUsuario_Dinamico.outline_color = Color.White
@@ -434,5 +438,9 @@
         Else
             MsgBox(SELECCIONE_AL_MENOS_UNO())
         End If
+    End Sub
+
+    Private Sub btnVincularAGrupoDocente_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class
