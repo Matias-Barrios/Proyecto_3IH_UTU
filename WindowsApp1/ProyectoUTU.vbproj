@@ -543,6 +543,51 @@
   <ItemGroup>
     <None Include="Resources\download.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_user_group-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group_members.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_books.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\748449.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_building.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_school.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_orientacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar_orientacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregar_orientacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions />
 </Project>

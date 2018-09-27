@@ -1348,7 +1348,7 @@ Partial Class Ventana_Principal
         'btnAlumnosImprimir
         '
         Me.btnAlumnosImprimir.BackColor = System.Drawing.Color.White
-        Me.btnAlumnosImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnAlumnosImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnAlumnosImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnAlumnosImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnAlumnosImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1363,7 +1363,7 @@ Partial Class Ventana_Principal
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.White
-        Me.Button4.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.user_group_man_man
+        Me.Button4.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.group_members
         Me.Button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1393,7 +1393,7 @@ Partial Class Ventana_Principal
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.White
-        Me.Button3.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.Button3.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1423,7 +1423,7 @@ Partial Class Ventana_Principal
         'btnGrupos_Eliminar
         '
         Me.btnGrupos_Eliminar.BackColor = System.Drawing.Color.White
-        Me.btnGrupos_Eliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
+        Me.btnGrupos_Eliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_group_512
         Me.btnGrupos_Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnGrupos_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnGrupos_Eliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1483,7 +1483,7 @@ Partial Class Ventana_Principal
         'btnMateriasEliminar
         '
         Me.btnMateriasEliminar.BackColor = System.Drawing.Color.White
-        Me.btnMateriasEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_book_trash_education_remove_30d96a3dea2d0c0a_512x512
+        Me.btnMateriasEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_books
         Me.btnMateriasEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnMateriasEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnMateriasEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1498,7 +1498,7 @@ Partial Class Ventana_Principal
         'btnMateriasCrear
         '
         Me.btnMateriasCrear.BackColor = System.Drawing.Color.White
-        Me.btnMateriasCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_books_read_literature_512
+        Me.btnMateriasCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_book
         Me.btnMateriasCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnMateriasCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnMateriasCrear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1513,7 +1513,7 @@ Partial Class Ventana_Principal
         'btnMateriasImprimir
         '
         Me.btnMateriasImprimir.BackColor = System.Drawing.Color.White
-        Me.btnMateriasImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnMateriasImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnMateriasImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnMateriasImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnMateriasImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1603,7 +1603,7 @@ Partial Class Ventana_Principal
         'btnEliminarCalificaciones
         '
         Me.btnEliminarCalificaciones.BackColor = System.Drawing.Color.White
-        Me.btnEliminarCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_book_trash_education_remove_30d96a3dea2d0c0a_512x512
+        Me.btnEliminarCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download2
         Me.btnEliminarCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnEliminarCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnEliminarCalificaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1618,7 +1618,7 @@ Partial Class Ventana_Principal
         'btnCrearCalificaciones
         '
         Me.btnCrearCalificaciones.BackColor = System.Drawing.Color.White
-        Me.btnCrearCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_books_read_literature_512
+        Me.btnCrearCalificaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources._748449
         Me.btnCrearCalificaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCrearCalificaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCrearCalificaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1634,7 +1634,7 @@ Partial Class Ventana_Principal
         '
         Me.btnEvaluacionesImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnEvaluacionesImprimir.BackColor = System.Drawing.Color.White
-        Me.btnEvaluacionesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnEvaluacionesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnEvaluacionesImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnEvaluacionesImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnEvaluacionesImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1679,7 +1679,7 @@ Partial Class Ventana_Principal
         'btnDocentesEliminar
         '
         Me.btnDocentesEliminar.BackColor = System.Drawing.Color.White
-        Me.btnDocentesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
+        Me.btnDocentesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_group_512
         Me.btnDocentesEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnDocentesEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDocentesEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1709,7 +1709,7 @@ Partial Class Ventana_Principal
         'btnDocentesImprimir
         '
         Me.btnDocentesImprimir.BackColor = System.Drawing.Color.White
-        Me.btnDocentesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnDocentesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnDocentesImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnDocentesImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnDocentesImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1739,7 +1739,7 @@ Partial Class Ventana_Principal
         'btnUsuariosImprimir
         '
         Me.btnUsuariosImprimir.BackColor = System.Drawing.Color.White
-        Me.btnUsuariosImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnUsuariosImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnUsuariosImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnUsuariosImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnUsuariosImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1815,7 +1815,7 @@ Partial Class Ventana_Principal
         '
         Me.btnInstitutoImprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnInstitutoImprimir.BackColor = System.Drawing.Color.White
-        Me.btnInstitutoImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnInstitutoImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnInstitutoImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnInstitutoImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnInstitutoImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1845,7 +1845,7 @@ Partial Class Ventana_Principal
         'btnInstitutoEliminar
         '
         Me.btnInstitutoEliminar.BackColor = System.Drawing.Color.White
-        Me.btnInstitutoEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
+        Me.btnInstitutoEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.delete_school
         Me.btnInstitutoEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnInstitutoEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnInstitutoEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1860,7 +1860,7 @@ Partial Class Ventana_Principal
         'btnInstitutoCrear
         '
         Me.btnInstitutoCrear.BackColor = System.Drawing.Color.White
-        Me.btnInstitutoCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_user_group_man_man
+        Me.btnInstitutoCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_school
         Me.btnInstitutoCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnInstitutoCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnInstitutoCrear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1905,7 +1905,7 @@ Partial Class Ventana_Principal
         'btnOrientacionesEliminar
         '
         Me.btnOrientacionesEliminar.BackColor = System.Drawing.Color.White
-        Me.btnOrientacionesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
+        Me.btnOrientacionesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.borrar_orientacion
         Me.btnOrientacionesEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnOrientacionesEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnOrientacionesEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1920,7 +1920,7 @@ Partial Class Ventana_Principal
         'btnOrientacionesCrear
         '
         Me.btnOrientacionesCrear.BackColor = System.Drawing.Color.White
-        Me.btnOrientacionesCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_user_group_man_man
+        Me.btnOrientacionesCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.agregar_orientacion
         Me.btnOrientacionesCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnOrientacionesCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnOrientacionesCrear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1935,7 +1935,7 @@ Partial Class Ventana_Principal
         'btnImprimirOrientaciones
         '
         Me.btnImprimirOrientaciones.BackColor = System.Drawing.Color.White
-        Me.btnImprimirOrientaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnImprimirOrientaciones.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnImprimirOrientaciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnImprimirOrientaciones.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnImprimirOrientaciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1980,7 +1980,7 @@ Partial Class Ventana_Principal
         'btnCiudadesEliminar
         '
         Me.btnCiudadesEliminar.BackColor = System.Drawing.Color.White
-        Me.btnCiudadesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.remove_user_male
+        Me.btnCiudadesEliminar.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.images1
         Me.btnCiudadesEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCiudadesEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCiudadesEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -1995,7 +1995,7 @@ Partial Class Ventana_Principal
         'btnCiudadesCrear
         '
         Me.btnCiudadesCrear.BackColor = System.Drawing.Color.White
-        Me.btnCiudadesCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.add_user_group_man_man
+        Me.btnCiudadesCrear.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download__1_
         Me.btnCiudadesCrear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCiudadesCrear.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCiudadesCrear.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2010,7 +2010,7 @@ Partial Class Ventana_Principal
         'btnCiudadesImprimir
         '
         Me.btnCiudadesImprimir.BackColor = System.Drawing.Color.White
-        Me.btnCiudadesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.btnCiudadesImprimir.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.btnCiudadesImprimir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnCiudadesImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnCiudadesImprimir.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -2086,7 +2086,7 @@ Partial Class Ventana_Principal
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button8.BackColor = System.Drawing.Color.White
-        Me.Button8.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.print
+        Me.Button8.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
         Me.Button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
