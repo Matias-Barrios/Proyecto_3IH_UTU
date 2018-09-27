@@ -70,8 +70,8 @@ Partial Class Ventana_Bienvenida
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(784, 561)
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ClientSize = New System.Drawing.Size(784, 562)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnModoInvitado)
         Me.Controls.Add(Me.btnIngresarAlSistema)
