@@ -41,7 +41,7 @@
         Me.tabCalificaciones_Vista.Appearance = TabAppearance.FlatButtons
         Me.tabCalificaciones_Vista.ItemSize = New Size(0, 1)
         Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
-
+        AddHandler Control_impresion.PrintPage, AddressOf Impresion.Imprimir
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
@@ -481,7 +481,8 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
+        Impresion.Apuntar_Impresion(dgvP_Grupos.Obtener_datos_totales())
+        Control_impresion.Print()
     End Sub
 
     Private Sub btnVincular_a_Orientacion_Click(sender As Object, e As EventArgs) Handles btnVincular_a_Orientacion.Click
@@ -570,7 +571,7 @@
             ventana_ver_calificaciones.lbl_nombre_alumno.Text = dgvP_Alumnos.Filas_Seleccionadas().Item(0).Cells("nombre_completo").Value().ToString()
             ventana_ver_calificaciones.dgvP_ver_notas_alumno.Cargar_datos(hacer_consulta(CONSULTAS_NOTAS_DE_ALUMNO_POR_MATERIA(dgvP_Alumnos.Filas_Seleccionadas().Item(0).Cells("CI").Value())))
             ventana_ver_calificaciones.ShowDialog()
-            dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS())))
+            dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
         Else
             MsgBox(SELECCIONE_SOLO_UNO())
         End If

@@ -17,13 +17,13 @@ Public Class DGVPaginado
         filtro = ""
         If dt.Rows.Count() <> 0 Then
 
-            If total <= items_por_pagina Then
+            If dt.Rows.Count() <= items_por_pagina Then
 
-                Panel1.Visible = False
+                pnl_controles.Visible = False
 
             Else
 
-                Panel1.Visible = True
+                pnl_controles.Visible = True
 
             End If
             todos_los_datos = dt
@@ -148,5 +148,8 @@ Public Class DGVPaginado
         End If
     End Sub
 
+    Public Function Obtener_datos_totales() As DataTable
+        Return todos_los_datos
+    End Function
 
 End Class

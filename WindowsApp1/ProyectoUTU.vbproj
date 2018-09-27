@@ -95,6 +95,7 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="modulos\Expresiones_Regulares.vb" />
+    <Compile Include="modulos\Impresion.vb" />
     <Compile Include="modulos\InformixConexion.vb" />
     <Compile Include="modulos\Mensajes_Al_Usuario.vb" />
     <Compile Include="Ventanas\Agregar_a_grupo.Designer.vb">
