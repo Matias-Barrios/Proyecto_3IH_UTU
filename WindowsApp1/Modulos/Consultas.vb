@@ -63,9 +63,11 @@
                 WHERE tipo = 'Docente' AND baja = 'f'"
     End Function
     Public Function CONSULTAS_SELECT_GRUPOS() As String
-        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Grupos.turno,Institutos.id_instituto,Institutos.nombre,Orientaciones.id_orientacion,Orientaciones.nombre_orientacion 
-                FROM Grupos,Institutos,Orientaciones 
-                WHERE Grupos.baja = 'f' and Grupos.foranea_id_instituto = Institutos.id_instituto and Grupos.foranea_id_orientacion = Orientaciones.id_orientacion and  Grupos.baja = 'f'"
+        Return "SELECT Grupos.id_grupo,Grupos.nombre_grupo,Grupos.turno,Institutos.nombre,Orientaciones.nombre_orientacion
+                from Grupos
+                left join Institutos on Institutos.id_instituto = Grupos.foranea_id_instituto 
+                left join Orientaciones on Orientaciones.id_orientacion = Grupos.foranea_id_orientacion 
+                where Grupos.baja = 'f';"
     End Function
     Public Function CONSULTAS_SELECT_AdministrativoES() As String
         Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
@@ -94,12 +96,12 @@
 		                TO_CHAR(fecha, '%A %B %d, %Y %R'),
 		                comentario,
 		                nota
-                FROM Calificaciones,Asignaturas,Grupos,Institutos
+                FROM Calificaciones
+                join Asignaturas on Asignaturas.id_asignatura = Calificaciones.id_asignatura
+                join Grupos on Grupos.id_grupo = Calificaciones.id_grupo
+                join Institutos on Institutos.id_instituto = Calificaciones.id_instituto
                 WHERE Calificaciones.baja = 'f' 
-                and Asignaturas.id_asignatura =  Calificaciones.id_asignatura 
-                and Grupos.id_grupo = Calificaciones.id_grupo
-		and Institutos.id_instituto = Calificaciones.id_instituto
-		order by fecha DESC"
+                order by fecha DESC"
     End Function
 
     Public Function CONSULTAS_SELECT_USUARIOS() As String
@@ -501,5 +503,55 @@ and Personas.baja = 'f'"
         Console.WriteLine(query)
         Return query
     End Function
+    Public Function CONSULTAS_TODOS_LOS_INSTITUTOS() As String
+        Return "select distinct id_instituto,nombre
+                from Institutos
+                WHERE Institutos.baja = 'f'"
+    End Function
+    Public Function CONSULTAS_TODAS_LAS_ORIENTACIONES() As String
+        Dim query As String = "select distinct id_orientacion,nombre_orientacion
+                from Orientaciones
+                WHERE Orientaciones.baja = 'f'"
+        Console.WriteLine(query)
+        Return query
+    End Function
+    Public Function CONSULTAS_ASIGNAR_GRUPO_A_INSTITUTO(id_grupo As Integer, id_instituto As Integer) As String
+        Dim query As String = "UPDATE Grupos
+                SET foranea_id_instituto = " & id_instituto.ToString() & "
+                WHERE id_grupo = " & id_grupo.ToString()
+        Console.WriteLine(query)
+        Return query
+    End Function
+    Public Function CONSULTAS_ASIGNAR_GRUPO_A_ORIENTACION(id_grupo As Integer, id_orientacion As Integer) As String
+        Dim query As String = "UPDATE Grupos
+                SET foranea_id_orientacion = " & id_orientacion.ToString() & "
+                WHERE id_grupo = " & id_grupo.ToString()
+        Console.WriteLine(query)
+        Return query
+    End Function
+
+    Public Function CONSULTAS_ALUMNOS_POR_GRUPO(id_grupo As Integer) As String
+        Dim query As String = "SELECT CI, (Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email,hace_proyecto,nota_final_pro,juicio_final
+                FROM Personas 
+                JOIN (select distinct foranea_ci_alumno, grupos.nombre_grupo 
+							from relacion_alumno_asignatura_grupos
+							join Grupos on id_grupo = foranea_id_grupo and id_grupo = " & id_grupo.ToString() & "
+							order by foranea_ci_alumno) as tmp
+				on tmp.foranea_ci_alumno = Personas.CI
+                WHERE tipo = 'Alumno' AND baja = 'f'"
+        Console.WriteLine(query)
+        Return query
+    End Function
+
+    Public Function CONSULTAS_NOTAS_DE_ALUMNO_POR_MATERIA(CI As Integer) As String
+        Dim query As String = "select Asignaturas.nombre_asignatura,nota_final_asignatura
+                                from Relacion_Alumno_Asignatura_Grupos
+                                join Asignaturas on Asignaturas.id_asignatura = Relacion_Alumno_Asignatura_Grupos.foranea_id_asignatura
+                                where foranea_CI_alumno = " & CI.ToString()
+        Console.WriteLine(query)
+        Return query
+    End Function
+
+
 
 End Module

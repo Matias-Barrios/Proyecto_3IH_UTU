@@ -233,6 +233,18 @@
     <Compile Include="Ventanas\ventana_crear_usuario.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventanas\ventana_ver_alumnado.Designer.vb">
+      <DependentUpon>ventana_ver_alumnado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_ver_alumnado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ventanas\ventana_ver_calificaciones.Designer.vb">
+      <DependentUpon>ventana_ver_calificaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_ver_calificaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\ventana_ver_grupos_docente.Designer.vb">
       <DependentUpon>ventana_ver_grupos_docente.vb</DependentUpon>
     </Compile>
@@ -309,6 +321,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_crear_usuario.resx">
       <DependentUpon>ventana_crear_usuario.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_ver_alumnado.resx">
+      <DependentUpon>ventana_ver_alumnado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_ver_calificaciones.resx">
+      <DependentUpon>ventana_ver_calificaciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_ver_grupos_docente.resx">
       <DependentUpon>ventana_ver_grupos_docente.vb</DependentUpon>
@@ -500,6 +518,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\jar-loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calificaciones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-user-group-woman-man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create_user_man_male-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create_user_group-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove-user-female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions />

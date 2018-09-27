@@ -24,8 +24,8 @@
         listDocenteAsignarGrupo.DisplayMember = "Grupo"
         Rellenar_Control(listAsignaturasDocente, CONSULTAS_TODOS_LAS_ASIGNATURAS)
         listAsignaturasDocente.DisplayMember = "Asignatura"
-
-
+        lstGrupos_vinc_Orientaciones.DataSource = hacer_consulta(CONSULTAS_TODAS_LAS_ORIENTACIONES())
+        lstGrupos_vinc_Orientaciones.DisplayMember = "nombre_orientacion"
 
         Me.b_lblusuarioLogueado_nombre.border_thickness = 2
         Me.b_lblNombreUsuario_Dinamico.outline_color = Color.White
@@ -408,7 +408,7 @@
 
     Private Sub btn_agregar_a_un_grupo_Click(sender As Object, e As EventArgs) Handles btn_agregar_a_un_grupo.Click
         If dgvP_Alumnos.Cantidad_Selecciones() > 0 Then
-            If MessageBox.Show(SEGURO_ASIGNAR(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(SEGURO_ASIGNAR_GRUPO(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
                 For Each fila In dgvP_Alumnos.Filas_Seleccionadas()
                     If IsDBNull(fila.Cells("Grupo").Value()) Then
                         hacer_consulta(CONSULTAS_ASIGNAR_ALUMNO_GRUPO(fila.Cells("CI").Value(), lst_Agregar_grupo.SelectedItem().Item("id_grupo"), lst_Agregar_grupo.SelectedItem().Item("foranea_id_instituto")))
@@ -448,7 +448,7 @@
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         If dgvP_Docentes.Cantidad_Selecciones() = 1 Then
-            If MessageBox.Show(SEGURO_ASIGNAR(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+            If MessageBox.Show(SEGURO_ASIGNAR_GRUPO(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
                 For Each fila In dgvP_Docentes.Filas_Seleccionadas()
                     hacer_consulta(CONSULTAS_VINCULAR_DOCENTE_A_GRUPO(fila.Cells("CI").Value(), listAsignaturasDocente.SelectedItem().Item("id_asignatura"), listDocenteAsignarGrupo.SelectedItem().Item("id_grupo"), listDocenteAsignarGrupo.SelectedItem().Item("foranea_id_instituto")))
                 Next
@@ -475,6 +475,102 @@
                 dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
             Next
 
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+        End If
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+    End Sub
+
+    Private Sub btnVincular_a_Orientacion_Click(sender As Object, e As EventArgs) Handles btnVincular_a_Orientacion.Click
+        If dgvP_Grupos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show(SEGURO_ASIGNAR_GRUPO_A_ORIENTACION(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+                For Each fila In dgvP_Grupos.Filas_Seleccionadas()
+                    hacer_consulta(CONSULTAS_ASIGNAR_GRUPO_A_ORIENTACION(fila.Cells("id_grupo").Value(), lstGrupos_vinc_Orientaciones.SelectedItem().Item("id_orientacion")))
+                Next
+                dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
+        End If
+    End Sub
+
+    Private Sub btnImprimirOrientaciones_Click(sender As Object, e As EventArgs) Handles btnImprimirOrientaciones.Click
+
+    End Sub
+
+    Private Sub btnUsuariosImprimir_Click(sender As Object, e As EventArgs) Handles btnUsuariosImprimir.Click
+
+    End Sub
+
+    Private Sub Button4_Click_1(sender As Object, e As EventArgs) Handles btn_admins_Refrescar.Click
+        dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
+    End Sub
+
+    Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
+
+    End Sub
+
+    Private Sub btn_Grupos_refrescar_Click(sender As Object, e As EventArgs) Handles btn_Grupos_refrescar.Click
+        dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+    End Sub
+
+    Private Sub btn_Asignaturas_refrescar_Click(sender As Object, e As EventArgs) Handles btn_Asignaturas_refrescar.Click
+        dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
+    End Sub
+
+    Private Sub btn_refrescar_Calificaciones_Click(sender As Object, e As EventArgs) Handles btn_refrescar_Calificaciones.Click
+        If USUARIO_LOGUEADO.Rol = "Docente" Then
+            dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo)))
+        End If
+        If USUARIO_LOGUEADO.Rol = "Admin" Then
+            dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
+
+        End If
+    End Sub
+
+    Private Sub btn_Docentes_refrescar_Click(sender As Object, e As EventArgs) Handles btn_Docentes_refrescar.Click
+        dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
+    End Sub
+
+    Private Sub btn_usuarios_refrescar_Click(sender As Object, e As EventArgs) Handles btn_usuarios_refrescar.Click
+        dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
+    End Sub
+
+    Private Sub btn_Institutos_refrescar_Click(sender As Object, e As EventArgs) Handles btn_Institutos_refrescar.Click
+        dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
+    End Sub
+
+    Private Sub btn_orientacion_refrescar_Click(sender As Object, e As EventArgs) Handles btn_orientacion_refrescar.Click
+        dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+    End Sub
+
+    Private Sub btnCiudades_Refrescar_Click(sender As Object, e As EventArgs) Handles btnCiudades_Refrescar.Click
+        dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CIUDADES()))
+    End Sub
+
+    Private Sub Button4_Click_2(sender As Object, e As EventArgs) Handles Button4.Click
+        If dgvP_Grupos.Cantidad_Selecciones() = 1 Then
+
+            ventana_ver_alumnado.lbl_ver_alumnado.Text = dgvP_Grupos.Filas_Seleccionadas().Item(0).Cells("nombre_grupo").Value().ToString() & " - " & dgvP_Grupos.Filas_Seleccionadas().Item(0).Cells("nombre").Value().ToString()
+            ventana_ver_alumnado.dgvP_ver_alumnado.Cargar_datos(hacer_consulta(CONSULTAS_ALUMNOS_POR_GRUPO(dgvP_Grupos.Filas_Seleccionadas().Item(0).Cells("id_grupo").Value())))
+            ventana_ver_alumnado.ShowDialog()
+            dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+
+
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+        End If
+    End Sub
+
+    Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
+        If dgvP_Alumnos.Cantidad_Selecciones() = 1 Then
+            ventana_ver_calificaciones.lbl_nombre_alumno.Text = dgvP_Alumnos.Filas_Seleccionadas().Item(0).Cells("nombre_completo").Value().ToString()
+            ventana_ver_calificaciones.dgvP_ver_notas_alumno.Cargar_datos(hacer_consulta(CONSULTAS_NOTAS_DE_ALUMNO_POR_MATERIA(dgvP_Alumnos.Filas_Seleccionadas().Item(0).Cells("CI").Value())))
+            ventana_ver_calificaciones.ShowDialog()
+            dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS())))
         Else
             MsgBox(SELECCIONE_SOLO_UNO())
         End If

@@ -12,7 +12,7 @@
 
         End If
 
-        If rol = "Profesor" Then
+        If rol = "Docente" Then
             Ventana_Principal.btnMaterias.Visible = False
             Ventana_Principal.btn_Grupos.Visible = False
             Ventana_Principal.btnDocentes.Visible = False
