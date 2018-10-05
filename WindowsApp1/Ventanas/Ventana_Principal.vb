@@ -15,6 +15,7 @@
         dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
         dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
         dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
+        dgvP_Historial.Cargar_datos(hacer_consulta(CONSULTA_SELECT_HISTORIAL()))
         cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
         cboInstituto.DisplayMember = "nombre"
         maximizarVentana(Me)
@@ -575,5 +576,9 @@
         Else
             MsgBox(SELECCIONE_SOLO_UNO())
         End If
+    End Sub
+
+    Private Sub btnTabHistorial_Click(sender As Object, e As EventArgs) Handles btnTabHistorial.Click
+        Me.tabPrincipal.SelectedTab = Me.tabHistorial
     End Sub
 End Class

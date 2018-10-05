@@ -25,10 +25,14 @@ Partial Class Ventana_Principal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ventana_Principal))
         Me.btnLogoff = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado = New System.Windows.Forms.Panel()
+        Me.b_lblRol_Dinamico = New WindowsApp1.BorderLabel()
+        Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
+        Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
         Me.btnAlumnos = New System.Windows.Forms.Button()
         Me.btnMaterias = New System.Windows.Forms.Button()
         Me.tabPrincipal = New System.Windows.Forms.TabControl()
         Me.tabPrincipalAlumnos = New System.Windows.Forms.TabPage()
+        Me.dgvP_Alumnos = New WindowsApp1.DGVPaginado()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.btnDesvincular = New System.Windows.Forms.Button()
@@ -39,6 +43,7 @@ Partial Class Ventana_Principal
         Me.btnAlumnosEliminar = New System.Windows.Forms.Button()
         Me.btnAlumnosCrearNuevo = New System.Windows.Forms.Button()
         Me.btnAlumnosImprimir = New System.Windows.Forms.Button()
+        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
         Me.tabpage_Grupos = New System.Windows.Forms.TabPage()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.btn_Grupos_refrescar = New System.Windows.Forms.Button()
@@ -48,12 +53,16 @@ Partial Class Ventana_Principal
         Me.btn_Grupos_Modificar = New System.Windows.Forms.Button()
         Me.btnGrupos_Eliminar = New System.Windows.Forms.Button()
         Me.btnGrupos_Agregar = New System.Windows.Forms.Button()
+        Me.dgvP_Grupos = New WindowsApp1.DGVPaginado()
+        Me.lbl_Grupos_Titulo = New WindowsApp1.BorderLabel()
         Me.tabPrincipalMaterias = New System.Windows.Forms.TabPage()
         Me.btn_Asignaturas_refrescar = New System.Windows.Forms.Button()
         Me.btnMateriasModificar = New System.Windows.Forms.Button()
         Me.btnMateriasEliminar = New System.Windows.Forms.Button()
         Me.btnMateriasCrear = New System.Windows.Forms.Button()
         Me.btnMateriasImprimir = New System.Windows.Forms.Button()
+        Me.dgvP_Asignaturas = New WindowsApp1.DGVPaginado()
+        Me.lblMaterias = New WindowsApp1.BorderLabel()
         Me.tabPrincipalTareas = New System.Windows.Forms.TabPage()
         Me.btn_refrescar_Calificaciones = New System.Windows.Forms.Button()
         Me.tabCalificaciones_Vista = New System.Windows.Forms.TabControl()
@@ -90,47 +99,63 @@ Partial Class Ventana_Principal
         Me.btnEliminarCalificaciones = New System.Windows.Forms.Button()
         Me.btnCrearCalificaciones = New System.Windows.Forms.Button()
         Me.btnEvaluacionesImprimir = New System.Windows.Forms.Button()
+        Me.dgvP_Calificaciones = New WindowsApp1.DGVPaginado()
+        Me.lblTareas = New WindowsApp1.BorderLabel()
         Me.tabPrincipalDocentes = New System.Windows.Forms.TabPage()
         Me.btn_Docentes_refrescar = New System.Windows.Forms.Button()
         Me.btn_ver_grupos_asignados_docente = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.BorderLabel5 = New WindowsApp1.BorderLabel()
+        Me.BorderLabel4 = New WindowsApp1.BorderLabel()
         Me.listAsignaturasDocente = New System.Windows.Forms.ListBox()
         Me.listDocenteAsignarGrupo = New System.Windows.Forms.ListBox()
         Me.btnDocentesModificar = New System.Windows.Forms.Button()
         Me.btnDocentesEliminar = New System.Windows.Forms.Button()
         Me.btnDocentesCrearNuevo = New System.Windows.Forms.Button()
         Me.btnDocentesImprimir = New System.Windows.Forms.Button()
+        Me.dgvP_Docentes = New WindowsApp1.DGVPaginado()
+        Me.lblDocentes = New WindowsApp1.BorderLabel()
         Me.tabPrincipalUsuarios = New System.Windows.Forms.TabPage()
         Me.btn_usuarios_refrescar = New System.Windows.Forms.Button()
         Me.btnUsuariosImprimir = New System.Windows.Forms.Button()
         Me.btnUsuariosModificar = New System.Windows.Forms.Button()
         Me.btnUsuariosBotonEliminarUsuario = New System.Windows.Forms.Button()
         Me.btnUsuariosBotonCrearNuevo = New System.Windows.Forms.Button()
+        Me.dgvP_Usuarios = New WindowsApp1.DGVPaginado()
+        Me.lblUsuarios = New WindowsApp1.BorderLabel()
         Me.tabpageInstitutos = New System.Windows.Forms.TabPage()
         Me.btn_Institutos_refrescar = New System.Windows.Forms.Button()
         Me.btnInstitutoImprimir = New System.Windows.Forms.Button()
         Me.btnInstitutoModificar = New System.Windows.Forms.Button()
         Me.btnInstitutoEliminar = New System.Windows.Forms.Button()
         Me.btnInstitutoCrear = New System.Windows.Forms.Button()
+        Me.dgvP_Institutos = New WindowsApp1.DGVPaginado()
+        Me.BorderLabel1 = New WindowsApp1.BorderLabel()
         Me.tabOrientaciones = New System.Windows.Forms.TabPage()
         Me.btn_orientacion_refrescar = New System.Windows.Forms.Button()
         Me.btnOrientacionesModificar = New System.Windows.Forms.Button()
         Me.btnOrientacionesEliminar = New System.Windows.Forms.Button()
         Me.btnOrientacionesCrear = New System.Windows.Forms.Button()
         Me.btnImprimirOrientaciones = New System.Windows.Forms.Button()
+        Me.BorderLabel2 = New WindowsApp1.BorderLabel()
+        Me.dgvP_Orientaciones = New WindowsApp1.DGVPaginado()
         Me.tabCiudades = New System.Windows.Forms.TabPage()
         Me.btnCiudades_Refrescar = New System.Windows.Forms.Button()
         Me.btnCiudadesModificar = New System.Windows.Forms.Button()
         Me.btnCiudadesEliminar = New System.Windows.Forms.Button()
         Me.btnCiudadesCrear = New System.Windows.Forms.Button()
         Me.btnCiudadesImprimir = New System.Windows.Forms.Button()
+        Me.lblCiudades = New WindowsApp1.BorderLabel()
+        Me.dgvP_Ciudades = New WindowsApp1.DGVPaginado()
         Me.tabAdmins = New System.Windows.Forms.TabPage()
+        Me.dgv_Admins_Administrativos = New WindowsApp1.DGVPaginado()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_admins_Refrescar = New System.Windows.Forms.Button()
         Me.btnAdmins_Modificar = New System.Windows.Forms.Button()
         Me.btnAdmins_Eliminar = New System.Windows.Forms.Button()
         Me.btnAdmins_Crear = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.BorderLabel3 = New WindowsApp1.BorderLabel()
         Me.btnTareas = New System.Windows.Forms.Button()
         Me.btnDocentes = New System.Windows.Forms.Button()
         Me.btnUsuarios = New System.Windows.Forms.Button()
@@ -140,32 +165,14 @@ Partial Class Ventana_Principal
         Me.btnCiudad = New System.Windows.Forms.Button()
         Me.btnVentanaPrincipal_Admins_Administrativos = New System.Windows.Forms.Button()
         Me.btnVentanaPrincipalConfiguracion = New System.Windows.Forms.Button()
-        Me.dgvP_Alumnos = New WindowsApp1.DGVPaginado()
-        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
-        Me.dgvP_Grupos = New WindowsApp1.DGVPaginado()
-        Me.lbl_Grupos_Titulo = New WindowsApp1.BorderLabel()
-        Me.dgvP_Asignaturas = New WindowsApp1.DGVPaginado()
-        Me.lblMaterias = New WindowsApp1.BorderLabel()
-        Me.dgvP_Calificaciones = New WindowsApp1.DGVPaginado()
-        Me.lblTareas = New WindowsApp1.BorderLabel()
-        Me.BorderLabel5 = New WindowsApp1.BorderLabel()
-        Me.BorderLabel4 = New WindowsApp1.BorderLabel()
-        Me.dgvP_Docentes = New WindowsApp1.DGVPaginado()
-        Me.lblDocentes = New WindowsApp1.BorderLabel()
-        Me.dgvP_Usuarios = New WindowsApp1.DGVPaginado()
-        Me.lblUsuarios = New WindowsApp1.BorderLabel()
-        Me.dgvP_Institutos = New WindowsApp1.DGVPaginado()
-        Me.BorderLabel1 = New WindowsApp1.BorderLabel()
-        Me.BorderLabel2 = New WindowsApp1.BorderLabel()
-        Me.dgvP_Orientaciones = New WindowsApp1.DGVPaginado()
-        Me.lblCiudades = New WindowsApp1.BorderLabel()
-        Me.dgvP_Ciudades = New WindowsApp1.DGVPaginado()
-        Me.dgv_Admins_Administrativos = New WindowsApp1.DGVPaginado()
-        Me.BorderLabel3 = New WindowsApp1.BorderLabel()
-        Me.b_lblRol_Dinamico = New WindowsApp1.BorderLabel()
-        Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
-        Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
         Me.Control_impresion = New System.Drawing.Printing.PrintDocument()
+        Me.tabHistorial = New System.Windows.Forms.TabPage()
+        Me.dgvP_Historial = New WindowsApp1.DGVPaginado()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Button11 = New System.Windows.Forms.Button()
+        Me.Button15 = New System.Windows.Forms.Button()
+        Me.Historial = New WindowsApp1.BorderLabel()
+        Me.btnTabHistorial = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
@@ -187,6 +194,8 @@ Partial Class Ventana_Principal
         Me.tabCiudades.SuspendLayout()
         Me.tabAdmins.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.tabHistorial.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogoff
@@ -216,6 +225,39 @@ Partial Class Ventana_Principal
         Me.pnlUsuario_logueado.Name = "pnlUsuario_logueado"
         Me.pnlUsuario_logueado.Size = New System.Drawing.Size(1345, 35)
         Me.pnlUsuario_logueado.TabIndex = 6
+        '
+        'b_lblRol_Dinamico
+        '
+        Me.b_lblRol_Dinamico.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.b_lblRol_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblRol_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.b_lblRol_Dinamico.Location = New System.Drawing.Point(1172, 4)
+        Me.b_lblRol_Dinamico.Name = "b_lblRol_Dinamico"
+        Me.b_lblRol_Dinamico.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.b_lblRol_Dinamico.Size = New System.Drawing.Size(160, 24)
+        Me.b_lblRol_Dinamico.TabIndex = 4
+        Me.b_lblRol_Dinamico.Text = "rol"
+        Me.b_lblRol_Dinamico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'b_lblNombreUsuario_Dinamico
+        '
+        Me.b_lblNombreUsuario_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblNombreUsuario_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.b_lblNombreUsuario_Dinamico.Location = New System.Drawing.Point(122, 4)
+        Me.b_lblNombreUsuario_Dinamico.Name = "b_lblNombreUsuario_Dinamico"
+        Me.b_lblNombreUsuario_Dinamico.Size = New System.Drawing.Size(200, 24)
+        Me.b_lblNombreUsuario_Dinamico.TabIndex = 2
+        Me.b_lblNombreUsuario_Dinamico.Text = "usuario"
+        '
+        'b_lblusuarioLogueado_nombre
+        '
+        Me.b_lblusuarioLogueado_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblusuarioLogueado_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.b_lblusuarioLogueado_nombre.Location = New System.Drawing.Point(4, 7)
+        Me.b_lblusuarioLogueado_nombre.Name = "b_lblusuarioLogueado_nombre"
+        Me.b_lblusuarioLogueado_nombre.Size = New System.Drawing.Size(112, 24)
+        Me.b_lblusuarioLogueado_nombre.TabIndex = 1
+        Me.b_lblusuarioLogueado_nombre.Text = "Bienvenido,"
         '
         'btnAlumnos
         '
@@ -258,6 +300,7 @@ Partial Class Ventana_Principal
         Me.tabPrincipal.Controls.Add(Me.tabOrientaciones)
         Me.tabPrincipal.Controls.Add(Me.tabCiudades)
         Me.tabPrincipal.Controls.Add(Me.tabAdmins)
+        Me.tabPrincipal.Controls.Add(Me.tabHistorial)
         Me.tabPrincipal.Location = New System.Drawing.Point(229, 45)
         Me.tabPrincipal.Name = "tabPrincipal"
         Me.tabPrincipal.SelectedIndex = 0
@@ -275,6 +318,18 @@ Partial Class Ventana_Principal
         Me.tabPrincipalAlumnos.Size = New System.Drawing.Size(1120, 629)
         Me.tabPrincipalAlumnos.TabIndex = 0
         Me.tabPrincipalAlumnos.Text = "Alumnos"
+        '
+        'dgvP_Alumnos
+        '
+        Me.dgvP_Alumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Alumnos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Alumnos.Location = New System.Drawing.Point(0, 118)
+        Me.dgvP_Alumnos.Name = "dgvP_Alumnos"
+        Me.dgvP_Alumnos.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dgvP_Alumnos.Size = New System.Drawing.Size(1117, 508)
+        Me.dgvP_Alumnos.TabIndex = 27
         '
         'Panel7
         '
@@ -423,6 +478,16 @@ Partial Class Ventana_Principal
         Me.btnAlumnosImprimir.TabIndex = 28
         Me.btnAlumnosImprimir.UseVisualStyleBackColor = False
         '
+        'lblAlumnos_Titulo
+        '
+        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(2, 10)
+        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
+        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
+        Me.lblAlumnos_Titulo.TabIndex = 26
+        Me.lblAlumnos_Titulo.Text = "Alumnos"
+        '
         'tabpage_Grupos
         '
         Me.tabpage_Grupos.BackColor = System.Drawing.Color.Silver
@@ -557,6 +622,27 @@ Partial Class Ventana_Principal
         Me.btnGrupos_Agregar.TabIndex = 35
         Me.btnGrupos_Agregar.UseVisualStyleBackColor = False
         '
+        'dgvP_Grupos
+        '
+        Me.dgvP_Grupos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Grupos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Grupos.Location = New System.Drawing.Point(14, 110)
+        Me.dgvP_Grupos.Name = "dgvP_Grupos"
+        Me.dgvP_Grupos.Size = New System.Drawing.Size(1101, 516)
+        Me.dgvP_Grupos.TabIndex = 41
+        '
+        'lbl_Grupos_Titulo
+        '
+        Me.lbl_Grupos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Grupos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lbl_Grupos_Titulo.Location = New System.Drawing.Point(6, 4)
+        Me.lbl_Grupos_Titulo.Name = "lbl_Grupos_Titulo"
+        Me.lbl_Grupos_Titulo.Size = New System.Drawing.Size(136, 36)
+        Me.lbl_Grupos_Titulo.TabIndex = 36
+        Me.lbl_Grupos_Titulo.Text = "Grupos"
+        '
         'tabPrincipalMaterias
         '
         Me.tabPrincipalMaterias.BackColor = System.Drawing.Color.Silver
@@ -648,6 +734,27 @@ Partial Class Ventana_Principal
         Me.btnMateriasImprimir.Size = New System.Drawing.Size(51, 50)
         Me.btnMateriasImprimir.TabIndex = 27
         Me.btnMateriasImprimir.UseVisualStyleBackColor = False
+        '
+        'dgvP_Asignaturas
+        '
+        Me.dgvP_Asignaturas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Asignaturas.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Asignaturas.Location = New System.Drawing.Point(9, 103)
+        Me.dgvP_Asignaturas.Name = "dgvP_Asignaturas"
+        Me.dgvP_Asignaturas.Size = New System.Drawing.Size(1104, 520)
+        Me.dgvP_Asignaturas.TabIndex = 32
+        '
+        'lblMaterias
+        '
+        Me.lblMaterias.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblMaterias.Location = New System.Drawing.Point(3, 4)
+        Me.lblMaterias.Name = "lblMaterias"
+        Me.lblMaterias.Size = New System.Drawing.Size(168, 36)
+        Me.lblMaterias.TabIndex = 11
+        Me.lblMaterias.Text = "Asignaturas"
         '
         'tabPrincipalTareas
         '
@@ -1099,6 +1206,27 @@ Partial Class Ventana_Principal
         Me.btnEvaluacionesImprimir.TabIndex = 34
         Me.btnEvaluacionesImprimir.UseVisualStyleBackColor = False
         '
+        'dgvP_Calificaciones
+        '
+        Me.dgvP_Calificaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Calificaciones.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Calificaciones.Location = New System.Drawing.Point(9, 248)
+        Me.dgvP_Calificaciones.Name = "dgvP_Calificaciones"
+        Me.dgvP_Calificaciones.Size = New System.Drawing.Size(1104, 378)
+        Me.dgvP_Calificaciones.TabIndex = 41
+        '
+        'lblTareas
+        '
+        Me.lblTareas.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTareas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblTareas.Location = New System.Drawing.Point(3, 3)
+        Me.lblTareas.Name = "lblTareas"
+        Me.lblTareas.Size = New System.Drawing.Size(219, 36)
+        Me.lblTareas.TabIndex = 12
+        Me.lblTareas.Text = "Calificaciones"
+        '
         'tabPrincipalDocentes
         '
         Me.tabPrincipalDocentes.BackColor = System.Drawing.Color.Silver
@@ -1162,6 +1290,26 @@ Partial Class Ventana_Principal
         Me.Button5.TabIndex = 39
         Me.Button5.Text = "Vincular a grupo con asignatura"
         Me.Button5.UseVisualStyleBackColor = False
+        '
+        'BorderLabel5
+        '
+        Me.BorderLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel5.Location = New System.Drawing.Point(546, 63)
+        Me.BorderLabel5.Name = "BorderLabel5"
+        Me.BorderLabel5.Size = New System.Drawing.Size(136, 21)
+        Me.BorderLabel5.TabIndex = 41
+        Me.BorderLabel5.Text = "Grupo"
+        '
+        'BorderLabel4
+        '
+        Me.BorderLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel4.Location = New System.Drawing.Point(546, 3)
+        Me.BorderLabel4.Name = "BorderLabel4"
+        Me.BorderLabel4.Size = New System.Drawing.Size(136, 21)
+        Me.BorderLabel4.TabIndex = 40
+        Me.BorderLabel4.Text = "Asignatura"
         '
         'listAsignaturasDocente
         '
@@ -1242,6 +1390,27 @@ Partial Class Ventana_Principal
         Me.btnDocentesImprimir.Size = New System.Drawing.Size(49, 50)
         Me.btnDocentesImprimir.TabIndex = 28
         Me.btnDocentesImprimir.UseVisualStyleBackColor = False
+        '
+        'dgvP_Docentes
+        '
+        Me.dgvP_Docentes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Docentes.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Docentes.Location = New System.Drawing.Point(7, 127)
+        Me.dgvP_Docentes.Name = "dgvP_Docentes"
+        Me.dgvP_Docentes.Size = New System.Drawing.Size(1104, 494)
+        Me.dgvP_Docentes.TabIndex = 33
+        '
+        'lblDocentes
+        '
+        Me.lblDocentes.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDocentes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblDocentes.Location = New System.Drawing.Point(3, 3)
+        Me.lblDocentes.Name = "lblDocentes"
+        Me.lblDocentes.Size = New System.Drawing.Size(136, 36)
+        Me.lblDocentes.TabIndex = 13
+        Me.lblDocentes.Text = "Docentes"
         '
         'tabPrincipalUsuarios
         '
@@ -1336,6 +1505,27 @@ Partial Class Ventana_Principal
         Me.btnUsuariosBotonCrearNuevo.TabIndex = 14
         Me.btnUsuariosBotonCrearNuevo.UseVisualStyleBackColor = False
         '
+        'dgvP_Usuarios
+        '
+        Me.dgvP_Usuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Usuarios.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Usuarios.Location = New System.Drawing.Point(10, 108)
+        Me.dgvP_Usuarios.Name = "dgvP_Usuarios"
+        Me.dgvP_Usuarios.Size = New System.Drawing.Size(1103, 515)
+        Me.dgvP_Usuarios.TabIndex = 34
+        '
+        'lblUsuarios
+        '
+        Me.lblUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblUsuarios.Location = New System.Drawing.Point(2, 2)
+        Me.lblUsuarios.Name = "lblUsuarios"
+        Me.lblUsuarios.Size = New System.Drawing.Size(136, 36)
+        Me.lblUsuarios.TabIndex = 14
+        Me.lblUsuarios.Text = "Usuarios"
+        '
         'tabpageInstitutos
         '
         Me.tabpageInstitutos.BackColor = System.Drawing.Color.Silver
@@ -1428,6 +1618,27 @@ Partial Class Ventana_Principal
         Me.btnInstitutoCrear.TabIndex = 29
         Me.btnInstitutoCrear.UseVisualStyleBackColor = False
         '
+        'dgvP_Institutos
+        '
+        Me.dgvP_Institutos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Institutos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Institutos.Location = New System.Drawing.Point(9, 103)
+        Me.dgvP_Institutos.Name = "dgvP_Institutos"
+        Me.dgvP_Institutos.Size = New System.Drawing.Size(1104, 523)
+        Me.dgvP_Institutos.TabIndex = 35
+        '
+        'BorderLabel1
+        '
+        Me.BorderLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel1.Location = New System.Drawing.Point(2, 1)
+        Me.BorderLabel1.Name = "BorderLabel1"
+        Me.BorderLabel1.Size = New System.Drawing.Size(136, 36)
+        Me.BorderLabel1.TabIndex = 27
+        Me.BorderLabel1.Text = "Institutos"
+        '
         'tabOrientaciones
         '
         Me.tabOrientaciones.BackColor = System.Drawing.Color.Silver
@@ -1518,6 +1729,27 @@ Partial Class Ventana_Principal
         Me.btnImprimirOrientaciones.Size = New System.Drawing.Size(50, 51)
         Me.btnImprimirOrientaciones.TabIndex = 35
         Me.btnImprimirOrientaciones.UseVisualStyleBackColor = False
+        '
+        'BorderLabel2
+        '
+        Me.BorderLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel2.Location = New System.Drawing.Point(6, 5)
+        Me.BorderLabel2.Name = "BorderLabel2"
+        Me.BorderLabel2.Size = New System.Drawing.Size(201, 36)
+        Me.BorderLabel2.TabIndex = 32
+        Me.BorderLabel2.Text = "Orientaciones"
+        '
+        'dgvP_Orientaciones
+        '
+        Me.dgvP_Orientaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Orientaciones.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Orientaciones.Location = New System.Drawing.Point(9, 104)
+        Me.dgvP_Orientaciones.Name = "dgvP_Orientaciones"
+        Me.dgvP_Orientaciones.Size = New System.Drawing.Size(1104, 522)
+        Me.dgvP_Orientaciones.TabIndex = 34
         '
         'tabCiudades
         '
@@ -1610,6 +1842,27 @@ Partial Class Ventana_Principal
         Me.btnCiudadesImprimir.TabIndex = 35
         Me.btnCiudadesImprimir.UseVisualStyleBackColor = False
         '
+        'lblCiudades
+        '
+        Me.lblCiudades.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCiudades.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblCiudades.Location = New System.Drawing.Point(4, 7)
+        Me.lblCiudades.Name = "lblCiudades"
+        Me.lblCiudades.Size = New System.Drawing.Size(136, 36)
+        Me.lblCiudades.TabIndex = 32
+        Me.lblCiudades.Text = "Ciudades"
+        '
+        'dgvP_Ciudades
+        '
+        Me.dgvP_Ciudades.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Ciudades.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Ciudades.Location = New System.Drawing.Point(7, 106)
+        Me.dgvP_Ciudades.Name = "dgvP_Ciudades"
+        Me.dgvP_Ciudades.Size = New System.Drawing.Size(1106, 520)
+        Me.dgvP_Ciudades.TabIndex = 34
+        '
         'tabAdmins
         '
         Me.tabAdmins.BackColor = System.Drawing.Color.Silver
@@ -1620,6 +1873,18 @@ Partial Class Ventana_Principal
         Me.tabAdmins.Size = New System.Drawing.Size(1120, 629)
         Me.tabAdmins.TabIndex = 9
         Me.tabAdmins.Text = "Admins/Administrativos"
+        '
+        'dgv_Admins_Administrativos
+        '
+        Me.dgv_Admins_Administrativos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgv_Admins_Administrativos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgv_Admins_Administrativos.Location = New System.Drawing.Point(0, 119)
+        Me.dgv_Admins_Administrativos.Name = "dgv_Admins_Administrativos"
+        Me.dgv_Admins_Administrativos.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dgv_Admins_Administrativos.Size = New System.Drawing.Size(1117, 507)
+        Me.dgv_Admins_Administrativos.TabIndex = 28
         '
         'Panel1
         '
@@ -1710,6 +1975,16 @@ Partial Class Ventana_Principal
         Me.Button8.Size = New System.Drawing.Size(54, 50)
         Me.Button8.TabIndex = 28
         Me.Button8.UseVisualStyleBackColor = False
+        '
+        'BorderLabel3
+        '
+        Me.BorderLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel3.Location = New System.Drawing.Point(2, 10)
+        Me.BorderLabel3.Name = "BorderLabel3"
+        Me.BorderLabel3.Size = New System.Drawing.Size(332, 36)
+        Me.BorderLabel3.TabIndex = 26
+        Me.BorderLabel3.Text = "Admins/Administrativos"
         '
         'btnTareas
         '
@@ -1834,270 +2109,92 @@ Partial Class Ventana_Principal
         Me.btnVentanaPrincipalConfiguracion.TabIndex = 21
         Me.btnVentanaPrincipalConfiguracion.UseVisualStyleBackColor = False
         '
-        'dgvP_Alumnos
+        'tabHistorial
         '
-        Me.dgvP_Alumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.tabHistorial.BackColor = System.Drawing.Color.Silver
+        Me.tabHistorial.Controls.Add(Me.dgvP_Historial)
+        Me.tabHistorial.Controls.Add(Me.Panel2)
+        Me.tabHistorial.Location = New System.Drawing.Point(4, 22)
+        Me.tabHistorial.Name = "tabHistorial"
+        Me.tabHistorial.Size = New System.Drawing.Size(1120, 629)
+        Me.tabHistorial.TabIndex = 10
+        Me.tabHistorial.Text = "Historial"
+        '
+        'dgvP_Historial
+        '
+        Me.dgvP_Historial.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Alumnos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Alumnos.Location = New System.Drawing.Point(0, 118)
-        Me.dgvP_Alumnos.Name = "dgvP_Alumnos"
-        Me.dgvP_Alumnos.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dgvP_Alumnos.Size = New System.Drawing.Size(1117, 508)
-        Me.dgvP_Alumnos.TabIndex = 27
+        Me.dgvP_Historial.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Historial.Location = New System.Drawing.Point(0, 119)
+        Me.dgvP_Historial.Name = "dgvP_Historial"
+        Me.dgvP_Historial.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dgvP_Historial.Size = New System.Drawing.Size(1117, 508)
+        Me.dgvP_Historial.TabIndex = 28
         '
-        'lblAlumnos_Titulo
+        'Panel2
         '
-        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(2, 10)
-        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
-        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
-        Me.lblAlumnos_Titulo.TabIndex = 26
-        Me.lblAlumnos_Titulo.Text = "Alumnos"
+        Me.Panel2.Controls.Add(Me.Button11)
+        Me.Panel2.Controls.Add(Me.Button15)
+        Me.Panel2.Controls.Add(Me.Historial)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(1120, 109)
+        Me.Panel2.TabIndex = 29
         '
-        'dgvP_Grupos
+        'Button11
         '
-        Me.dgvP_Grupos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Grupos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Grupos.Location = New System.Drawing.Point(14, 110)
-        Me.dgvP_Grupos.Name = "dgvP_Grupos"
-        Me.dgvP_Grupos.Size = New System.Drawing.Size(1101, 516)
-        Me.dgvP_Grupos.TabIndex = 41
+        Me.Button11.BackColor = System.Drawing.Color.White
+        Me.Button11.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.Button11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button11.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button11.Location = New System.Drawing.Point(8, 53)
+        Me.Button11.Name = "Button11"
+        Me.Button11.Size = New System.Drawing.Size(57, 50)
+        Me.Button11.TabIndex = 32
+        Me.Button11.UseVisualStyleBackColor = False
         '
-        'lbl_Grupos_Titulo
+        'Button15
         '
-        Me.lbl_Grupos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Grupos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lbl_Grupos_Titulo.Location = New System.Drawing.Point(6, 4)
-        Me.lbl_Grupos_Titulo.Name = "lbl_Grupos_Titulo"
-        Me.lbl_Grupos_Titulo.Size = New System.Drawing.Size(136, 36)
-        Me.lbl_Grupos_Titulo.TabIndex = 36
-        Me.lbl_Grupos_Titulo.Text = "Grupos"
+        Me.Button15.BackColor = System.Drawing.Color.White
+        Me.Button15.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.printer1
+        Me.Button15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button15.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.Button15.Location = New System.Drawing.Point(71, 53)
+        Me.Button15.Name = "Button15"
+        Me.Button15.Size = New System.Drawing.Size(51, 50)
+        Me.Button15.TabIndex = 28
+        Me.Button15.UseVisualStyleBackColor = False
         '
-        'dgvP_Asignaturas
+        'Historial
         '
-        Me.dgvP_Asignaturas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Asignaturas.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Asignaturas.Location = New System.Drawing.Point(9, 103)
-        Me.dgvP_Asignaturas.Name = "dgvP_Asignaturas"
-        Me.dgvP_Asignaturas.Size = New System.Drawing.Size(1104, 520)
-        Me.dgvP_Asignaturas.TabIndex = 32
+        Me.Historial.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Historial.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Historial.Location = New System.Drawing.Point(2, 10)
+        Me.Historial.Name = "Historial"
+        Me.Historial.Size = New System.Drawing.Size(136, 36)
+        Me.Historial.TabIndex = 26
+        Me.Historial.Text = "Historial"
         '
-        'lblMaterias
+        'btnTabHistorial
         '
-        Me.lblMaterias.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblMaterias.Location = New System.Drawing.Point(3, 4)
-        Me.lblMaterias.Name = "lblMaterias"
-        Me.lblMaterias.Size = New System.Drawing.Size(168, 36)
-        Me.lblMaterias.TabIndex = 11
-        Me.lblMaterias.Text = "Asignaturas"
-        '
-        'dgvP_Calificaciones
-        '
-        Me.dgvP_Calificaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Calificaciones.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Calificaciones.Location = New System.Drawing.Point(9, 248)
-        Me.dgvP_Calificaciones.Name = "dgvP_Calificaciones"
-        Me.dgvP_Calificaciones.Size = New System.Drawing.Size(1104, 378)
-        Me.dgvP_Calificaciones.TabIndex = 41
-        '
-        'lblTareas
-        '
-        Me.lblTareas.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTareas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblTareas.Location = New System.Drawing.Point(3, 3)
-        Me.lblTareas.Name = "lblTareas"
-        Me.lblTareas.Size = New System.Drawing.Size(219, 36)
-        Me.lblTareas.TabIndex = 12
-        Me.lblTareas.Text = "Calificaciones"
-        '
-        'BorderLabel5
-        '
-        Me.BorderLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel5.Location = New System.Drawing.Point(546, 63)
-        Me.BorderLabel5.Name = "BorderLabel5"
-        Me.BorderLabel5.Size = New System.Drawing.Size(136, 21)
-        Me.BorderLabel5.TabIndex = 41
-        Me.BorderLabel5.Text = "Grupo"
-        '
-        'BorderLabel4
-        '
-        Me.BorderLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel4.Location = New System.Drawing.Point(546, 3)
-        Me.BorderLabel4.Name = "BorderLabel4"
-        Me.BorderLabel4.Size = New System.Drawing.Size(136, 21)
-        Me.BorderLabel4.TabIndex = 40
-        Me.BorderLabel4.Text = "Asignatura"
-        '
-        'dgvP_Docentes
-        '
-        Me.dgvP_Docentes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Docentes.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Docentes.Location = New System.Drawing.Point(7, 127)
-        Me.dgvP_Docentes.Name = "dgvP_Docentes"
-        Me.dgvP_Docentes.Size = New System.Drawing.Size(1104, 494)
-        Me.dgvP_Docentes.TabIndex = 33
-        '
-        'lblDocentes
-        '
-        Me.lblDocentes.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDocentes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblDocentes.Location = New System.Drawing.Point(3, 3)
-        Me.lblDocentes.Name = "lblDocentes"
-        Me.lblDocentes.Size = New System.Drawing.Size(136, 36)
-        Me.lblDocentes.TabIndex = 13
-        Me.lblDocentes.Text = "Docentes"
-        '
-        'dgvP_Usuarios
-        '
-        Me.dgvP_Usuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Usuarios.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Usuarios.Location = New System.Drawing.Point(10, 108)
-        Me.dgvP_Usuarios.Name = "dgvP_Usuarios"
-        Me.dgvP_Usuarios.Size = New System.Drawing.Size(1103, 515)
-        Me.dgvP_Usuarios.TabIndex = 34
-        '
-        'lblUsuarios
-        '
-        Me.lblUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblUsuarios.Location = New System.Drawing.Point(2, 2)
-        Me.lblUsuarios.Name = "lblUsuarios"
-        Me.lblUsuarios.Size = New System.Drawing.Size(136, 36)
-        Me.lblUsuarios.TabIndex = 14
-        Me.lblUsuarios.Text = "Usuarios"
-        '
-        'dgvP_Institutos
-        '
-        Me.dgvP_Institutos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Institutos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Institutos.Location = New System.Drawing.Point(9, 103)
-        Me.dgvP_Institutos.Name = "dgvP_Institutos"
-        Me.dgvP_Institutos.Size = New System.Drawing.Size(1104, 523)
-        Me.dgvP_Institutos.TabIndex = 35
-        '
-        'BorderLabel1
-        '
-        Me.BorderLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel1.Location = New System.Drawing.Point(2, 1)
-        Me.BorderLabel1.Name = "BorderLabel1"
-        Me.BorderLabel1.Size = New System.Drawing.Size(136, 36)
-        Me.BorderLabel1.TabIndex = 27
-        Me.BorderLabel1.Text = "Institutos"
-        '
-        'BorderLabel2
-        '
-        Me.BorderLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel2.Location = New System.Drawing.Point(6, 5)
-        Me.BorderLabel2.Name = "BorderLabel2"
-        Me.BorderLabel2.Size = New System.Drawing.Size(201, 36)
-        Me.BorderLabel2.TabIndex = 32
-        Me.BorderLabel2.Text = "Orientaciones"
-        '
-        'dgvP_Orientaciones
-        '
-        Me.dgvP_Orientaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Orientaciones.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Orientaciones.Location = New System.Drawing.Point(9, 104)
-        Me.dgvP_Orientaciones.Name = "dgvP_Orientaciones"
-        Me.dgvP_Orientaciones.Size = New System.Drawing.Size(1104, 522)
-        Me.dgvP_Orientaciones.TabIndex = 34
-        '
-        'lblCiudades
-        '
-        Me.lblCiudades.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCiudades.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCiudades.Location = New System.Drawing.Point(4, 7)
-        Me.lblCiudades.Name = "lblCiudades"
-        Me.lblCiudades.Size = New System.Drawing.Size(136, 36)
-        Me.lblCiudades.TabIndex = 32
-        Me.lblCiudades.Text = "Ciudades"
-        '
-        'dgvP_Ciudades
-        '
-        Me.dgvP_Ciudades.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Ciudades.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Ciudades.Location = New System.Drawing.Point(7, 106)
-        Me.dgvP_Ciudades.Name = "dgvP_Ciudades"
-        Me.dgvP_Ciudades.Size = New System.Drawing.Size(1106, 520)
-        Me.dgvP_Ciudades.TabIndex = 34
-        '
-        'dgv_Admins_Administrativos
-        '
-        Me.dgv_Admins_Administrativos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_Admins_Administrativos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgv_Admins_Administrativos.Location = New System.Drawing.Point(0, 119)
-        Me.dgv_Admins_Administrativos.Name = "dgv_Admins_Administrativos"
-        Me.dgv_Admins_Administrativos.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dgv_Admins_Administrativos.Size = New System.Drawing.Size(1117, 507)
-        Me.dgv_Admins_Administrativos.TabIndex = 28
-        '
-        'BorderLabel3
-        '
-        Me.BorderLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel3.Location = New System.Drawing.Point(2, 10)
-        Me.BorderLabel3.Name = "BorderLabel3"
-        Me.BorderLabel3.Size = New System.Drawing.Size(332, 36)
-        Me.BorderLabel3.TabIndex = 26
-        Me.BorderLabel3.Text = "Admins/Administrativos"
-        '
-        'b_lblRol_Dinamico
-        '
-        Me.b_lblRol_Dinamico.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.b_lblRol_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblRol_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.b_lblRol_Dinamico.Location = New System.Drawing.Point(1172, 4)
-        Me.b_lblRol_Dinamico.Name = "b_lblRol_Dinamico"
-        Me.b_lblRol_Dinamico.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.b_lblRol_Dinamico.Size = New System.Drawing.Size(160, 24)
-        Me.b_lblRol_Dinamico.TabIndex = 4
-        Me.b_lblRol_Dinamico.Text = "rol"
-        Me.b_lblRol_Dinamico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'b_lblNombreUsuario_Dinamico
-        '
-        Me.b_lblNombreUsuario_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblNombreUsuario_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.b_lblNombreUsuario_Dinamico.Location = New System.Drawing.Point(122, 4)
-        Me.b_lblNombreUsuario_Dinamico.Name = "b_lblNombreUsuario_Dinamico"
-        Me.b_lblNombreUsuario_Dinamico.Size = New System.Drawing.Size(200, 24)
-        Me.b_lblNombreUsuario_Dinamico.TabIndex = 2
-        Me.b_lblNombreUsuario_Dinamico.Text = "usuario"
-        '
-        'b_lblusuarioLogueado_nombre
-        '
-        Me.b_lblusuarioLogueado_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblusuarioLogueado_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.b_lblusuarioLogueado_nombre.Location = New System.Drawing.Point(4, 7)
-        Me.b_lblusuarioLogueado_nombre.Name = "b_lblusuarioLogueado_nombre"
-        Me.b_lblusuarioLogueado_nombre.Size = New System.Drawing.Size(112, 24)
-        Me.b_lblusuarioLogueado_nombre.TabIndex = 1
-        Me.b_lblusuarioLogueado_nombre.Text = "Bienvenido,"
+        Me.btnTabHistorial.BackColor = System.Drawing.Color.White
+        Me.btnTabHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTabHistorial.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnTabHistorial.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnTabHistorial.Location = New System.Drawing.Point(12, 346)
+        Me.btnTabHistorial.Name = "btnTabHistorial"
+        Me.btnTabHistorial.Size = New System.Drawing.Size(211, 29)
+        Me.btnTabHistorial.TabIndex = 27
+        Me.btnTabHistorial.Text = "Historial"
+        Me.btnTabHistorial.UseVisualStyleBackColor = False
         '
         'Ventana_Principal
         '
@@ -2106,6 +2203,7 @@ Partial Class Ventana_Principal
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CausesValidation = False
         Me.ClientSize = New System.Drawing.Size(1369, 712)
+        Me.Controls.Add(Me.btnTabHistorial)
         Me.Controls.Add(Me.btnVentanaPrincipal_Admins_Administrativos)
         Me.Controls.Add(Me.btnCiudad)
         Me.Controls.Add(Me.btnVentanaPrincipalOrientaciones)
@@ -2148,6 +2246,8 @@ Partial Class Ventana_Principal
         Me.tabCiudades.ResumeLayout(False)
         Me.tabAdmins.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.tabHistorial.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -2295,4 +2395,11 @@ Partial Class Ventana_Principal
     Friend WithEvents Button4 As Button
     Friend WithEvents Button6 As Button
     Friend WithEvents Control_impresion As Printing.PrintDocument
+    Friend WithEvents tabHistorial As TabPage
+    Friend WithEvents dgvP_Historial As DGVPaginado
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Button11 As Button
+    Friend WithEvents Button15 As Button
+    Friend WithEvents Historial As BorderLabel
+    Friend WithEvents btnTabHistorial As Button
 End Class

@@ -1,4 +1,6 @@
-﻿Module Consultas
+﻿Imports System.Globalization
+
+Module Consultas
 
     Public uno As New Integer
     Public dos As New Integer
@@ -117,34 +119,54 @@
     End Function
 
     Public Function CREAR_USUARIO(CI As Integer, hash As String, sal As String) As String
-        Return "UPDATE Personas SET encriptacion_hash = '" & hash & "',encriptacion_sal = '" & sal & "'  WHERE CI = " & CI
+        Dim query As String = "UPDATE Personas SET encriptacion_hash = '" & hash & "',encriptacion_sal = '" & sal & "'  WHERE CI = " & CI
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_USUARIO(CI As Integer) As String
-        Return "UPDATE Personas SET encriptacion_hash = null,encriptacion_sal = null  WHERE CI = " & CI
+        Dim query As String = "UPDATE Personas SET encriptacion_hash = null,encriptacion_sal = null  WHERE CI = " & CI
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_ALUMNO(CI As Integer) As String
-        Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+        Dim query As String = "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_GRUPO(id_grupo As Integer) As String
-        Return "UPDATE Grupos SET baja = 't'  WHERE id_grupo = " & id_grupo
+        Dim query As String = "UPDATE Grupos SET baja = 't'  WHERE id_grupo = " & id_grupo
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_ASIGNATURA(id_asignatura As Integer) As String
-        Return "UPDATE Asignaturas SET baja = 't'  WHERE id_asignatura = " & id_asignatura
+        Dim query As String = "UPDATE Asignaturas SET baja = 't'  WHERE id_asignatura = " & id_asignatura
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_CALIFICACION(id_calificacion As Integer) As String
-        Return "UPDATE Calificaciones SET baja = 't'  WHERE id_calificacion = " & id_calificacion
+        Dim query As String = "UPDATE Calificaciones SET baja = 't'  WHERE id_calificacion = " & id_calificacion
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_DOCENTE(CI As Integer) As String
-        Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+        Dim query As String = "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_INSTITUTO(id_instituto As Integer) As String
-        Return "UPDATE Institutos SET baja = 't'  WHERE id_instituto = " & id_instituto
+        Dim query As String = "UPDATE Institutos SET baja = 't'  WHERE id_instituto = " & id_instituto
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_ORIENTACION(id_orientacion As Integer) As String
-        Return "UPDATE Orientaciones SET baja = 't'  WHERE id_orientacion = " & id_orientacion
+        Dim query As String = "UPDATE Orientaciones SET baja = 't'  WHERE id_orientacion = " & id_orientacion
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function BAJA_LOGICA_CIUDAD(id_ciudad As Integer) As String
-        Return "UPDATE Ciudad SET baja = 't'  WHERE id_ciudad = " & id_ciudad
+        Dim query As String = "UPDATE Ciudad SET baja = 't'  WHERE id_ciudad = " & id_ciudad
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
     End Function
     Public Function CREAR_ALUMNO(CI As String, primer_nombre As String, segundo_nombre As String, primer_apellido As String, segundo_apellido As String, fecha_nacimiento As Date, email As String, hace_proyecto As Boolean, convertir_fecha_ingles As Boolean) As String
         Dim fecha_con_formato As String
@@ -159,7 +181,7 @@
         End If
         Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
                 VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & "NULL" & ",'" & hace_proyecto_como_letra & "'," & 1 & "," & "'Examen Febrero'" & "," & "'Alumno'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
-
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
 
@@ -184,6 +206,7 @@
                 " nota_final_pro = '1'" &
                 " WHERE CI = " & CI_original
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
 
@@ -210,6 +233,7 @@
                 " nota_final_pro = '" & alumno.Cells("nota_final_pro").Value() & "'" &
                 " WHERE CI = " & CI_original
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
     Public Function MODIFICAR_GRUPO(id_grupo_original As Integer, Grupo As DataGridViewRow, id_instituto As Integer, id_orientacion As Integer) As String
@@ -219,6 +243,7 @@
                 " foranea_id_orientacion  = " & id_orientacion & "," &
                 " WHERE id_grupo = " & id_grupo_original
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
 
@@ -233,6 +258,7 @@
         Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
                 VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & grado & ",'" & "f" & "'," & "NULL" & "," & "Examen Febrero" & "," & "'Docente'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
     Public Function CREAR_GRUPO(nombre As String, turno As String, id_instituto As Integer, id_orientacion As Integer) As String
@@ -241,6 +267,7 @@
         Dim consulta As String = "INSERT INTO Grupos (foranea_id_instituto, nombre_grupo, turno, baja, foranea_id_orientacion)
                 VALUES(" & id_instituto & ",'" & nombre & "','" & turno & "','" & "f" & "'," & id_orientacion & ")"
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
 
         Return consulta
     End Function
@@ -250,7 +277,7 @@
         Dim consulta As String = "INSERT INTO Asignaturas (nombre_asignatura  , descripcion, baja)
                 VALUES('" & nombre & "','" & descripcion & "'," & "'f'" & ")"
         Console.WriteLine(consulta)
-
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
     Public Function MODIFICAR_ASIGNATURA(asignatura As DataGridViewRow) As String
@@ -260,6 +287,7 @@
                 " descripcion = '" & asignatura.Cells("descripcion").Value() & "'" &
                 " WHERE id_asignatura = " & asignatura.Cells("id_asignatura").Value()
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
 
@@ -367,6 +395,7 @@
             nota & "," & "'f' )"
 
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
 
     End Function
@@ -429,6 +458,7 @@ and Personas.baja = 'f'"
         Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
                                   VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "', NULL ,'" & "f" & "'," & "NULL" & ",'" & "Examen Febrero" & "'," & "'" & tipo_persona & "'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
         Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
 
@@ -438,7 +468,9 @@ and Personas.baja = 'f'"
                 WHERE baja = 'f' and (tipo = 'Admin' OR tipo = 'Administrativo' )"
     End Function
     Public Function BAJA_LOGICA_ADMIN(CI As Integer) As String
-        Return "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+        Dim consulta As String = "UPDATE Personas SET baja = 't'  WHERE CI = " & CI
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return consulta
     End Function
     Public Function CONSULTAS_TODOS_LOS_GRUPOS() As String
         Return "SELECT id_grupo,foranea_id_instituto,foranea_id_orientacion, nombre_orientacion, ( nombre_orientacion || ' - ' || Institutos.nombre || ' - ' || nombre_grupo ) as Grupo 
@@ -452,12 +484,13 @@ and Personas.baja = 'f'"
             MsgBox("Parece que el grupo con Id : " & id_grupo & " no tiene asignadas asignaturas!!")
             Return "SELECT 1 FROM (1) as tmp"
         End If
-        Dim query As String
+        Dim query As String = ""
         For Each materia In materias_del_grupo.Rows()
             query += vbNewLine & " INSERT INTO Relacion_Alumno_Asignatura_Grupos (foranea_CI_alumno, foranea_id_asignatura, foranea_id_grupo, foranea_id_instituto, nota_final_asignatura, nota_final_asignatura_proyecto)
                         VALUES ( " & ci & " , " & materia.Item("foranea_id_asignatura").ToString() & ", " & id_grupo.ToString() & ", " & id_instituto.ToString() & ", 1, 1) ; " & vbNewLine
         Next
         Console.WriteLine(query)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return query
     End Function
     Public Function OBTENER_ASIGNATURAS_GRUPO(id_grupo As Integer) As String
@@ -470,19 +503,21 @@ and Personas.baja = 'f'"
         Dim query As String = "DELETE FROM Relacion_Alumno_Asignatura_Grupos
                 where foranea_CI_alumno = " & ci.ToString()
         Console.WriteLine(query)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return query
     End Function
 
     Public Function CONSULTAS_TODOS_LAS_ASIGNATURAS() As String
         Return "select distinct id_asignatura, ( id_asignatura || ' - ' || nombre_asignatura ) as Asignatura
                     from Asignaturas"
-                    
+
     End Function
     Public Function CONSULTAS_VINCULAR_DOCENTE_A_GRUPO(ci As Integer, id_asignatura As Integer, id_grupo As Integer, id_instituto As Integer) As String
         Dim query As String = "INSERT INTO 
                 Relacion_Docente_Asignatura_Grupos (foranea_CI_docente, foranea_id_asignatura, foranea_id_grupo, foranea_id_instituto)
                 VALUES ( " & ci.ToString() & " , " & id_asignatura.ToString() & " , " & id_grupo.ToString() & ", " & id_instituto.ToString() & " );"
         Console.WriteLine(query)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return query
     End Function
     Public Function CONSULTA_GRUPOS_ASIGNADOS_DOCENTE(ci As Integer) As String
@@ -501,6 +536,7 @@ and Personas.baja = 'f'"
                                 "AND foranea_id_asignatura = " & id_asignatura &
                                 "AND foranea_id_grupo = " & id_grupo & ";"
         Console.WriteLine(query)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return query
     End Function
     Public Function CONSULTAS_TODOS_LOS_INSTITUTOS() As String
@@ -520,6 +556,7 @@ and Personas.baja = 'f'"
                 SET foranea_id_instituto = " & id_instituto.ToString() & "
                 WHERE id_grupo = " & id_grupo.ToString()
         Console.WriteLine(query)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return query
     End Function
     Public Function CONSULTAS_ASIGNAR_GRUPO_A_ORIENTACION(id_grupo As Integer, id_orientacion As Integer) As String
@@ -527,6 +564,7 @@ and Personas.baja = 'f'"
                 SET foranea_id_orientacion = " & id_orientacion.ToString() & "
                 WHERE id_grupo = " & id_grupo.ToString()
         Console.WriteLine(query)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return query
     End Function
 
@@ -540,6 +578,7 @@ and Personas.baja = 'f'"
 				on tmp.foranea_ci_alumno = Personas.CI
                 WHERE tipo = 'Alumno' AND baja = 'f'"
         Console.WriteLine(query)
+
         Return query
     End Function
 
@@ -549,9 +588,18 @@ and Personas.baja = 'f'"
                                 join Asignaturas on Asignaturas.id_asignatura = Relacion_Alumno_Asignatura_Grupos.foranea_id_asignatura
                                 where foranea_CI_alumno = " & CI.ToString()
         Console.WriteLine(query)
+
         Return query
     End Function
 
+    Public Function GUARDAR_HISTORIAL(CI As Integer, IP As String, if_query As String, fecha As String) As String
 
-
+        Dim query As String = "INSERT INTO Historial (foranea_CI_Persona,IP,query,fecha_hora) 
+                                VALUES( " & CI.ToString() & ", '" & IP & "','" & Convert.ToBase64String(System.Text.Encoding.Unicode.GetBytes(if_query)) & "',TO_DATE ('" & fecha & "','%d-%m-%Y %H:%M:%S'))"
+        Console.WriteLine(query)
+        Return query
+    End Function
+    Public Function CONSULTA_SELECT_HISTORIAL() As String
+        Return "SELECT * FROM Historial"
+    End Function
 End Module

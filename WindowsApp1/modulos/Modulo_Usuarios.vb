@@ -1,4 +1,7 @@
-﻿Module Modulo_Usuarios
+﻿Imports System.Net
+Imports System.Net.Sockets
+
+Module Modulo_Usuarios
     Public Class User
 
         Public Property CI As Integer
@@ -15,6 +18,7 @@
         Public Property tipo As String
         Public Property Password As String
         Public Property Rol As String
+        Public Property IPAddress As String
 
         Public Sub New(ByVal CI As Integer, ByVal primer_nombre As String, ByVal segundo_nombre As String, ByVal primer_apellido As String, ByVal segundo_apellido As String, ByVal fecha_de_nacimiento As Date, ByVal email As String, ByVal grado As Integer, ByVal hace_proyecto As Boolean, ByVal nota_final_pro As Integer, ByVal juicio_final As String, ByVal tipo As String)
             Me.CI = CI
@@ -29,12 +33,24 @@
             Me.nota_final_pro = nota_final_pro
             Me.juicio_final = juicio_final
             Me.tipo = tipo
+            Me.IPAddress = Get_IP()
         End Sub
 
 
 
     End Class
+    Public Function Get_IP() As String
+        Dim host = Dns.GetHostEntry(Dns.GetHostName())
+        For Each ip In host.AddressList
 
+            If ip.AddressFamily = AddressFamily.InterNetwork Then
+
+                Return ip.ToString()
+            End If
+
+        Next
+        Return "NULL"
+    End Function
     Public Function Validar(usersList As List(Of User), nombre As String, password As String) As Boolean
 
         For Each user As Object In usersList
