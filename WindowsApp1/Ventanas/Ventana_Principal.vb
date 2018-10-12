@@ -2,20 +2,38 @@
 
 
     Public usuario = vbNull
+    Private Sub Precarga(tipo As String)
+        If tipo = "Admin" Then
+            dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+            dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
+            dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
+            dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
+            dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
+            dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
+            dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+            dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+            dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+            dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
+            dgvP_Historial.Cargar_datos(Decodificar_Historial(hacer_consulta(CONSULTA_SELECT_HISTORIAL())))
+        ElseIf tipo = "Docente" Then
+            Me.tabPrincipal.SelectedTab = Me.tabPrincipalTareas
+        ElseIf tipo = "Administrativo" Then
+            dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+            dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
+            dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
+            dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
+            dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
+            dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+            dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+            dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+        End If
 
+
+
+    End Sub
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
-        dgvP_Asignaturas.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ASIGNATURAS()))
-        dgvP_Calificaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CALIFICACIONES()))
-        dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
-        dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
-        dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
-        dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
-        dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
-        dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
-        dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
-        dgvP_Historial.Cargar_datos(hacer_consulta(CONSULTA_SELECT_HISTORIAL()))
+        Precarga(USUARIO_LOGUEADO.tipo)
         cboInstituto.DataSource = hacer_consulta(CONSULTAS_SELECT_INSTITUTOS_CALIFICACIONES_COMBOBOX())
         cboInstituto.DisplayMember = "nombre"
         maximizarVentana(Me)
@@ -38,16 +56,13 @@
         Me.tabPrincipal.Appearance = TabAppearance.FlatButtons
         Me.tabPrincipal.ItemSize = New Size(0, 1)
         Me.tabPrincipal.SizeMode = TabSizeMode.Fixed
-
-        Me.tabCalificaciones_Vista.Appearance = TabAppearance.FlatButtons
-        Me.tabCalificaciones_Vista.ItemSize = New Size(0, 1)
-        Me.tabCalificaciones_Vista.SizeMode = TabSizeMode.Fixed
         AddHandler Control_impresion.PrintPage, AddressOf Impresion.Imprimir
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
      Handles Me.FormClosing
-
+        WindowsApp1.Ventana_Login.txtNombreUsuario.Text = ""
+        WindowsApp1.Ventana_Login.txtPassword.Text = ""
         WindowsApp1.Ventana_Login.Show()
     End Sub
 
@@ -68,7 +83,6 @@
 
     Private Sub btnTareas_Click(sender As Object, e As EventArgs) Handles btnTareas.Click
         Me.tabPrincipal.SelectedTab = Me.tabPrincipalTareas
-        dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo)))
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnDocentes.Click
@@ -83,7 +97,7 @@
         ventana_crear_usuario.ShowDialog()
     End Sub
 
-    Private Sub btnVentanaPrincipalConfiguracion_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalConfiguracion.Click
+    Private Sub btnVentanaPrincipalConfiguracion_Click(sender As Object, e As EventArgs)
         VentanaConfiguracion.ShowDialog()
     End Sub
 
@@ -119,13 +133,6 @@
     End Sub
 
 
-    Private Sub rdioCalificaciones_Ver_Por_Calificacion_CheckedChanged(sender As Object, e As EventArgs) Handles rdioCalificaciones_Ver_Por_Calificacion.CheckedChanged
-        Me.tabCalificaciones_Vista.SelectedTab = Me.tabCalificaciones_Vista_Por_Calificacion
-    End Sub
-
-    Private Sub rdioCalificaciones_Ver_Por_Alumno_CheckedChanged(sender As Object, e As EventArgs) Handles rdioCalificaciones_Ver_Por_Alumno.CheckedChanged
-        Me.tabCalificaciones_Vista.SelectedTab = Me.tabCalificaiones_Vista_Alumnos
-    End Sub
 
     Private Sub btnMateriasCrear_Click(sender As Object, e As EventArgs) Handles btnMateriasCrear.Click
         ventana_crear_asignatura.ShowDialog()
@@ -413,7 +420,8 @@
                 For Each fila In dgvP_Alumnos.Filas_Seleccionadas()
                     If IsDBNull(fila.Cells("Grupo").Value()) Then
                         hacer_consulta(CONSULTAS_ASIGNAR_ALUMNO_GRUPO(fila.Cells("CI").Value(), lst_Agregar_grupo.SelectedItem().Item("id_grupo"), lst_Agregar_grupo.SelectedItem().Item("foranea_id_instituto")))
-
+                    Else
+                        hacer_consulta(CONSULTAS_MODIFICAR_ASIGNACION_ALUMNO_GRUPO(fila.Cells("CI").Value(), lst_Agregar_grupo.SelectedItem().Item("id_grupo"), lst_Agregar_grupo.SelectedItem().Item("foranea_id_instituto")))
                     End If
                 Next
 
@@ -580,5 +588,30 @@
 
     Private Sub btnTabHistorial_Click(sender As Object, e As EventArgs) Handles btnTabHistorial.Click
         Me.tabPrincipal.SelectedTab = Me.tabHistorial
+    End Sub
+
+    Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
+        dgvP_Historial.Cargar_datos(hacer_consulta(CONSULTA_SELECT_HISTORIAL()))
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
+        If dgvP_Historial.Cantidad_Selecciones() = 1 Then
+            ventana_historial.lbl_info.Text = dgvP_Historial.Filas_Seleccionadas().Item(0).Cells("foranea_CI_Persona").Value() & " a las " & dgvP_Historial.Filas_Seleccionadas().Item(0).Cells("fecha_hora").Value() & " desde " & dgvP_Historial.Filas_Seleccionadas().Item(0).Cells("IP").Value()
+            ventana_historial.rch_query.Text = dgvP_Historial.Filas_Seleccionadas().Item(0).Cells("query").Value()
+            ventana_historial.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+        End If
+    End Sub
+
+    Private Sub ver_grupos_Click(sender As Object, e As EventArgs) Handles ver_grupos.Click
+        If dgvP_Docentes.Cantidad_Selecciones() = 1 Then
+            ventana_ver_grupos.lstGruposDeDocente.DataSource = hacer_consulta(GRUPOS_DEL_DOCENTE(dgvP_Docentes.Filas_Seleccionadas().Item(0).Cells("CI").Value()))
+            ventana_ver_grupos.lstGruposDeDocente.DisplayMember = "Grupo"
+            ventana_ver_grupos.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+        End If
+
     End Sub
 End Class

@@ -37,6 +37,7 @@ Partial Class Invitado
         'txtalumnosci
         '
         Me.txtalumnosci.Location = New System.Drawing.Point(188, 40)
+        Me.txtalumnosci.MaxLength = 8
         Me.txtalumnosci.Name = "txtalumnosci"
         Me.txtalumnosci.Size = New System.Drawing.Size(100, 20)
         Me.txtalumnosci.TabIndex = 0
@@ -65,12 +66,16 @@ Partial Class Invitado
         '
         'btnconsultar
         '
-        Me.btnconsultar.Location = New System.Drawing.Point(373, 40)
+        Me.btnconsultar.BackColor = System.Drawing.Color.White
+        Me.btnconsultar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnconsultar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnconsultar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btnconsultar.Location = New System.Drawing.Point(337, 40)
         Me.btnconsultar.Name = "btnconsultar"
-        Me.btnconsultar.Size = New System.Drawing.Size(75, 23)
-        Me.btnconsultar.TabIndex = 2
+        Me.btnconsultar.Size = New System.Drawing.Size(201, 20)
+        Me.btnconsultar.TabIndex = 5
         Me.btnconsultar.Text = "Consultar"
-        Me.btnconsultar.UseVisualStyleBackColor = True
+        Me.btnconsultar.UseVisualStyleBackColor = False
         '
         'lblnotapro
         '
@@ -146,10 +151,10 @@ Partial Class Invitado
     Friend WithEvents txtalumnosci As TextBox
     Friend WithEvents lblingreseci As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents btnconsultar As Button
     Friend WithEvents lblnotapro As Label
     Friend WithEvents lblvalornotapro As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblnotafinalaprobacion As Label
     Friend WithEvents DgvCalificacion As DGVPaginado
+    Friend WithEvents btnconsultar As Button
 End Class

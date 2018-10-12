@@ -121,7 +121,7 @@ Partial Class ventana_crear_alumno
         Me.NumericUpDown1.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
-        Me.NumericUpDown1.TabIndex = 40
+        Me.NumericUpDown1.TabIndex = 38
         Me.NumericUpDown1.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label4
@@ -152,7 +152,7 @@ Partial Class ventana_crear_alumno
         Me.chkHaceProyecto.Location = New System.Drawing.Point(19, 308)
         Me.chkHaceProyecto.Name = "chkHaceProyecto"
         Me.chkHaceProyecto.Size = New System.Drawing.Size(15, 14)
-        Me.chkHaceProyecto.TabIndex = 36
+        Me.chkHaceProyecto.TabIndex = 37
         Me.chkHaceProyecto.UseVisualStyleBackColor = True
         '
         'txtCrearAlumnoPrimerApellido
@@ -163,7 +163,7 @@ Partial Class ventana_crear_alumno
         Me.txtCrearAlumnoPrimerApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearAlumnoPrimerApellido.ShortcutsEnabled = False
         Me.txtCrearAlumnoPrimerApellido.Size = New System.Drawing.Size(196, 20)
-        Me.txtCrearAlumnoPrimerApellido.TabIndex = 35
+        Me.txtCrearAlumnoPrimerApellido.TabIndex = 34
         '
         'Label2
         '
@@ -210,7 +210,7 @@ Partial Class ventana_crear_alumno
         'txtCrearAlumnoCI
         '
         Me.txtCrearAlumnoCI.Location = New System.Drawing.Point(175, 12)
-        Me.txtCrearAlumnoCI.MaxLength = 10
+        Me.txtCrearAlumnoCI.MaxLength = 8
         Me.txtCrearAlumnoCI.Name = "txtCrearAlumnoCI"
         Me.txtCrearAlumnoCI.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearAlumnoCI.ShortcutsEnabled = False
@@ -233,7 +233,7 @@ Partial Class ventana_crear_alumno
         Me.datepickerCrearAlumnoFechaNacimiento.Location = New System.Drawing.Point(194, 258)
         Me.datepickerCrearAlumnoFechaNacimiento.Name = "datepickerCrearAlumnoFechaNacimiento"
         Me.datepickerCrearAlumnoFechaNacimiento.Size = New System.Drawing.Size(193, 20)
-        Me.datepickerCrearAlumnoFechaNacimiento.TabIndex = 29
+        Me.datepickerCrearAlumnoFechaNacimiento.TabIndex = 37
         '
         'lblCrearAlumnoFechaNacimiento
         '
@@ -254,7 +254,7 @@ Partial Class ventana_crear_alumno
         Me.txtCrearAlumnoEmail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearAlumnoEmail.ShortcutsEnabled = False
         Me.txtCrearAlumnoEmail.Size = New System.Drawing.Size(193, 20)
-        Me.txtCrearAlumnoEmail.TabIndex = 27
+        Me.txtCrearAlumnoEmail.TabIndex = 36
         '
         'lblCrearAlumnoEmail
         '
@@ -275,7 +275,7 @@ Partial Class ventana_crear_alumno
         Me.txtCrearAlumnoSegundoApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearAlumnoSegundoApellido.ShortcutsEnabled = False
         Me.txtCrearAlumnoSegundoApellido.Size = New System.Drawing.Size(196, 20)
-        Me.txtCrearAlumnoSegundoApellido.TabIndex = 24
+        Me.txtCrearAlumnoSegundoApellido.TabIndex = 35
         '
         'txtCrearAlumnoPrimerNombre
         '
@@ -285,7 +285,7 @@ Partial Class ventana_crear_alumno
         Me.txtCrearAlumnoPrimerNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearAlumnoPrimerNombre.ShortcutsEnabled = False
         Me.txtCrearAlumnoPrimerNombre.Size = New System.Drawing.Size(196, 20)
-        Me.txtCrearAlumnoPrimerNombre.TabIndex = 22
+        Me.txtCrearAlumnoPrimerNombre.TabIndex = 32
         '
         'lblCrearAlumnoApellido
         '
@@ -318,7 +318,7 @@ Partial Class ventana_crear_alumno
         Me.btnModificar_Usuario_Aceptar.Location = New System.Drawing.Point(250, 449)
         Me.btnModificar_Usuario_Aceptar.Name = "btnModificar_Usuario_Aceptar"
         Me.btnModificar_Usuario_Aceptar.Size = New System.Drawing.Size(183, 32)
-        Me.btnModificar_Usuario_Aceptar.TabIndex = 37
+        Me.btnModificar_Usuario_Aceptar.TabIndex = 40
         Me.btnModificar_Usuario_Aceptar.Text = "Aceptar"
         Me.btnModificar_Usuario_Aceptar.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnModificar_Usuario_Aceptar.UseVisualStyleBackColor = False
@@ -332,7 +332,7 @@ Partial Class ventana_crear_alumno
         Me.btnModificarUsuario_Cancelar.Location = New System.Drawing.Point(21, 449)
         Me.btnModificarUsuario_Cancelar.Name = "btnModificarUsuario_Cancelar"
         Me.btnModificarUsuario_Cancelar.Size = New System.Drawing.Size(183, 32)
-        Me.btnModificarUsuario_Cancelar.TabIndex = 36
+        Me.btnModificarUsuario_Cancelar.TabIndex = 41
         Me.btnModificarUsuario_Cancelar.Text = "Cancelar"
         Me.btnModificarUsuario_Cancelar.UseVisualStyleBackColor = False
         '

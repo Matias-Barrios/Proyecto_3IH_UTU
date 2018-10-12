@@ -34,7 +34,7 @@
 
     Private Sub btnCrearCalificacion_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrearCalificacion_Aceptar.Click
         If Validar() Then
-            For Each alumno In chkCrearCalificacion_Asignar_A.SelectedItems
+            For Each alumno In chkCrearCalificacion_Asignar_A.CheckedItems
 
                 hacer_consulta(CREAR_CALIFICACION(USUARIO_LOGUEADO.CI, alumno.Row.Item("foranea_ci_alumno"), Ventana_Principal.cboAsignatura.SelectedItem.Row.Item("id_asignatura"), Ventana_Principal.cboGrupo.SelectedItem.Row.Item("id_grupo"), Ventana_Principal.cboInstituto.SelectedItem.Row.Item("id_instituto"), txtCrearCalificaciones_Nombre_Descriptivo.Text.Trim(), lstCrearCalificacion_tipo.SelectedItem, Now.Date, rchCrearCalificacion_Comentario.Text.Trim(), nudCrearCalificacion_Nota.Value(), True))
             Next
@@ -43,5 +43,9 @@
 
             Ventana_Principal.dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(Ventana_Principal.cboAsignatura, Ventana_Principal.cboInstituto, Ventana_Principal.cboGrupo)))
         End If
+    End Sub
+
+    Private Sub btnCrearCalificacion_Cancelar_Click(sender As Object, e As EventArgs) Handles btnCrearCalificacion_Cancelar.Click
+        Me.Dispose()
     End Sub
 End Class

@@ -53,4 +53,14 @@ Public Class ventana_crear_usuario
     Private Sub btnCrearUsuario_Cancelar_Click(sender As Object, e As EventArgs) Handles btnCrearUsuario_Cancelar.Click
         Me.Dispose()
     End Sub
+
+    Private Sub txt_Crear_Usuario_RepetirPassword_TextChanged(sender As Object, e As EventArgs) Handles txt_Crear_Usuario_RepetirPassword.TextChanged, txtCrearUsuario_Password.TextChanged
+        If txt_Crear_Usuario_RepetirPassword.Text.Trim() = txtCrearUsuario_Password.Text.Trim() And txtCrearUsuario_Password.Text <> "" Then
+            txtCrearUsuario_Password.BackColor = Color.FromArgb(100, 200, 100)
+            txt_Crear_Usuario_RepetirPassword.BackColor = Color.FromArgb(100, 200, 100)
+        Else
+            txtCrearUsuario_Password.BackColor = Color.FromArgb(255, 255, 255)
+            txt_Crear_Usuario_RepetirPassword.BackColor = Color.FromArgb(255, 255, 255)
+        End If
+    End Sub
 End Class

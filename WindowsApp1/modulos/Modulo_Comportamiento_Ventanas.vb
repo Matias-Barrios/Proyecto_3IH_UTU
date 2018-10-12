@@ -3,13 +3,11 @@
     Public Sub verificarRol(rol As String)
         If rol = "Admin" Then
             Ventana_Principal.pnlCalificaciones_Comboboxes.Visible = False
-
         End If
         If rol = "Administrativo" Then
             Ventana_Principal.btnUsuarios.Visible = False
-            Ventana_Principal.btnVentanaPrincipalConfiguracion.Visible = False
             Ventana_Principal.btnTareas.Visible = False
-
+            Ventana_Principal.btnTabHistorial.Visible = False
         End If
 
         If rol = "Docente" Then
@@ -20,11 +18,19 @@
             Ventana_Principal.btnVentanaPrincipalOrientaciones.Visible = False
             Ventana_Principal.btnCiudad.Visible = False
             Ventana_Principal.btnUsuarios.Visible = False
-            Ventana_Principal.btnVentanaPrincipalConfiguracion.Visible = False
+            Ventana_Principal.btnAlumnos.Visible = False
             Ventana_Principal.btnTareas.Location = New Point(12, 101)
+            Ventana_Principal.btnTabHistorial.Visible = False
+            Ventana_Principal.btnVentanaPrincipal_Admins_Administrativos.Visible = False
         End If
 
     End Sub
+    Public Function Decodificar_Historial(hist As DataTable)
+        For Each row In hist.Rows
+            row.Item("query") = System.Text.Encoding.Unicode.GetString(Convert.FromBase64String(row.Item("query")))
+        Next
+        Return hist
+    End Function
     Public Sub Rellenar_Control(un_control As Object, query As String)
         un_control.DataSource = hacer_consulta(query)
     End Sub
@@ -54,10 +60,9 @@
         Return ((ventana.Height * porcentaje) / 100)
     End Function
     Public Sub LogOff()
-        ' Aca iria una subrutina mas para borrar la sesion
-        ' TODO ^^
-        Console.Write("Clicky clicky")
-        WindowsApp1.Ventana_Principal.Hide()
+        WindowsApp1.Ventana_Login.txtNombreUsuario.Text = ""
+        WindowsApp1.Ventana_Login.txtPassword.Text = ""
+        WindowsApp1.Ventana_Principal.Dispose()
         WindowsApp1.Ventana_Login.Show()
     End Sub
     Public Sub Esconder_todos_los_paneles(ventana As Object)

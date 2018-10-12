@@ -168,6 +168,12 @@
     <Compile Include="Ventanas\ventana_crear_docente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventanas\ventana_historial.Designer.vb">
+      <DependentUpon>ventana_historial.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_historial.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\Ventana_Login.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -246,6 +252,12 @@
     <Compile Include="Ventanas\ventana_ver_calificaciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventanas\ventana_ver_grupos.Designer.vb">
+      <DependentUpon>ventana_ver_grupos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventanas\ventana_ver_grupos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Ventanas\ventana_ver_grupos_docente.Designer.vb">
       <DependentUpon>ventana_ver_grupos_docente.vb</DependentUpon>
     </Compile>
@@ -290,6 +302,9 @@
     <EmbeddedResource Include="Ventanas\ventana_crear_docente.resx">
       <DependentUpon>ventana_crear_docente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_historial.resx">
+      <DependentUpon>ventana_historial.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\Ventana_Login.resx">
       <DependentUpon>Ventana_Login.vb</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_ver_calificaciones.resx">
       <DependentUpon>ventana_ver_calificaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventanas\ventana_ver_grupos.resx">
+      <DependentUpon>ventana_ver_grupos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventanas\ventana_ver_grupos_docente.resx">
       <DependentUpon>ventana_ver_grupos_docente.vb</DependentUpon>
@@ -588,6 +606,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-button-icon-delete-button-png-image-5a756de9e12917.7504282715176452899223.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-1-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <ProjectExtensions />

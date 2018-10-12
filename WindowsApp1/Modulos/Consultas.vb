@@ -493,6 +493,23 @@ and Personas.baja = 'f'"
         hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return query
     End Function
+    Public Function CONSULTAS_MODIFICAR_ASIGNACION_ALUMNO_GRUPO(ci As Integer, id_grupo As Integer, id_instituto As Integer) As String
+        Dim materias_del_grupo = hacer_consulta(OBTENER_ASIGNATURAS_GRUPO(id_grupo))
+        If materias_del_grupo.Rows().Count() = 0 Then
+            MsgBox("Parece que el grupo con Id : " & id_grupo & " no tiene asignadas asignaturas!!")
+            Return "SELECT max(1) from Institutos;"
+        End If
+        hacer_consulta(CONSULTAS_DESVINCULAR_ALUMNO_GRUPO(ci))
+        Dim query As String = ""
+        For Each materia In materias_del_grupo.Rows()
+            query += vbNewLine & " INSERT INTO Relacion_Alumno_Asignatura_Grupos (foranea_CI_alumno, foranea_id_asignatura, foranea_id_grupo, foranea_id_instituto, nota_final_asignatura, nota_final_asignatura_proyecto)
+                        VALUES ( " & ci & " , " & materia.Item("foranea_id_asignatura").ToString() & ", " & id_grupo.ToString() & ", " & id_instituto.ToString() & ", 1, 1) ; " & vbNewLine
+        Next
+        Console.WriteLine(query)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, query, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return query
+    End Function
+
     Public Function OBTENER_ASIGNATURAS_GRUPO(id_grupo As Integer) As String
         Return "select distinct foranea_id_asignatura 
                     from Relacion_Grupos_Formado_Asignaturas
@@ -601,5 +618,20 @@ and Personas.baja = 'f'"
     End Function
     Public Function CONSULTA_SELECT_HISTORIAL() As String
         Return "SELECT * FROM Historial"
+    End Function
+    Public Function GRUPOS_DEL_DOCENTE(ci As Integer) As String
+        Dim query As String = "select Relacion_Docente_Asignatura_Grupos.foranea_id_grupo as Id,( Institutos.nombre || ' - ' || Grupos.nombre_grupo || ' - ' || Asignaturas.nombre_asignatura ) as Grupo
+                    from Relacion_Docente_Asignatura_Grupos
+                    join Grupos on Grupos.id_grupo = foranea_id_grupo
+                    join Institutos on Institutos.id_instituto = Relacion_Docente_Asignatura_Grupos.foranea_id_instituto
+                    join Asignaturas on Asignaturas.id_asignatura = Relacion_Docente_Asignatura_Grupos.foranea_id_asignatura
+                    where Relacion_Docente_Asignatura_Grupos.foranea_CI_docente = " & ci.ToString()
+        Console.WriteLine(query)
+        Return query
+    End Function
+    Public Function CONSULTAS_PERSONA_EXISTE(ci As Integer) As String
+        Dim query As String = "Select count(*) as cant FROM Personas Where CI = " & ci.ToString()
+        Console.WriteLine(query)
+        Return query
     End Function
 End Module

@@ -35,22 +35,21 @@ Partial Class Ventana_Login
         'txtNombreUsuario
         '
         Me.txtNombreUsuario.Location = New System.Drawing.Point(31, 163)
-        Me.txtNombreUsuario.MaxLength = 50
+        Me.txtNombreUsuario.MaxLength = 8
         Me.txtNombreUsuario.Name = "txtNombreUsuario"
         Me.txtNombreUsuario.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtNombreUsuario.Size = New System.Drawing.Size(201, 20)
         Me.txtNombreUsuario.TabIndex = 2
-        Me.txtNombreUsuario.Text = "1234"
         '
         'txtPassword
         '
         Me.txtPassword.Location = New System.Drawing.Point(31, 232)
         Me.txtPassword.MaxLength = 50
         Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtPassword.Size = New System.Drawing.Size(201, 20)
         Me.txtPassword.TabIndex = 3
-        Me.txtPassword.Text = "admi"
         '
         'btnLogin
         '

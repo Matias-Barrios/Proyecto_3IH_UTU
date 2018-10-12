@@ -78,4 +78,11 @@ Module Modulo_Usuarios
         End If
     End Function
 
+    Function Persona_Existe(ci As Integer) As Boolean
+        If hacer_consulta(CONSULTAS_PERSONA_EXISTE(ci)).Rows(0).Item("cant") <> 0 Then
+            Return True
+        End If
+        Return False
+    End Function
+
 End Module

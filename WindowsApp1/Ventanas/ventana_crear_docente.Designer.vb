@@ -82,7 +82,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteSegundoApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocenteSegundoApellido.ShortcutsEnabled = False
         Me.txtCrearDocenteSegundoApellido.Size = New System.Drawing.Size(208, 20)
-        Me.txtCrearDocenteSegundoApellido.TabIndex = 36
+        Me.txtCrearDocenteSegundoApellido.TabIndex = 35
         '
         'txtCrearDocentePrimerApellido
         '
@@ -94,7 +94,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocentePrimerApellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocentePrimerApellido.ShortcutsEnabled = False
         Me.txtCrearDocentePrimerApellido.Size = New System.Drawing.Size(208, 20)
-        Me.txtCrearDocentePrimerApellido.TabIndex = 35
+        Me.txtCrearDocentePrimerApellido.TabIndex = 34
         '
         'Label1
         '
@@ -131,7 +131,7 @@ Partial Class ventana_crear_docente
         Me.nudCrearDocenteGrado.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.nudCrearDocenteGrado.Name = "nudCrearDocenteGrado"
         Me.nudCrearDocenteGrado.Size = New System.Drawing.Size(144, 20)
-        Me.nudCrearDocenteGrado.TabIndex = 32
+        Me.nudCrearDocenteGrado.TabIndex = 38
         Me.nudCrearDocenteGrado.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'lblCrearDocenteGrado
@@ -187,7 +187,7 @@ Partial Class ventana_crear_docente
         Me.datepickerCrearDocenteFechaNacimiento.Location = New System.Drawing.Point(200, 237)
         Me.datepickerCrearDocenteFechaNacimiento.Name = "datepickerCrearDocenteFechaNacimiento"
         Me.datepickerCrearDocenteFechaNacimiento.Size = New System.Drawing.Size(208, 20)
-        Me.datepickerCrearDocenteFechaNacimiento.TabIndex = 29
+        Me.datepickerCrearDocenteFechaNacimiento.TabIndex = 37
         '
         'lblCrearDocenteFechaNacimiento
         '
@@ -212,7 +212,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteEmail.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocenteEmail.ShortcutsEnabled = False
         Me.txtCrearDocenteEmail.Size = New System.Drawing.Size(208, 20)
-        Me.txtCrearDocenteEmail.TabIndex = 27
+        Me.txtCrearDocenteEmail.TabIndex = 36
         '
         'lblCrearDocenteEmail
         '
@@ -237,7 +237,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocenteSegundoNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocenteSegundoNombre.ShortcutsEnabled = False
         Me.txtCrearDocenteSegundoNombre.Size = New System.Drawing.Size(208, 20)
-        Me.txtCrearDocenteSegundoNombre.TabIndex = 24
+        Me.txtCrearDocenteSegundoNombre.TabIndex = 33
         '
         'txtCrearDocentePrimerNombre
         '
@@ -249,7 +249,7 @@ Partial Class ventana_crear_docente
         Me.txtCrearDocentePrimerNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearDocentePrimerNombre.ShortcutsEnabled = False
         Me.txtCrearDocentePrimerNombre.Size = New System.Drawing.Size(208, 20)
-        Me.txtCrearDocentePrimerNombre.TabIndex = 22
+        Me.txtCrearDocentePrimerNombre.TabIndex = 32
         '
         'lblCrearDocenteApellido
         '
@@ -313,7 +313,7 @@ Partial Class ventana_crear_docente
         Me.btnCrearDocenteCancelar.Location = New System.Drawing.Point(12, 431)
         Me.btnCrearDocenteCancelar.Name = "btnCrearDocenteCancelar"
         Me.btnCrearDocenteCancelar.Size = New System.Drawing.Size(183, 32)
-        Me.btnCrearDocenteCancelar.TabIndex = 38
+        Me.btnCrearDocenteCancelar.TabIndex = 40
         Me.btnCrearDocenteCancelar.Text = "Cancelar"
         Me.btnCrearDocenteCancelar.UseVisualStyleBackColor = False
         '

@@ -57,7 +57,7 @@ Partial Class ventana_crear_admin
         Me.btnAdmin_Aceptar.Location = New System.Drawing.Point(249, 473)
         Me.btnAdmin_Aceptar.Name = "btnAdmin_Aceptar"
         Me.btnAdmin_Aceptar.Size = New System.Drawing.Size(183, 32)
-        Me.btnAdmin_Aceptar.TabIndex = 41
+        Me.btnAdmin_Aceptar.TabIndex = 40
         Me.btnAdmin_Aceptar.Text = "Aceptar"
         Me.btnAdmin_Aceptar.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnAdmin_Aceptar.UseVisualStyleBackColor = False
@@ -71,7 +71,7 @@ Partial Class ventana_crear_admin
         Me.btnAdmin_Cancelar.Location = New System.Drawing.Point(20, 473)
         Me.btnAdmin_Cancelar.Name = "btnAdmin_Cancelar"
         Me.btnAdmin_Cancelar.Size = New System.Drawing.Size(183, 32)
-        Me.btnAdmin_Cancelar.TabIndex = 42
+        Me.btnAdmin_Cancelar.TabIndex = 41
         Me.btnAdmin_Cancelar.Text = "Cancelar"
         Me.btnAdmin_Cancelar.UseVisualStyleBackColor = False
         '
@@ -117,7 +117,7 @@ Partial Class ventana_crear_admin
         Me.rdoAdministrativo.Location = New System.Drawing.Point(175, 24)
         Me.rdoAdministrativo.Name = "rdoAdministrativo"
         Me.rdoAdministrativo.Size = New System.Drawing.Size(179, 29)
-        Me.rdoAdministrativo.TabIndex = 40
+        Me.rdoAdministrativo.TabIndex = 39
         Me.rdoAdministrativo.Text = "Administrativo"
         Me.rdoAdministrativo.UseVisualStyleBackColor = True
         '
@@ -130,7 +130,7 @@ Partial Class ventana_crear_admin
         Me.rdoAdmin.Location = New System.Drawing.Point(40, 24)
         Me.rdoAdmin.Name = "rdoAdmin"
         Me.rdoAdmin.Size = New System.Drawing.Size(95, 29)
-        Me.rdoAdmin.TabIndex = 39
+        Me.rdoAdmin.TabIndex = 38
         Me.rdoAdmin.TabStop = True
         Me.rdoAdmin.Text = "Admin"
         Me.rdoAdmin.UseVisualStyleBackColor = True
@@ -213,7 +213,7 @@ Partial Class ventana_crear_admin
         Me.datepicker_Admin.Location = New System.Drawing.Point(194, 258)
         Me.datepicker_Admin.Name = "datepicker_Admin"
         Me.datepicker_Admin.Size = New System.Drawing.Size(193, 20)
-        Me.datepicker_Admin.TabIndex = 38
+        Me.datepicker_Admin.TabIndex = 37
         '
         'lblCrearAlumnoFechaNacimiento
         '
@@ -234,7 +234,7 @@ Partial Class ventana_crear_admin
         Me.txtAdmin_email.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtAdmin_email.ShortcutsEnabled = False
         Me.txtAdmin_email.Size = New System.Drawing.Size(193, 20)
-        Me.txtAdmin_email.TabIndex = 37
+        Me.txtAdmin_email.TabIndex = 36
         '
         'lblCrearAlumnoEmail
         '
@@ -255,7 +255,7 @@ Partial Class ventana_crear_admin
         Me.txtAdmin_segundo_apellido.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtAdmin_segundo_apellido.ShortcutsEnabled = False
         Me.txtAdmin_segundo_apellido.Size = New System.Drawing.Size(196, 20)
-        Me.txtAdmin_segundo_apellido.TabIndex = 36
+        Me.txtAdmin_segundo_apellido.TabIndex = 35
         '
         'txtAdmin_primer_nombre
         '

@@ -22,6 +22,7 @@ Partial Class ventana_crear_usuario
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ventana_crear_usuario))
         Me.lblCrear_Docente_Titulo = New WindowsApp1.BorderLabel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvP_Usuarios_Seleccion = New WindowsApp1.DGVPaginado()
@@ -32,6 +33,7 @@ Partial Class ventana_crear_usuario
         Me.lblCrearUsuario_RepitaPAssword = New System.Windows.Forms.Label()
         Me.txtCrearUsuario_Password = New System.Windows.Forms.TextBox()
         Me.lblCrearUsuarioPassword = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlCrearDocenteCI.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,7 +62,7 @@ Partial Class ventana_crear_usuario
         Me.dgvP_Usuarios_Seleccion.BackColor = System.Drawing.Color.AliceBlue
         Me.dgvP_Usuarios_Seleccion.Location = New System.Drawing.Point(15, 115)
         Me.dgvP_Usuarios_Seleccion.Name = "dgvP_Usuarios_Seleccion"
-        Me.dgvP_Usuarios_Seleccion.Size = New System.Drawing.Size(693, 336)
+        Me.dgvP_Usuarios_Seleccion.Size = New System.Drawing.Size(693, 273)
         Me.dgvP_Usuarios_Seleccion.TabIndex = 25
         '
         'pnlCrearDocenteCI
@@ -68,15 +70,16 @@ Partial Class ventana_crear_usuario
         Me.pnlCrearDocenteCI.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pnlCrearDocenteCI.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.pnlCrearDocenteCI.Controls.Add(Me.Label2)
         Me.pnlCrearDocenteCI.Controls.Add(Me.btnCrear_Usuario_Aceptar)
         Me.pnlCrearDocenteCI.Controls.Add(Me.btnCrearUsuario_Cancelar)
         Me.pnlCrearDocenteCI.Controls.Add(Me.txt_Crear_Usuario_RepetirPassword)
         Me.pnlCrearDocenteCI.Controls.Add(Me.lblCrearUsuario_RepitaPAssword)
         Me.pnlCrearDocenteCI.Controls.Add(Me.txtCrearUsuario_Password)
         Me.pnlCrearDocenteCI.Controls.Add(Me.lblCrearUsuarioPassword)
-        Me.pnlCrearDocenteCI.Location = New System.Drawing.Point(15, 457)
+        Me.pnlCrearDocenteCI.Location = New System.Drawing.Point(15, 394)
         Me.pnlCrearDocenteCI.Name = "pnlCrearDocenteCI"
-        Me.pnlCrearDocenteCI.Size = New System.Drawing.Size(693, 78)
+        Me.pnlCrearDocenteCI.Size = New System.Drawing.Size(693, 141)
         Me.pnlCrearDocenteCI.TabIndex = 31
         '
         'btnCrear_Usuario_Aceptar
@@ -109,8 +112,9 @@ Partial Class ventana_crear_usuario
         'txt_Crear_Usuario_RepetirPassword
         '
         Me.txt_Crear_Usuario_RepetirPassword.Location = New System.Drawing.Point(202, 49)
-        Me.txt_Crear_Usuario_RepetirPassword.MaxLength = 10
+        Me.txt_Crear_Usuario_RepetirPassword.MaxLength = 20
         Me.txt_Crear_Usuario_RepetirPassword.Name = "txt_Crear_Usuario_RepetirPassword"
+        Me.txt_Crear_Usuario_RepetirPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_Crear_Usuario_RepetirPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txt_Crear_Usuario_RepetirPassword.ShortcutsEnabled = False
         Me.txt_Crear_Usuario_RepetirPassword.Size = New System.Drawing.Size(248, 20)
@@ -130,8 +134,9 @@ Partial Class ventana_crear_usuario
         'txtCrearUsuario_Password
         '
         Me.txtCrearUsuario_Password.Location = New System.Drawing.Point(202, 13)
-        Me.txtCrearUsuario_Password.MaxLength = 10
+        Me.txtCrearUsuario_Password.MaxLength = 20
         Me.txtCrearUsuario_Password.Name = "txtCrearUsuario_Password"
+        Me.txtCrearUsuario_Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtCrearUsuario_Password.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearUsuario_Password.ShortcutsEnabled = False
         Me.txtCrearUsuario_Password.Size = New System.Drawing.Size(248, 20)
@@ -147,6 +152,16 @@ Partial Class ventana_crear_usuario
         Me.lblCrearUsuarioPassword.Size = New System.Drawing.Size(92, 24)
         Me.lblCrearUsuarioPassword.TabIndex = 19
         Me.lblCrearUsuarioPassword.Text = "Password"
+        '
+        'Label2
+        '
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Label2.Location = New System.Drawing.Point(4, 79)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(686, 61)
+        Me.Label2.TabIndex = 36
+        Me.Label2.Text = resources.GetString("Label2.Text")
         '
         'ventana_crear_usuario
         '
@@ -178,4 +193,5 @@ Partial Class ventana_crear_usuario
     Friend WithEvents lblCrearUsuarioPassword As Label
     Friend WithEvents btnCrear_Usuario_Aceptar As Button
     Friend WithEvents btnCrearUsuario_Cancelar As Button
+    Friend WithEvents Label2 As Label
 End Class

@@ -55,7 +55,7 @@ Partial Class ventana_crear_asignatura
         Me.rchCrearAsignatura_Descripcion.MaxLength = 500
         Me.rchCrearAsignatura_Descripcion.Name = "rchCrearAsignatura_Descripcion"
         Me.rchCrearAsignatura_Descripcion.Size = New System.Drawing.Size(609, 398)
-        Me.rchCrearAsignatura_Descripcion.TabIndex = 33
+        Me.rchCrearAsignatura_Descripcion.TabIndex = 32
         Me.rchCrearAsignatura_Descripcion.Text = ""
         '
         'lblCrearAsignatura_Descripcion
@@ -82,7 +82,7 @@ Partial Class ventana_crear_asignatura
         'txtCrearAsignaturaNombre
         '
         Me.txtCrearAsignaturaNombre.Location = New System.Drawing.Point(98, 12)
-        Me.txtCrearAsignaturaNombre.MaxLength = 100
+        Me.txtCrearAsignaturaNombre.MaxLength = 50
         Me.txtCrearAsignaturaNombre.Name = "txtCrearAsignaturaNombre"
         Me.txtCrearAsignaturaNombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtCrearAsignaturaNombre.ShortcutsEnabled = False
@@ -110,7 +110,7 @@ Partial Class ventana_crear_asignatura
         Me.btnCrearAsignaturaAceptar.Location = New System.Drawing.Point(488, 572)
         Me.btnCrearAsignaturaAceptar.Name = "btnCrearAsignaturaAceptar"
         Me.btnCrearAsignaturaAceptar.Size = New System.Drawing.Size(183, 32)
-        Me.btnCrearAsignaturaAceptar.TabIndex = 41
+        Me.btnCrearAsignaturaAceptar.TabIndex = 33
         Me.btnCrearAsignaturaAceptar.Text = "Aceptar"
         Me.btnCrearAsignaturaAceptar.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnCrearAsignaturaAceptar.UseVisualStyleBackColor = False
@@ -125,7 +125,7 @@ Partial Class ventana_crear_asignatura
         Me.btnCrearAsignaturaCancelar.Location = New System.Drawing.Point(15, 572)
         Me.btnCrearAsignaturaCancelar.Name = "btnCrearAsignaturaCancelar"
         Me.btnCrearAsignaturaCancelar.Size = New System.Drawing.Size(183, 32)
-        Me.btnCrearAsignaturaCancelar.TabIndex = 40
+        Me.btnCrearAsignaturaCancelar.TabIndex = 34
         Me.btnCrearAsignaturaCancelar.Text = "Cancelar"
         Me.btnCrearAsignaturaCancelar.UseVisualStyleBackColor = False
         '
@@ -147,7 +147,7 @@ Partial Class ventana_crear_asignatura
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
-        Me.ClientSize = New System.Drawing.Size(683, 618)
+        Me.ClientSize = New System.Drawing.Size(683, 619)
         Me.Controls.Add(Me.btnCrearAsignaturaAceptar)
         Me.Controls.Add(Me.pnlCrearAsignatura)
         Me.Controls.Add(Me.btnCrearAsignaturaCancelar)
