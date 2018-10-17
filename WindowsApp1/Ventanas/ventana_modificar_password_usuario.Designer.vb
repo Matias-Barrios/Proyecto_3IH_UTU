@@ -93,8 +93,9 @@ Partial Class ventana_modificar_password_usuario
         'txt_Modificar_Usuario_RepetirPassword
         '
         Me.txt_Modificar_Usuario_RepetirPassword.Location = New System.Drawing.Point(202, 83)
-        Me.txt_Modificar_Usuario_RepetirPassword.MaxLength = 30
+        Me.txt_Modificar_Usuario_RepetirPassword.MaxLength = 50
         Me.txt_Modificar_Usuario_RepetirPassword.Name = "txt_Modificar_Usuario_RepetirPassword"
+        Me.txt_Modificar_Usuario_RepetirPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txt_Modificar_Usuario_RepetirPassword.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txt_Modificar_Usuario_RepetirPassword.ShortcutsEnabled = False
         Me.txt_Modificar_Usuario_RepetirPassword.Size = New System.Drawing.Size(248, 20)
@@ -114,8 +115,9 @@ Partial Class ventana_modificar_password_usuario
         'txtModificarUsuario_Password
         '
         Me.txtModificarUsuario_Password.Location = New System.Drawing.Point(202, 47)
-        Me.txtModificarUsuario_Password.MaxLength = 30
+        Me.txtModificarUsuario_Password.MaxLength = 50
         Me.txtModificarUsuario_Password.Name = "txtModificarUsuario_Password"
+        Me.txtModificarUsuario_Password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtModificarUsuario_Password.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         Me.txtModificarUsuario_Password.ShortcutsEnabled = False
         Me.txtModificarUsuario_Password.Size = New System.Drawing.Size(248, 20)

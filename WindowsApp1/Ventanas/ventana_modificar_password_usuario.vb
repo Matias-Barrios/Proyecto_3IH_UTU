@@ -39,4 +39,23 @@ Public Class ventana_modificar_password_usuario
         Return True
     End Function
 
+    Private Sub txtModificarUsuario_Password_TextChanged(sender As Object, e As EventArgs) Handles txtModificarUsuario_Password.TextChanged
+        If txtModificarUsuario_Password.Text.Trim() = txt_Modificar_Usuario_RepetirPassword.Text.Trim() And txt_Modificar_Usuario_RepetirPassword.Text <> "" Then
+            txt_Modificar_Usuario_RepetirPassword.BackColor = Color.FromArgb(100, 200, 100)
+            txt_Modificar_Usuario_RepetirPassword.BackColor = Color.FromArgb(100, 200, 100)
+        Else
+            txtModificarUsuario_Password.BackColor = Color.FromArgb(255, 255, 255)
+            txt_Modificar_Usuario_RepetirPassword.BackColor = Color.FromArgb(255, 255, 255)
+        End If
+    End Sub
+
+    Private Sub txt_Modificar_Usuario_RepetirPassword_TextChanged(sender As Object, e As EventArgs) Handles txt_Modificar_Usuario_RepetirPassword.TextChanged
+        If txtModificarUsuario_Password.Text.Trim() = txt_Modificar_Usuario_RepetirPassword.Text.Trim() And txt_Modificar_Usuario_RepetirPassword.Text <> "" Then
+            txt_Modificar_Usuario_RepetirPassword.BackColor = Color.FromArgb(100, 200, 100)
+            txt_Modificar_Usuario_RepetirPassword.BackColor = Color.FromArgb(100, 200, 100)
+        Else
+            txtModificarUsuario_Password.BackColor = Color.FromArgb(255, 255, 255)
+            txt_Modificar_Usuario_RepetirPassword.BackColor = Color.FromArgb(255, 255, 255)
+        End If
+    End Sub
 End Class

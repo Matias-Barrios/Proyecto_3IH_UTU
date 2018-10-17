@@ -1,4 +1,6 @@
-﻿Public Class Ventana_Login
+﻿Imports System.Globalization
+
+Public Class Ventana_Login
 
 
 
@@ -11,7 +13,7 @@
         removerMarco(Ventana_Principal)
         Me.b_lblNombreUsuario.border_thickness = 4
         Me.b_lblPassword.border_thickness = 4
-        Adherir_Validacion(txtNombreUsuario, TipoValidacion.Solo_username)
+        Adherir_Validacion(txtNombreUsuario, TipoValidacion.Solo_cedulas)
         Adherir_Validacion(txtPassword, TipoValidacion.Solo_password)
     End Sub
 
@@ -40,9 +42,11 @@
             Me.Hide()
 
             Modulo_Comportamiento_Ventanas.verificarRol(USUARIO_LOGUEADO.tipo)
+            GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, "!!!!! USUARIO LOGUEADO !!!!!", Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture))
             Ventana_Principal.ShowDialog()
         Else
             MsgBox("Su nombre de usuario o contraseña es incorrecto", 0, "Error de autenticacion")
+            txtPassword.Text = ""
         End If
 
     End Sub

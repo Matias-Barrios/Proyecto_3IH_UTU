@@ -11,7 +11,7 @@
             dgvP_Usuarios.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_USUARIOS()))
             dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
             dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
-            dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+            dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_CIUDADES()))
             dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
             dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
             dgvP_Historial.Cargar_datos(Decodificar_Historial(hacer_consulta(CONSULTA_SELECT_HISTORIAL())))
@@ -613,5 +613,79 @@
             MsgBox(SELECCIONE_SOLO_UNO())
         End If
 
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Me.tabPrincipal.SelectedTab = Me.tabCarambula
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles btn_carambula_1.Click
+        dgvP_carambula_1.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_1()))
+    End Sub
+
+    Private Sub btn_carambula_2_Click(sender As Object, e As EventArgs) Handles btn_carambula_2.Click
+        dgvp_carambula_2.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_2()))
+    End Sub
+
+    Private Sub btn_carambula_3_Click(sender As Object, e As EventArgs) Handles btn_carambula_3.Click
+        dgvp_carambula_3.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_3()))
+    End Sub
+
+    Private Sub btn_carambula_4_Click(sender As Object, e As EventArgs) Handles btn_carambula_4.Click
+        dgvp_carambula_4.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_4()))
+    End Sub
+
+    Private Sub btn_carambula_5_Click(sender As Object, e As EventArgs) Handles btn_carambula_5.Click
+        dgvp_carambula_5.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_5()))
+    End Sub
+
+    Private Sub btn_carambula_6_Click(sender As Object, e As EventArgs) Handles btn_carambula_6.Click
+        dgvp_carambula_6.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_6()))
+    End Sub
+
+    Private Sub btn_carambula_7_Click(sender As Object, e As EventArgs) Handles btn_carambula_7.Click
+        dgvp_carambula_7.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_7()))
+    End Sub
+
+    Private Sub btn_carambula_8_Click(sender As Object, e As EventArgs) Handles btn_carambula_8.Click
+        dgvp_carambula_8.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_8()))
+    End Sub
+
+    Private Sub btn_carambula_9_Click(sender As Object, e As EventArgs) Handles btn_carambula_9.Click
+        dgvp_carambula_9.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_9()))
+    End Sub
+
+    Private Sub btn_carambula_10_Click(sender As Object, e As EventArgs) Handles btn_carambula_10.Click
+        dgvp_carambula_10.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_10()))
+    End Sub
+
+    Private Sub btn_carambula_11_Click(sender As Object, e As EventArgs) Handles btn_carambula_11.Click
+        dgvp_carambula_11.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_11()))
+    End Sub
+
+    Private Sub btn_carambula_12_Click(sender As Object, e As EventArgs) Handles btn_carambula_12.Click
+        dgvp_carambula_12.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_12()))
+    End Sub
+
+    Private Sub btn_carambula_13_Click(sender As Object, e As EventArgs) Handles btn_carambula_13.Click
+        dgvp_carambula_13.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_13()))
+    End Sub
+
+    Private Sub btn_carambula_14_Click(sender As Object, e As EventArgs) Handles btn_carambula_14.Click
+        dgvp_carambula_14.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_14()))
+    End Sub
+    Private Sub btn_carambula_15_Click(sender As Object, e As EventArgs) Handles btn_carambula_15.Click
+        dgvp_carambula_15.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_15()))
+    End Sub
+    Private Sub btn_carambula_16_Click(sender As Object, e As EventArgs) Handles btn_carambula_16.Click
+        dgvp_carambula_16.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_16()))
+    End Sub
+
+    Private Sub btn_carambula_17_Click(sender As Object, e As EventArgs) Handles btn_carambula_17.Click
+        dgvp_carambula_17.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_17()))
+    End Sub
+
+    Private Sub btn_carambula_18_Click(sender As Object, e As EventArgs) Handles btn_carambula_18.Click
+        dgvp_carambula_18.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_18()))
     End Sub
 End Class

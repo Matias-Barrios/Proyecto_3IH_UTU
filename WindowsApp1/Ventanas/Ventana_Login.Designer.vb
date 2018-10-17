@@ -102,7 +102,7 @@ Partial Class Ventana_Login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Silver
+        Me.BackColor = System.Drawing.Color.Teal
         Me.ClientSize = New System.Drawing.Size(259, 342)
         Me.Controls.Add(Me.picUserLogin)
         Me.Controls.Add(Me.b_lblPassword)

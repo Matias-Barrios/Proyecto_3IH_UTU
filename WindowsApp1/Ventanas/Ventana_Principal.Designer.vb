@@ -25,10 +25,14 @@ Partial Class Ventana_Principal
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Ventana_Principal))
         Me.btnLogoff = New System.Windows.Forms.Button()
         Me.pnlUsuario_logueado = New System.Windows.Forms.Panel()
+        Me.b_lblRol_Dinamico = New WindowsApp1.BorderLabel()
+        Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
+        Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
         Me.btnAlumnos = New System.Windows.Forms.Button()
         Me.btnMaterias = New System.Windows.Forms.Button()
         Me.tabPrincipal = New System.Windows.Forms.TabControl()
         Me.tabPrincipalAlumnos = New System.Windows.Forms.TabPage()
+        Me.dgvP_Alumnos = New WindowsApp1.DGVPaginado()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.lst_Agregar_grupo = New System.Windows.Forms.ComboBox()
         Me.Button6 = New System.Windows.Forms.Button()
@@ -39,6 +43,7 @@ Partial Class Ventana_Principal
         Me.btnAlumnosEliminar = New System.Windows.Forms.Button()
         Me.btnAlumnosCrearNuevo = New System.Windows.Forms.Button()
         Me.btnAlumnosImprimir = New System.Windows.Forms.Button()
+        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
         Me.tabpage_Grupos = New System.Windows.Forms.TabPage()
         Me.lstGrupos_vinc_Orientaciones = New System.Windows.Forms.ComboBox()
         Me.btnVincular_a_Orientacion = New System.Windows.Forms.Button()
@@ -48,12 +53,16 @@ Partial Class Ventana_Principal
         Me.btn_Grupos_Modificar = New System.Windows.Forms.Button()
         Me.btnGrupos_Eliminar = New System.Windows.Forms.Button()
         Me.btnGrupos_Agregar = New System.Windows.Forms.Button()
+        Me.dgvP_Grupos = New WindowsApp1.DGVPaginado()
+        Me.lbl_Grupos_Titulo = New WindowsApp1.BorderLabel()
         Me.tabPrincipalMaterias = New System.Windows.Forms.TabPage()
         Me.btn_Asignaturas_refrescar = New System.Windows.Forms.Button()
         Me.btnMateriasModificar = New System.Windows.Forms.Button()
         Me.btnMateriasEliminar = New System.Windows.Forms.Button()
         Me.btnMateriasCrear = New System.Windows.Forms.Button()
         Me.btnMateriasImprimir = New System.Windows.Forms.Button()
+        Me.dgvP_Asignaturas = New WindowsApp1.DGVPaginado()
+        Me.lblMaterias = New WindowsApp1.BorderLabel()
         Me.tabPrincipalTareas = New System.Windows.Forms.TabPage()
         Me.btn_refrescar_Calificaciones = New System.Windows.Forms.Button()
         Me.pnlCalificaciones_Comboboxes = New System.Windows.Forms.Panel()
@@ -68,7 +77,10 @@ Partial Class Ventana_Principal
         Me.btnEliminarCalificaciones = New System.Windows.Forms.Button()
         Me.btnCrearCalificaciones = New System.Windows.Forms.Button()
         Me.btnEvaluacionesImprimir = New System.Windows.Forms.Button()
+        Me.dgvP_Calificaciones = New WindowsApp1.DGVPaginado()
+        Me.lblTareas = New WindowsApp1.BorderLabel()
         Me.tabPrincipalDocentes = New System.Windows.Forms.TabPage()
+        Me.ver_grupos = New System.Windows.Forms.Button()
         Me.listDocenteAsignarGrupo = New System.Windows.Forms.ComboBox()
         Me.listAsignaturasDocente = New System.Windows.Forms.ComboBox()
         Me.btn_ver_grupos_asignados_docente = New System.Windows.Forms.Button()
@@ -78,42 +90,58 @@ Partial Class Ventana_Principal
         Me.btnDocentesEliminar = New System.Windows.Forms.Button()
         Me.btnDocentesCrearNuevo = New System.Windows.Forms.Button()
         Me.btnDocentesImprimir = New System.Windows.Forms.Button()
+        Me.BorderLabel5 = New WindowsApp1.BorderLabel()
+        Me.BorderLabel4 = New WindowsApp1.BorderLabel()
+        Me.dgvP_Docentes = New WindowsApp1.DGVPaginado()
+        Me.lblDocentes = New WindowsApp1.BorderLabel()
         Me.tabPrincipalUsuarios = New System.Windows.Forms.TabPage()
         Me.btn_usuarios_refrescar = New System.Windows.Forms.Button()
         Me.btnUsuariosImprimir = New System.Windows.Forms.Button()
         Me.btnUsuariosModificar = New System.Windows.Forms.Button()
         Me.btnUsuariosBotonEliminarUsuario = New System.Windows.Forms.Button()
         Me.btnUsuariosBotonCrearNuevo = New System.Windows.Forms.Button()
+        Me.dgvP_Usuarios = New WindowsApp1.DGVPaginado()
+        Me.lblUsuarios = New WindowsApp1.BorderLabel()
         Me.tabpageInstitutos = New System.Windows.Forms.TabPage()
         Me.btn_Institutos_refrescar = New System.Windows.Forms.Button()
         Me.btnInstitutoImprimir = New System.Windows.Forms.Button()
         Me.btnInstitutoModificar = New System.Windows.Forms.Button()
         Me.btnInstitutoEliminar = New System.Windows.Forms.Button()
         Me.btnInstitutoCrear = New System.Windows.Forms.Button()
+        Me.dgvP_Institutos = New WindowsApp1.DGVPaginado()
+        Me.BorderLabel1 = New WindowsApp1.BorderLabel()
         Me.tabOrientaciones = New System.Windows.Forms.TabPage()
         Me.btn_orientacion_refrescar = New System.Windows.Forms.Button()
         Me.btnOrientacionesModificar = New System.Windows.Forms.Button()
         Me.btnOrientacionesEliminar = New System.Windows.Forms.Button()
         Me.btnOrientacionesCrear = New System.Windows.Forms.Button()
         Me.btnImprimirOrientaciones = New System.Windows.Forms.Button()
+        Me.BorderLabel2 = New WindowsApp1.BorderLabel()
+        Me.dgvP_Orientaciones = New WindowsApp1.DGVPaginado()
         Me.tabCiudades = New System.Windows.Forms.TabPage()
         Me.btnCiudades_Refrescar = New System.Windows.Forms.Button()
         Me.btnCiudadesModificar = New System.Windows.Forms.Button()
         Me.btnCiudadesEliminar = New System.Windows.Forms.Button()
         Me.btnCiudadesCrear = New System.Windows.Forms.Button()
         Me.btnCiudadesImprimir = New System.Windows.Forms.Button()
+        Me.lblCiudades = New WindowsApp1.BorderLabel()
+        Me.dgvP_Ciudades = New WindowsApp1.DGVPaginado()
         Me.tabAdmins = New System.Windows.Forms.TabPage()
+        Me.dgv_Admins_Administrativos = New WindowsApp1.DGVPaginado()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btn_admins_Refrescar = New System.Windows.Forms.Button()
         Me.btnAdmins_Modificar = New System.Windows.Forms.Button()
         Me.btnAdmins_Eliminar = New System.Windows.Forms.Button()
         Me.btnAdmins_Crear = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.BorderLabel3 = New WindowsApp1.BorderLabel()
         Me.tabHistorial = New System.Windows.Forms.TabPage()
+        Me.dgvP_Historial = New WindowsApp1.DGVPaginado()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button15 = New System.Windows.Forms.Button()
+        Me.Historial = New WindowsApp1.BorderLabel()
         Me.btnTareas = New System.Windows.Forms.Button()
         Me.btnDocentes = New System.Windows.Forms.Button()
         Me.btnUsuarios = New System.Windows.Forms.Button()
@@ -124,34 +152,99 @@ Partial Class Ventana_Principal
         Me.btnVentanaPrincipal_Admins_Administrativos = New System.Windows.Forms.Button()
         Me.Control_impresion = New System.Drawing.Printing.PrintDocument()
         Me.btnTabHistorial = New System.Windows.Forms.Button()
-        Me.dgvP_Alumnos = New WindowsApp1.DGVPaginado()
-        Me.lblAlumnos_Titulo = New WindowsApp1.BorderLabel()
-        Me.dgvP_Grupos = New WindowsApp1.DGVPaginado()
-        Me.lbl_Grupos_Titulo = New WindowsApp1.BorderLabel()
-        Me.dgvP_Asignaturas = New WindowsApp1.DGVPaginado()
-        Me.lblMaterias = New WindowsApp1.BorderLabel()
-        Me.dgvP_Calificaciones = New WindowsApp1.DGVPaginado()
-        Me.lblTareas = New WindowsApp1.BorderLabel()
-        Me.BorderLabel5 = New WindowsApp1.BorderLabel()
-        Me.BorderLabel4 = New WindowsApp1.BorderLabel()
-        Me.dgvP_Docentes = New WindowsApp1.DGVPaginado()
-        Me.lblDocentes = New WindowsApp1.BorderLabel()
-        Me.dgvP_Usuarios = New WindowsApp1.DGVPaginado()
-        Me.lblUsuarios = New WindowsApp1.BorderLabel()
-        Me.dgvP_Institutos = New WindowsApp1.DGVPaginado()
-        Me.BorderLabel1 = New WindowsApp1.BorderLabel()
-        Me.BorderLabel2 = New WindowsApp1.BorderLabel()
-        Me.dgvP_Orientaciones = New WindowsApp1.DGVPaginado()
-        Me.lblCiudades = New WindowsApp1.BorderLabel()
-        Me.dgvP_Ciudades = New WindowsApp1.DGVPaginado()
-        Me.dgv_Admins_Administrativos = New WindowsApp1.DGVPaginado()
-        Me.BorderLabel3 = New WindowsApp1.BorderLabel()
-        Me.dgvP_Historial = New WindowsApp1.DGVPaginado()
-        Me.Historial = New WindowsApp1.BorderLabel()
-        Me.b_lblRol_Dinamico = New WindowsApp1.BorderLabel()
-        Me.b_lblNombreUsuario_Dinamico = New WindowsApp1.BorderLabel()
-        Me.b_lblusuarioLogueado_nombre = New WindowsApp1.BorderLabel()
-        Me.ver_grupos = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.tabCarambula = New System.Windows.Forms.TabPage()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.tabCarambula_1 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_2 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_3 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_4 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_5 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_6 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_7 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_8 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_9 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_10 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_11 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_12 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_13 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_14 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_15 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_16 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_17 = New System.Windows.Forms.TabPage()
+        Me.tabCarambula_18 = New System.Windows.Forms.TabPage()
+        Me.BorderLabel6 = New WindowsApp1.BorderLabel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.dgvP_carambula_1 = New WindowsApp1.DGVPaginado()
+        Me.btn_carambula_1 = New System.Windows.Forms.Button()
+        Me.btn_carambula_2 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_2 = New WindowsApp1.DGVPaginado()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel7 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_3 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_3 = New WindowsApp1.DGVPaginado()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel8 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_4 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_4 = New WindowsApp1.DGVPaginado()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel9 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_5 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_5 = New WindowsApp1.DGVPaginado()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel10 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_6 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_6 = New WindowsApp1.DGVPaginado()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel11 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_7 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_7 = New WindowsApp1.DGVPaginado()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel12 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_8 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_8 = New WindowsApp1.DGVPaginado()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel13 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_9 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_9 = New WindowsApp1.DGVPaginado()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel14 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_10 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_10 = New WindowsApp1.DGVPaginado()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel15 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_11 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_11 = New WindowsApp1.DGVPaginado()
+        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel16 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_12 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_12 = New WindowsApp1.DGVPaginado()
+        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel17 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_13 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_13 = New WindowsApp1.DGVPaginado()
+        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel18 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_14 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_14 = New WindowsApp1.DGVPaginado()
+        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel19 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_15 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_15 = New WindowsApp1.DGVPaginado()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel20 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_16 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_16 = New WindowsApp1.DGVPaginado()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel21 = New WindowsApp1.BorderLabel()
+        Me.dgvp_carambula_17 = New WindowsApp1.DGVPaginado()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel22 = New WindowsApp1.BorderLabel()
+        Me.btn_carambula_17 = New System.Windows.Forms.Button()
+        Me.btn_carambula_18 = New System.Windows.Forms.Button()
+        Me.dgvp_carambula_18 = New WindowsApp1.DGVPaginado()
+        Me.TextBox18 = New System.Windows.Forms.TextBox()
+        Me.BorderLabel23 = New WindowsApp1.BorderLabel()
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
@@ -169,6 +262,26 @@ Partial Class Ventana_Principal
         Me.Panel1.SuspendLayout()
         Me.tabHistorial.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.tabCarambula.SuspendLayout()
+        Me.TabControl1.SuspendLayout()
+        Me.tabCarambula_1.SuspendLayout()
+        Me.tabCarambula_2.SuspendLayout()
+        Me.tabCarambula_3.SuspendLayout()
+        Me.tabCarambula_4.SuspendLayout()
+        Me.tabCarambula_5.SuspendLayout()
+        Me.tabCarambula_6.SuspendLayout()
+        Me.tabCarambula_7.SuspendLayout()
+        Me.tabCarambula_8.SuspendLayout()
+        Me.tabCarambula_9.SuspendLayout()
+        Me.tabCarambula_10.SuspendLayout()
+        Me.tabCarambula_11.SuspendLayout()
+        Me.tabCarambula_12.SuspendLayout()
+        Me.tabCarambula_13.SuspendLayout()
+        Me.tabCarambula_14.SuspendLayout()
+        Me.tabCarambula_15.SuspendLayout()
+        Me.tabCarambula_16.SuspendLayout()
+        Me.tabCarambula_17.SuspendLayout()
+        Me.tabCarambula_18.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnLogoff
@@ -198,6 +311,39 @@ Partial Class Ventana_Principal
         Me.pnlUsuario_logueado.Name = "pnlUsuario_logueado"
         Me.pnlUsuario_logueado.Size = New System.Drawing.Size(1345, 35)
         Me.pnlUsuario_logueado.TabIndex = 6
+        '
+        'b_lblRol_Dinamico
+        '
+        Me.b_lblRol_Dinamico.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.b_lblRol_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblRol_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(233, Byte), Integer))
+        Me.b_lblRol_Dinamico.Location = New System.Drawing.Point(1172, 4)
+        Me.b_lblRol_Dinamico.Name = "b_lblRol_Dinamico"
+        Me.b_lblRol_Dinamico.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.b_lblRol_Dinamico.Size = New System.Drawing.Size(160, 24)
+        Me.b_lblRol_Dinamico.TabIndex = 4
+        Me.b_lblRol_Dinamico.Text = "rol"
+        Me.b_lblRol_Dinamico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'b_lblNombreUsuario_Dinamico
+        '
+        Me.b_lblNombreUsuario_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblNombreUsuario_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(182, Byte), Integer))
+        Me.b_lblNombreUsuario_Dinamico.Location = New System.Drawing.Point(122, 4)
+        Me.b_lblNombreUsuario_Dinamico.Name = "b_lblNombreUsuario_Dinamico"
+        Me.b_lblNombreUsuario_Dinamico.Size = New System.Drawing.Size(200, 24)
+        Me.b_lblNombreUsuario_Dinamico.TabIndex = 2
+        Me.b_lblNombreUsuario_Dinamico.Text = "usuario"
+        '
+        'b_lblusuarioLogueado_nombre
+        '
+        Me.b_lblusuarioLogueado_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.b_lblusuarioLogueado_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.b_lblusuarioLogueado_nombre.Location = New System.Drawing.Point(4, 7)
+        Me.b_lblusuarioLogueado_nombre.Name = "b_lblusuarioLogueado_nombre"
+        Me.b_lblusuarioLogueado_nombre.Size = New System.Drawing.Size(112, 24)
+        Me.b_lblusuarioLogueado_nombre.TabIndex = 1
+        Me.b_lblusuarioLogueado_nombre.Text = "Bienvenido,"
         '
         'btnAlumnos
         '
@@ -241,6 +387,7 @@ Partial Class Ventana_Principal
         Me.tabPrincipal.Controls.Add(Me.tabCiudades)
         Me.tabPrincipal.Controls.Add(Me.tabAdmins)
         Me.tabPrincipal.Controls.Add(Me.tabHistorial)
+        Me.tabPrincipal.Controls.Add(Me.tabCarambula)
         Me.tabPrincipal.Location = New System.Drawing.Point(229, 45)
         Me.tabPrincipal.Name = "tabPrincipal"
         Me.tabPrincipal.SelectedIndex = 0
@@ -258,6 +405,18 @@ Partial Class Ventana_Principal
         Me.tabPrincipalAlumnos.Size = New System.Drawing.Size(1120, 629)
         Me.tabPrincipalAlumnos.TabIndex = 0
         Me.tabPrincipalAlumnos.Text = "Alumnos"
+        '
+        'dgvP_Alumnos
+        '
+        Me.dgvP_Alumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Alumnos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Alumnos.Location = New System.Drawing.Point(0, 118)
+        Me.dgvP_Alumnos.Name = "dgvP_Alumnos"
+        Me.dgvP_Alumnos.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dgvP_Alumnos.Size = New System.Drawing.Size(1117, 508)
+        Me.dgvP_Alumnos.TabIndex = 27
         '
         'Panel7
         '
@@ -404,6 +563,16 @@ Partial Class Ventana_Principal
         Me.btnAlumnosImprimir.TabIndex = 28
         Me.btnAlumnosImprimir.UseVisualStyleBackColor = False
         '
+        'lblAlumnos_Titulo
+        '
+        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(2, 10)
+        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
+        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
+        Me.lblAlumnos_Titulo.TabIndex = 26
+        Me.lblAlumnos_Titulo.Text = "Alumnos"
+        '
         'tabpage_Grupos
         '
         Me.tabpage_Grupos.BackColor = System.Drawing.Color.Silver
@@ -536,6 +705,27 @@ Partial Class Ventana_Principal
         Me.btnGrupos_Agregar.TabIndex = 35
         Me.btnGrupos_Agregar.UseVisualStyleBackColor = False
         '
+        'dgvP_Grupos
+        '
+        Me.dgvP_Grupos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Grupos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Grupos.Location = New System.Drawing.Point(14, 110)
+        Me.dgvP_Grupos.Name = "dgvP_Grupos"
+        Me.dgvP_Grupos.Size = New System.Drawing.Size(1101, 516)
+        Me.dgvP_Grupos.TabIndex = 41
+        '
+        'lbl_Grupos_Titulo
+        '
+        Me.lbl_Grupos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_Grupos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lbl_Grupos_Titulo.Location = New System.Drawing.Point(6, 4)
+        Me.lbl_Grupos_Titulo.Name = "lbl_Grupos_Titulo"
+        Me.lbl_Grupos_Titulo.Size = New System.Drawing.Size(136, 36)
+        Me.lbl_Grupos_Titulo.TabIndex = 36
+        Me.lbl_Grupos_Titulo.Text = "Grupos"
+        '
         'tabPrincipalMaterias
         '
         Me.tabPrincipalMaterias.BackColor = System.Drawing.Color.Silver
@@ -627,6 +817,27 @@ Partial Class Ventana_Principal
         Me.btnMateriasImprimir.Size = New System.Drawing.Size(51, 50)
         Me.btnMateriasImprimir.TabIndex = 27
         Me.btnMateriasImprimir.UseVisualStyleBackColor = False
+        '
+        'dgvP_Asignaturas
+        '
+        Me.dgvP_Asignaturas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Asignaturas.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Asignaturas.Location = New System.Drawing.Point(9, 103)
+        Me.dgvP_Asignaturas.Name = "dgvP_Asignaturas"
+        Me.dgvP_Asignaturas.Size = New System.Drawing.Size(1104, 520)
+        Me.dgvP_Asignaturas.TabIndex = 32
+        '
+        'lblMaterias
+        '
+        Me.lblMaterias.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblMaterias.Location = New System.Drawing.Point(3, 4)
+        Me.lblMaterias.Name = "lblMaterias"
+        Me.lblMaterias.Size = New System.Drawing.Size(168, 36)
+        Me.lblMaterias.TabIndex = 11
+        Me.lblMaterias.Text = "Asignaturas"
         '
         'tabPrincipalTareas
         '
@@ -816,6 +1027,27 @@ Partial Class Ventana_Principal
         Me.btnEvaluacionesImprimir.TabIndex = 34
         Me.btnEvaluacionesImprimir.UseVisualStyleBackColor = False
         '
+        'dgvP_Calificaciones
+        '
+        Me.dgvP_Calificaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Calificaciones.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Calificaciones.Location = New System.Drawing.Point(9, 104)
+        Me.dgvP_Calificaciones.Name = "dgvP_Calificaciones"
+        Me.dgvP_Calificaciones.Size = New System.Drawing.Size(1104, 522)
+        Me.dgvP_Calificaciones.TabIndex = 41
+        '
+        'lblTareas
+        '
+        Me.lblTareas.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTareas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblTareas.Location = New System.Drawing.Point(3, 3)
+        Me.lblTareas.Name = "lblTareas"
+        Me.lblTareas.Size = New System.Drawing.Size(219, 36)
+        Me.lblTareas.TabIndex = 12
+        Me.lblTareas.Text = "Calificaciones"
+        '
         'tabPrincipalDocentes
         '
         Me.tabPrincipalDocentes.BackColor = System.Drawing.Color.Silver
@@ -839,6 +1071,21 @@ Partial Class Ventana_Principal
         Me.tabPrincipalDocentes.Size = New System.Drawing.Size(1120, 629)
         Me.tabPrincipalDocentes.TabIndex = 3
         Me.tabPrincipalDocentes.Text = "Docentes"
+        '
+        'ver_grupos
+        '
+        Me.ver_grupos.BackColor = System.Drawing.Color.White
+        Me.ver_grupos.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.group_members
+        Me.ver_grupos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ver_grupos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.ver_grupos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ver_grupos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.ver_grupos.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.ver_grupos.Location = New System.Drawing.Point(177, 69)
+        Me.ver_grupos.Name = "ver_grupos"
+        Me.ver_grupos.Size = New System.Drawing.Size(53, 52)
+        Me.ver_grupos.TabIndex = 46
+        Me.ver_grupos.UseVisualStyleBackColor = False
         '
         'listDocenteAsignarGrupo
         '
@@ -961,6 +1208,49 @@ Partial Class Ventana_Principal
         Me.btnDocentesImprimir.TabIndex = 28
         Me.btnDocentesImprimir.UseVisualStyleBackColor = False
         '
+        'BorderLabel5
+        '
+        Me.BorderLabel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BorderLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel5.Location = New System.Drawing.Point(548, 72)
+        Me.BorderLabel5.Name = "BorderLabel5"
+        Me.BorderLabel5.Size = New System.Drawing.Size(136, 21)
+        Me.BorderLabel5.TabIndex = 41
+        Me.BorderLabel5.Text = "Grupo"
+        '
+        'BorderLabel4
+        '
+        Me.BorderLabel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BorderLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel4.Location = New System.Drawing.Point(546, 3)
+        Me.BorderLabel4.Name = "BorderLabel4"
+        Me.BorderLabel4.Size = New System.Drawing.Size(136, 21)
+        Me.BorderLabel4.TabIndex = 40
+        Me.BorderLabel4.Text = "Asignatura"
+        '
+        'dgvP_Docentes
+        '
+        Me.dgvP_Docentes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Docentes.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Docentes.Location = New System.Drawing.Point(7, 127)
+        Me.dgvP_Docentes.Name = "dgvP_Docentes"
+        Me.dgvP_Docentes.Size = New System.Drawing.Size(1104, 494)
+        Me.dgvP_Docentes.TabIndex = 33
+        '
+        'lblDocentes
+        '
+        Me.lblDocentes.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDocentes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblDocentes.Location = New System.Drawing.Point(3, 3)
+        Me.lblDocentes.Name = "lblDocentes"
+        Me.lblDocentes.Size = New System.Drawing.Size(136, 36)
+        Me.lblDocentes.TabIndex = 13
+        Me.lblDocentes.Text = "Docentes"
+        '
         'tabPrincipalUsuarios
         '
         Me.tabPrincipalUsuarios.BackColor = System.Drawing.Color.Silver
@@ -1054,6 +1344,27 @@ Partial Class Ventana_Principal
         Me.btnUsuariosBotonCrearNuevo.TabIndex = 14
         Me.btnUsuariosBotonCrearNuevo.UseVisualStyleBackColor = False
         '
+        'dgvP_Usuarios
+        '
+        Me.dgvP_Usuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Usuarios.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Usuarios.Location = New System.Drawing.Point(10, 108)
+        Me.dgvP_Usuarios.Name = "dgvP_Usuarios"
+        Me.dgvP_Usuarios.Size = New System.Drawing.Size(1103, 515)
+        Me.dgvP_Usuarios.TabIndex = 34
+        '
+        'lblUsuarios
+        '
+        Me.lblUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblUsuarios.Location = New System.Drawing.Point(2, 2)
+        Me.lblUsuarios.Name = "lblUsuarios"
+        Me.lblUsuarios.Size = New System.Drawing.Size(136, 36)
+        Me.lblUsuarios.TabIndex = 14
+        Me.lblUsuarios.Text = "Usuarios"
+        '
         'tabpageInstitutos
         '
         Me.tabpageInstitutos.BackColor = System.Drawing.Color.Silver
@@ -1144,6 +1455,27 @@ Partial Class Ventana_Principal
         Me.btnInstitutoCrear.Size = New System.Drawing.Size(50, 50)
         Me.btnInstitutoCrear.TabIndex = 29
         Me.btnInstitutoCrear.UseVisualStyleBackColor = False
+        '
+        'dgvP_Institutos
+        '
+        Me.dgvP_Institutos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Institutos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Institutos.Location = New System.Drawing.Point(9, 103)
+        Me.dgvP_Institutos.Name = "dgvP_Institutos"
+        Me.dgvP_Institutos.Size = New System.Drawing.Size(1104, 523)
+        Me.dgvP_Institutos.TabIndex = 35
+        '
+        'BorderLabel1
+        '
+        Me.BorderLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel1.Location = New System.Drawing.Point(2, 1)
+        Me.BorderLabel1.Name = "BorderLabel1"
+        Me.BorderLabel1.Size = New System.Drawing.Size(136, 36)
+        Me.BorderLabel1.TabIndex = 27
+        Me.BorderLabel1.Text = "Institutos"
         '
         'tabOrientaciones
         '
@@ -1236,6 +1568,27 @@ Partial Class Ventana_Principal
         Me.btnImprimirOrientaciones.TabIndex = 35
         Me.btnImprimirOrientaciones.UseVisualStyleBackColor = False
         '
+        'BorderLabel2
+        '
+        Me.BorderLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel2.Location = New System.Drawing.Point(6, 5)
+        Me.BorderLabel2.Name = "BorderLabel2"
+        Me.BorderLabel2.Size = New System.Drawing.Size(201, 36)
+        Me.BorderLabel2.TabIndex = 32
+        Me.BorderLabel2.Text = "Orientaciones"
+        '
+        'dgvP_Orientaciones
+        '
+        Me.dgvP_Orientaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Orientaciones.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Orientaciones.Location = New System.Drawing.Point(9, 104)
+        Me.dgvP_Orientaciones.Name = "dgvP_Orientaciones"
+        Me.dgvP_Orientaciones.Size = New System.Drawing.Size(1104, 522)
+        Me.dgvP_Orientaciones.TabIndex = 34
+        '
         'tabCiudades
         '
         Me.tabCiudades.BackColor = System.Drawing.Color.Silver
@@ -1327,6 +1680,27 @@ Partial Class Ventana_Principal
         Me.btnCiudadesImprimir.TabIndex = 35
         Me.btnCiudadesImprimir.UseVisualStyleBackColor = False
         '
+        'lblCiudades
+        '
+        Me.lblCiudades.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCiudades.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.lblCiudades.Location = New System.Drawing.Point(4, 7)
+        Me.lblCiudades.Name = "lblCiudades"
+        Me.lblCiudades.Size = New System.Drawing.Size(136, 36)
+        Me.lblCiudades.TabIndex = 32
+        Me.lblCiudades.Text = "Ciudades"
+        '
+        'dgvP_Ciudades
+        '
+        Me.dgvP_Ciudades.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Ciudades.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Ciudades.Location = New System.Drawing.Point(7, 106)
+        Me.dgvP_Ciudades.Name = "dgvP_Ciudades"
+        Me.dgvP_Ciudades.Size = New System.Drawing.Size(1106, 520)
+        Me.dgvP_Ciudades.TabIndex = 34
+        '
         'tabAdmins
         '
         Me.tabAdmins.BackColor = System.Drawing.Color.Silver
@@ -1337,6 +1711,18 @@ Partial Class Ventana_Principal
         Me.tabAdmins.Size = New System.Drawing.Size(1120, 629)
         Me.tabAdmins.TabIndex = 9
         Me.tabAdmins.Text = "Admins/Administrativos"
+        '
+        'dgv_Admins_Administrativos
+        '
+        Me.dgv_Admins_Administrativos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgv_Admins_Administrativos.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgv_Admins_Administrativos.Location = New System.Drawing.Point(0, 119)
+        Me.dgv_Admins_Administrativos.Name = "dgv_Admins_Administrativos"
+        Me.dgv_Admins_Administrativos.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dgv_Admins_Administrativos.Size = New System.Drawing.Size(1117, 507)
+        Me.dgv_Admins_Administrativos.TabIndex = 28
         '
         'Panel1
         '
@@ -1428,6 +1814,16 @@ Partial Class Ventana_Principal
         Me.Button8.TabIndex = 28
         Me.Button8.UseVisualStyleBackColor = False
         '
+        'BorderLabel3
+        '
+        Me.BorderLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.BorderLabel3.Location = New System.Drawing.Point(2, 10)
+        Me.BorderLabel3.Name = "BorderLabel3"
+        Me.BorderLabel3.Size = New System.Drawing.Size(332, 36)
+        Me.BorderLabel3.TabIndex = 26
+        Me.BorderLabel3.Text = "Admins/Administrativos"
+        '
         'tabHistorial
         '
         Me.tabHistorial.BackColor = System.Drawing.Color.Silver
@@ -1438,6 +1834,18 @@ Partial Class Ventana_Principal
         Me.tabHistorial.Size = New System.Drawing.Size(1120, 629)
         Me.tabHistorial.TabIndex = 10
         Me.tabHistorial.Text = "Historial"
+        '
+        'dgvP_Historial
+        '
+        Me.dgvP_Historial.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvP_Historial.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_Historial.Location = New System.Drawing.Point(0, 119)
+        Me.dgvP_Historial.Name = "dgvP_Historial"
+        Me.dgvP_Historial.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.dgvP_Historial.Size = New System.Drawing.Size(1117, 508)
+        Me.dgvP_Historial.TabIndex = 28
         '
         'Panel2
         '
@@ -1495,6 +1903,16 @@ Partial Class Ventana_Principal
         Me.Button15.Size = New System.Drawing.Size(51, 50)
         Me.Button15.TabIndex = 28
         Me.Button15.UseVisualStyleBackColor = False
+        '
+        'Historial
+        '
+        Me.Historial.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Historial.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.Historial.Location = New System.Drawing.Point(2, 10)
+        Me.Historial.Name = "Historial"
+        Me.Historial.Size = New System.Drawing.Size(136, 36)
+        Me.Historial.TabIndex = 26
+        Me.Historial.Text = "Historial"
         '
         'btnTareas
         '
@@ -1615,309 +2033,1228 @@ Partial Class Ventana_Principal
         Me.btnTabHistorial.Text = "Historial"
         Me.btnTabHistorial.UseVisualStyleBackColor = False
         '
-        'dgvP_Alumnos
+        'Button7
         '
-        Me.dgvP_Alumnos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.Button7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button7.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Button7.Location = New System.Drawing.Point(12, 535)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(211, 29)
+        Me.Button7.TabIndex = 28
+        Me.Button7.Text = "Consultas Carambula 2018"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'tabCarambula
+        '
+        Me.tabCarambula.Controls.Add(Me.TabControl1)
+        Me.tabCarambula.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula.Name = "tabCarambula"
+        Me.tabCarambula.Size = New System.Drawing.Size(1120, 629)
+        Me.tabCarambula.TabIndex = 11
+        Me.tabCarambula.Text = "Consultas Carambula 2018"
+        Me.tabCarambula.UseVisualStyleBackColor = True
+        '
+        'TabControl1
+        '
+        Me.TabControl1.Controls.Add(Me.tabCarambula_1)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_2)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_3)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_4)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_5)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_6)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_7)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_8)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_9)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_10)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_11)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_12)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_13)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_14)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_15)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_16)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_17)
+        Me.TabControl1.Controls.Add(Me.tabCarambula_18)
+        Me.TabControl1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TabControl1.Location = New System.Drawing.Point(0, 0)
+        Me.TabControl1.Name = "TabControl1"
+        Me.TabControl1.SelectedIndex = 0
+        Me.TabControl1.Size = New System.Drawing.Size(1120, 629)
+        Me.TabControl1.TabIndex = 0
+        '
+        'tabCarambula_1
+        '
+        Me.tabCarambula_1.Controls.Add(Me.btn_carambula_1)
+        Me.tabCarambula_1.Controls.Add(Me.dgvP_carambula_1)
+        Me.tabCarambula_1.Controls.Add(Me.TextBox1)
+        Me.tabCarambula_1.Controls.Add(Me.BorderLabel6)
+        Me.tabCarambula_1.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_1.Name = "tabCarambula_1"
+        Me.tabCarambula_1.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabCarambula_1.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_1.TabIndex = 0
+        Me.tabCarambula_1.Text = "Consulta 1"
+        Me.tabCarambula_1.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_2
+        '
+        Me.tabCarambula_2.Controls.Add(Me.btn_carambula_2)
+        Me.tabCarambula_2.Controls.Add(Me.dgvp_carambula_2)
+        Me.tabCarambula_2.Controls.Add(Me.TextBox2)
+        Me.tabCarambula_2.Controls.Add(Me.BorderLabel7)
+        Me.tabCarambula_2.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_2.Name = "tabCarambula_2"
+        Me.tabCarambula_2.Padding = New System.Windows.Forms.Padding(3)
+        Me.tabCarambula_2.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_2.TabIndex = 1
+        Me.tabCarambula_2.Text = "Consulta 2"
+        Me.tabCarambula_2.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_3
+        '
+        Me.tabCarambula_3.Controls.Add(Me.btn_carambula_3)
+        Me.tabCarambula_3.Controls.Add(Me.dgvp_carambula_3)
+        Me.tabCarambula_3.Controls.Add(Me.TextBox3)
+        Me.tabCarambula_3.Controls.Add(Me.BorderLabel8)
+        Me.tabCarambula_3.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_3.Name = "tabCarambula_3"
+        Me.tabCarambula_3.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_3.TabIndex = 2
+        Me.tabCarambula_3.Text = "Consulta 3"
+        Me.tabCarambula_3.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_4
+        '
+        Me.tabCarambula_4.Controls.Add(Me.btn_carambula_4)
+        Me.tabCarambula_4.Controls.Add(Me.dgvp_carambula_4)
+        Me.tabCarambula_4.Controls.Add(Me.TextBox4)
+        Me.tabCarambula_4.Controls.Add(Me.BorderLabel9)
+        Me.tabCarambula_4.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_4.Name = "tabCarambula_4"
+        Me.tabCarambula_4.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_4.TabIndex = 3
+        Me.tabCarambula_4.Text = "Consulta 4"
+        Me.tabCarambula_4.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_5
+        '
+        Me.tabCarambula_5.Controls.Add(Me.btn_carambula_5)
+        Me.tabCarambula_5.Controls.Add(Me.dgvp_carambula_5)
+        Me.tabCarambula_5.Controls.Add(Me.TextBox5)
+        Me.tabCarambula_5.Controls.Add(Me.BorderLabel10)
+        Me.tabCarambula_5.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_5.Name = "tabCarambula_5"
+        Me.tabCarambula_5.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_5.TabIndex = 4
+        Me.tabCarambula_5.Text = "Consulta 5"
+        Me.tabCarambula_5.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_6
+        '
+        Me.tabCarambula_6.Controls.Add(Me.btn_carambula_6)
+        Me.tabCarambula_6.Controls.Add(Me.dgvp_carambula_6)
+        Me.tabCarambula_6.Controls.Add(Me.TextBox6)
+        Me.tabCarambula_6.Controls.Add(Me.BorderLabel11)
+        Me.tabCarambula_6.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_6.Name = "tabCarambula_6"
+        Me.tabCarambula_6.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_6.TabIndex = 5
+        Me.tabCarambula_6.Text = "Consulta 6"
+        Me.tabCarambula_6.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_7
+        '
+        Me.tabCarambula_7.Controls.Add(Me.btn_carambula_7)
+        Me.tabCarambula_7.Controls.Add(Me.dgvp_carambula_7)
+        Me.tabCarambula_7.Controls.Add(Me.TextBox7)
+        Me.tabCarambula_7.Controls.Add(Me.BorderLabel12)
+        Me.tabCarambula_7.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_7.Name = "tabCarambula_7"
+        Me.tabCarambula_7.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_7.TabIndex = 6
+        Me.tabCarambula_7.Text = "Consulta 7"
+        Me.tabCarambula_7.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_8
+        '
+        Me.tabCarambula_8.Controls.Add(Me.btn_carambula_8)
+        Me.tabCarambula_8.Controls.Add(Me.dgvp_carambula_8)
+        Me.tabCarambula_8.Controls.Add(Me.TextBox8)
+        Me.tabCarambula_8.Controls.Add(Me.BorderLabel13)
+        Me.tabCarambula_8.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_8.Name = "tabCarambula_8"
+        Me.tabCarambula_8.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_8.TabIndex = 7
+        Me.tabCarambula_8.Text = "Consulta 8"
+        Me.tabCarambula_8.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_9
+        '
+        Me.tabCarambula_9.Controls.Add(Me.btn_carambula_9)
+        Me.tabCarambula_9.Controls.Add(Me.dgvp_carambula_9)
+        Me.tabCarambula_9.Controls.Add(Me.TextBox9)
+        Me.tabCarambula_9.Controls.Add(Me.BorderLabel14)
+        Me.tabCarambula_9.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_9.Name = "tabCarambula_9"
+        Me.tabCarambula_9.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_9.TabIndex = 8
+        Me.tabCarambula_9.Text = "Consulta 9"
+        Me.tabCarambula_9.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_10
+        '
+        Me.tabCarambula_10.Controls.Add(Me.btn_carambula_10)
+        Me.tabCarambula_10.Controls.Add(Me.dgvp_carambula_10)
+        Me.tabCarambula_10.Controls.Add(Me.TextBox10)
+        Me.tabCarambula_10.Controls.Add(Me.BorderLabel15)
+        Me.tabCarambula_10.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_10.Name = "tabCarambula_10"
+        Me.tabCarambula_10.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_10.TabIndex = 9
+        Me.tabCarambula_10.Text = "Consulta 10"
+        Me.tabCarambula_10.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_11
+        '
+        Me.tabCarambula_11.Controls.Add(Me.btn_carambula_11)
+        Me.tabCarambula_11.Controls.Add(Me.dgvp_carambula_11)
+        Me.tabCarambula_11.Controls.Add(Me.TextBox11)
+        Me.tabCarambula_11.Controls.Add(Me.BorderLabel16)
+        Me.tabCarambula_11.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_11.Name = "tabCarambula_11"
+        Me.tabCarambula_11.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_11.TabIndex = 10
+        Me.tabCarambula_11.Text = "Consulta 11"
+        Me.tabCarambula_11.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_12
+        '
+        Me.tabCarambula_12.Controls.Add(Me.btn_carambula_12)
+        Me.tabCarambula_12.Controls.Add(Me.dgvp_carambula_12)
+        Me.tabCarambula_12.Controls.Add(Me.TextBox12)
+        Me.tabCarambula_12.Controls.Add(Me.BorderLabel17)
+        Me.tabCarambula_12.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_12.Name = "tabCarambula_12"
+        Me.tabCarambula_12.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_12.TabIndex = 11
+        Me.tabCarambula_12.Text = "Consulta 12"
+        Me.tabCarambula_12.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_13
+        '
+        Me.tabCarambula_13.Controls.Add(Me.btn_carambula_13)
+        Me.tabCarambula_13.Controls.Add(Me.dgvp_carambula_13)
+        Me.tabCarambula_13.Controls.Add(Me.TextBox13)
+        Me.tabCarambula_13.Controls.Add(Me.BorderLabel18)
+        Me.tabCarambula_13.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_13.Name = "tabCarambula_13"
+        Me.tabCarambula_13.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_13.TabIndex = 12
+        Me.tabCarambula_13.Text = "Consulta 13"
+        Me.tabCarambula_13.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_14
+        '
+        Me.tabCarambula_14.Controls.Add(Me.btn_carambula_14)
+        Me.tabCarambula_14.Controls.Add(Me.dgvp_carambula_14)
+        Me.tabCarambula_14.Controls.Add(Me.TextBox14)
+        Me.tabCarambula_14.Controls.Add(Me.BorderLabel19)
+        Me.tabCarambula_14.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_14.Name = "tabCarambula_14"
+        Me.tabCarambula_14.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_14.TabIndex = 13
+        Me.tabCarambula_14.Text = "Consulta 14"
+        Me.tabCarambula_14.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_15
+        '
+        Me.tabCarambula_15.Controls.Add(Me.btn_carambula_15)
+        Me.tabCarambula_15.Controls.Add(Me.dgvp_carambula_15)
+        Me.tabCarambula_15.Controls.Add(Me.TextBox15)
+        Me.tabCarambula_15.Controls.Add(Me.BorderLabel20)
+        Me.tabCarambula_15.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_15.Name = "tabCarambula_15"
+        Me.tabCarambula_15.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_15.TabIndex = 14
+        Me.tabCarambula_15.Text = "Consulta 15"
+        Me.tabCarambula_15.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_16
+        '
+        Me.tabCarambula_16.Controls.Add(Me.btn_carambula_16)
+        Me.tabCarambula_16.Controls.Add(Me.dgvp_carambula_16)
+        Me.tabCarambula_16.Controls.Add(Me.TextBox16)
+        Me.tabCarambula_16.Controls.Add(Me.BorderLabel21)
+        Me.tabCarambula_16.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_16.Name = "tabCarambula_16"
+        Me.tabCarambula_16.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_16.TabIndex = 15
+        Me.tabCarambula_16.Text = "Consulta 16"
+        Me.tabCarambula_16.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_17
+        '
+        Me.tabCarambula_17.Controls.Add(Me.btn_carambula_17)
+        Me.tabCarambula_17.Controls.Add(Me.dgvp_carambula_17)
+        Me.tabCarambula_17.Controls.Add(Me.TextBox17)
+        Me.tabCarambula_17.Controls.Add(Me.BorderLabel22)
+        Me.tabCarambula_17.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_17.Name = "tabCarambula_17"
+        Me.tabCarambula_17.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_17.TabIndex = 16
+        Me.tabCarambula_17.Text = "Consulta 17"
+        Me.tabCarambula_17.UseVisualStyleBackColor = True
+        '
+        'tabCarambula_18
+        '
+        Me.tabCarambula_18.Controls.Add(Me.btn_carambula_18)
+        Me.tabCarambula_18.Controls.Add(Me.dgvp_carambula_18)
+        Me.tabCarambula_18.Controls.Add(Me.TextBox18)
+        Me.tabCarambula_18.Controls.Add(Me.BorderLabel23)
+        Me.tabCarambula_18.Location = New System.Drawing.Point(4, 22)
+        Me.tabCarambula_18.Name = "tabCarambula_18"
+        Me.tabCarambula_18.Size = New System.Drawing.Size(1112, 603)
+        Me.tabCarambula_18.TabIndex = 17
+        Me.tabCarambula_18.Text = "Consulta 18"
+        Me.tabCarambula_18.UseVisualStyleBackColor = True
+        '
+        'BorderLabel6
+        '
+        Me.BorderLabel6.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel6.Location = New System.Drawing.Point(16, 9)
+        Me.BorderLabel6.Name = "BorderLabel6"
+        Me.BorderLabel6.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel6.TabIndex = 27
+        Me.BorderLabel6.Text = "Consulta 1"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Enabled = False
+        Me.TextBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox1.Location = New System.Drawing.Point(22, 65)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox1.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox1.TabIndex = 28
+        Me.TextBox1.Text = resources.GetString("TextBox1.Text")
+        '
+        'dgvP_carambula_1
+        '
+        Me.dgvP_carambula_1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Alumnos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Alumnos.Location = New System.Drawing.Point(0, 118)
-        Me.dgvP_Alumnos.Name = "dgvP_Alumnos"
-        Me.dgvP_Alumnos.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dgvP_Alumnos.Size = New System.Drawing.Size(1117, 508)
-        Me.dgvP_Alumnos.TabIndex = 27
+        Me.dgvP_carambula_1.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvP_carambula_1.Location = New System.Drawing.Point(22, 169)
+        Me.dgvP_carambula_1.Name = "dgvP_carambula_1"
+        Me.dgvP_carambula_1.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvP_carambula_1.TabIndex = 29
         '
-        'lblAlumnos_Titulo
+        'btn_carambula_1
         '
-        Me.lblAlumnos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblAlumnos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblAlumnos_Titulo.Location = New System.Drawing.Point(2, 10)
-        Me.lblAlumnos_Titulo.Name = "lblAlumnos_Titulo"
-        Me.lblAlumnos_Titulo.Size = New System.Drawing.Size(136, 36)
-        Me.lblAlumnos_Titulo.TabIndex = 26
-        Me.lblAlumnos_Titulo.Text = "Alumnos"
+        Me.btn_carambula_1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_1.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_1.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_1.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_1.Location = New System.Drawing.Point(1047, 9)
+        Me.btn_carambula_1.Name = "btn_carambula_1"
+        Me.btn_carambula_1.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_1.TabIndex = 47
+        Me.btn_carambula_1.UseVisualStyleBackColor = False
         '
-        'dgvP_Grupos
+        'btn_carambula_2
         '
-        Me.dgvP_Grupos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.btn_carambula_2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_2.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_2.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_2.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_2.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_2.Name = "btn_carambula_2"
+        Me.btn_carambula_2.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_2.TabIndex = 51
+        Me.btn_carambula_2.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_2
+        '
+        Me.dgvp_carambula_2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Grupos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Grupos.Location = New System.Drawing.Point(14, 110)
-        Me.dgvP_Grupos.Name = "dgvP_Grupos"
-        Me.dgvP_Grupos.Size = New System.Drawing.Size(1101, 516)
-        Me.dgvP_Grupos.TabIndex = 41
+        Me.dgvp_carambula_2.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_2.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_2.Name = "dgvp_carambula_2"
+        Me.dgvp_carambula_2.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_2.TabIndex = 50
         '
-        'lbl_Grupos_Titulo
+        'TextBox2
         '
-        Me.lbl_Grupos_Titulo.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbl_Grupos_Titulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lbl_Grupos_Titulo.Location = New System.Drawing.Point(6, 4)
-        Me.lbl_Grupos_Titulo.Name = "lbl_Grupos_Titulo"
-        Me.lbl_Grupos_Titulo.Size = New System.Drawing.Size(136, 36)
-        Me.lbl_Grupos_Titulo.TabIndex = 36
-        Me.lbl_Grupos_Titulo.Text = "Grupos"
+        Me.TextBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox2.Enabled = False
+        Me.TextBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox2.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox2.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox2.TabIndex = 49
+        Me.TextBox2.Text = resources.GetString("TextBox2.Text")
         '
-        'dgvP_Asignaturas
+        'BorderLabel7
         '
-        Me.dgvP_Asignaturas.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BorderLabel7.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel7.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel7.Name = "BorderLabel7"
+        Me.BorderLabel7.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel7.TabIndex = 48
+        Me.BorderLabel7.Text = "Consulta 2"
+        '
+        'btn_carambula_3
+        '
+        Me.btn_carambula_3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_3.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_3.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_3.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_3.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_3.Name = "btn_carambula_3"
+        Me.btn_carambula_3.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_3.TabIndex = 55
+        Me.btn_carambula_3.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_3
+        '
+        Me.dgvp_carambula_3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Asignaturas.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Asignaturas.Location = New System.Drawing.Point(9, 103)
-        Me.dgvP_Asignaturas.Name = "dgvP_Asignaturas"
-        Me.dgvP_Asignaturas.Size = New System.Drawing.Size(1104, 520)
-        Me.dgvP_Asignaturas.TabIndex = 32
+        Me.dgvp_carambula_3.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_3.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_3.Name = "dgvp_carambula_3"
+        Me.dgvp_carambula_3.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_3.TabIndex = 54
         '
-        'lblMaterias
+        'TextBox3
         '
-        Me.lblMaterias.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblMaterias.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblMaterias.Location = New System.Drawing.Point(3, 4)
-        Me.lblMaterias.Name = "lblMaterias"
-        Me.lblMaterias.Size = New System.Drawing.Size(168, 36)
-        Me.lblMaterias.TabIndex = 11
-        Me.lblMaterias.Text = "Asignaturas"
+        Me.TextBox3.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox3.Enabled = False
+        Me.TextBox3.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox3.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox3.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox3.TabIndex = 53
+        Me.TextBox3.Text = resources.GetString("TextBox3.Text")
         '
-        'dgvP_Calificaciones
+        'BorderLabel8
         '
-        Me.dgvP_Calificaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BorderLabel8.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel8.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel8.Name = "BorderLabel8"
+        Me.BorderLabel8.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel8.TabIndex = 52
+        Me.BorderLabel8.Text = "Consulta 3"
+        '
+        'btn_carambula_4
+        '
+        Me.btn_carambula_4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_4.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_4.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_4.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_4.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_4.Name = "btn_carambula_4"
+        Me.btn_carambula_4.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_4.TabIndex = 59
+        Me.btn_carambula_4.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_4
+        '
+        Me.dgvp_carambula_4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Calificaciones.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Calificaciones.Location = New System.Drawing.Point(9, 104)
-        Me.dgvP_Calificaciones.Name = "dgvP_Calificaciones"
-        Me.dgvP_Calificaciones.Size = New System.Drawing.Size(1104, 522)
-        Me.dgvP_Calificaciones.TabIndex = 41
+        Me.dgvp_carambula_4.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_4.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_4.Name = "dgvp_carambula_4"
+        Me.dgvp_carambula_4.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_4.TabIndex = 58
         '
-        'lblTareas
+        'TextBox4
         '
-        Me.lblTareas.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTareas.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblTareas.Location = New System.Drawing.Point(3, 3)
-        Me.lblTareas.Name = "lblTareas"
-        Me.lblTareas.Size = New System.Drawing.Size(219, 36)
-        Me.lblTareas.TabIndex = 12
-        Me.lblTareas.Text = "Calificaciones"
+        Me.TextBox4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox4.Enabled = False
+        Me.TextBox4.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox4.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox4.Multiline = True
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox4.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox4.TabIndex = 57
+        Me.TextBox4.Text = resources.GetString("TextBox4.Text")
         '
-        'BorderLabel5
+        'BorderLabel9
         '
-        Me.BorderLabel5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BorderLabel5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel5.Location = New System.Drawing.Point(548, 72)
-        Me.BorderLabel5.Name = "BorderLabel5"
-        Me.BorderLabel5.Size = New System.Drawing.Size(136, 21)
-        Me.BorderLabel5.TabIndex = 41
-        Me.BorderLabel5.Text = "Grupo"
+        Me.BorderLabel9.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel9.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel9.Name = "BorderLabel9"
+        Me.BorderLabel9.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel9.TabIndex = 56
+        Me.BorderLabel9.Text = "Consulta 4"
         '
-        'BorderLabel4
+        'btn_carambula_5
         '
-        Me.BorderLabel4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BorderLabel4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel4.Location = New System.Drawing.Point(546, 3)
-        Me.BorderLabel4.Name = "BorderLabel4"
-        Me.BorderLabel4.Size = New System.Drawing.Size(136, 21)
-        Me.BorderLabel4.TabIndex = 40
-        Me.BorderLabel4.Text = "Asignatura"
+        Me.btn_carambula_5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_5.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_5.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_5.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_5.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_5.Name = "btn_carambula_5"
+        Me.btn_carambula_5.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_5.TabIndex = 63
+        Me.btn_carambula_5.UseVisualStyleBackColor = False
         '
-        'dgvP_Docentes
+        'dgvp_carambula_5
         '
-        Me.dgvP_Docentes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.dgvp_carambula_5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Docentes.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Docentes.Location = New System.Drawing.Point(7, 127)
-        Me.dgvP_Docentes.Name = "dgvP_Docentes"
-        Me.dgvP_Docentes.Size = New System.Drawing.Size(1104, 494)
-        Me.dgvP_Docentes.TabIndex = 33
+        Me.dgvp_carambula_5.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_5.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_5.Name = "dgvp_carambula_5"
+        Me.dgvp_carambula_5.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_5.TabIndex = 62
         '
-        'lblDocentes
+        'TextBox5
         '
-        Me.lblDocentes.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDocentes.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblDocentes.Location = New System.Drawing.Point(3, 3)
-        Me.lblDocentes.Name = "lblDocentes"
-        Me.lblDocentes.Size = New System.Drawing.Size(136, 36)
-        Me.lblDocentes.TabIndex = 13
-        Me.lblDocentes.Text = "Docentes"
+        Me.TextBox5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox5.Enabled = False
+        Me.TextBox5.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox5.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox5.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox5.TabIndex = 61
+        Me.TextBox5.Text = resources.GetString("TextBox5.Text")
         '
-        'dgvP_Usuarios
+        'BorderLabel10
         '
-        Me.dgvP_Usuarios.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BorderLabel10.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel10.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel10.Name = "BorderLabel10"
+        Me.BorderLabel10.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel10.TabIndex = 60
+        Me.BorderLabel10.Text = "Consulta 5"
+        '
+        'btn_carambula_6
+        '
+        Me.btn_carambula_6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_6.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_6.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_6.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_6.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_6.Name = "btn_carambula_6"
+        Me.btn_carambula_6.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_6.TabIndex = 67
+        Me.btn_carambula_6.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_6
+        '
+        Me.dgvp_carambula_6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Usuarios.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Usuarios.Location = New System.Drawing.Point(10, 108)
-        Me.dgvP_Usuarios.Name = "dgvP_Usuarios"
-        Me.dgvP_Usuarios.Size = New System.Drawing.Size(1103, 515)
-        Me.dgvP_Usuarios.TabIndex = 34
+        Me.dgvp_carambula_6.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_6.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_6.Name = "dgvp_carambula_6"
+        Me.dgvp_carambula_6.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_6.TabIndex = 66
         '
-        'lblUsuarios
+        'TextBox6
         '
-        Me.lblUsuarios.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUsuarios.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblUsuarios.Location = New System.Drawing.Point(2, 2)
-        Me.lblUsuarios.Name = "lblUsuarios"
-        Me.lblUsuarios.Size = New System.Drawing.Size(136, 36)
-        Me.lblUsuarios.TabIndex = 14
-        Me.lblUsuarios.Text = "Usuarios"
+        Me.TextBox6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox6.Enabled = False
+        Me.TextBox6.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox6.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox6.Multiline = True
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox6.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox6.TabIndex = 65
+        Me.TextBox6.Text = resources.GetString("TextBox6.Text")
         '
-        'dgvP_Institutos
+        'BorderLabel11
         '
-        Me.dgvP_Institutos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BorderLabel11.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel11.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel11.Name = "BorderLabel11"
+        Me.BorderLabel11.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel11.TabIndex = 64
+        Me.BorderLabel11.Text = "Consulta 6"
+        '
+        'btn_carambula_7
+        '
+        Me.btn_carambula_7.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_7.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_7.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_7.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_7.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_7.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_7.Name = "btn_carambula_7"
+        Me.btn_carambula_7.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_7.TabIndex = 71
+        Me.btn_carambula_7.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_7
+        '
+        Me.dgvp_carambula_7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Institutos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Institutos.Location = New System.Drawing.Point(9, 103)
-        Me.dgvP_Institutos.Name = "dgvP_Institutos"
-        Me.dgvP_Institutos.Size = New System.Drawing.Size(1104, 523)
-        Me.dgvP_Institutos.TabIndex = 35
+        Me.dgvp_carambula_7.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_7.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_7.Name = "dgvp_carambula_7"
+        Me.dgvp_carambula_7.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_7.TabIndex = 70
         '
-        'BorderLabel1
+        'TextBox7
         '
-        Me.BorderLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel1.Location = New System.Drawing.Point(2, 1)
-        Me.BorderLabel1.Name = "BorderLabel1"
-        Me.BorderLabel1.Size = New System.Drawing.Size(136, 36)
-        Me.BorderLabel1.TabIndex = 27
-        Me.BorderLabel1.Text = "Institutos"
+        Me.TextBox7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox7.Enabled = False
+        Me.TextBox7.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox7.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox7.Multiline = True
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox7.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox7.TabIndex = 69
+        Me.TextBox7.Text = resources.GetString("TextBox7.Text")
         '
-        'BorderLabel2
+        'BorderLabel12
         '
-        Me.BorderLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel2.Location = New System.Drawing.Point(6, 5)
-        Me.BorderLabel2.Name = "BorderLabel2"
-        Me.BorderLabel2.Size = New System.Drawing.Size(201, 36)
-        Me.BorderLabel2.TabIndex = 32
-        Me.BorderLabel2.Text = "Orientaciones"
+        Me.BorderLabel12.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel12.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel12.Name = "BorderLabel12"
+        Me.BorderLabel12.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel12.TabIndex = 68
+        Me.BorderLabel12.Text = "Consulta 7"
         '
-        'dgvP_Orientaciones
+        'btn_carambula_8
         '
-        Me.dgvP_Orientaciones.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.btn_carambula_8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_8.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_8.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_8.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_8.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_8.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_8.Name = "btn_carambula_8"
+        Me.btn_carambula_8.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_8.TabIndex = 75
+        Me.btn_carambula_8.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_8
+        '
+        Me.dgvp_carambula_8.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Orientaciones.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Orientaciones.Location = New System.Drawing.Point(9, 104)
-        Me.dgvP_Orientaciones.Name = "dgvP_Orientaciones"
-        Me.dgvP_Orientaciones.Size = New System.Drawing.Size(1104, 522)
-        Me.dgvP_Orientaciones.TabIndex = 34
+        Me.dgvp_carambula_8.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_8.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_8.Name = "dgvp_carambula_8"
+        Me.dgvp_carambula_8.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_8.TabIndex = 74
         '
-        'lblCiudades
+        'TextBox8
         '
-        Me.lblCiudades.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCiudades.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.lblCiudades.Location = New System.Drawing.Point(4, 7)
-        Me.lblCiudades.Name = "lblCiudades"
-        Me.lblCiudades.Size = New System.Drawing.Size(136, 36)
-        Me.lblCiudades.TabIndex = 32
-        Me.lblCiudades.Text = "Ciudades"
+        Me.TextBox8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox8.Enabled = False
+        Me.TextBox8.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox8.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox8.Multiline = True
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox8.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox8.TabIndex = 73
+        Me.TextBox8.Text = resources.GetString("TextBox8.Text")
         '
-        'dgvP_Ciudades
+        'BorderLabel13
         '
-        Me.dgvP_Ciudades.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BorderLabel13.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel13.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel13.Name = "BorderLabel13"
+        Me.BorderLabel13.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel13.TabIndex = 72
+        Me.BorderLabel13.Text = "Consulta 8"
+        '
+        'btn_carambula_9
+        '
+        Me.btn_carambula_9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_9.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_9.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_9.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_9.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_9.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_9.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_9.Name = "btn_carambula_9"
+        Me.btn_carambula_9.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_9.TabIndex = 79
+        Me.btn_carambula_9.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_9
+        '
+        Me.dgvp_carambula_9.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Ciudades.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Ciudades.Location = New System.Drawing.Point(7, 106)
-        Me.dgvP_Ciudades.Name = "dgvP_Ciudades"
-        Me.dgvP_Ciudades.Size = New System.Drawing.Size(1106, 520)
-        Me.dgvP_Ciudades.TabIndex = 34
+        Me.dgvp_carambula_9.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_9.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_9.Name = "dgvp_carambula_9"
+        Me.dgvp_carambula_9.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_9.TabIndex = 78
         '
-        'dgv_Admins_Administrativos
+        'TextBox9
         '
-        Me.dgv_Admins_Administrativos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.TextBox9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox9.Enabled = False
+        Me.TextBox9.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox9.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox9.Multiline = True
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox9.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox9.TabIndex = 77
+        Me.TextBox9.Text = resources.GetString("TextBox9.Text")
+        '
+        'BorderLabel14
+        '
+        Me.BorderLabel14.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel14.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel14.Name = "BorderLabel14"
+        Me.BorderLabel14.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel14.TabIndex = 76
+        Me.BorderLabel14.Text = "Consulta 9"
+        '
+        'btn_carambula_10
+        '
+        Me.btn_carambula_10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_10.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_10.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_10.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_10.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_10.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_10.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_10.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_10.Name = "btn_carambula_10"
+        Me.btn_carambula_10.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_10.TabIndex = 83
+        Me.btn_carambula_10.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_10
+        '
+        Me.dgvp_carambula_10.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgv_Admins_Administrativos.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgv_Admins_Administrativos.Location = New System.Drawing.Point(0, 119)
-        Me.dgv_Admins_Administrativos.Name = "dgv_Admins_Administrativos"
-        Me.dgv_Admins_Administrativos.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dgv_Admins_Administrativos.Size = New System.Drawing.Size(1117, 507)
-        Me.dgv_Admins_Administrativos.TabIndex = 28
+        Me.dgvp_carambula_10.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_10.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_10.Name = "dgvp_carambula_10"
+        Me.dgvp_carambula_10.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_10.TabIndex = 82
         '
-        'BorderLabel3
+        'TextBox10
         '
-        Me.BorderLabel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BorderLabel3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.BorderLabel3.Location = New System.Drawing.Point(2, 10)
-        Me.BorderLabel3.Name = "BorderLabel3"
-        Me.BorderLabel3.Size = New System.Drawing.Size(332, 36)
-        Me.BorderLabel3.TabIndex = 26
-        Me.BorderLabel3.Text = "Admins/Administrativos"
+        Me.TextBox10.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox10.Enabled = False
+        Me.TextBox10.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox10.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox10.Multiline = True
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox10.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox10.TabIndex = 81
+        Me.TextBox10.Text = resources.GetString("TextBox10.Text")
         '
-        'dgvP_Historial
+        'BorderLabel15
         '
-        Me.dgvP_Historial.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.BorderLabel15.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel15.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel15.Name = "BorderLabel15"
+        Me.BorderLabel15.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel15.TabIndex = 80
+        Me.BorderLabel15.Text = "Consulta 10"
+        '
+        'btn_carambula_11
+        '
+        Me.btn_carambula_11.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_11.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_11.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_11.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_11.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_11.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_11.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_11.Name = "btn_carambula_11"
+        Me.btn_carambula_11.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_11.TabIndex = 87
+        Me.btn_carambula_11.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_11
+        '
+        Me.dgvp_carambula_11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dgvP_Historial.BackColor = System.Drawing.Color.AliceBlue
-        Me.dgvP_Historial.Location = New System.Drawing.Point(0, 119)
-        Me.dgvP_Historial.Name = "dgvP_Historial"
-        Me.dgvP_Historial.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dgvP_Historial.Size = New System.Drawing.Size(1117, 508)
-        Me.dgvP_Historial.TabIndex = 28
+        Me.dgvp_carambula_11.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_11.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_11.Name = "dgvp_carambula_11"
+        Me.dgvp_carambula_11.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_11.TabIndex = 86
         '
-        'Historial
+        'TextBox11
         '
-        Me.Historial.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Historial.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.Historial.Location = New System.Drawing.Point(2, 10)
-        Me.Historial.Name = "Historial"
-        Me.Historial.Size = New System.Drawing.Size(136, 36)
-        Me.Historial.TabIndex = 26
-        Me.Historial.Text = "Historial"
+        Me.TextBox11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox11.Enabled = False
+        Me.TextBox11.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox11.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox11.Multiline = True
+        Me.TextBox11.Name = "TextBox11"
+        Me.TextBox11.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox11.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox11.TabIndex = 85
+        Me.TextBox11.Text = resources.GetString("TextBox11.Text")
         '
-        'b_lblRol_Dinamico
+        'BorderLabel16
         '
-        Me.b_lblRol_Dinamico.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.b_lblRol_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblRol_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(43, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(233, Byte), Integer))
-        Me.b_lblRol_Dinamico.Location = New System.Drawing.Point(1172, 4)
-        Me.b_lblRol_Dinamico.Name = "b_lblRol_Dinamico"
-        Me.b_lblRol_Dinamico.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.b_lblRol_Dinamico.Size = New System.Drawing.Size(160, 24)
-        Me.b_lblRol_Dinamico.TabIndex = 4
-        Me.b_lblRol_Dinamico.Text = "rol"
-        Me.b_lblRol_Dinamico.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BorderLabel16.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel16.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel16.Name = "BorderLabel16"
+        Me.BorderLabel16.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel16.TabIndex = 84
+        Me.BorderLabel16.Text = "Consulta 11"
         '
-        'b_lblNombreUsuario_Dinamico
+        'btn_carambula_12
         '
-        Me.b_lblNombreUsuario_Dinamico.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblNombreUsuario_Dinamico.ForeColor = System.Drawing.Color.FromArgb(CType(CType(200, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(182, Byte), Integer))
-        Me.b_lblNombreUsuario_Dinamico.Location = New System.Drawing.Point(122, 4)
-        Me.b_lblNombreUsuario_Dinamico.Name = "b_lblNombreUsuario_Dinamico"
-        Me.b_lblNombreUsuario_Dinamico.Size = New System.Drawing.Size(200, 24)
-        Me.b_lblNombreUsuario_Dinamico.TabIndex = 2
-        Me.b_lblNombreUsuario_Dinamico.Text = "usuario"
+        Me.btn_carambula_12.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_12.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_12.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_12.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_12.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_12.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_12.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_12.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_12.Name = "btn_carambula_12"
+        Me.btn_carambula_12.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_12.TabIndex = 91
+        Me.btn_carambula_12.UseVisualStyleBackColor = False
         '
-        'b_lblusuarioLogueado_nombre
+        'dgvp_carambula_12
         '
-        Me.b_lblusuarioLogueado_nombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.b_lblusuarioLogueado_nombre.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.b_lblusuarioLogueado_nombre.Location = New System.Drawing.Point(4, 7)
-        Me.b_lblusuarioLogueado_nombre.Name = "b_lblusuarioLogueado_nombre"
-        Me.b_lblusuarioLogueado_nombre.Size = New System.Drawing.Size(112, 24)
-        Me.b_lblusuarioLogueado_nombre.TabIndex = 1
-        Me.b_lblusuarioLogueado_nombre.Text = "Bienvenido,"
+        Me.dgvp_carambula_12.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvp_carambula_12.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_12.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_12.Name = "dgvp_carambula_12"
+        Me.dgvp_carambula_12.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_12.TabIndex = 90
         '
-        'ver_grupos
+        'TextBox12
         '
-        Me.ver_grupos.BackColor = System.Drawing.Color.White
-        Me.ver_grupos.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.group_members
-        Me.ver_grupos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ver_grupos.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.ver_grupos.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ver_grupos.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.ver_grupos.ImageAlign = System.Drawing.ContentAlignment.TopLeft
-        Me.ver_grupos.Location = New System.Drawing.Point(177, 69)
-        Me.ver_grupos.Name = "ver_grupos"
-        Me.ver_grupos.Size = New System.Drawing.Size(53, 52)
-        Me.ver_grupos.TabIndex = 46
-        Me.ver_grupos.UseVisualStyleBackColor = False
+        Me.TextBox12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox12.Enabled = False
+        Me.TextBox12.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox12.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox12.Multiline = True
+        Me.TextBox12.Name = "TextBox12"
+        Me.TextBox12.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox12.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox12.TabIndex = 89
+        Me.TextBox12.Text = resources.GetString("TextBox12.Text")
+        '
+        'BorderLabel17
+        '
+        Me.BorderLabel17.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel17.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel17.Name = "BorderLabel17"
+        Me.BorderLabel17.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel17.TabIndex = 88
+        Me.BorderLabel17.Text = "Consulta 12"
+        '
+        'btn_carambula_13
+        '
+        Me.btn_carambula_13.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_13.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_13.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_13.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_13.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_13.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_13.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_13.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_13.Name = "btn_carambula_13"
+        Me.btn_carambula_13.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_13.TabIndex = 95
+        Me.btn_carambula_13.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_13
+        '
+        Me.dgvp_carambula_13.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvp_carambula_13.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_13.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_13.Name = "dgvp_carambula_13"
+        Me.dgvp_carambula_13.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_13.TabIndex = 94
+        '
+        'TextBox13
+        '
+        Me.TextBox13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox13.Enabled = False
+        Me.TextBox13.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox13.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox13.Multiline = True
+        Me.TextBox13.Name = "TextBox13"
+        Me.TextBox13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox13.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox13.TabIndex = 93
+        Me.TextBox13.Text = resources.GetString("TextBox13.Text")
+        '
+        'BorderLabel18
+        '
+        Me.BorderLabel18.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel18.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel18.Name = "BorderLabel18"
+        Me.BorderLabel18.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel18.TabIndex = 92
+        Me.BorderLabel18.Text = "Consulta 13"
+        '
+        'btn_carambula_14
+        '
+        Me.btn_carambula_14.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_14.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_14.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_14.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_14.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_14.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_14.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_14.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_14.Name = "btn_carambula_14"
+        Me.btn_carambula_14.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_14.TabIndex = 99
+        Me.btn_carambula_14.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_14
+        '
+        Me.dgvp_carambula_14.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvp_carambula_14.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_14.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_14.Name = "dgvp_carambula_14"
+        Me.dgvp_carambula_14.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_14.TabIndex = 98
+        '
+        'TextBox14
+        '
+        Me.TextBox14.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox14.Enabled = False
+        Me.TextBox14.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox14.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox14.Multiline = True
+        Me.TextBox14.Name = "TextBox14"
+        Me.TextBox14.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox14.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox14.TabIndex = 97
+        Me.TextBox14.Text = resources.GetString("TextBox14.Text")
+        '
+        'BorderLabel19
+        '
+        Me.BorderLabel19.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel19.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel19.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel19.Name = "BorderLabel19"
+        Me.BorderLabel19.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel19.TabIndex = 96
+        Me.BorderLabel19.Text = "Consulta 14"
+        '
+        'btn_carambula_15
+        '
+        Me.btn_carambula_15.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_15.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_15.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_15.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_15.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_15.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_15.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_15.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_15.Name = "btn_carambula_15"
+        Me.btn_carambula_15.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_15.TabIndex = 103
+        Me.btn_carambula_15.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_15
+        '
+        Me.dgvp_carambula_15.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvp_carambula_15.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_15.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_15.Name = "dgvp_carambula_15"
+        Me.dgvp_carambula_15.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_15.TabIndex = 102
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox15.Enabled = False
+        Me.TextBox15.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox15.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox15.Multiline = True
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox15.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox15.TabIndex = 101
+        Me.TextBox15.Text = resources.GetString("TextBox15.Text")
+        '
+        'BorderLabel20
+        '
+        Me.BorderLabel20.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel20.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel20.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel20.Name = "BorderLabel20"
+        Me.BorderLabel20.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel20.TabIndex = 100
+        Me.BorderLabel20.Text = "Consulta 15"
+        '
+        'btn_carambula_16
+        '
+        Me.btn_carambula_16.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_16.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_16.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_16.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_16.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_16.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_16.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_16.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_16.Name = "btn_carambula_16"
+        Me.btn_carambula_16.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_16.TabIndex = 107
+        Me.btn_carambula_16.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_16
+        '
+        Me.dgvp_carambula_16.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvp_carambula_16.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_16.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_16.Name = "dgvp_carambula_16"
+        Me.dgvp_carambula_16.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_16.TabIndex = 106
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox16.Enabled = False
+        Me.TextBox16.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox16.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox16.Multiline = True
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox16.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox16.TabIndex = 105
+        Me.TextBox16.Text = resources.GetString("TextBox16.Text")
+        '
+        'BorderLabel21
+        '
+        Me.BorderLabel21.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel21.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel21.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel21.Name = "BorderLabel21"
+        Me.BorderLabel21.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel21.TabIndex = 104
+        Me.BorderLabel21.Text = "Consulta 16"
+        '
+        'dgvp_carambula_17
+        '
+        Me.dgvp_carambula_17.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvp_carambula_17.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_17.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_17.Name = "dgvp_carambula_17"
+        Me.dgvp_carambula_17.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_17.TabIndex = 109
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox17.Enabled = False
+        Me.TextBox17.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox17.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox17.Multiline = True
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox17.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox17.TabIndex = 108
+        Me.TextBox17.Text = resources.GetString("TextBox17.Text")
+        '
+        'BorderLabel22
+        '
+        Me.BorderLabel22.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel22.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel22.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel22.Name = "BorderLabel22"
+        Me.BorderLabel22.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel22.TabIndex = 107
+        Me.BorderLabel22.Text = "Consulta 17"
+        '
+        'btn_carambula_17
+        '
+        Me.btn_carambula_17.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_17.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_17.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_17.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_17.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_17.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_17.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_17.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_17.Name = "btn_carambula_17"
+        Me.btn_carambula_17.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_17.TabIndex = 110
+        Me.btn_carambula_17.UseVisualStyleBackColor = False
+        '
+        'btn_carambula_18
+        '
+        Me.btn_carambula_18.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_carambula_18.BackColor = System.Drawing.Color.White
+        Me.btn_carambula_18.BackgroundImage = Global.WindowsApp1.My.Resources.Resources.download1
+        Me.btn_carambula_18.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btn_carambula_18.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_carambula_18.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_carambula_18.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_carambula_18.ImageAlign = System.Drawing.ContentAlignment.TopLeft
+        Me.btn_carambula_18.Location = New System.Drawing.Point(1045, 10)
+        Me.btn_carambula_18.Name = "btn_carambula_18"
+        Me.btn_carambula_18.Size = New System.Drawing.Size(53, 50)
+        Me.btn_carambula_18.TabIndex = 114
+        Me.btn_carambula_18.UseVisualStyleBackColor = False
+        '
+        'dgvp_carambula_18
+        '
+        Me.dgvp_carambula_18.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dgvp_carambula_18.BackColor = System.Drawing.Color.AliceBlue
+        Me.dgvp_carambula_18.Location = New System.Drawing.Point(20, 170)
+        Me.dgvp_carambula_18.Name = "dgvp_carambula_18"
+        Me.dgvp_carambula_18.Size = New System.Drawing.Size(1072, 422)
+        Me.dgvp_carambula_18.TabIndex = 113
+        '
+        'TextBox18
+        '
+        Me.TextBox18.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox18.Enabled = False
+        Me.TextBox18.ForeColor = System.Drawing.SystemColors.MenuHighlight
+        Me.TextBox18.Location = New System.Drawing.Point(20, 66)
+        Me.TextBox18.Multiline = True
+        Me.TextBox18.Name = "TextBox18"
+        Me.TextBox18.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox18.Size = New System.Drawing.Size(1078, 98)
+        Me.TextBox18.TabIndex = 112
+        Me.TextBox18.Text = resources.GetString("TextBox18.Text")
+        '
+        'BorderLabel23
+        '
+        Me.BorderLabel23.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BorderLabel23.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.BorderLabel23.Location = New System.Drawing.Point(14, 10)
+        Me.BorderLabel23.Name = "BorderLabel23"
+        Me.BorderLabel23.Size = New System.Drawing.Size(215, 36)
+        Me.BorderLabel23.TabIndex = 111
+        Me.BorderLabel23.Text = "Consulta 18"
         '
         'Ventana_Principal
         '
@@ -1926,6 +3263,7 @@ Partial Class Ventana_Principal
         Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.CausesValidation = False
         Me.ClientSize = New System.Drawing.Size(1369, 712)
+        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.btnTabHistorial)
         Me.Controls.Add(Me.btnVentanaPrincipal_Admins_Administrativos)
         Me.Controls.Add(Me.btnCiudad)
@@ -1961,6 +3299,44 @@ Partial Class Ventana_Principal
         Me.Panel1.ResumeLayout(False)
         Me.tabHistorial.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
+        Me.tabCarambula.ResumeLayout(False)
+        Me.TabControl1.ResumeLayout(False)
+        Me.tabCarambula_1.ResumeLayout(False)
+        Me.tabCarambula_1.PerformLayout()
+        Me.tabCarambula_2.ResumeLayout(False)
+        Me.tabCarambula_2.PerformLayout()
+        Me.tabCarambula_3.ResumeLayout(False)
+        Me.tabCarambula_3.PerformLayout()
+        Me.tabCarambula_4.ResumeLayout(False)
+        Me.tabCarambula_4.PerformLayout()
+        Me.tabCarambula_5.ResumeLayout(False)
+        Me.tabCarambula_5.PerformLayout()
+        Me.tabCarambula_6.ResumeLayout(False)
+        Me.tabCarambula_6.PerformLayout()
+        Me.tabCarambula_7.ResumeLayout(False)
+        Me.tabCarambula_7.PerformLayout()
+        Me.tabCarambula_8.ResumeLayout(False)
+        Me.tabCarambula_8.PerformLayout()
+        Me.tabCarambula_9.ResumeLayout(False)
+        Me.tabCarambula_9.PerformLayout()
+        Me.tabCarambula_10.ResumeLayout(False)
+        Me.tabCarambula_10.PerformLayout()
+        Me.tabCarambula_11.ResumeLayout(False)
+        Me.tabCarambula_11.PerformLayout()
+        Me.tabCarambula_12.ResumeLayout(False)
+        Me.tabCarambula_12.PerformLayout()
+        Me.tabCarambula_13.ResumeLayout(False)
+        Me.tabCarambula_13.PerformLayout()
+        Me.tabCarambula_14.ResumeLayout(False)
+        Me.tabCarambula_14.PerformLayout()
+        Me.tabCarambula_15.ResumeLayout(False)
+        Me.tabCarambula_15.PerformLayout()
+        Me.tabCarambula_16.ResumeLayout(False)
+        Me.tabCarambula_16.PerformLayout()
+        Me.tabCarambula_17.ResumeLayout(False)
+        Me.tabCarambula_17.PerformLayout()
+        Me.tabCarambula_18.ResumeLayout(False)
+        Me.tabCarambula_18.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2094,4 +3470,97 @@ Partial Class Ventana_Principal
     Friend WithEvents listAsignaturasDocente As ComboBox
     Friend WithEvents Button1 As Button
     Friend WithEvents ver_grupos As Button
+    Friend WithEvents tabCarambula As TabPage
+    Friend WithEvents TabControl1 As TabControl
+    Friend WithEvents tabCarambula_1 As TabPage
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents BorderLabel6 As BorderLabel
+    Friend WithEvents tabCarambula_2 As TabPage
+    Friend WithEvents tabCarambula_3 As TabPage
+    Friend WithEvents tabCarambula_4 As TabPage
+    Friend WithEvents tabCarambula_5 As TabPage
+    Friend WithEvents tabCarambula_6 As TabPage
+    Friend WithEvents tabCarambula_7 As TabPage
+    Friend WithEvents tabCarambula_8 As TabPage
+    Friend WithEvents tabCarambula_9 As TabPage
+    Friend WithEvents tabCarambula_10 As TabPage
+    Friend WithEvents tabCarambula_11 As TabPage
+    Friend WithEvents tabCarambula_12 As TabPage
+    Friend WithEvents tabCarambula_13 As TabPage
+    Friend WithEvents tabCarambula_14 As TabPage
+    Friend WithEvents tabCarambula_15 As TabPage
+    Friend WithEvents tabCarambula_16 As TabPage
+    Friend WithEvents tabCarambula_17 As TabPage
+    Friend WithEvents tabCarambula_18 As TabPage
+    Friend WithEvents Button7 As Button
+    Friend WithEvents dgvP_carambula_1 As DGVPaginado
+    Friend WithEvents btn_carambula_1 As Button
+    Friend WithEvents btn_carambula_2 As Button
+    Friend WithEvents dgvp_carambula_2 As DGVPaginado
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents BorderLabel7 As BorderLabel
+    Friend WithEvents btn_carambula_3 As Button
+    Friend WithEvents dgvp_carambula_3 As DGVPaginado
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents BorderLabel8 As BorderLabel
+    Friend WithEvents btn_carambula_4 As Button
+    Friend WithEvents dgvp_carambula_4 As DGVPaginado
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents BorderLabel9 As BorderLabel
+    Friend WithEvents btn_carambula_5 As Button
+    Friend WithEvents dgvp_carambula_5 As DGVPaginado
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents BorderLabel10 As BorderLabel
+    Friend WithEvents btn_carambula_6 As Button
+    Friend WithEvents dgvp_carambula_6 As DGVPaginado
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents BorderLabel11 As BorderLabel
+    Friend WithEvents btn_carambula_7 As Button
+    Friend WithEvents dgvp_carambula_7 As DGVPaginado
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents BorderLabel12 As BorderLabel
+    Friend WithEvents btn_carambula_8 As Button
+    Friend WithEvents dgvp_carambula_8 As DGVPaginado
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents BorderLabel13 As BorderLabel
+    Friend WithEvents btn_carambula_9 As Button
+    Friend WithEvents dgvp_carambula_9 As DGVPaginado
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents BorderLabel14 As BorderLabel
+    Friend WithEvents btn_carambula_10 As Button
+    Friend WithEvents dgvp_carambula_10 As DGVPaginado
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents BorderLabel15 As BorderLabel
+    Friend WithEvents btn_carambula_11 As Button
+    Friend WithEvents dgvp_carambula_11 As DGVPaginado
+    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents BorderLabel16 As BorderLabel
+    Friend WithEvents btn_carambula_12 As Button
+    Friend WithEvents dgvp_carambula_12 As DGVPaginado
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents BorderLabel17 As BorderLabel
+    Friend WithEvents btn_carambula_13 As Button
+    Friend WithEvents dgvp_carambula_13 As DGVPaginado
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents BorderLabel18 As BorderLabel
+    Friend WithEvents btn_carambula_14 As Button
+    Friend WithEvents dgvp_carambula_14 As DGVPaginado
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents BorderLabel19 As BorderLabel
+    Friend WithEvents btn_carambula_15 As Button
+    Friend WithEvents dgvp_carambula_15 As DGVPaginado
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents BorderLabel20 As BorderLabel
+    Friend WithEvents btn_carambula_16 As Button
+    Friend WithEvents dgvp_carambula_16 As DGVPaginado
+    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents BorderLabel21 As BorderLabel
+    Friend WithEvents btn_carambula_17 As Button
+    Friend WithEvents dgvp_carambula_17 As DGVPaginado
+    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents BorderLabel22 As BorderLabel
+    Friend WithEvents btn_carambula_18 As Button
+    Friend WithEvents dgvp_carambula_18 As DGVPaginado
+    Friend WithEvents TextBox18 As TextBox
+    Friend WithEvents BorderLabel23 As BorderLabel
 End Class
