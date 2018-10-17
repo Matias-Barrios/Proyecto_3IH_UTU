@@ -240,12 +240,22 @@ Module Consultas
         Dim consulta As String = "UPDATE Grupos SET " &
                 " turno = '" & Grupo.Cells("turno").Value() & "'," &
                 " foranea_id_instituto  = " & id_instituto & "," &
-                " foranea_id_orientacion  = " & id_orientacion & "," &
+                " foranea_id_orientacion  = " & id_orientacion &
                 " WHERE id_grupo = " & id_grupo_original
         Console.WriteLine(consulta)
         hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
+    Public Function MODIFICAR_CIUDAD(ciudad As DataGridViewRow, departamento As String) As String
+        Dim consulta As String = "UPDATE Ciudad SET " &
+                " nombre_ciudad = '" & ciudad.Cells("nombre_ciudad").Value() & "'," &
+                " nombre_departamento   = '" & departamento & "'" &
+                " WHERE id_ciudad  = " & ciudad.Cells("id_ciudad").Value().ToString()
+        Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return consulta
+    End Function
+
 
 
     Public Function CREAR_DOCENTE(CI As String, primer_nombre As String, segundo_nombre As String, primer_apellido As String, segundo_apellido As String, fecha_nacimiento As Date, email As String, grado As Integer, convertir_fecha_ingles As Boolean) As String
@@ -1217,4 +1227,13 @@ and not exists (
         Console.WriteLine(query)
         Return query
     End Function
+    Public Function CREAR_CIUDAD(nombre As String, departamento As String) As String
+        Dim consulta As String = "INSERT INTO Ciudad (nombre_ciudad , nombre_departamento , baja)
+                VALUES('" & nombre & "','" & departamento & "','" & "f" & "')"
+        Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+
+        Return consulta
+    End Function
+
 End Module

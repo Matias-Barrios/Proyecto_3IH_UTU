@@ -22,44 +22,44 @@ Partial Class ventana_crear_ciudades
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lstCrearGrupo_Turno = New System.Windows.Forms.ListBox()
+        Me.lst_crear_ciudad_departamento = New System.Windows.Forms.ListBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txt_crar_ciudad_nombre = New System.Windows.Forms.TextBox()
+        Me.txt_crear_ciudad_nombre = New System.Windows.Forms.TextBox()
         Me.lblCrearAlumnoCI = New System.Windows.Forms.Label()
         Me.lblCrear_alumno_nombre = New System.Windows.Forms.Label()
         Me.btnCrearGrupo_Aceptar = New System.Windows.Forms.Button()
-        Me.btnCrearGrupo_Cancelar = New System.Windows.Forms.Button()
+        Me.btn_crear_ciudad_Cancelar = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'lstCrearGrupo_Turno
+        'lst_crear_ciudad_departamento
         '
-        Me.lstCrearGrupo_Turno.FormattingEnabled = True
-        Me.lstCrearGrupo_Turno.Items.AddRange(New Object() {"Artigas", "Canelones", "Cerro_Largo", "Colonia", "Durazno", "Flores", "Florida", "Lavalleja", "Maldonado", "Montevideo", "Paysandú", "Río_Negro", "Rivera", "Rocha", "Salto", "San_José", "Soriano", "Tacuarembó", "Treinta_y_Tres"})
-        Me.lstCrearGrupo_Turno.Location = New System.Drawing.Point(12, 87)
-        Me.lstCrearGrupo_Turno.Name = "lstCrearGrupo_Turno"
-        Me.lstCrearGrupo_Turno.Size = New System.Drawing.Size(371, 251)
-        Me.lstCrearGrupo_Turno.TabIndex = 43
+        Me.lst_crear_ciudad_departamento.FormattingEnabled = True
+        Me.lst_crear_ciudad_departamento.Items.AddRange(New Object() {"Artigas", "Canelones", "Cerro_Largo", "Colonia", "Durazno", "Flores", "Florida", "Lavalleja", "Maldonado", "Montevideo", "Paysandú", "Río_Negro", "Rivera", "Rocha", "Salto", "San_José", "Soriano", "Tacuarembó", "Treinta_y_Tres"})
+        Me.lst_crear_ciudad_departamento.Location = New System.Drawing.Point(12, 87)
+        Me.lst_crear_ciudad_departamento.Name = "lst_crear_ciudad_departamento"
+        Me.lst_crear_ciudad_departamento.Size = New System.Drawing.Size(371, 251)
+        Me.lst_crear_ciudad_departamento.TabIndex = 43
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.txt_crar_ciudad_nombre)
+        Me.Panel2.Controls.Add(Me.txt_crear_ciudad_nombre)
         Me.Panel2.Controls.Add(Me.lblCrearAlumnoCI)
         Me.Panel2.Location = New System.Drawing.Point(12, 12)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(371, 42)
         Me.Panel2.TabIndex = 42
         '
-        'txt_crar_ciudad_nombre
+        'txt_crear_ciudad_nombre
         '
-        Me.txt_crar_ciudad_nombre.Location = New System.Drawing.Point(91, 12)
-        Me.txt_crar_ciudad_nombre.MaxLength = 10
-        Me.txt_crar_ciudad_nombre.Name = "txt_crar_ciudad_nombre"
-        Me.txt_crar_ciudad_nombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
-        Me.txt_crar_ciudad_nombre.ShortcutsEnabled = False
-        Me.txt_crar_ciudad_nombre.Size = New System.Drawing.Size(274, 20)
-        Me.txt_crar_ciudad_nombre.TabIndex = 31
+        Me.txt_crear_ciudad_nombre.Location = New System.Drawing.Point(91, 12)
+        Me.txt_crear_ciudad_nombre.MaxLength = 50
+        Me.txt_crear_ciudad_nombre.Name = "txt_crear_ciudad_nombre"
+        Me.txt_crear_ciudad_nombre.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
+        Me.txt_crear_ciudad_nombre.ShortcutsEnabled = False
+        Me.txt_crear_ciudad_nombre.Size = New System.Drawing.Size(274, 20)
+        Me.txt_crear_ciudad_nombre.TabIndex = 31
         '
         'lblCrearAlumnoCI
         '
@@ -98,19 +98,19 @@ Partial Class ventana_crear_ciudades
         Me.btnCrearGrupo_Aceptar.TextAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnCrearGrupo_Aceptar.UseVisualStyleBackColor = False
         '
-        'btnCrearGrupo_Cancelar
+        'btn_crear_ciudad_Cancelar
         '
-        Me.btnCrearGrupo_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.btnCrearGrupo_Cancelar.BackColor = System.Drawing.Color.White
-        Me.btnCrearGrupo_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCrearGrupo_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCrearGrupo_Cancelar.ForeColor = System.Drawing.Color.Red
-        Me.btnCrearGrupo_Cancelar.Location = New System.Drawing.Point(12, 344)
-        Me.btnCrearGrupo_Cancelar.Name = "btnCrearGrupo_Cancelar"
-        Me.btnCrearGrupo_Cancelar.Size = New System.Drawing.Size(183, 32)
-        Me.btnCrearGrupo_Cancelar.TabIndex = 44
-        Me.btnCrearGrupo_Cancelar.Text = "Cancelar"
-        Me.btnCrearGrupo_Cancelar.UseVisualStyleBackColor = False
+        Me.btn_crear_ciudad_Cancelar.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btn_crear_ciudad_Cancelar.BackColor = System.Drawing.Color.White
+        Me.btn_crear_ciudad_Cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_crear_ciudad_Cancelar.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_crear_ciudad_Cancelar.ForeColor = System.Drawing.Color.Red
+        Me.btn_crear_ciudad_Cancelar.Location = New System.Drawing.Point(12, 344)
+        Me.btn_crear_ciudad_Cancelar.Name = "btn_crear_ciudad_Cancelar"
+        Me.btn_crear_ciudad_Cancelar.Size = New System.Drawing.Size(183, 32)
+        Me.btn_crear_ciudad_Cancelar.TabIndex = 44
+        Me.btn_crear_ciudad_Cancelar.Text = "Cancelar"
+        Me.btn_crear_ciudad_Cancelar.UseVisualStyleBackColor = False
         '
         'ventana_crear_ciudades
         '
@@ -118,11 +118,11 @@ Partial Class ventana_crear_ciudades
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Silver
         Me.ClientSize = New System.Drawing.Size(388, 381)
-        Me.Controls.Add(Me.lstCrearGrupo_Turno)
+        Me.Controls.Add(Me.lst_crear_ciudad_departamento)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.lblCrear_alumno_nombre)
         Me.Controls.Add(Me.btnCrearGrupo_Aceptar)
-        Me.Controls.Add(Me.btnCrearGrupo_Cancelar)
+        Me.Controls.Add(Me.btn_crear_ciudad_Cancelar)
         Me.Name = "ventana_crear_ciudades"
         Me.Text = "Crear Ciudad"
         Me.Panel2.ResumeLayout(False)
@@ -132,11 +132,11 @@ Partial Class ventana_crear_ciudades
 
     End Sub
 
-    Friend WithEvents lstCrearGrupo_Turno As ListBox
+    Friend WithEvents lst_crear_ciudad_departamento As ListBox
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents txt_crar_ciudad_nombre As TextBox
+    Friend WithEvents txt_crear_ciudad_nombre As TextBox
     Friend WithEvents lblCrearAlumnoCI As Label
     Friend WithEvents lblCrear_alumno_nombre As Label
     Friend WithEvents btnCrearGrupo_Aceptar As Button
-    Friend WithEvents btnCrearGrupo_Cancelar As Button
+    Friend WithEvents btn_crear_ciudad_Cancelar As Button
 End Class

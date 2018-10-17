@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TextBox18.Text" xml:space="preserve">
-    <value>-- 18. Historial de las acciones realizadas por todos los Usuarios en un período de tiempo
--- determinado. Ordenar cronológicamente. (Fecha, Acción, Datos Usuario, Datos PC)
-
-select * from Historial
-	where fecha_hora &gt; TO_DATE('10-28-1986','%m-%d-%Y') and fecha_hora &lt; TO_DATE('01-01-2040','%m-%d-%Y');
-	order by fecha_hora;</value>
-  </data>
-  <metadata name="Control_impresion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="TextBox1.Text" xml:space="preserve">
     <value>-- 1.Listado general de los Docentes de un Instituto Ordenado por Apellido y Nombre. (Apellido, Nombre)
 
@@ -700,6 +689,17 @@ select * from Historial
 	where foranea_CI_Persona = 48914198
 	order by fecha_hora;</value>
   </data>
+  <data name="TextBox18.Text" xml:space="preserve">
+    <value>-- 18. Historial de las acciones realizadas por todos los Usuarios en un período de tiempo
+-- determinado. Ordenar cronológicamente. (Fecha, Acción, Datos Usuario, Datos PC)
+
+select * from Historial
+	where fecha_hora &gt; TO_DATE('10-28-1986','%m-%d-%Y') and fecha_hora &lt; TO_DATE('01-01-2040','%m-%d-%Y');
+	order by fecha_hora;</value>
+  </data>
+  <metadata name="Control_impresion.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>

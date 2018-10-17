@@ -21,6 +21,9 @@ Module Expresiones_Regulares
     Public Function GRUPO_NOMBRE_VALIDO() As String
         Return "^[1-3][A-Z][A-Z]$"
     End Function
+    Public Function CIUDAD_NOMBRE_VALIDO() As String
+        Return "^[A-Za-z ]{1,50}$"
+    End Function
 
 
 End Module

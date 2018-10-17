@@ -35,7 +35,7 @@ Public Class ventana_crear_grupo
             If validar_inputs() Then
                 Preparar_Grupo()
                 hacer_consulta(MODIFICAR_GRUPO(id_grupo_original, elGrupo, lstCrearGrupo_Instituto.SelectedItem.Item("id_instituto"), lstCrearGrupo_Orientacion.SelectedItem.Item("id_orientacion")))
-                Ventana_Principal.dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+                Ventana_Principal.dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
                 Me.Dispose()
             End If
         End If
@@ -69,4 +69,5 @@ Public Class ventana_crear_grupo
         'Si ta todo bien ta todo bien
         Return True
     End Function
+
 End Class

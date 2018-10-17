@@ -688,4 +688,18 @@
     Private Sub btn_carambula_18_Click(sender As Object, e As EventArgs) Handles btn_carambula_18.Click
         dgvp_carambula_18.Cargar_datos(hacer_consulta(CONSULTAS_CARAMBULA_18()))
     End Sub
+
+    Private Sub btnCiudadesCrear_Click(sender As Object, e As EventArgs) Handles btnCiudadesCrear.Click
+        ventana_crear_ciudades.ShowDialog()
+    End Sub
+
+    Private Sub btnCiudadesModificar_Click(sender As Object, e As EventArgs) Handles btnCiudadesModificar.Click
+        If Not dgvP_Ciudades.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_ciudades.Preparar_Ventana_Modificacion(dgvP_Ciudades.Filas_Seleccionadas().Item(0))
+            ventana_crear_ciudades.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
+    End Sub
 End Class
