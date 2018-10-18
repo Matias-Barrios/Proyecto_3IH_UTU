@@ -1,4 +1,7 @@
 ﻿Public Class ventana_crear_calificaciones
+    Private es_modificacion = False
+    Private calificacion As New DataGridViewRow()
+    Private CI_original As Integer
 
     Private Sub ventana_crear_calificaciones_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -32,20 +35,25 @@
         Return True
     End Function
 
-    Private Sub btnCrearCalificacion_Aceptar_Click(sender As Object, e As EventArgs) Handles btnCrearCalificacion_Aceptar.Click
-        If Validar() Then
-            For Each alumno In chkCrearCalificacion_Asignar_A.CheckedItems
 
-                hacer_consulta(CREAR_CALIFICACION(USUARIO_LOGUEADO.CI, alumno.Row.Item("foranea_ci_alumno"), Ventana_Principal.cboAsignatura.SelectedItem.Row.Item("id_asignatura"), Ventana_Principal.cboGrupo.SelectedItem.Row.Item("id_grupo"), Ventana_Principal.cboInstituto.SelectedItem.Row.Item("id_instituto"), txtCrearCalificaciones_Nombre_Descriptivo.Text.Trim(), lstCrearCalificacion_tipo.SelectedItem, Now.Date, rchCrearCalificacion_Comentario.Text.Trim(), nudCrearCalificacion_Nota.Value(), True))
-            Next
-
-            MsgBox(MENSAJE_EXITO)
-
-            Ventana_Principal.dgvP_Calificaciones.Cargar_datos(hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(Ventana_Principal.cboAsignatura, Ventana_Principal.cboInstituto, Ventana_Principal.cboGrupo)))
-        End If
-    End Sub
 
     Private Sub btnCrearCalificacion_Cancelar_Click(sender As Object, e As EventArgs) Handles btnCrearCalificacion_Cancelar.Click
         Me.Dispose()
+    End Sub
+
+    Public Sub Preparar_Ventana_Modificacion(cal As DataGridViewRow)
+        Try
+            es_modificacion = True
+            calificacion = cal
+            CI_original = calificacion.Cells("CI").Value()
+            txtCrearCalificaciones_Nombre_Descriptivo.Text = calificacion.Cells("nombre_calificacion").Value()
+            nudCrearCalificacion_Nota.Text = calificacion.Cells("nota").Value().ToString()
+            rchCrearCalificacion_Comentario.Text = calificacion.Cells("comentario").Value().ToString()
+
+
+        Catch ex As Exception
+            MsgBox(ex.ToString())
+        End Try
+
     End Sub
 End Class

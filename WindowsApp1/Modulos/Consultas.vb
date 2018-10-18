@@ -236,6 +236,40 @@ Module Consultas
         hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
     End Function
+
+    Public Function MODIFICAR_ORIENTACION(ori_original As Integer, nombre As String, descripcion As String) As String
+
+        Dim consulta As String = "UPDATE Orientaciones SET " &
+                " nombre_orientacion  = '" & nombre & "'," &
+                " descripcion   = '" & descripcion & "'" &
+                " WHERE id_orientacion = " & ori_original.ToString()
+        Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return consulta
+    End Function
+
+    Public Function MODIFICAR_DOCENTE(CI_original As Integer, docente As DataGridViewRow, convertir_fecha_ingles As Boolean) As String
+        Dim fecha_con_formato As String
+        Dim hace_proyecto_como_letra As String = "t"
+        If convertir_fecha_ingles Then
+            fecha_con_formato = docente.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
+        Else
+            fecha_con_formato = docente.Cells("fecha_nacimiento").Value().ToString().Split(" ")(0)
+        End If
+        Dim consulta As String = "UPDATE Personas SET " &
+                " CI = " & docente.Cells("CI").Value() & "," &
+                " primer_nombre = '" & docente.Cells("primer_nombre").Value() & "'," &
+                " segundo_nombre = '" & docente.Cells("segundo_nombre").Value() & "'," &
+                " primer_apellido = '" & docente.Cells("primer_apellido").Value() & "'," &
+                " segundo_apellido = '" & docente.Cells("primer_apellido").Value() & "'," &
+                " fecha_nacimiento = " & fecha_con_formato & "," &
+                " email = '" & docente.Cells("email").Value() & "'," &
+                " grado = " & docente.Cells("grado").Value().ToString() &
+                " WHERE CI = " & CI_original
+        Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return consulta
+    End Function
     Public Function MODIFICAR_GRUPO(id_grupo_original As Integer, Grupo As DataGridViewRow, id_instituto As Integer, id_orientacion As Integer) As String
         Dim consulta As String = "UPDATE Grupos SET " &
                 " turno = '" & Grupo.Cells("turno").Value() & "'," &
@@ -472,6 +506,14 @@ and Personas.baja = 'f'"
         Return consulta
     End Function
 
+    Public Function CREAR_ORIENTACION(nombre As String, descripcion As String) As String
+        Dim consulta As String = "INSERT INTO Orientaciones (nombre_orientacion , descripcion, baja)
+                                  VALUES('" & nombre & "','" & descripcion & "', 'f' )"
+        Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+        Return consulta
+        End
+    End Function
     Public Function CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS() As String
         Return "SELECT CI,tipo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas
@@ -1221,7 +1263,7 @@ and not exists (
     End Function
     Public Function CONSULTAS_CARAMBULA_18() As String
         Dim query As String = "select * from Historial
-	            where fecha_hora > TO_DATE('10-28-1986','%m-%d-%Y') and fecha_hora < TO_DATE('01-01-2040','%m-%d-%Y');
+	            where fecha_hora > TO_DATE('10-28-1986','%m-%d-%Y') and fecha_hora < TO_DATE('01-01-2040','%m-%d-%Y')
 	            order by fecha_hora;
                         "
         Console.WriteLine(query)
@@ -1233,6 +1275,27 @@ and not exists (
         Console.WriteLine(consulta)
         hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
 
+        Return consulta
+    End Function
+
+    Public Function CREAR_INSTITUTO(nombre As String, calle As String, numero As Integer, email As String, telefonos As String, id_ciudad As Integer) As String
+        Dim consulta As String = "INSERT INTO Institutos (nombre , calle, numero,telefonos, email , foranea_id_ciudad, baja)
+                VALUES('" & nombre & "','" & calle & "'," & numero &
+                ",'" & email &
+                & ",'" & telefonos & "'," & id_ciudad &
+                ",'" & "f" & "')"
+        Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+
+        Return consulta
+    End Function
+
+    Public Function CONSULTAS_COMBO_CIUDADES() As String
+        Dim consulta As String = "
+            select id_ciudad,( id_ciudad || ' - ' || nombre_ciudad) as nombre
+	            from Ciudad
+	            where baja = 'f'"
+        Console.WriteLine(consulta)
         Return consulta
     End Function
 

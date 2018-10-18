@@ -24,6 +24,9 @@ Module Expresiones_Regulares
     Public Function CIUDAD_NOMBRE_VALIDO() As String
         Return "^[A-Za-z ]{1,50}$"
     End Function
+    Public Function ORIEANTACION_NOMBRE_VALIDO() As String
+        Return "^[A-Za-z ]{1,50}$"
+    End Function
 
 
 End Module

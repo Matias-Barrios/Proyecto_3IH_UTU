@@ -41,7 +41,7 @@ Partial Class ventana_crear_calificaciones
         '
         'txtCrearCalificaciones_Nombre_Descriptivo
         '
-        Me.txtCrearCalificaciones_Nombre_Descriptivo.Location = New System.Drawing.Point(25, 47)
+        Me.txtCrearCalificaciones_Nombre_Descriptivo.Location = New System.Drawing.Point(25, 51)
         Me.txtCrearCalificaciones_Nombre_Descriptivo.MaxLength = 100
         Me.txtCrearCalificaciones_Nombre_Descriptivo.Name = "txtCrearCalificaciones_Nombre_Descriptivo"
         Me.txtCrearCalificaciones_Nombre_Descriptivo.Size = New System.Drawing.Size(262, 20)

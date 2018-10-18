@@ -12,6 +12,9 @@ Public Class ventana_crear_docente
         Adherir_Validacion(txtCrearDocenteSegundoApellido, TipoValidacion.Solo_nombres)
         Adherir_Validacion(txtCrearDocenteEmail, TipoValidacion.Solo_Email)
         datepickerCrearDocenteFechaNacimiento.MaxDate = Date.Now
+        If es_modificacion = True Then
+            txtCrearDocenteCI.Enabled = False
+        End If
     End Sub
 
     Private Sub btnCrearDocenteCancelar_Click(sender As Object, e As EventArgs)
@@ -25,14 +28,14 @@ Public Class ventana_crear_docente
         If Not es_modificacion Then
             If validar_inputs() Then
                 hacer_consulta(CREAR_DOCENTE(txtCrearDocenteCI.Text, txtCrearDocentePrimerNombre.Text, txtCrearDocenteSegundoNombre.Text, txtCrearDocentePrimerApellido.Text, txtCrearDocenteSegundoApellido.Text, datepickerCrearDocenteFechaNacimiento.Value, txtCrearDocenteEmail.Text, nudCrearDocenteGrado.Value, False))
-                Ventana_Principal.dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+                Ventana_Principal.dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
                 Me.Dispose()
             End If
         Else
             If validar_inputs() Then
                 Preparar_Docente()
-                hacer_consulta(MODIFICAR_ALUMNO(CI_original, docente, True))
-                Ventana_Principal.dgvP_Alumnos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ALUMNOS()))
+                hacer_consulta(MODIFICAR_DOCENTE(CI_original, docente, True))
+                Ventana_Principal.dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
                 Me.Dispose()
             End If
         End If

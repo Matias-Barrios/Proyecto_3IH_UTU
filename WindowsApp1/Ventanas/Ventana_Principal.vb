@@ -110,15 +110,17 @@
     End Sub
 
     Private Sub btnAlumnosModificar_Click(sender As Object, e As EventArgs)
-        ventana_modificar_alumno.ShowDialog()
+        If Not dgvP_Docentes.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_docente.Preparar_Ventana_Modificacion(dgvP_Docentes.Filas_Seleccionadas().Item(0))
+            ventana_crear_docente.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
     End Sub
 
     Private Sub btnAlumnosEliminar_Click(sender As Object, e As EventArgs)
 
-    End Sub
-
-    Private Sub btnDocentesModificar_Click(sender As Object, e As EventArgs) Handles btnDocentesModificar.Click
-        ventana_modificar_docente.ShowDialog()
     End Sub
 
     Private Sub btnVentanaPrincipalInstitutos_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalInstitutos.Click
@@ -319,6 +321,16 @@
 
         End If
     End Sub
+    Private Sub btnDocenteModificar_Click_1(sender As Object, e As EventArgs) Handles btnDocentesModificar.Click
+        If Not dgvP_Docentes.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_docente.Preparar_Ventana_Modificacion(dgvP_Docentes.Filas_Seleccionadas().Item(0))
+            ventana_crear_docente.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
+    End Sub
+
 
     Private Sub btnGrupos_Agregar_Click(sender As Object, e As EventArgs) Handles btnGrupos_Agregar.Click
         ventana_crear_grupo.Show()
@@ -697,6 +709,28 @@
         If Not dgvP_Ciudades.Cantidad_Selecciones() <> 1 Then
             ventana_crear_ciudades.Preparar_Ventana_Modificacion(dgvP_Ciudades.Filas_Seleccionadas().Item(0))
             ventana_crear_ciudades.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnDocentesModificar_Click(sender As Object, e As EventArgs) Handles btnDocentesModificar.Click
+
+    End Sub
+
+    Private Sub btnModificarCalificaciones_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnOrientacionesCrear_Click(sender As Object, e As EventArgs) Handles btnOrientacionesCrear.Click
+        ventana_crear_orientaciones.ShowDialog()
+    End Sub
+
+    Private Sub btnOrientacionesModificar_Click(sender As Object, e As EventArgs) Handles btnOrientacionesModificar.Click
+        If Not dgvP_Orientaciones.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_orientaciones.Preparar_Ventana_Modificacion(dgvP_Orientaciones.Filas_Seleccionadas().Item(0))
+            ventana_crear_orientaciones.ShowDialog()
         Else
             MsgBox(SELECCIONE_SOLO_UNO())
 
