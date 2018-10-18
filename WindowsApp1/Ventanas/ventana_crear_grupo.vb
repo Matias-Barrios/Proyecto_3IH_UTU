@@ -61,7 +61,7 @@ Public Class ventana_crear_grupo
 
     Private Function validar_inputs()
 
-        If Regex.Matches(txtCrearGrupoNombre.Text, GRUPO_NOMBRE_VALIDO()).Count <> 1 Then
+        If Regex.Matches(txtCrearGrupoNombre.Text, ORIEANTACION_NOMBRE_VALIDO()).Count <> 1 Then
             MsgBox("Debe completar el campo 'Nombre grupo' correctamente!")
             Return False
         End If
