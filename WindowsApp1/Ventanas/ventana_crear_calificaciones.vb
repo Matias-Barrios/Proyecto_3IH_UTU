@@ -6,9 +6,8 @@ Public Class ventana_crear_calificaciones
             Dim hola = Consultas.uno
             Dim pepe = Consultas.dos
             Dim cacho = Consultas.tres
-        hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(Ventana_Principal.cboAsignatura, Ventana_Principal.cboInstituto, Ventana_Principal.cboGrupo))
         chkCrearCalificacion_Asignar_A.DataSource = hacer_consulta(CONSULTAS_SELECT_ALUMNOS_CREAR_CALIFICACIONES_LISTBOX())
-            chkCrearCalificacion_Asignar_A.DisplayMember = "nombre_alumno"
+        chkCrearCalificacion_Asignar_A.DisplayMember = "nombre_alumno"
 
         End Sub
 

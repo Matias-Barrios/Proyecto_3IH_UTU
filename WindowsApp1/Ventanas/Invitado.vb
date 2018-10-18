@@ -21,5 +21,7 @@
 
 
     End Sub
-
+    Private Sub cerrar_ventana(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Dispose()
+    End Sub
 End Class

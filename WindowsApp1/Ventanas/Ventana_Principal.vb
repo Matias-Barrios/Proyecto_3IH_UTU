@@ -15,6 +15,8 @@
             dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
             dgv_Admins_Administrativos.Cargar_datos(hacer_consulta(CONSULTA_SELECT_ADMINS_ADMINISTRATIVOS()))
             dgvP_Historial.Cargar_datos(Decodificar_Historial(hacer_consulta(CONSULTA_SELECT_HISTORIAL())))
+            chk_asignaturas_para_grupo.DataSource = hacer_consulta(CONSULTAS_TODOS_LAS_ASIGNATURAS())
+            chk_asignaturas_para_grupo.DisplayMember = "Asignatura"
         ElseIf tipo = "Docente" Then
             Me.tabPrincipal.SelectedTab = Me.tabPrincipalTareas
         ElseIf tipo = "Administrativo" Then
@@ -26,6 +28,8 @@
             dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
             dgvP_Ciudades.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
             dgvP_Orientaciones.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_ORIENTACIONES()))
+            chk_asignaturas_para_grupo.DataSource = hacer_consulta(CONSULTAS_TODOS_LAS_ASIGNATURAS())
+            chk_asignaturas_para_grupo.DisplayMember = "Asignatura"
         End If
 
 
@@ -57,6 +61,7 @@
         Me.tabPrincipal.ItemSize = New Size(0, 1)
         Me.tabPrincipal.SizeMode = TabSizeMode.Fixed
         AddHandler Control_impresion.PrintPage, AddressOf Impresion.Imprimir
+        hacer_consulta(COMBOBOX_CALIFICACIONES_COMPLETA(cboAsignatura, cboInstituto, cboGrupo))
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) _
@@ -151,6 +156,8 @@
 
     Private Sub btn_Grupos_Click(sender As Object, e As EventArgs) Handles btn_Grupos.Click
         Me.tabPrincipal.SelectedTab = Me.tabpage_Grupos
+        chk_asignaturas_para_grupo.DataSource = hacer_consulta(CONSULTAS_TODOS_LAS_ASIGNATURAS())
+        chk_asignaturas_para_grupo.DisplayMember = "Asignatura"
     End Sub
 
     Private Sub btnUsuariosBotonEliminarUsuario_Click(sender As Object, e As EventArgs) Handles btnUsuariosBotonEliminarUsuario.Click
@@ -249,6 +256,7 @@
 
                 For Each fila In dgvP_Docentes.Filas_Seleccionadas()
                     hacer_consulta(BAJA_LOGICA_DOCENTE(fila.Cells("CI").Value()))
+
                 Next
 
                 dgvP_Docentes.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_DOCENTES()))
@@ -745,6 +753,22 @@
         Else
             MsgBox(SELECCIONE_SOLO_UNO())
 
+        End If
+    End Sub
+
+    Private Sub btn_grupo_vincular_a_asignatura_Click(sender As Object, e As EventArgs) Handles btn_grupo_vincular_a_asignatura.Click
+        If dgvP_Grupos.Cantidad_Selecciones() > 0 Then
+            If MessageBox.Show(SEGURO_ASIGNAR_GRUPO_A_ORIENTACION(), "Seguro?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = System.Windows.Forms.DialogResult.Yes Then
+                For Each fila In dgvP_Grupos.Filas_Seleccionadas()
+                    For Each asignatura In chk_asignaturas_para_grupo.CheckedItems
+                        hacer_consulta(CONSULTAS_ASIGNAR_GRUPO_A_ASIGNATURA(fila.Cells("id_grupo").Value(), asignatura.Item("id_asignatura")))
+                    Next
+                Next
+                dgvP_Grupos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_GRUPOS()))
+                chk_asignaturas_para_grupo.ClearSelected()
+            End If
+        Else
+            MsgBox(SELECCIONE_AL_MENOS_UNO())
         End If
     End Sub
 End Class

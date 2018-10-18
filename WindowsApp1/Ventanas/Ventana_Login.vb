@@ -43,6 +43,8 @@ Public Class Ventana_Login
 
             Modulo_Comportamiento_Ventanas.verificarRol(USUARIO_LOGUEADO.tipo)
             GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, "!!!!! USUARIO LOGUEADO !!!!!", Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture))
+            txtNombreUsuario.Clear()
+            txtPassword.Clear()
             Ventana_Principal.ShowDialog()
         Else
             MsgBox("Su nombre de usuario o contraseña es incorrecto", 0, "Error de autenticacion")

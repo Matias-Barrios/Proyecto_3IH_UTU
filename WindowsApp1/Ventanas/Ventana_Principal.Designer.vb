@@ -244,6 +244,8 @@ Partial Class Ventana_Principal
         Me.Control_impresion = New System.Drawing.Printing.PrintDocument()
         Me.btnTabHistorial = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
+        Me.btn_grupo_vincular_a_asignatura = New System.Windows.Forms.Button()
+        Me.chk_asignaturas_para_grupo = New System.Windows.Forms.CheckedListBox()
         Me.pnlUsuario_logueado.SuspendLayout()
         Me.tabPrincipal.SuspendLayout()
         Me.tabPrincipalAlumnos.SuspendLayout()
@@ -575,6 +577,8 @@ Partial Class Ventana_Principal
         'tabpage_Grupos
         '
         Me.tabpage_Grupos.BackColor = System.Drawing.Color.Silver
+        Me.tabpage_Grupos.Controls.Add(Me.chk_asignaturas_para_grupo)
+        Me.tabpage_Grupos.Controls.Add(Me.btn_grupo_vincular_a_asignatura)
         Me.tabpage_Grupos.Controls.Add(Me.lstGrupos_vinc_Orientaciones)
         Me.tabpage_Grupos.Controls.Add(Me.btnVincular_a_Orientacion)
         Me.tabpage_Grupos.Controls.Add(Me.Button4)
@@ -595,7 +599,7 @@ Partial Class Ventana_Principal
         '
         Me.lstGrupos_vinc_Orientaciones.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lstGrupos_vinc_Orientaciones.FormattingEnabled = True
-        Me.lstGrupos_vinc_Orientaciones.Location = New System.Drawing.Point(763, 7)
+        Me.lstGrupos_vinc_Orientaciones.Location = New System.Drawing.Point(763, 3)
         Me.lstGrupos_vinc_Orientaciones.Name = "lstGrupos_vinc_Orientaciones"
         Me.lstGrupos_vinc_Orientaciones.Size = New System.Drawing.Size(350, 21)
         Me.lstGrupos_vinc_Orientaciones.TabIndex = 48
@@ -607,7 +611,7 @@ Partial Class Ventana_Principal
         Me.btnVincular_a_Orientacion.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnVincular_a_Orientacion.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnVincular_a_Orientacion.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.btnVincular_a_Orientacion.Location = New System.Drawing.Point(576, 4)
+        Me.btnVincular_a_Orientacion.Location = New System.Drawing.Point(576, 1)
         Me.btnVincular_a_Orientacion.Name = "btnVincular_a_Orientacion"
         Me.btnVincular_a_Orientacion.Size = New System.Drawing.Size(181, 24)
         Me.btnVincular_a_Orientacion.TabIndex = 44
@@ -3238,6 +3242,29 @@ Partial Class Ventana_Principal
         Me.Button7.Text = "Consultas Carambula 2018"
         Me.Button7.UseVisualStyleBackColor = False
         '
+        'btn_grupo_vincular_a_asignatura
+        '
+        Me.btn_grupo_vincular_a_asignatura.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btn_grupo_vincular_a_asignatura.BackColor = System.Drawing.Color.White
+        Me.btn_grupo_vincular_a_asignatura.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btn_grupo_vincular_a_asignatura.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_grupo_vincular_a_asignatura.ForeColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(187, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.btn_grupo_vincular_a_asignatura.Location = New System.Drawing.Point(576, 30)
+        Me.btn_grupo_vincular_a_asignatura.Name = "btn_grupo_vincular_a_asignatura"
+        Me.btn_grupo_vincular_a_asignatura.Size = New System.Drawing.Size(181, 24)
+        Me.btn_grupo_vincular_a_asignatura.TabIndex = 49
+        Me.btn_grupo_vincular_a_asignatura.Text = "Añadir Asignaturas"
+        Me.btn_grupo_vincular_a_asignatura.UseVisualStyleBackColor = False
+        '
+        'chk_asignaturas_para_grupo
+        '
+        Me.chk_asignaturas_para_grupo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.chk_asignaturas_para_grupo.FormattingEnabled = True
+        Me.chk_asignaturas_para_grupo.Location = New System.Drawing.Point(763, 30)
+        Me.chk_asignaturas_para_grupo.Name = "chk_asignaturas_para_grupo"
+        Me.chk_asignaturas_para_grupo.Size = New System.Drawing.Size(352, 79)
+        Me.chk_asignaturas_para_grupo.TabIndex = 50
+        '
         'Ventana_Principal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -3544,4 +3571,6 @@ Partial Class Ventana_Principal
     Friend WithEvents dgvp_carambula_18 As DGVPaginado
     Friend WithEvents TextBox18 As TextBox
     Friend WithEvents BorderLabel23 As BorderLabel
+    Friend WithEvents chk_asignaturas_para_grupo As CheckedListBox
+    Friend WithEvents btn_grupo_vincular_a_asignatura As Button
 End Class
