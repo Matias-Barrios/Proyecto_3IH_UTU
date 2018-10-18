@@ -68,6 +68,7 @@
 
     Private Sub btnLogoff_Click(sender As Object, e As EventArgs) Handles btnLogoff.Click
         LogOff()
+        Ventana_Login.Show()
     End Sub
 
     Private Sub btnVentanaPrincipalOrientaciones_Click(sender As Object, e As EventArgs) Handles btnVentanaPrincipalOrientaciones.Click
@@ -731,6 +732,16 @@
         If Not dgvP_Orientaciones.Cantidad_Selecciones() <> 1 Then
             ventana_crear_orientaciones.Preparar_Ventana_Modificacion(dgvP_Orientaciones.Filas_Seleccionadas().Item(0))
             ventana_crear_orientaciones.ShowDialog()
+        Else
+            MsgBox(SELECCIONE_SOLO_UNO())
+
+        End If
+    End Sub
+
+    Private Sub btnInstitutoModificar_Click(sender As Object, e As EventArgs) Handles btnInstitutoModificar.Click
+        If Not dgvP_Institutos.Cantidad_Selecciones() <> 1 Then
+            ventana_crear_institutos.Preparar_Ventana_Modificacion(dgvP_Institutos.Filas_Seleccionadas().Item(0))
+            ventana_crear_institutos.ShowDialog()
         Else
             MsgBox(SELECCIONE_SOLO_UNO())
 

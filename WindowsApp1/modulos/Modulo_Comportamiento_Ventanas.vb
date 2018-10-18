@@ -2,12 +2,13 @@
 
     Public Sub verificarRol(rol As String)
         If rol = "Admin" Then
-            Ventana_Principal.pnlCalificaciones_Comboboxes.Visible = False
+            Ventana_Principal.btnTareas.Visible = False
         End If
         If rol = "Administrativo" Then
             Ventana_Principal.btnUsuarios.Visible = False
             Ventana_Principal.btnTareas.Visible = False
             Ventana_Principal.btnTabHistorial.Visible = False
+            Ventana_Principal.btnTareas.Visible = False
         End If
 
         If rol = "Docente" Then

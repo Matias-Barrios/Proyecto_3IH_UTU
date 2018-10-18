@@ -83,9 +83,9 @@ Partial Class Ventana_Login
         Me.b_lblNombreUsuario.ForeColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(240, Byte), Integer))
         Me.b_lblNombreUsuario.Location = New System.Drawing.Point(72, 119)
         Me.b_lblNombreUsuario.Name = "b_lblNombreUsuario"
-        Me.b_lblNombreUsuario.Size = New System.Drawing.Size(108, 31)
+        Me.b_lblNombreUsuario.Size = New System.Drawing.Size(100, 31)
         Me.b_lblNombreUsuario.TabIndex = 5
-        Me.b_lblNombreUsuario.Text = "Usuario"
+        Me.b_lblNombreUsuario.Text = "Cedula"
         Me.b_lblNombreUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'picUserLogin

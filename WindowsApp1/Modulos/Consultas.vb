@@ -82,8 +82,6 @@ Module Consultas
                 WHERE tipo = 'Admin' AND baja = 'f'"
     End Function
 
-
-
     Public Function CONSULTAS_SELECT_CALIFICACIONES() As String
         Return "SELECT id_calificacion,
 		                (select Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido from Personas where Personas.CI = CI_docente) AS nombre_docente,
@@ -107,13 +105,13 @@ Module Consultas
     End Function
 
     Public Function CONSULTAS_SELECT_USUARIOS() As String
-        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email 
+        Return "SELECT CI,Personas.tipo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email 
                 FROM Personas
                 WHERE baja = 'f' AND encriptacion_hash is not null AND baja = 'f'"
     End Function
 
     Public Function CONSULTAS_SELECT_POTENCIALES_USUARIOS() As String
-        Return "SELECT CI,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
+        Return "SELECT CI,Personas.tipo,(Personas.primer_nombre || ' ' || Personas.segundo_nombre || ' ' || Personas.primer_apellido || ' ' || Personas.segundo_apellido ) AS nombre_completo,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,fecha_nacimiento,email
                 FROM Personas 
                 WHERE baja = 'f' AND tipo IN ('Admin','Docente','Administrativo')"
     End Function
@@ -300,7 +298,7 @@ Module Consultas
             fecha_con_formato = fecha_nacimiento.ToString("MM/dd/yyyy")
         End If
         Dim consulta As String = "INSERT INTO Personas (CI, primer_nombre, segundo_nombre, primer_apellido, segundo_apellido, fecha_nacimiento, email, grado, hace_proyecto, nota_final_pro, juicio_final, tipo, encriptacion_hash, encriptacion_sal, baja)
-                VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & grado & ",'" & "f" & "'," & "NULL" & "," & "Examen Febrero" & "," & "'Docente'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
+                VALUES(" & CI & ",'" & primer_nombre & "','" & segundo_nombre & "','" & primer_apellido & "','" & segundo_apellido & "'," & fecha_con_formato & ",'" & email & "'," & grado & ",'" & "f" & "'," & "NULL" & "," & "'Examen Febrero'" & "," & "'Docente'" & "," & "NULL" & "," & "NULL" & "," & "'f'" & ")"
         Console.WriteLine(consulta)
         hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
         Return consulta
@@ -1279,11 +1277,9 @@ and not exists (
     End Function
 
     Public Function CREAR_INSTITUTO(nombre As String, calle As String, numero As Integer, email As String, telefonos As String, id_ciudad As Integer) As String
-        Dim consulta As String = "INSERT INTO Institutos (nombre , calle, numero,telefonos, email , foranea_id_ciudad, baja)
+        Dim consulta As String = "INSERT INTO Institutos (nombre , calle, numero,email, telefonos , foranea_id_ciudad, baja)
                 VALUES('" & nombre & "','" & calle & "'," & numero &
-                ",'" & email &
-                & ",'" & telefonos & "'," & id_ciudad &
-                ",'" & "f" & "')"
+                ",'" & email & "','" & telefonos & "'," & id_ciudad & ",'" & "f" & "')"
         Console.WriteLine(consulta)
         hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
 
@@ -1299,4 +1295,13 @@ and not exists (
         Return consulta
     End Function
 
+    Public Function MODIFICAR_INSTITUTO(id_instituto As Integer, nombre As String, calle As String, numero As Integer, email As String, telefonos As String) As String
+        Dim consulta As String = "UPDATE Institutos 
+                set nombre = '" & nombre & "', calle = '" & calle & "', numero = " & numero.ToString() &
+                ", email = '" & email & "', telefonos = '" & telefonos & "' WHERE id_instituto = " & id_instituto.ToString()
+        Console.WriteLine(consulta)
+        hacer_consulta(GUARDAR_HISTORIAL(USUARIO_LOGUEADO.CI, USUARIO_LOGUEADO.IPAddress, consulta, Date.Now.ToString("dd-MM-yyyy HH:MM:ss", CultureInfo.InvariantCulture)))
+
+        Return consulta
+    End Function
 End Module

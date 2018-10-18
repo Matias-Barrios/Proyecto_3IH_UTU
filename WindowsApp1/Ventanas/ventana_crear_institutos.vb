@@ -12,6 +12,12 @@ Public Class ventana_crear_institutos
         Adherir_Validacion(txt_crear_institutos_email, TipoValidacion.Solo_Email)
         Cbo_Ciudades.DataSource = hacer_consulta(CONSULTAS_COMBO_CIUDADES())
         Cbo_Ciudades.DisplayMember = "nombre"
+        If es_modificacion Then
+            Cbo_Ciudades.Enabled = False
+        End If
+    End Sub
+    Private Sub cerrar_ventana(sender As Object, e As EventArgs) Handles Me.Closed
+        Me.Dispose()
     End Sub
 
     Private Sub crear_instituto_click(sender As Object, e As EventArgs) Handles btn_crear_instituto_aceptar.Click
@@ -24,7 +30,7 @@ Public Class ventana_crear_institutos
         Else
             If validar_inputs() Then
                 Preparar_Orientacion()
-                'hacer_consulta(MODIFICAR_ORIENTACION(id_orientacion_original, txt_crear_orientaciones_nombre.Text, rch_crear_orientaciones_.Text))
+                hacer_consulta(MODIFICAR_INSTITUTO(instituto.Cells("id_instituto").Value(), txt_crear_instituto_nombre.Text, txt_crear_instituto_calles.Text, txt_crear_instituto_numero_calle.Text, txt_crear_institutos_email.Text, join(chk_institutos_telefonos.Items)))
                 Ventana_Principal.dgvP_Institutos.Cargar_datos(hacer_consulta(CONSULTAS_SELECT_INSTITUTOS()))
                 Me.Dispose()
             End If
@@ -43,20 +49,28 @@ Public Class ventana_crear_institutos
         Try
             es_modificacion = True
             instituto = ins
-            txt.Text = ori.Cells("nombre_orientacion").Value()
-            rch_crear_orientaciones_.Text = ori.Cells("descripcion").Value()
+            txt_crear_instituto_nombre.Text = instituto.Cells("nombre").Value()
+            txt_crear_instituto_calles.Text = instituto.Cells("calle").Value()
+            txt_crear_instituto_numero_calle.Text = instituto.Cells("numero").Value().ToString()
+            txt_crear_institutos_email.Text = instituto.Cells("email").Value().ToString()
+            For Each tel In instituto.Cells("telefonos").Value().ToString().Split("|")
+                chk_institutos_telefonos.Items.Add(tel)
+            Next
         Catch ex As Exception
             MsgBox(ex.ToString())
         End Try
 
     End Sub
     Public Sub Preparar_Orientacion()
-        orientacion.Cells("nombre_orientacion").Value = txt_crear_orientaciones_nombre.Text
-        orientacion.Cells("descripcion").Value = rch_crear_orientaciones_.Text
+        instituto.Cells("nombre").Value() = txt_crear_instituto_nombre.Text
+        instituto.Cells("calle").Value() = txt_crear_instituto_calles.Text
+        instituto.Cells("calle").Value() = Val(txt_crear_instituto_numero_calle.Text)
+        instituto.Cells("email").Value() = txt_crear_institutos_email.Text
+        instituto.Cells("telefonos").Value() = join(chk_institutos_telefonos.Items)
     End Sub
     Private Function validar_inputs()
 
-        If Regex.Matches(txt_crear_orientaciones_nombre.Text, ORIEANTACION_NOMBRE_VALIDO()).Count <> 1 Then
+        If Regex.Matches(txt_crear_instituto_nombre.Text, ORIEANTACION_NOMBRE_VALIDO()).Count <> 1 Then
             MsgBox("Debe completar el campo 'Nombre' correctamente!")
             Return False
         End If
@@ -65,15 +79,14 @@ Public Class ventana_crear_institutos
         Return True
     End Function
 
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        chk_institutos_telefonos.Items.Add(txt_crear_instituto_telefono.Text)
+        txt_crear_instituto_telefono.Clear()
     End Sub
 
-    Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles CheckedListBox1.SelectedIndexChanged, chk_institutos_telefonos.SelectedIndexChanged
-
-    End Sub
-
-    Private Sub lblCrear_Asignatura_Titulo_Click(sender As Object, e As EventArgs) Handles lblCrear_Asignatura_Titulo.Click
-
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        For Each tel In chk_institutos_telefonos.CheckedIndices
+            chk_institutos_telefonos.Items.RemoveAt(tel)
+        Next
     End Sub
 End Class
